@@ -34,38 +34,42 @@ const Navbar = () => {
 	return (
 		<nav className={`nav-bar ${isScrolled ? "nav-bar-scrolled" : ""}`}>
 			<div className="log-container">
-				<div className="logo-box">
-					<Link to="/">
+				<Link to="/">
+					<div className="logo-box">
 						<img src={Icon} alt="logo" />
-					</Link>
-					<Link to="/">
 						<h1>Shahir Ahmed</h1>
-					</Link>
-				</div>
+					</div>
+				</Link>
 			</div>
 			<div className="nav-links">
-				<div className="nav-box">
-					<Link to="/">Home</Link>
-					<img src={Home} alt="home" />
-				</div>
-				<div className="nav-box">
-					<Link to="/about">About</Link>
-					<img src={About} alt="about" />
-				</div>
-				<div className="nav-box">
-					<Link to="/projects">Projects</Link>
-					<img src={Code} alt="projects" />
-				</div>
-				<div className="nav-box">
-					<a
-						href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Resume
-					</a>
-					<img src={Doc} alt="resume" />
-				</div>
+				<Link to="/">
+					<div className="nav-box">
+						<span>Home</span>
+						<img src={Home} alt="home" />
+					</div>
+				</Link>
+				<Link to="/about">
+					<div className="nav-box">
+						<span>About</span>
+						<img src={About} alt="about" />
+					</div>
+				</Link>
+				<Link to="/projects">
+					<div className="nav-box">
+						<span>Projects</span>
+						<img src={Code} alt="projects" />
+					</div>
+				</Link>
+				<a
+					href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<div className="nav-box">
+						<span>Resume</span>
+						<img src={Doc} alt="resume" />
+					</div>
+				</a>
 				<div className="hamburger" onClick={toggleHamburgerMenu}>
 					<img src={hamburgerImg} alt="hamburger menu" />
 					<div className={`hamburger-menu ${hamburgerClass}`}>
