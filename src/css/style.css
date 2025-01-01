@@ -84,6 +84,7 @@ div#content {
 	font-weight: 500;
 	cursor: pointer;
 	margin: 0;
+	color: #e0e0e0;
 }
 
 .nav-links {
@@ -246,11 +247,22 @@ div#content {
 	display: flex;
 	flex-direction: row-reverse;
 	gap: 0.5rem;
-	align-items: center;
+	align-items: flex-end;
 }
 
 .nav-box img {
 	width: 2rem;
+	height: auto;
+}
+
+.nav-box:nth-of-type(1) img {
+	width: 1.65rem;
+	height: auto;
+	align-self: flex-start;
+}
+
+.nav-box:last-of-type img {
+	width: 1.6rem;
 	height: auto;
 }
 
@@ -738,6 +750,7 @@ html {
 
 	.logo-box h1 {
 		font-size: 1.5rem;
+		color: #e0e0e0;
 	}
 
 	div.text-div h3 {
@@ -892,6 +905,7 @@ html {
 
 	.logo-box h1 {
 		font-size: 1.5rem;
+		color: #e0e0e0;
 	}
 
 	div.hamburger-menu.inactive,
@@ -1162,18 +1176,29 @@ html {
 
 	div.logo-box h1 {
 		font-size: 2.5rem;
+		color: #e0e0e0;
 	}
 
-	div.nav-box img {
+	.nav-box img {
 		width: 3rem;
 		height: auto;
 	}
 
-	div.nav-box {
+	.nav-box img:nth-of-type(1) {
+		width: 2.65rem;
+		height: auto;
+	}
+
+	.nav-box img:last-of-type {
+		width: 2.6rem;
+		height: auto;
+	}
+
+	.nav-box {
 		gap: 1rem;
 	}
 
-	div.nav-links a {
+	.nav-links a {
 		font-size: 2rem;
 	}
 

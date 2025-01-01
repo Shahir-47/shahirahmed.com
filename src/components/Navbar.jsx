@@ -40,33 +40,26 @@ const Navbar = () => {
 				</Link>
 			</div>
 			<div className="nav-links">
-				<Link to="/">
-					<div className="nav-box">
-						<span>Home</span>
-						<img src={Home} alt="home" />
-					</div>
+				<Link to="/" className="nav-box">
+					<span>Home</span>
+					<img src={Home} alt="home" />
 				</Link>
-				<Link to="/about">
-					<div className="nav-box">
-						<span>About</span>
-						<img src={About} alt="about" />
-					</div>
+				<Link to="/about" className="nav-box">
+					<span>About</span>
+					<img src={About} alt="about" />
 				</Link>
-				<Link to="/projects">
-					<div className="nav-box">
-						<span>Projects</span>
-						<img src={Code} alt="projects" />
-					</div>
+				<Link to="/projects" className="nav-box">
+					<span>Projects</span>
+					<img src={Code} alt="projects" />
 				</Link>
 				<a
 					href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="nav-box"
 				>
-					<div className="nav-box">
-						<span>Resume</span>
-						<img src={Doc} alt="resume" />
-					</div>
+					<span>Resume</span>
+					<img src={Doc} alt="resume" />
 				</a>
 				<div className="hamburger" onClick={toggleHamburgerMenu}>
 					<img src={hamburgerImg} alt="hamburger menu" />
