@@ -27,6 +27,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import CodeIcon from "@mui/icons-material/Code";
 import EngineeringIcon from "@mui/icons-material/Engineering";
+import GitHubStats from "./GitHubStats";
 import "react-vertical-timeline-component/style.min.css";
 import {
 	VerticalTimeline,
@@ -158,7 +159,11 @@ const About = () => {
 					{/* Dickinson College */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--education"
-						contentStyle={{ background: "rgb(33, 33, 33)", color: "#fff" }}
+						contentStyle={{
+							background: "rgb(33, 33, 33)",
+							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
+						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="Expected May 2025"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
@@ -193,7 +198,11 @@ const About = () => {
 					{/* HarvardX CS50x */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--education"
-						contentStyle={{ background: "rgb(45, 45, 45)", color: "#fff" }}
+						contentStyle={{
+							background: "rgb(33, 33, 33)",
+							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
+						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
 						date="January 2021"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
@@ -251,6 +260,7 @@ const About = () => {
 						contentStyle={{
 							background: "rgb(33, 33, 33)",
 							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="May 2024 - Present"
@@ -294,8 +304,9 @@ const About = () => {
 					<VerticalTimelineElement
 						className="vertical-timeline-element--work"
 						contentStyle={{
-							background: "rgb(45, 45, 45)",
+							background: "rgb(33, 33, 33)",
 							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
 						date="September 2023 - January 2024"
@@ -334,6 +345,7 @@ const About = () => {
 						contentStyle={{
 							background: "rgb(33, 33, 33)",
 							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="January 2022 - Present"
@@ -385,6 +397,7 @@ const About = () => {
 						contentStyle={{
 							background: "rgb(33, 33, 33)",
 							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="HoyaHacks 2024"
@@ -492,8 +505,9 @@ const About = () => {
 					<VerticalTimelineElement
 						className="vertical-timeline-element--hackathon"
 						contentStyle={{
-							background: "rgb(45, 45, 45)",
+							background: "rgb(33, 33, 33)",
 							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(45, 45, 45)" }}
 						date="PennApps 2024"
@@ -601,6 +615,7 @@ const About = () => {
 						contentStyle={{
 							background: "rgb(33, 33, 33)",
 							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="HackHarvard 2024"
@@ -712,6 +727,9 @@ const About = () => {
 					</VerticalTimelineElement>
 				</VerticalTimeline>
 			</div>
+
+			{/* GitHub Stats */}
+			<GitHubStats />
 		</div>
 	);
 };

@@ -1310,14 +1310,15 @@ html {
 	}
 }
 
+.github-stats-section h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #4fd1c5;
+}
 .timeline-section h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
 	color: #4fd1c5;
-}
-
-.vertical-timeline-element-content {
-	box-shadow: 0 3px 0 #4fd1c5;
 }
 
 .timeline-section button {
@@ -1357,4 +1358,52 @@ button.live-preview:hover {
 	background-color: #388e3c; /* Change background color */
 	border-color: #72ef75; /* Highlighted border */
 	box-shadow: 0 0 10px rgba(114, 239, 117, 0.5); /* Subtle glow */
+}
+
+.github-stats-section {
+	text-align: center;
+	margin: 50px 0;
+}
+
+.github-stats-container {
+	display: flex;
+	flex-wrap: wrap; /* Enable wrapping */
+	gap: 20px; /* Spacing between elements */
+	justify-content: center; /* Center content */
+	margin-top: 20px;
+}
+
+.github-activity-calendar {
+	margin: 20px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.github-activity-calendar > div {
+	max-width: 900px;
+}
+
+.github-stats-container img {
+	max-width: 600px; /* Limit size for better wrapping */
+	width: 100%; /* Ensure responsiveness */
+	margin: 10px 0;
+}
+
+.github-streak img {
+	max-width: 900px;
+	width: 100%;
+}
+
+.react-activity-calendar__footer {
+	padding: 0;
+	margin: 0.25rem;
+	background: transparent;
+}
+
+.github-stats-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
 }
