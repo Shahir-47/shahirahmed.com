@@ -56,6 +56,11 @@ const Navbar = () => {
 					<span>Projects</span>
 					<img src={Code} alt="projects" />
 				</Link>
+				<Link to="/contact" className={`nav-box ${isActive("/contact")}`}>
+					<span>Contact</span>
+					<img src={Code} alt="contact" />
+				</Link>
+
 				<a
 					href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
 					target="_blank"
@@ -77,6 +82,10 @@ const Navbar = () => {
 						<Link to="/projects" onClick={() => setHamburgerClass("inactive")}>
 							Projects
 						</Link>
+						<Link to="/contact" onClick={() => setHamburgerClass("inactive")}>
+							Contact
+						</Link>
+
 						<a
 							href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
 							target="_blank"
