@@ -2,7 +2,7 @@ body {
 	color: #e0e0e0;
 	background-color: #000000;
 	background-image: url(../assets/background.jpg);
-	background-size: contain !important;
+	background-size: 100% auto !important;
 	background-repeat: no-repeat !important;
 	font-family: sans-serif;
 }
@@ -136,6 +136,23 @@ div#content {
 	transition: all 0.3s ease-out 0s;
 	width: 0;
 	z-index: -1;
+}
+
+a.nav-box.active {
+	cursor: pointer;
+	color: #ffffffff;
+}
+
+a.nav-box.active a {
+	color: #ffffffff;
+}
+
+a.nav-box.active img {
+	filter: brightness(3);
+}
+
+div.nav-links a.nav-box.active:after {
+	width: 100%;
 }
 
 .main-container {
