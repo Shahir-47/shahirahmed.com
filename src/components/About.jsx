@@ -23,6 +23,18 @@ import Html from "../assets/html.svg";
 import Css from "../assets/css.svg";
 import Js from "../assets/js.svg";
 import Matlab from "../assets/matlab.svg";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
+import CodeIcon from "@mui/icons-material/Code";
+import {
+	Timeline,
+	TimelineItem,
+	TimelineSeparator,
+	TimelineConnector,
+	TimelineContent,
+	TimelineDot,
+} from "@mui/lab";
+import { Typography, Card, CardContent } from "@mui/material";
 
 const tools = [
 	{ src: Html, title: "HTML" },
@@ -136,6 +148,125 @@ const About = () => {
 						))}
 					</div>
 				</div>
+			</div>
+
+			{/* Education Timeline */}
+			<div className="timeline-section">
+				<Typography variant="h4" gutterBottom>
+					Education
+				</Typography>
+				<Timeline>
+					<TimelineItem>
+						<TimelineSeparator>
+							<TimelineDot color="primary">
+								<SchoolIcon />
+							</TimelineDot>
+							<TimelineConnector />
+						</TimelineSeparator>
+						<TimelineContent>
+							<Typography variant="h6">Dickinson College</Typography>
+							<Typography>
+								Computer Science & Mathematics (2019 - Present)
+							</Typography>
+						</TimelineContent>
+					</TimelineItem>
+					<TimelineItem>
+						<TimelineSeparator>
+							<TimelineDot>
+								<img
+									src="../assets/dickinson-logo.svg"
+									alt="Dickinson College"
+								/>
+							</TimelineDot>
+						</TimelineSeparator>
+						<TimelineContent>
+							<Card>
+								<CardContent>
+									<Typography variant="h6">Bachelor’s Degree</Typography>
+									<Typography>Focused on Full-Stack Development</Typography>
+								</CardContent>
+							</Card>
+						</TimelineContent>
+					</TimelineItem>
+				</Timeline>
+			</div>
+
+			{/* Work Experience Timeline */}
+			<div className="timeline-section">
+				<Typography variant="h4" gutterBottom>
+					Work Experience
+				</Typography>
+				<Timeline>
+					<TimelineItem>
+						<TimelineSeparator>
+							<TimelineDot color="primary">
+								<WorkIcon />
+							</TimelineDot>
+							<TimelineConnector />
+						</TimelineSeparator>
+						<TimelineContent>
+							<Typography variant="h6">84 Lumber</Typography>
+							<Typography>Software Developer Intern (Summer 2023)</Typography>
+						</TimelineContent>
+					</TimelineItem>
+					<TimelineItem>
+						<TimelineSeparator>
+							<TimelineDot>
+								<img src="../assets/lumber-logo.svg" alt="84 Lumber" />
+							</TimelineDot>
+						</TimelineSeparator>
+						<TimelineContent>
+							<Card>
+								<CardContent>
+									<Typography variant="h6">Internship Project</Typography>
+									<Typography>
+										Modernized 50,000 lines of legacy code into scalable Java
+										and Python applications.
+									</Typography>
+								</CardContent>
+							</Card>
+						</TimelineContent>
+					</TimelineItem>
+				</Timeline>
+			</div>
+
+			{/* Hackathon Experience Timeline */}
+			<div className="timeline-section">
+				<Typography variant="h4" gutterBottom>
+					Hackathon Experience
+				</Typography>
+				<Timeline>
+					<TimelineItem>
+						<TimelineSeparator>
+							<TimelineDot color="primary">
+								<CodeIcon />
+							</TimelineDot>
+							<TimelineConnector />
+						</TimelineSeparator>
+						<TimelineContent>
+							<Typography variant="h6">HackMIT</Typography>
+							<Typography>Participant (Fall 2023)</Typography>
+						</TimelineContent>
+					</TimelineItem>
+					<TimelineItem>
+						<TimelineSeparator>
+							<TimelineDot>
+								<img src="../assets/hackmit-logo.svg" alt="HackMIT" />
+							</TimelineDot>
+						</TimelineSeparator>
+						<TimelineContent>
+							<Card>
+								<CardContent>
+									<Typography variant="h6">Project Name</Typography>
+									<Typography>
+										Developed an AI-powered solution for chronic disease
+										monitoring.
+									</Typography>
+								</CardContent>
+							</Card>
+						</TimelineContent>
+					</TimelineItem>
+				</Timeline>
 			</div>
 		</div>
 	);
