@@ -4,6 +4,7 @@ import Icon from "../assets/icon.svg";
 import Home from "../assets/home.svg";
 import About from "../assets/about.svg";
 import Code from "../assets/code.svg";
+import phone from "../assets/phone.svg";
 import Doc from "../assets/doc.svg";
 import hamburgerImg from "../assets/hamburger.svg";
 
@@ -58,7 +59,7 @@ const Navbar = () => {
 				</Link>
 				<Link to="/contact" className={`nav-box ${isActive("/contact")}`}>
 					<span>Contact</span>
-					<img src={Code} alt="contact" />
+					<img src={phone} alt="contact" />
 				</Link>
 
 				<a
