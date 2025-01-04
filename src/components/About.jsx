@@ -33,6 +33,7 @@ import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import { Box, Typography } from "@mui/material";
 import SocialIcons from "./SocialIcons";
 
 const tools = [
@@ -772,6 +773,22 @@ const About = () => {
 
 			{/* GitHub Stats */}
 			<GitHubStats />
+
+			{/* Social Section */}
+			<Box
+				sx={{
+					textAlign: "center",
+					color: "#e0e0e0",
+				}}
+			>
+				<Typography
+					variant="h5"
+					sx={{ color: "#4fd1c5", fontWeight: "bold", marginBottom: "1rem" }}
+				>
+					Connect with Me
+				</Typography>
+				<SocialIcons />
+			</Box>
 		</div>
 	);
 };
