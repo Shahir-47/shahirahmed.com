@@ -305,6 +305,7 @@ div.nav-links a.nav-box.active:after {
 	padding: 0 3rem;
 	margin: 0 5rem;
 	gap: 5rem;
+	margin-bottom: 3rem;
 }
 
 .second-block-text-container {
@@ -1034,6 +1035,11 @@ html {
 		align-items: center;
 		margin-top: 2.5rem;
 		gap: 1rem; */
+	}
+
+	a.icon-container svg {
+		width: 1.65rem;
+		height: 1.65rem;
 	}
 
 	@keyframes expand {
