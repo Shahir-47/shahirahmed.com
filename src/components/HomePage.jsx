@@ -3,8 +3,8 @@ import Typed from "typed.js";
 import Computer from "../assets/computer.png";
 import Hand from "../assets/hand.svg";
 import Hacker from "../assets/hacker.svg";
-import GitSocial from "../assets/gitSocial.svg";
-import Linked from "../assets/linked.svg";
+import SocialIcons from "./SocialIcons";
+import { Box, Typography } from "@mui/material";
 
 const HomePage = () => {
 	useEffect(() => {
@@ -96,30 +96,26 @@ const HomePage = () => {
 				</div>
 
 				{/* Social Block */}
-				<div className="social-block">
-					<div className="social-text-div">
-						<h3>FIND ME ON</h3>
-						<p className="social-sub-text">
-							Feel free to <span>connect</span> with me
-						</p>
-					</div>
-					<div className="social-icons">
-						<a
-							href="https://github.com/Shahir-47"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img className="social-icon" src={GitSocial} alt="GitHub" />
-						</a>
-						<a
-							href="https://www.linkedin.com/in/shahir47/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img className="social-icon" src={Linked} alt="LinkedIn" />
-						</a>
-					</div>
-				</div>
+				{/* Social Section */}
+				<Box
+					sx={{
+						textAlign: "center",
+						color: "#e0e0e0",
+					}}
+				>
+					<Typography
+						variant="h5"
+						sx={{
+							fontWeight: "bold",
+							marginBottom: "1rem",
+							fontSize: "1.2rem",
+						}}
+					>
+						Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with
+						me
+					</Typography>
+					<SocialIcons />
+				</Box>
 			</div>
 		</div>
 	);

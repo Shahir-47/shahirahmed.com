@@ -174,16 +174,15 @@ const ContactMe = () => {
 			{/* Social Section */}
 			<Box
 				sx={{
-					marginTop: "2rem",
 					textAlign: "center",
 					color: "#e0e0e0",
 				}}
 			>
 				<Typography
 					variant="h5"
-					sx={{ color: "#4fd1c5", fontWeight: "bold", marginBottom: "1rem" }}
+					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
 				>
-					Connect with Me
+					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
 				</Typography>
 				<SocialIcons />
 			</Box>

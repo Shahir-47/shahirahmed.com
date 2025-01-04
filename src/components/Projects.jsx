@@ -6,6 +6,8 @@ import Tictac from "../assets/tictac.png";
 import Calculator from "../assets/calculator.png";
 import Restaurant from "../assets/restaurant.png";
 import Etch from "../assets/etch.png";
+import SocialIcons from "./SocialIcons";
+import { Box, Typography } from "@mui/material";
 
 const projectsData = [
 	{
@@ -100,6 +102,21 @@ const Projects = () => {
 					<ProjectItem key={index} {...project} />
 				))}
 			</div>
+			{/* Social Section */}
+			<Box
+				sx={{
+					textAlign: "center",
+					color: "#e0e0e0",
+				}}
+			>
+				<Typography
+					variant="h5"
+					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
+				>
+					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
+				</Typography>
+				<SocialIcons />
+			</Box>
 		</div>
 	);
 };

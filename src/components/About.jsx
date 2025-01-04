@@ -1,6 +1,4 @@
 import Shahir from "../assets/shahir.png";
-import GitSocial from "../assets/gitSocial.svg";
-import Linked from "../assets/linked.svg";
 import Docker from "../assets/docker.svg";
 import Sql from "../assets/sql.svg";
 import Eclipse from "../assets/eclipse.svg";
@@ -79,9 +77,10 @@ const About = () => {
 								majoring in <bold>Computer Science</bold> and{" "}
 								<bold>Mathematics</bold>. My coding journey started with
 								curiosity and has grown into a passion for exploring new
-								technologies and solving problems through code. Whether it's
-								tackling bugs or creating something from scratch, I genuinely
-								enjoy the process (even the occasional debugging marathons 😅).
+								technologies and solving problems through code. Whether
+								it&apos;s tackling bugs or creating something from scratch, I
+								genuinely enjoy the process (even the occasional debugging
+								marathons 😅).
 							</p>
 							<p className="about-me-text">
 								Over the years, I’ve had the chance to contribute to impactful
@@ -783,9 +782,9 @@ const About = () => {
 			>
 				<Typography
 					variant="h5"
-					sx={{ color: "#4fd1c5", fontWeight: "bold", marginBottom: "1rem" }}
+					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
 				>
-					Connect with Me
+					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
 				</Typography>
 				<SocialIcons />
 			</Box>
