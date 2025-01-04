@@ -33,6 +33,7 @@ import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import SocialIcons from "./SocialIcons";
 
 const tools = [
 	{ src: Html, title: "HTML" },
@@ -62,6 +63,7 @@ const tools = [
 const About = () => {
 	return (
 		<div className="about-page">
+			{/* About Me */}
 			<div className="about-container">
 				<div className="about-text-container">
 					<h1 className="about-me">
@@ -72,62 +74,102 @@ const About = () => {
 					<div className="about-me-text-div">
 						<div className="paragraph">
 							<p className="about-me-text">
-								Hello! I&apos;m Shahir, a dedicated Computer Science and
-								Mathematics student at Dickinson College, where I&apos;m
-								mastering the art of full-stack development, with a keen eye on
-								creating innovative web solutions. My academic journey is richly
-								complemented by hands-on experience, especially noted during my
-								transformative internship at 84 Lumber. There, I took the lead
-								in modernizing technology by converting 50,000 lines of legacy
-								code into contemporary and scalable Java and Python
-								applications, showcasing my proficiency in these languages and
-								my knack for efficient problem-solving.
+								Hi, I’m Shahir—a senior at <bold>Dickinson College</bold>,
+								majoring in <bold>Computer Science</bold> and{" "}
+								<bold>Mathematics</bold>. My coding journey started with
+								curiosity and has grown into a passion for exploring new
+								technologies and solving problems through code. Whether it's
+								tackling bugs or creating something from scratch, I genuinely
+								enjoy the process (even the occasional debugging marathons 😅).
 							</p>
 							<p className="about-me-text">
-								My commitment to tech excellence is demonstrated through a
-								series of challenging projects. I&apos;ve dedicated myself to
-								developing a variety of applications, from interactive games to
-								dynamic web applications, each serving as a platform for
-								learning and applying new technologies and coding techniques.
-								These projects, available in my active GitHub repository,
-								highlight my dedication to coding excellence and my passion for
-								exploring the boundaries of web and software development.
+								Over the years, I’ve had the chance to contribute to impactful
+								projects like{" "}
+								<a
+									href="https://github.com/FarmData2"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<bold>FarmData2</bold>
+								</a>
+								, where I enhanced system reliability and streamlined workflows,
+								and{" "}
+								<a
+									href="https://tinyurl.com/bp5j9uwa"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<bold>84 Lumber</bold>
+								</a>
+								, where I worked on modernizing legacy systems. These
+								experiences have taught me the value of collaboration,
+								persistence, and writing clean, maintainable code.
 							</p>
 							<p className="about-me-text">
-								As I continue to evolve in this dynamic field, my goal is to
-								leverage my skills in a professional setting where I can
-								contribute to meaningful tech solutions and further hone my
-								expertise. Whether working solo or as part of a team, I approach
-								every project with a meticulous analytical mindset, constantly
-								striving to exceed expectations and drive innovation in the tech
-								space.
+								Hackathons have been another exciting part of my journey. From
+								my first project at HoyaHacks, which was a learning experience
+								(to say the least), to building{" "}
+								<a
+									href="https://devpost.com/software/sweetfriend"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<bold>SweetFriend</bold>
+								</a>{" "}
+								at PennApps and{" "}
+								<a
+									href="https://devpost.com/software/albatross"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<bold>Albatross</bold>
+								</a>{" "}
+								at HackHarvard, every event has pushed me to think outside the
+								box, work under tight deadlines, and grow as a developer.
 							</p>
 							<p className="about-me-text">
-								Let&apos;s connect to explore opportunities in web development,
-								collaborate on exciting projects, or simply to exchange insights
-								on the latest in technology!
+								When I’m not coding, you can find me mentoring fellow students
+								as a teaching assistant, cheering for{" "}
+								<a
+									href="https://www.realmadrid.com/en"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<bold>Real Madrid</bold>
+								</a>{" "}
+								⚽, or working on personal projects that let me experiment with
+								new tools and ideas. You can explore my{" "}
+								<a
+									href="https://github.com/Shahir-47"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<bold>GitHub</bold>
+								</a>{" "}
+								to see what I’ve been up to!
+							</p>
+							<p className="about-me-text">
+								Want to know more? Scroll down to explore my{" "}
+								<bold>education</bold>, <bold>work experience</bold>,{" "}
+								<bold>hackathon adventures</bold>, and the{" "}
+								<bold>tools and technologies</bold> I’ve worked with. You can
+								also visit my{" "}
+								<a href="/contact" target="_self">
+									<bold>Contact</bold>
+								</a>{" "}
+								page or connect directly using the social icons below. However
+								you choose, I’d love to hear from you and collaborate on
+								something exciting! 😊
 							</p>
 						</div>
-						<div className="social-icons">
-							<a
-								href="https://github.com/Shahir-47"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img src={GitSocial} alt="GitHub" />
-							</a>
-							<a
-								href="https://www.linkedin.com/in/shahir47/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img src={Linked} alt="LinkedIn" />
-							</a>
-						</div>
+
+						{/* Social Section */}
+						<SocialIcons />
 					</div>
 					<img src={Shahir} alt="Shahir" className="about-me-picture" />
 				</div>
 			</div>
+
 			<div className="second-div">
 				<div className="second-div-text">
 					<p>

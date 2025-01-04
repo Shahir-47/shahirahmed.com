@@ -1,13 +1,7 @@
+import SocialIcons from "./SocialIcons";
 import { useState } from "react";
-import {
-	TextField,
-	Button,
-	Box,
-	Typography,
-	Grid,
-	IconButton,
-} from "@mui/material";
-import { Send, Email, LinkedIn, GitHub, Instagram } from "@mui/icons-material";
+import { TextField, Button, Box, Typography, Grid } from "@mui/material";
+import { Send } from "@mui/icons-material";
 import "../css/style.css";
 
 const ContactMe = () => {
@@ -34,19 +28,30 @@ const ContactMe = () => {
 		}, 1500);
 	};
 
-	const iconStyles = {
-		backgroundColor: "#4fd1c5",
-		color: "#fff",
-		borderRadius: "50%",
-		border: "2px solid #4fd1c5",
-		transition: "all 0.3s ease",
-		padding: "0.2rem",
-		// height: "3rem",
-		// width: "3rem",
-		"&:hover": {
-			backgroundColor: "#000",
-			color: "#f00",
-			borderColor: "#f00",
+	const inputStyle = {
+		"& .MuiInputLabel-root": {
+			color: "#4fd1c5",
+			transition: "color 0.3s ease",
+		},
+		"& .MuiInputLabel-root.Mui-focused": {
+			color: "#a569bd",
+		},
+		"& .MuiOutlinedInput-root": {
+			backgroundColor: "#333",
+			borderRadius: "5px",
+			"& fieldset": {
+				borderColor: "#4fd1c5",
+				transition: "border-color 0.3s ease",
+			},
+			"&:hover fieldset": {
+				borderColor: "#4fd1c5",
+			},
+			"&.Mui-focused fieldset": {
+				borderColor: "#a569bd",
+			},
+		},
+		"& .MuiInputBase-input": {
+			color: "#e0e0e0",
 		},
 	};
 
@@ -86,17 +91,7 @@ const ContactMe = () => {
 								name="name"
 								value={formData.name}
 								onChange={handleChange}
-								sx={{
-									"& .MuiInputLabel-root": { color: "#4fd1c5" },
-									"& .MuiOutlinedInput-root": {
-										backgroundColor: "#333",
-										borderRadius: "5px",
-										"& fieldset": { borderColor: "#4fd1c5" },
-										"&:hover fieldset": { borderColor: "#4fd1c5" },
-										"&.Mui-focused fieldset": { borderColor: "#4fd1c5" },
-									},
-									"& .MuiInputBase-input": { color: "#e0e0e0" },
-								}}
+								sx={inputStyle}
 							/>
 						</Grid>
 						<Grid item xs={12} sm={6}>
@@ -108,17 +103,7 @@ const ContactMe = () => {
 								type="email"
 								value={formData.email}
 								onChange={handleChange}
-								sx={{
-									"& .MuiInputLabel-root": { color: "#4fd1c5" },
-									"& .MuiOutlinedInput-root": {
-										backgroundColor: "#333",
-										borderRadius: "5px",
-										"& fieldset": { borderColor: "#4fd1c5" },
-										"&:hover fieldset": { borderColor: "#4fd1c5" },
-										"&.Mui-focused fieldset": { borderColor: "#4fd1c5" },
-									},
-									"& .MuiInputBase-input": { color: "#e0e0e0" },
-								}}
+								sx={inputStyle}
 							/>
 						</Grid>
 						<Grid item xs={12}>
@@ -129,17 +114,7 @@ const ContactMe = () => {
 								name="subject"
 								value={formData.subject}
 								onChange={handleChange}
-								sx={{
-									"& .MuiInputLabel-root": { color: "#4fd1c5" },
-									"& .MuiOutlinedInput-root": {
-										backgroundColor: "#333",
-										borderRadius: "5px",
-										"& fieldset": { borderColor: "#4fd1c5" },
-										"&:hover fieldset": { borderColor: "#4fd1c5" },
-										"&.Mui-focused fieldset": { borderColor: "#4fd1c5" },
-									},
-									"& .MuiInputBase-input": { color: "#e0e0e0" },
-								}}
+								sx={inputStyle}
 							/>
 						</Grid>
 						<Grid item xs={12}>
@@ -152,17 +127,7 @@ const ContactMe = () => {
 								name="message"
 								value={formData.message}
 								onChange={handleChange}
-								sx={{
-									"& .MuiInputLabel-root": { color: "#4fd1c5" },
-									"& .MuiOutlinedInput-root": {
-										backgroundColor: "#333",
-										borderRadius: "5px",
-										"& fieldset": { borderColor: "#4fd1c5" },
-										"&:hover fieldset": { borderColor: "#4fd1c5" },
-										"&.Mui-focused fieldset": { borderColor: "#4fd1c5" },
-									},
-									"& .MuiInputBase-input": { color: "#e0e0e0" },
-								}}
+								sx={inputStyle}
 							/>
 						</Grid>
 						<Grid
@@ -177,8 +142,14 @@ const ContactMe = () => {
 									backgroundColor: "#4fd1c5",
 									color: "#222",
 									fontWeight: "bold",
-									"&:hover": { backgroundColor: "#2c3e50", color: "#e0e0e0" },
 									width: "70%",
+									transition: "all 0.3s ease",
+									boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+									"&:hover": {
+										backgroundColor: "#8a2be2",
+										color: "#fff",
+										boxShadow: "0 6px 20px rgba(138, 43, 226, 0.5)",
+									},
 								}}
 								startIcon={<Send />}
 							>
@@ -214,33 +185,7 @@ const ContactMe = () => {
 				>
 					Connect with Me
 				</Typography>
-				<Box
-					sx={{
-						display: "flex",
-						flexWrap: "wrap",
-						justifyContent: "center",
-						gap: "1.5rem",
-					}}
-				>
-					<IconButton href="mailto:ahmeds@dickinson.edu" sx={iconStyles}>
-						<Email sx={{ width: "2rem", height: "2rem" }} />
-					</IconButton>
-					<IconButton
-						href="https://www.linkedin.com/in/shahir47/"
-						sx={iconStyles}
-					>
-						<LinkedIn sx={{ width: "2rem", height: "2rem" }} />
-					</IconButton>
-					<IconButton href="https://github.com/Shahir-47" sx={iconStyles}>
-						<GitHub sx={{ width: "2rem", height: "2rem" }} />
-					</IconButton>
-					<IconButton
-						href="https://instagram.com/shahirahmed._"
-						sx={iconStyles}
-					>
-						<Instagram sx={{ width: "2rem", height: "2rem" }} />
-					</IconButton>
-				</Box>
+				<SocialIcons />
 			</Box>
 		</div>
 	);
