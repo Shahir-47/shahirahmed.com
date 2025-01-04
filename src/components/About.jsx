@@ -290,12 +290,6 @@ const About = () => {
 					layout="1-column-left"
 					className="timeline"
 				>
-					{/* Starting Icon */}
-					<VerticalTimelineElement
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<WorkIcon />}
-					/>
-
 					{/* FarmData2 */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--work"
@@ -427,12 +421,6 @@ const About = () => {
 					layout="1-column-left"
 					className="timeline"
 				>
-					{/* Starting Icon */}
-					<VerticalTimelineElement
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<CodeIcon />}
-					/>
-
 					{/* HoyaHacks */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--hackathon"
