@@ -33,7 +33,7 @@ const SocialIcons = () => {
 				<FaInstagram />
 			</a>
 			<a
-				href="https://devpost.com/shahir-47"
+				href="https://devpost.com/ahmeds561"
 				className="icon-container"
 				aria-label="Devpost"
 			>

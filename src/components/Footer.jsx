@@ -15,7 +15,7 @@ const Footer = () => {
 			</a>
 			<p>|</p>
 			<a
-				href="https://github.com/Shahir-47/Portfolio-Website"
+				href="https://github.com/Shahir-47/personal-website"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
