@@ -1439,7 +1439,6 @@ button.live-preview:hover {
 
 .about-me-text a:hover {
 	color: #fff;
-	text-decoration: underline;
 	transition: all 0.3s ease;
 }
 

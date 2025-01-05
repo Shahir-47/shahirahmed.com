@@ -1,4 +1,4 @@
-import Shahir from "../assets/shahir.png";
+import Shahir from "../assets/shahir.jpeg";
 import Docker from "../assets/docker.svg";
 import Sql from "../assets/sql.svg";
 import Eclipse from "../assets/eclipse.svg";
@@ -34,31 +34,6 @@ import {
 import { Box, Typography } from "@mui/material";
 import SocialIcons from "./SocialIcons";
 
-const tools = [
-	{ src: Html, title: "HTML" },
-	{ src: Css, title: "CSS" },
-	{ src: Js, title: "JavaScript" },
-	{ src: Git, title: "Git" },
-	{ src: Npm, title: "NPM" },
-	{ src: Vscode, title: "VS Code" },
-	{ src: Docker, title: "Docker" },
-	{ src: Linux, title: "Linux" },
-	{ src: Python, title: "Python" },
-	{ src: Java, title: "Java" },
-	{ src: Sql, title: "SQL" },
-	{ src: Webpack, title: "Webpack" },
-	{ src: Vue, title: "Vue.js" },
-	{ src: Babel, title: "Babel" },
-	{ src: Jest, title: "Jest" },
-	{ src: Prettier, title: "Prettier" },
-	{ src: Eslint, title: "Eslint" },
-	{ src: Cypress, title: "Cypress" },
-	{ src: C, title: "C++" },
-	{ src: Lua, title: "Lua" },
-	{ src: Eclipse, title: "Eclipse" },
-	{ src: Matlab, title: "Matlab" },
-];
-
 const About = () => {
 	return (
 		<div className="about-page">
@@ -66,16 +41,16 @@ const About = () => {
 			<div className="about-container">
 				<div className="about-text-container">
 					<h1 className="about-me">
-						About <span>Me</span>
+						🧑‍💻 About <span>Me</span>
 					</h1>
 				</div>
 				<div className="about-me-div">
 					<div className="about-me-text-div">
 						<div className="paragraph">
 							<p className="about-me-text">
-								Hi, I’m Shahir—a senior at <bold>Dickinson College</bold>,
-								majoring in <bold>Computer Science</bold> and{" "}
-								<bold>Mathematics</bold>. My coding journey started with
+								Hi, I’m Shahir—a senior at <strong>Dickinson College</strong>,
+								majoring in <strong>Computer Science</strong> and{" "}
+								<strong>Mathematics</strong>. My coding journey started with
 								curiosity and has grown into a passion for exploring new
 								technologies and solving problems through code. Whether
 								it&apos;s tackling bugs or creating something from scratch, I
@@ -90,7 +65,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<bold>FarmData2</bold>
+									<strong>FarmData2</strong>
 								</a>
 								, where I enhanced system reliability and streamlined workflows,
 								and{" "}
@@ -99,7 +74,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<bold>84 Lumber</bold>
+									<strong>84 Lumber</strong>
 								</a>
 								, where I worked on modernizing legacy systems. These
 								experiences have taught me the value of collaboration,
@@ -114,7 +89,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<bold>SweetFriend</bold>
+									<strong>SweetFriend</strong>
 								</a>{" "}
 								at PennApps and{" "}
 								<a
@@ -122,7 +97,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<bold>Albatross</bold>
+									<strong>Albatross</strong>
 								</a>{" "}
 								at HackHarvard, every event has pushed me to think outside the
 								box, work under tight deadlines, and grow as a developer.
@@ -135,7 +110,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<bold>Real Madrid</bold>
+									<strong>Real Madrid</strong>
 								</a>{" "}
 								⚽, or working on personal projects that let me experiment with
 								new tools and ideas. You can explore my{" "}
@@ -144,18 +119,18 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<bold>GitHub</bold>
+									<strong>GitHub</strong>
 								</a>{" "}
 								to see what I’ve been up to!
 							</p>
 							<p className="about-me-text">
 								Want to know more? Scroll down to explore my{" "}
-								<bold>education</bold>, <bold>work experience</bold>,{" "}
-								<bold>hackathon adventures</bold>, and the{" "}
-								<bold>tools and technologies</bold> I’ve worked with. You can
-								also visit my{" "}
+								<strong>education</strong>, <strong>work experience</strong>,{" "}
+								<strong>hackathon adventures</strong>, and the{" "}
+								<strong>tools and technologies</strong> I’ve worked with. You
+								can also visit my{" "}
 								<a href="/contact" target="_self">
-									<bold>Contact</bold>
+									<strong>Contact</strong>
 								</a>{" "}
 								page or connect directly using the social icons below. However
 								you choose, I’d love to hear from you and collaborate on
@@ -173,7 +148,7 @@ const About = () => {
 			<div className="tools-section">
 				<div className="tools-header">
 					<h2>
-						<span className="highlight">Tools</span> and{" "}
+						🛠️ <span className="highlight">Tools</span> and{" "}
 						<span className="highlight">Technologies</span> I’ve worked with
 					</h2>
 				</div>
@@ -314,7 +289,7 @@ const About = () => {
 
 			{/* Education Timeline */}
 			<div className="timeline-section">
-				<h2>Education</h2>
+				<h2>🎓 Education</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
 					layout="1-column-left"
@@ -406,7 +381,7 @@ const About = () => {
 
 			{/* Work Experience Timeline */}
 			<div className="timeline-section">
-				<h2>Work Experience</h2>
+				<h2>💼 Work Experience</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
 					layout="1-column-left"
@@ -537,7 +512,7 @@ const About = () => {
 
 			{/* Hackathon Experience Timeline */}
 			<div className="timeline-section">
-				<h2>Hackathon Experience</h2>
+				<h2>💡 Hackathon Experience</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
 					layout="1-column-left"
