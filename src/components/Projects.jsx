@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Masonry from "react-masonry-css";
 import Todo from "../assets/todo.png";
 import Battleship from "../assets/battleship.png";
 import Weather from "../assets/weather.png";
@@ -258,15 +259,6 @@ const ProjectItem = ({
 	</Box>
 );
 
-ProjectItem.propTypes = {
-	image: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
-	liveDemo: PropTypes.string.isRequired,
-	sourceCode: PropTypes.string.isRequired,
-	highlight: PropTypes.func.isRequired,
-};
-
 const Projects = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 
@@ -281,6 +273,12 @@ const Projects = () => {
 			project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			project.description.toLowerCase().includes(searchTerm.toLowerCase())
 	);
+
+	const breakpointColumnsObj = {
+		default: 3,
+		1100: 2,
+		700: 1,
+	};
 
 	return (
 		<Box
@@ -342,17 +340,15 @@ const Projects = () => {
 					}}
 				/>
 			</Box>
-			<Box
-				sx={{
-					display: "grid",
-					gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-					gap: "2rem",
-				}}
+			<Masonry
+				breakpointCols={breakpointColumnsObj}
+				className="my-masonry-grid"
+				columnClassName="my-masonry-grid_column"
 			>
 				{filteredProjects.map((project, index) => (
 					<ProjectItem key={index} {...project} highlight={highlightText} />
 				))}
-			</Box>
+			</Masonry>
 			<Box sx={{ textAlign: "center", color: "#e0e0e0", marginTop: "3rem" }}>
 				<Typography
 					variant="h5"
@@ -365,4 +361,14 @@ const Projects = () => {
 		</Box>
 	);
 };
+
+ProjectItem.propTypes = {
+	image: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	liveDemo: PropTypes.string.isRequired,
+	sourceCode: PropTypes.string.isRequired,
+	highlight: PropTypes.func.isRequired,
+};
+
 export default Projects;
