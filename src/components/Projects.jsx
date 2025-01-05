@@ -101,7 +101,7 @@ const ProjectItem = ({
 }) => (
 	<Box
 		sx={{
-			backgroundColor: "#333",
+			backgroundColor: "#222",
 			padding: "1.5rem",
 			borderRadius: "10px",
 			boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
@@ -247,13 +247,30 @@ const Projects = () => {
 						flex: "1",
 						backgroundColor: "#333",
 						borderRadius: "5px",
-						"& .MuiInputLabel-root": { color: "#4fd1c5" },
-						"& .MuiOutlinedInput-root": {
-							"& fieldset": { borderColor: "#4fd1c5" },
-							"&:hover fieldset": { borderColor: "#3ea9a6" },
-							"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+						"& .MuiInputLabel-root": {
+							color: "#4fd1c5",
+							transition: "color 0.3s ease",
 						},
-						"& .MuiInputBase-input": { color: "#e0e0e0" },
+						"& .MuiInputLabel-root.Mui-focused": {
+							color: "#a569bd",
+						},
+						"& .MuiOutlinedInput-root": {
+							backgroundColor: "#333",
+							borderRadius: "5px",
+							"& fieldset": {
+								borderColor: "#4fd1c5",
+								transition: "border-color 0.3s ease",
+							},
+							"&:hover fieldset": {
+								borderColor: "#4fd1c5",
+							},
+							"&.Mui-focused fieldset": {
+								borderColor: "#a569bd",
+							},
+						},
+						"& .MuiInputBase-input": {
+							color: "#e0e0e0",
+						},
 					}}
 				/>
 				<TextField
@@ -265,13 +282,30 @@ const Projects = () => {
 						flex: "0.4",
 						backgroundColor: "#333",
 						borderRadius: "5px",
-						"& .MuiInputLabel-root": { color: "#4fd1c5" },
-						"& .MuiOutlinedInput-root": {
-							"& fieldset": { borderColor: "#4fd1c5" },
-							"&:hover fieldset": { borderColor: "#3ea9a6" },
-							"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+						"& .MuiInputLabel-root": {
+							color: "#4fd1c5",
+							transition: "color 0.3s ease",
 						},
-						"& .MuiInputBase-input": { color: "#e0e0e0" },
+						"& .MuiInputLabel-root.Mui-focused": {
+							color: "#a569bd",
+						},
+						"& .MuiOutlinedInput-root": {
+							backgroundColor: "#333",
+							borderRadius: "5px",
+							"& fieldset": {
+								borderColor: "#4fd1c5",
+								transition: "border-color 0.3s ease",
+							},
+							"&:hover fieldset": {
+								borderColor: "#4fd1c5",
+							},
+							"&.Mui-focused fieldset": {
+								borderColor: "#a569bd",
+							},
+						},
+						"& .MuiInputBase-input": {
+							color: "#e0e0e0",
+						},
 					}}
 				>
 					<MenuItem value="asc">Ascending</MenuItem>
@@ -286,10 +320,29 @@ const Projects = () => {
 							flex: "1",
 							backgroundColor: "#333",
 							borderRadius: "5px",
+							"& .MuiInputLabel-root": {
+								color: "#4fd1c5",
+								transition: "color 0.3s ease",
+							},
+							"& .MuiInputLabel-root.Mui-focused": {
+								color: "#a569bd",
+							},
 							"& .MuiOutlinedInput-root": {
-								"& fieldset": { borderColor: "#4fd1c5" },
-								"&:hover fieldset": { borderColor: "#3ea9a6" },
-								"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+								backgroundColor: "#333",
+								borderRadius: "5px",
+								"& fieldset": {
+									borderColor: "#4fd1c5",
+									transition: "border-color 0.3s ease",
+								},
+								"&:hover fieldset": {
+									borderColor: "#4fd1c5",
+								},
+								"&.Mui-focused fieldset": {
+									borderColor: "#a569bd",
+								},
+							},
+							"& .MuiInputBase-input": {
+								color: "#e0e0e0",
 							},
 						}}
 					/>
@@ -301,10 +354,29 @@ const Projects = () => {
 							flex: "1",
 							backgroundColor: "#333",
 							borderRadius: "5px",
+							"& .MuiInputLabel-root": {
+								color: "#4fd1c5",
+								transition: "color 0.3s ease",
+							},
+							"& .MuiInputLabel-root.Mui-focused": {
+								color: "#a569bd",
+							},
 							"& .MuiOutlinedInput-root": {
-								"& fieldset": { borderColor: "#4fd1c5" },
-								"&:hover fieldset": { borderColor: "#3ea9a6" },
-								"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+								backgroundColor: "#333",
+								borderRadius: "5px",
+								"& fieldset": {
+									borderColor: "#4fd1c5",
+									transition: "border-color 0.3s ease",
+								},
+								"&:hover fieldset": {
+									borderColor: "#4fd1c5",
+								},
+								"&.Mui-focused fieldset": {
+									borderColor: "#a569bd",
+								},
+							},
+							"& .MuiInputBase-input": {
+								color: "#e0e0e0",
 							},
 						}}
 					/>
