@@ -141,7 +141,11 @@ const ProjectItem = ({
 					backgroundColor: "#4fd1c5",
 					color: "#222",
 					fontWeight: "bold",
-					"&:hover": { backgroundColor: "#3ea9a6" },
+					"&:hover": {
+						backgroundColor: "#a569bd",
+						boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+						color: "#fff",
+					},
 				}}
 			>
 				Live Demo
@@ -155,7 +159,11 @@ const ProjectItem = ({
 					borderColor: "#4fd1c5",
 					color: "#4fd1c5",
 					fontWeight: "bold",
-					"&:hover": { borderColor: "#3ea9a6", color: "#3ea9a6" },
+					"&:hover": {
+						borderColor: "#a569bd",
+						color: "#a569bd",
+						boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+					},
 				}}
 			>
 				Source Code
