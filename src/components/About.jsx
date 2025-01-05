@@ -1,4 +1,14 @@
 import Shahir from "../assets/shahir.jpeg";
+import Dickinson from "../assets/dickinson.png";
+import HarvardX from "../assets/Harvard_x_logo.png";
+import FarmData2 from "../assets/farmData2.png";
+import Lumber84 from "../assets/84.png";
+import Hoya from "../assets/hoya.png";
+import PennApps from "../assets/penn.png";
+import HackHarvard from "../assets/hackharvardlogo.png";
+import Prospectus from "../assets/prospectus.jpg";
+import SweetFriend from "../assets/sweetFriend.jpg";
+import Albatross from "../assets/albatross.png";
 import Docker from "../assets/docker.svg";
 import Sql from "../assets/sql.svg";
 import Eclipse from "../assets/eclipse.svg";
@@ -346,7 +356,18 @@ const About = () => {
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="Expected May 2025"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<SchoolIcon />}
+						icon={
+							<img
+								src={Dickinson}
+								alt="Dickinson College"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">
 							Dickinson College
@@ -385,7 +406,18 @@ const About = () => {
 						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
 						date="January 2021"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<SchoolIcon />}
+						icon={
+							<img
+								src={HarvardX}
+								alt="HarvardX CS50x"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">HarvardX CS50x</h3>
 						<h4 className="vertical-timeline-element-subtitle">
@@ -437,8 +469,18 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="May 2024 - Present"
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<EngineeringIcon />}
+						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
+						icon={
+							<img
+								src={FarmData2}
+								alt="FarmData2"
+								style={{
+									width: "100%",
+									height: "100%",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">
 							Software Engineer
@@ -484,7 +526,18 @@ const About = () => {
 						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
 						date="September 2023 - January 2024"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<EngineeringIcon />}
+						icon={
+							<img
+								src={Lumber84}
+								alt="84 Lumber"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">
 							Software Engineer (Volunteer)
@@ -523,7 +576,18 @@ const About = () => {
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="January 2022 - Present"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<WorkIcon />}
+						icon={
+							<img
+								src={Dickinson}
+								alt="Dickinson College"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">
 							Teaching Assistant
@@ -569,17 +633,32 @@ const About = () => {
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="HoyaHacks 2024"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<CodeIcon />}
+						icon={
+							<img
+								src={Hoya}
+								alt="HoyaHacks"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">Prospectus</h3>
 						<h4 className="vertical-timeline-element-subtitle">HoyaHacks</h4>
 						<img
-							src="../assets/hoyahacks.png"
-							alt="HoyaHacks"
+							src={Prospectus}
+							alt="Prospectus"
 							style={{
 								width: "100%",
 								borderRadius: "8px",
-								marginBottom: "1rem",
+								marginTop: "1rem",
+								border: "2px solid #4fd1c5",
+								padding: "5px",
+								backgroundColor: "#333",
+								boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
 							}}
 						/>
 						<p>
@@ -679,17 +758,32 @@ const About = () => {
 						contentArrowStyle={{ borderRight: "7px solid rgb(45, 45, 45)" }}
 						date="PennApps 2024"
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<CodeIcon />}
+						icon={
+							<img
+								src={PennApps}
+								alt="PennApps"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">SweetFriend</h3>
 						<h4 className="vertical-timeline-element-subtitle">PennApps</h4>
 						<img
-							src="../assets/pennapps.png"
-							alt="PennApps"
+							src={SweetFriend}
+							alt="SweetFriend"
 							style={{
 								width: "100%",
 								borderRadius: "8px",
-								marginBottom: "1rem",
+								marginTop: "1rem",
+								border: "2px solid #4fd1c5",
+								padding: "5px",
+								backgroundColor: "#333",
+								boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
 							}}
 						/>
 						<p>
@@ -786,18 +880,33 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="HackHarvard 2024"
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={<CodeIcon />}
+						iconStyle={{ background: "#fff", color: "#fff" }}
+						icon={
+							<img
+								src={HackHarvard}
+								alt="HackHarvard"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
 					>
 						<h3 className="vertical-timeline-element-title">Albatross</h3>
 						<h4 className="vertical-timeline-element-subtitle">HackHarvard</h4>
 						<img
-							src="../assets/hackharvard.png"
-							alt="HackHarvard"
+							src={Albatross}
+							alt="Albatross"
 							style={{
 								width: "100%",
 								borderRadius: "8px",
-								marginBottom: "1rem",
+								marginTop: "1rem",
+								border: "2px solid #4fd1c5",
+								padding: "5px",
+								backgroundColor: "#333",
+								boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
 							}}
 						/>
 						<p>
