@@ -7,6 +7,9 @@ import Calculator from "../assets/calculator.png";
 import Restaurant from "../assets/restaurant.png";
 import Etch from "../assets/etch.png";
 import FD2 from "../assets/fd2.png";
+import SweetFriend from "../assets/sweetFriend.jpg";
+import Albatross from "../assets/albatross.png";
+import ResumeApp from "../assets/resume-app.png";
 import SocialIcons from "./SocialIcons";
 import { Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
@@ -83,6 +86,33 @@ const projectsData = [
 		liveDemo: null, // No live demo available
 		sourceCode: "https://github.com/FarmData2/FarmData2",
 		repo: "FarmData2",
+	},
+	{
+		image: Albatross,
+		title: "Albatross",
+		description:
+			"Albatross is a hackathon project leveraging AI and real-time crime data to enhance urban safety by calculating and displaying the safest navigation routes. Built with Vue.js, it features an interactive map highlighting high-risk zones and optimized routes, currently operating in demo mode.",
+		liveDemo: "https://albatross-hack.netlify.app/",
+		sourceCode: "https://github.com/orgs/HackHarvard2024-Team/repositories",
+		repo: "Albatross",
+	},
+	{
+		image: SweetFriend,
+		title: "SweetFriend",
+		description:
+			"SweetFriend is a diabetes management web app integrating Dexcom glucose monitors for real-time glucose tracking, AI-powered meal recognition, and personalized health insights. It simplifies carb counting, meal logging, and glucose trend analysis to empower users in managing diabetes effectively.",
+		liveDemo: "https://sweetfriend.vercel.app/",
+		sourceCode: "https://github.com/dmicz/SweetFriend",
+		repo: "SweetFriend",
+	},
+	{
+		image: ResumeApp,
+		title: "Resume Builder",
+		description:
+			"A user-friendly web application for creating, editing, and previewing professional resumes. Features include customizable sections, reorder functionality, and PDF export. Perfect for users looking to design structured and visually appealing resumes.",
+		liveDemo: "https://resume-maker-template.netlify.app/",
+		sourceCode: "https://github.com/Shahir-47/CV-Application",
+		repo: "CV-Application",
 	},
 ];
 
