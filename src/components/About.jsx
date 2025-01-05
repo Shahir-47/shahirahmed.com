@@ -226,6 +226,14 @@ const About = () => {
 								src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"
 								alt="ESLint"
 							/>
+							<img
+								src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"
+								alt="Prettier"
+							/>
+							<img
+								src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
+								alt="npm"
+							/>
 						</div>
 					</div>
 
@@ -271,8 +279,32 @@ const About = () => {
 								alt="Flask"
 							/>
 							<img
+								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
+								alt="Vercel"
+							/>
+							<img
+								src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+								alt="Git"
+							/>
+							<img
+								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+								alt="GitHub"
+							/>
+							<img
+								src="https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
+								alt="VS Code"
+							/>
+							<img
+								src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"
+								alt="Eclipse"
+							/>
+							<img
 								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
 								alt="Docker"
+							/>
+							<img
+								src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"
+								alt="VM VirtualBox"
 							/>
 							<img
 								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
@@ -281,6 +313,14 @@ const About = () => {
 							<img
 								src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
 								alt="Bash"
+							/>
+							<img
+								src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
+								alt="Cypress"
+							/>
+							<img
+								src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
+								alt="Jest"
 							/>
 						</div>
 					</div>

@@ -1306,6 +1306,39 @@ html {
 	.react-activity-calendar__footer * {
 		font-size: 1rem;
 		margin-bottom: 0.5rem;
+		justify-content: center;
+	}
+
+	div.about-page {
+		gap: 3rem;
+	}
+
+	div.github-stats-section {
+		gap: 0;
+		margin-top: 0;
+	}
+
+	div.github-stats-container {
+		margin-top: 0;
+	}
+
+	div.github-stats-section h2,
+	div.tools-header h2 {
+		font-size: 1.75rem;
+	}
+
+	div.timeline-section h2 {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	div.timeline-section:last-of-type h2 {
+		font-size: 1.75rem;
+	}
+
+	.react-activity-calendar__legend-colors {
+		margin-left: 0;
 	}
 }
 
@@ -1541,4 +1574,8 @@ button.live-preview:hover {
 .tools-icons img:hover {
 	transform: scale(1.1);
 	filter: brightness(1.2);
+}
+
+div.timeline {
+	padding: 0;
 }
