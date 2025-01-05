@@ -118,7 +118,7 @@ const HomePage = () => {
 								</Button>
 								<Button
 									variant="contained"
-									href="/resume"
+									href="https://drive.google.com/file/d/1mm60vOZ3USwgjAFHp-_knDZiP3XpyI5M/view?usp=sharing"
 									startIcon={<DescriptionIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",

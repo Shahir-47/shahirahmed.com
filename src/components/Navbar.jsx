@@ -63,7 +63,7 @@ const Navbar = () => {
 				</Link>
 
 				<a
-					href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
+					href="https://drive.google.com/file/d/1mm60vOZ3USwgjAFHp-_knDZiP3XpyI5M/view?usp=sharing"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="nav-box"
@@ -88,7 +88,7 @@ const Navbar = () => {
 						</Link>
 
 						<a
-							href="https://drive.google.com/file/d/1YXAy4b7gfQIbTt0mnD-grfHBZKfvHVvz/view?usp=sharing"
+							href="https://drive.google.com/file/d/1mm60vOZ3USwgjAFHp-_knDZiP3XpyI5M/view?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
 							onClick={() => setHamburgerClass("inactive")}
