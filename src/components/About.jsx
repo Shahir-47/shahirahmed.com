@@ -9,6 +9,9 @@ import HackHarvard from "../assets/hackharvardlogo.png";
 import Prospectus from "../assets/prospectus.jpg";
 import SweetFriend from "../assets/sweetFriend.jpg";
 import Albatross from "../assets/albatross.png";
+import { SiDevpost } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+import { MdVisibility } from "react-icons/md";
 import Docker from "../assets/docker.svg";
 import Sql from "../assets/sql.svg";
 import Eclipse from "../assets/eclipse.svg";
@@ -43,6 +46,11 @@ import {
 } from "react-vertical-timeline-component";
 import { Box, Typography } from "@mui/material";
 import SocialIcons from "./SocialIcons";
+
+const iconSize = {
+	marginRight: "10px",
+	fontSize: "1.5rem",
+};
 
 const About = () => {
 	return (
@@ -723,11 +731,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="devpost">
-									<i
-										className="fab fa-devpost"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
-									View on DevPost
+									<SiDevpost style={iconSize} /> View on DevPost
 								</button>
 							</a>
 							<a
@@ -737,11 +741,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="github">
-									<i
-										className="fab fa-github"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
-									GitHub Repo
+									<FaGithub style={iconSize} /> GitHub Repo
 								</button>
 							</a>
 						</div>
@@ -832,10 +832,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="devpost">
-									<i
-										className="fab fa-devpost"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
+									<SiDevpost style={iconSize} />
 									View on DevPost
 								</button>
 							</a>
@@ -846,10 +843,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="github">
-									<i
-										className="fab fa-github"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
+									<FaGithub style={iconSize} />
 									GitHub Repo
 								</button>
 							</a>
@@ -860,10 +854,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="live-preview">
-									<i
-										className="fas fa-external-link-alt"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
+									<MdVisibility style={iconSize} />
 									Live Preview
 								</button>
 							</a>
@@ -964,10 +955,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="devpost">
-									<i
-										className="fab fa-devpost"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
+									<SiDevpost style={iconSize} />
 									View on DevPost
 								</button>
 							</a>
@@ -978,10 +966,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="github">
-									<i
-										className="fab fa-github"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
+									<FaGithub style={iconSize} />
 									GitHub Repo
 								</button>
 							</a>
@@ -992,10 +977,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="live-preview">
-									<i
-										className="fas fa-external-link-alt"
-										style={{ marginRight: "10px" }}
-									></i>{" "}
+									<MdVisibility style={iconSize} />
 									Live Preview
 								</button>
 							</a>

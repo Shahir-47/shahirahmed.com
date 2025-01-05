@@ -1583,3 +1583,10 @@ button.live-preview:hover {
 div.timeline {
 	padding: 0;
 }
+
+button.devpost,
+button.github,
+button.live-preview {
+	display: flex;
+	align-items: center;
+}
