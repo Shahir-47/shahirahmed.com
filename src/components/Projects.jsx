@@ -23,7 +23,7 @@ const projectsData = [
 		description:
 			"FarmData2 is an open-source platform for diversified vegetable farms, streamlining data entry, reporting, and analytics for organic certification and sustainable farming practices.",
 		liveDemo: null,
-		sourceCode: "https://github.com/FarmData2/FarmData2",
+		sourceCode: "https://github.com/FarmData2/",
 		repo: "FarmData2",
 	},
 	{
@@ -40,7 +40,7 @@ const projectsData = [
 		title: "SweetFriend",
 		description:
 			"SweetFriend is a diabetes management web app integrating Dexcom glucose monitors for real-time glucose tracking, AI-powered meal recognition, and personalized health insights. It simplifies carb counting, meal logging, and glucose trend analysis to empower users in managing diabetes effectively.",
-		liveDemo: "https://sweetfriend.vercel.app/",
+		liveDemo: "https://sweet-friend.vercel.app/",
 		sourceCode: "https://github.com/dmicz/SweetFriend",
 		repo: "SweetFriend",
 	},
