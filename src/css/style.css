@@ -1331,6 +1331,10 @@ html {
 		margin-bottom: 2rem;
 	}
 
+	h2.projects-link-h2 {
+		font-size: 1.5rem;
+	}
+
 	div.timeline-section h2 {
 		font-size: 1.75rem;
 		text-align: center;
@@ -1368,6 +1372,14 @@ html {
 	font-weight: 700;
 	color: #4fd1c5;
 }
+
+.projects-link-h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #4fd1c5;
+	margin-top: 0;
+}
+
 .timeline-section h2 {
 	font-size: 2.5rem;
 	font-weight: 700;

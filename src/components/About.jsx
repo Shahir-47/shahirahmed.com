@@ -44,7 +44,7 @@ import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import SocialIcons from "./SocialIcons";
 
 const iconSize = {
@@ -495,6 +495,16 @@ const About = () => {
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							Dickinson College • FarmData2
+							<span style={{ marginLeft: "8px" }}>
+								<a
+									href="https://github.com/FarmData2"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[https://github.com/FarmData2]
+								</a>
+							</span>
 						</h4>
 						<p>
 							<strong>Key Achievements:</strong>
@@ -550,7 +560,19 @@ const About = () => {
 						<h3 className="vertical-timeline-element-title">
 							Software Engineer (Volunteer)
 						</h3>
-						<h4 className="vertical-timeline-element-subtitle">84 Lumber</h4>
+						<h4 className="vertical-timeline-element-subtitle">
+							84 Lumber
+							<span style={{ marginLeft: "8px" }}>
+								<a
+									href="https://tinyurl.com/bp5j9uwa"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[https://tinyurl.com/bp5j9uwa]
+								</a>
+							</span>
+						</h4>
 						<p>
 							<strong>Key Achievements:</strong>
 							<ul>
@@ -602,6 +624,16 @@ const About = () => {
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							Dickinson College
+							<span style={{ marginLeft: "8px" }}>
+								<a
+									href="https://tinyurl.com/329pkspw"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[https://tinyurl.com/329pkspw]
+								</a>
+							</span>
 						</h4>
 						<p>
 							<strong>Key Achievements:</strong>
@@ -988,6 +1020,50 @@ const About = () => {
 
 			{/* GitHub Stats */}
 			<GitHubStats />
+
+			{/* Projects Section Link */}
+			<Box
+				sx={{
+					textAlign: "center",
+					color: "#e0e0e0",
+					padding: "1rem",
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+				}}
+			>
+				<h2 className="projects-link-h2">
+					Check Out My <span style={{ color: "#fff" }}>Projects</span> 🚀
+				</h2>
+				<Typography
+					sx={{
+						fontSize: "1.2rem",
+						marginBottom: "1.5rem",
+						maxWidth: "800px",
+						className: "projects-link-p",
+					}}
+				>
+					I’ve worked on a variety of exciting projects showcasing my skills in
+					web development, software engineering, and more. Click the button
+					below to see them!
+				</Typography>
+				<Button
+					href="/projects" // Redirects to the projects page
+					variant="contained"
+					sx={{
+						backgroundColor: "#4fd1c5",
+						color: "#222",
+						fontWeight: "bold",
+						"&:hover": {
+							backgroundColor: "#2c3e50",
+							color: "#e0e0e0",
+							boxShadow: "0 0 20px rgba(79, 209, 197, 0.6)",
+						},
+					}}
+				>
+					View Projects
+				</Button>
+			</Box>
 
 			{/* Social Section */}
 			<Box
