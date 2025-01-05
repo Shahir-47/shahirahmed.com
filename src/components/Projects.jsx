@@ -7,7 +7,8 @@ import Calculator from "../assets/calculator.png";
 import Restaurant from "../assets/restaurant.png";
 import Etch from "../assets/etch.png";
 import SocialIcons from "./SocialIcons";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button, TextField, MenuItem } from "@mui/material";
+import { useState, useEffect } from "react";
 
 const projectsData = [
 	{
@@ -17,6 +18,7 @@ const projectsData = [
 			"Todo List is a powerful task management application that helps you stay organized and productive. Manage tasks, projects, and notes effortlessly. Features include priority levels, due dates, search functionality, and dark/light theme. Get started and boost your productivity today!",
 		liveDemo: "https://shahir-47.github.io/Todo-List/",
 		sourceCode: "https://github.com/Shahir-47/Todo-List",
+		repo: "Todo-List",
 	},
 	{
 		image: Battleship,
@@ -25,6 +27,7 @@ const projectsData = [
 			"A web-based Battleship game with a strategic AI. Players engage in classic naval warfare against a computer. Code is open for contributions and tests ensure robust gameplay. Play now!",
 		liveDemo: "https://shahir-47.github.io/Battleship/",
 		sourceCode: "https://github.com/Shahir-47/Battleship",
+		repo: "Battleship",
 	},
 	{
 		image: Weather,
@@ -33,6 +36,7 @@ const projectsData = [
 			"Weather Whiz is a web app providing current weather, hourly & 2-day forecasts for different locations. Switch between imperial & metric units. Built with HTML, CSS, JS, Webpack, Babel, ESLint & Prettier. APIs: OpenWeather & Mapbox. Stay prepared with accurate weather data!",
 		liveDemo: "https://shahir-47.github.io/Weather-Whiz/",
 		sourceCode: "https://github.com/Shahir-47/Weather-Whiz",
+		repo: "Weather-Whiz",
 	},
 	{
 		image: Tictac,
@@ -41,6 +45,7 @@ const projectsData = [
 			"Enjoy the classic Tic Tac Toe game with customizable markers, colors, and player names. Play against a friend or challenging AI. Responsive design, visually appealing interface. Source code for HTML, CSS, JavaScript implementation. Experience hours of interactive and addictive fun!",
 		liveDemo: "https://shahir-47.github.io/Tic-Tac-Toe/",
 		sourceCode: "https://github.com/Shahir-47/Tic-Tac-toe",
+		repo: "Tic-Tac-Toe",
 	},
 	{
 		image: Calculator,
@@ -49,6 +54,7 @@ const projectsData = [
 			"This is a simple calculator application with keyboard support. It allows you to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It also includes additional features like calculating the factorial and exponentiation.",
 		liveDemo: "https://shahir-47.github.io/Calculator/",
 		sourceCode: "https://github.com/Shahir-47/Calculator",
+		repo: "Calculator",
 	},
 	{
 		image: Restaurant,
@@ -57,6 +63,7 @@ const projectsData = [
 			"A web-based platform that provides information and features related to a fictional restaurant called the Galactic Cantina. The application allows users to explore various sections such as the home page, menu page, contact page, about us page, review page, and FAQ page.",
 		liveDemo: "https://shahir-47.github.io/Restaurant-Page/",
 		sourceCode: "https://github.com/Shahir-47/Restaurant-Page",
+		repo: "Restaurant-Page",
 	},
 	{
 		image: Etch,
@@ -65,50 +72,256 @@ const projectsData = [
 			"Experience the classic Etch-a-Sketch fun online! Draw and create masterpieces with this simple web application. Built using HTML, CSS, and JavaScript.",
 		liveDemo: "https://shahir-47.github.io/Etch-a-Sketch/",
 		sourceCode: "https://github.com/Shahir-47/Etch-a-Sketch/",
+		repo: "Etch-a-Sketch",
 	},
 ];
 
-const ProjectItem = ({ image, title, description, liveDemo, sourceCode }) => (
-	<div className="project-item">
-		<img src={image} alt={title} />
-		<div className="project-item-div">
-			<h1>{title}</h1>
-			<p>{description}</p>
-			<div className="project-link-div">
-				<a href={liveDemo} target="_blank" rel="noopener noreferrer">
-					Live Demo
-				</a>
-				<a href={sourceCode} target="_blank" rel="noopener noreferrer">
-					Source Code
-				</a>
-			</div>
-		</div>
-	</div>
+const fetchRepoDates = async () => {
+	const baseUrl = "https://api.github.com/repos/Shahir-47/";
+	const updatedProjects = await Promise.all(
+		projectsData.map(async (project) => {
+			const response = await fetch(`${baseUrl}${project.repo}`);
+			const data = await response.json();
+			return {
+				...project,
+				createdAt: new Date(data.created_at),
+			};
+		})
+	);
+	return updatedProjects;
+};
+
+const ProjectItem = ({
+	image,
+	title,
+	description,
+	liveDemo,
+	sourceCode,
+	highlight,
+}) => (
+	<Box
+		sx={{
+			backgroundColor: "#333",
+			padding: "1.5rem",
+			borderRadius: "10px",
+			boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
+			transition: "transform 0.3s ease",
+			"&:hover": { transform: "scale(1.05)" },
+		}}
+	>
+		<img
+			src={image}
+			alt={title}
+			style={{
+				width: "100%",
+				borderRadius: "8px",
+				marginBottom: "1rem",
+			}}
+		/>
+		<Typography
+			variant="h5"
+			sx={{
+				color: "#4fd1c5",
+				fontWeight: "bold",
+				marginBottom: "0.5rem",
+			}}
+			dangerouslySetInnerHTML={{ __html: highlight(title) }}
+		/>
+		<Typography
+			sx={{ color: "#e0e0e0", marginBottom: "1rem" }}
+			dangerouslySetInnerHTML={{ __html: highlight(description) }}
+		/>
+		<Box sx={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
+			<Button
+				variant="contained"
+				href={liveDemo}
+				target="_blank"
+				rel="noopener noreferrer"
+				sx={{
+					backgroundColor: "#4fd1c5",
+					color: "#222",
+					fontWeight: "bold",
+					"&:hover": { backgroundColor: "#3ea9a6" },
+				}}
+			>
+				Live Demo
+			</Button>
+			<Button
+				variant="outlined"
+				href={sourceCode}
+				target="_blank"
+				rel="noopener noreferrer"
+				sx={{
+					borderColor: "#4fd1c5",
+					color: "#4fd1c5",
+					fontWeight: "bold",
+					"&:hover": { borderColor: "#3ea9a6", color: "#3ea9a6" },
+				}}
+			>
+				Source Code
+			</Button>
+		</Box>
+	</Box>
 );
+
 ProjectItem.propTypes = {
 	image: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
 	liveDemo: PropTypes.string.isRequired,
 	sourceCode: PropTypes.string.isRequired,
+	highlight: PropTypes.func.isRequired,
 };
 
 const Projects = () => {
+	const [projects, setProjects] = useState([]);
+	const [searchTerm, setSearchTerm] = useState("");
+	const [sortOrder, setSortOrder] = useState("asc");
+	const [startDate, setStartDate] = useState("");
+	const [endDate, setEndDate] = useState("");
+
+	useEffect(() => {
+		fetchRepoDates().then(setProjects);
+	}, []);
+
+	const highlightText = (text) => {
+		if (!searchTerm) return text;
+		const regex = new RegExp(`(${searchTerm})`, "gi");
+		return text.replace(regex, "<mark>$1</mark>");
+	};
+
+	const filteredProjects = projects
+		.filter((project) => {
+			if (startDate && new Date(project.createdAt) < new Date(startDate))
+				return false;
+			if (endDate && new Date(project.createdAt) > new Date(endDate))
+				return false;
+			return (
+				project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+				project.description.toLowerCase().includes(searchTerm.toLowerCase())
+			);
+		})
+		.sort((a, b) => {
+			if (sortOrder === "asc")
+				return new Date(a.createdAt) - new Date(b.createdAt);
+			return new Date(b.createdAt) - new Date(a.createdAt);
+		});
+
 	return (
-		<div className="project-div">
-			<h1>Projects</h1>
-			<div className="project-container">
-				{projectsData.map((project, index) => (
-					<ProjectItem key={index} {...project} />
-				))}
-			</div>
-			{/* Social Section */}
-			<Box
+		<Box
+			sx={{
+				color: "#e0e0e0",
+				maxWidth: "1200px",
+				margin: "0 auto",
+				padding: "2rem",
+				flex: "1",
+			}}
+		>
+			<Typography
+				variant="h4"
 				sx={{
 					textAlign: "center",
-					color: "#e0e0e0",
+					color: "#4fd1c5",
+					fontWeight: "bold",
+					marginBottom: "2rem",
 				}}
 			>
+				📂 Projects
+			</Typography>
+			<Box
+				sx={{
+					display: "flex",
+					justifyContent: "space-between",
+					flexWrap: "wrap",
+					gap: "1rem",
+					marginBottom: "2rem",
+				}}
+			>
+				<TextField
+					fullWidth
+					label="Search Projects"
+					variant="outlined"
+					value={searchTerm}
+					onChange={(e) => setSearchTerm(e.target.value)}
+					sx={{
+						flex: "1",
+						backgroundColor: "#333",
+						borderRadius: "5px",
+						"& .MuiInputLabel-root": { color: "#4fd1c5" },
+						"& .MuiOutlinedInput-root": {
+							"& fieldset": { borderColor: "#4fd1c5" },
+							"&:hover fieldset": { borderColor: "#3ea9a6" },
+							"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+						},
+						"& .MuiInputBase-input": { color: "#e0e0e0" },
+					}}
+				/>
+				<TextField
+					select
+					label="Sort By"
+					value={sortOrder}
+					onChange={(e) => setSortOrder(e.target.value)}
+					sx={{
+						flex: "0.4",
+						backgroundColor: "#333",
+						borderRadius: "5px",
+						"& .MuiInputLabel-root": { color: "#4fd1c5" },
+						"& .MuiOutlinedInput-root": {
+							"& fieldset": { borderColor: "#4fd1c5" },
+							"&:hover fieldset": { borderColor: "#3ea9a6" },
+							"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+						},
+						"& .MuiInputBase-input": { color: "#e0e0e0" },
+					}}
+				>
+					<MenuItem value="asc">Ascending</MenuItem>
+					<MenuItem value="desc">Descending</MenuItem>
+				</TextField>
+				<Box sx={{ display: "flex", gap: "1rem" }}>
+					<TextField
+						type="date"
+						value={startDate}
+						onChange={(e) => setStartDate(e.target.value)}
+						sx={{
+							flex: "1",
+							backgroundColor: "#333",
+							borderRadius: "5px",
+							"& .MuiOutlinedInput-root": {
+								"& fieldset": { borderColor: "#4fd1c5" },
+								"&:hover fieldset": { borderColor: "#3ea9a6" },
+								"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+							},
+						}}
+					/>
+					<TextField
+						type="date"
+						value={endDate}
+						onChange={(e) => setEndDate(e.target.value)}
+						sx={{
+							flex: "1",
+							backgroundColor: "#333",
+							borderRadius: "5px",
+							"& .MuiOutlinedInput-root": {
+								"& fieldset": { borderColor: "#4fd1c5" },
+								"&:hover fieldset": { borderColor: "#3ea9a6" },
+								"&.Mui-focused fieldset": { borderColor: "#3ea9a6" },
+							},
+						}}
+					/>
+				</Box>
+			</Box>
+			<Box
+				sx={{
+					display: "grid",
+					gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+					gap: "2rem",
+				}}
+			>
+				{filteredProjects.map((project, index) => (
+					<ProjectItem key={index} {...project} highlight={highlightText} />
+				))}
+			</Box>
+			<Box sx={{ textAlign: "center", color: "#e0e0e0", marginTop: "3rem" }}>
 				<Typography
 					variant="h5"
 					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
@@ -117,7 +330,7 @@ const Projects = () => {
 				</Typography>
 				<SocialIcons />
 			</Box>
-		</div>
+		</Box>
 	);
 };
 
