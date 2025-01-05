@@ -4,7 +4,10 @@ import Computer from "../assets/computer.png";
 import Hand from "../assets/hand.svg";
 import Hacker from "../assets/hacker.svg";
 import SocialIcons from "./SocialIcons";
-import { Box, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import PersonIcon from "@mui/icons-material/Person";
+import CodeIcon from "@mui/icons-material/Code";
+import DescriptionIcon from "@mui/icons-material/Description";
 
 const HomePage = () => {
 	useEffect(() => {
@@ -69,53 +72,83 @@ const HomePage = () => {
 			<div className="second-block-home">
 				<div className="second-block-text-container">
 					<div className="text-div">
-						<h3>
-							If opportunity doesn&apos;t knock,{" "}
-							<span className="span-door">build a door.</span>
-						</h3>
 						<div className="sub-div">
 							<p className="sub-text">
-								<span className="highlight">
-									Embracing challenges with innovation and determination,{" "}
-								</span>
-								I channel my passion for coding into crafting solutions where
-								none existed before. In the ever-evolving world of web
-								development, I&apos;m committed to turning obstacles into
-								stepping stones for growth and learning.
+								Learn more about my background and skills by visiting the{" "}
+								<strong>About</strong> page, exploring my{" "}
+								<strong>Projects</strong>, or reviewing my{" "}
+								<strong>Resume</strong>.
 							</p>
+							<Box
+								sx={{ display: "flex", gap: "2rem", justifyContent: "center" }}
+							>
+								<Button
+									variant="contained"
+									href="/about"
+									icon={<PersonIcon />}
+									sx={{
+										backgroundColor: "#4fd1c5",
+										color: "#222",
+										fontWeight: "bold",
+										"&:hover": {
+											backgroundColor: "#a569bd",
+											boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+											color: "#fff",
+										},
+									}}
+								>
+									About Me
+								</Button>
+								<Button
+									variant="contained"
+									href="/projects"
+									icon={<CodeIcon />}
+									sx={{
+										backgroundColor: "#4fd1c5",
+										color: "#222",
+										fontWeight: "bold",
+										"&:hover": {
+											backgroundColor: "#a569bd",
+											boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+											color: "#fff",
+										},
+									}}
+								>
+									My Projects
+								</Button>
+								<Button
+									variant="contained"
+									href="/resume"
+									icon={<DescriptionIcon />}
+									sx={{
+										backgroundColor: "#4fd1c5",
+										color: "#222",
+										fontWeight: "bold",
+										"&:hover": {
+											backgroundColor: "#a569bd",
+											boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+											color: "#fff",
+										},
+									}}
+								>
+									My Resume
+								</Button>
+							</Box>
 							<p className="sub-text">
-								With every line of code, I aim to build web applications that
-								are intuitive and efficient. My goal is to create tools that not
-								only function smoothly but also enhance the user experience.
-								It&apos;s about paving new pathways to success and ensuring they
-								lead to meaningful results for both users and businesses.
+								You can also <strong>Contact Me</strong> via the{" "}
+								<a
+									href="/contact"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									Contact Me page
+								</a>{" "}
+								or through my social links below.
 							</p>
 						</div>
+						<SocialIcons />
 					</div>
 					<img className="hacker" src={Hacker} alt="Hacker" />
 				</div>
-
-				{/* Social Block */}
-				{/* Social Section */}
-				<Box
-					sx={{
-						textAlign: "center",
-						color: "#e0e0e0",
-					}}
-				>
-					<Typography
-						variant="h5"
-						sx={{
-							fontWeight: "bold",
-							marginBottom: "1rem",
-							fontSize: "1.2rem",
-						}}
-					>
-						Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with
-						me
-					</Typography>
-					<SocialIcons />
-				</Box>
 			</div>
 		</div>
 	);

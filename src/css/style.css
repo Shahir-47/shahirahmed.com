@@ -324,6 +324,8 @@ div.nav-links a.nav-box.active:after {
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
+	font-size: 1.4rem;
+	font-weight: 500;
 }
 
 .text-div h3 {
@@ -1614,4 +1616,20 @@ button.live-preview {
 }
 .my-masonry-grid_column > div {
 	margin-bottom: 30px;
+}
+
+.highlight-link {
+	color: #4fd1c5;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+	color: #a569bd;
+	text-decoration: underline;
+}
+
+.sub-text strong {
+	color: #a569bd;
 }
