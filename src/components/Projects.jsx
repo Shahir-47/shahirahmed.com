@@ -6,6 +6,7 @@ import Tictac from "../assets/tictac.png";
 import Calculator from "../assets/calculator.png";
 import Restaurant from "../assets/restaurant.png";
 import Etch from "../assets/etch.png";
+import FD2 from "../assets/fd2.png";
 import SocialIcons from "./SocialIcons";
 import { Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
@@ -74,22 +75,16 @@ const projectsData = [
 		sourceCode: "https://github.com/Shahir-47/Etch-a-Sketch/",
 		repo: "Etch-a-Sketch",
 	},
+	{
+		image: FD2,
+		title: "FarmData2",
+		description:
+			"FarmData2 is an open-source platform for diversified vegetable farms, streamlining data entry, reporting, and analytics for organic certification and sustainable farming practices.",
+		liveDemo: null, // No live demo available
+		sourceCode: "https://github.com/FarmData2/FarmData2",
+		repo: "FarmData2",
+	},
 ];
-
-const fetchRepoDates = async () => {
-	const baseUrl = "https://api.github.com/repos/Shahir-47/";
-	const updatedProjects = await Promise.all(
-		projectsData.map(async (project) => {
-			const response = await fetch(`${baseUrl}${project.repo}`);
-			const data = await response.json();
-			return {
-				...project,
-				createdAt: new Date(data.created_at),
-			};
-		})
-	);
-	return updatedProjects;
-};
 
 const ProjectItem = ({
 	image,
