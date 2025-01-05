@@ -119,6 +119,8 @@ const HomePage = () => {
 								<Button
 									variant="contained"
 									href="https://drive.google.com/file/d/1mm60vOZ3USwgjAFHp-_knDZiP3XpyI5M/view?usp=sharing"
+									target="_blank"
+									rel="noopener noreferrer"
 									startIcon={<DescriptionIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
