@@ -85,7 +85,7 @@ const HomePage = () => {
 								<Button
 									variant="contained"
 									href="/about"
-									icon={<PersonIcon />}
+									startIcon={<PersonIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
 										color: "#222",
@@ -102,7 +102,7 @@ const HomePage = () => {
 								<Button
 									variant="contained"
 									href="/projects"
-									icon={<CodeIcon />}
+									startIcon={<CodeIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
 										color: "#222",
@@ -119,7 +119,7 @@ const HomePage = () => {
 								<Button
 									variant="contained"
 									href="/resume"
-									icon={<DescriptionIcon />}
+									startIcon={<DescriptionIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
 										color: "#222",
@@ -136,13 +136,8 @@ const HomePage = () => {
 							</Box>
 							<p className="sub-text">
 								You can also <strong>Contact Me</strong> via the{" "}
-								<a
-									href="/contact"
-									style={{ color: "#4fd1c5", textDecoration: "underline" }}
-								>
-									Contact Me page
-								</a>{" "}
-								or through my social links below.
+								<a href="/contact">Contact Me page</a> or through my social
+								links below.
 							</p>
 						</div>
 						<SocialIcons />
