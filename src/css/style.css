@@ -1437,6 +1437,19 @@ button.live-preview:hover {
 	font-weight: bold;
 }
 
+.about-me-text a strong {
+	color: #4fd1c5;
+	font-weight: bold;
+}
+
+.about-me-text a:hover strong {
+	color: #fff;
+}
+
+.about-me-text strong {
+	color: #ff6347;
+}
+
 .about-me-text a:hover {
 	color: #fff;
 	transition: all 0.3s ease;
