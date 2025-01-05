@@ -1322,19 +1322,23 @@ html {
 		margin-top: 0;
 	}
 
-	div.github-stats-section h2,
+	div.github-stats-section h2 {
+		font-size: 1.5rem;
+	}
+
 	div.tools-header h2 {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
 	}
 
 	div.timeline-section h2 {
-		font-size: 2rem;
+		font-size: 1.75rem;
 		text-align: center;
 		margin-bottom: 2rem;
 	}
 
-	div.timeline-section:last-of-type h2 {
-		font-size: 1.75rem;
+	div.timeline-section h2.hack-h2 {
+		font-size: 1.5rem;
 	}
 
 	.react-activity-calendar__legend-colors {

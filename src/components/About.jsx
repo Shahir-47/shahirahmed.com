@@ -552,7 +552,7 @@ const About = () => {
 
 			{/* Hackathon Experience Timeline */}
 			<div className="timeline-section">
-				<h2>💡 Hackathon Experience</h2>
+				<h2 className="hack-h2">💡 Hackathon Experience</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
 					layout="1-column-left"
