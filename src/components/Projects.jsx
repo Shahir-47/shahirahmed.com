@@ -7,8 +7,8 @@ import Calculator from "../assets/calculator.png";
 import Restaurant from "../assets/restaurant.png";
 import Etch from "../assets/etch.png";
 import SocialIcons from "./SocialIcons";
-import { Box, Typography, Button, TextField, MenuItem } from "@mui/material";
-import { useState, useEffect } from "react";
+import { Box, Typography, Button, TextField } from "@mui/material";
+import { useState } from "react";
 
 const projectsData = [
 	{
@@ -182,15 +182,7 @@ ProjectItem.propTypes = {
 };
 
 const Projects = () => {
-	const [projects, setProjects] = useState([]);
 	const [searchTerm, setSearchTerm] = useState("");
-	const [sortOrder, setSortOrder] = useState("asc");
-	const [startDate, setStartDate] = useState("");
-	const [endDate, setEndDate] = useState("");
-
-	useEffect(() => {
-		fetchRepoDates().then(setProjects);
-	}, []);
 
 	const highlightText = (text) => {
 		if (!searchTerm) return text;
@@ -198,22 +190,11 @@ const Projects = () => {
 		return text.replace(regex, "<mark>$1</mark>");
 	};
 
-	const filteredProjects = projects
-		.filter((project) => {
-			if (startDate && new Date(project.createdAt) < new Date(startDate))
-				return false;
-			if (endDate && new Date(project.createdAt) > new Date(endDate))
-				return false;
-			return (
-				project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-				project.description.toLowerCase().includes(searchTerm.toLowerCase())
-			);
-		})
-		.sort((a, b) => {
-			if (sortOrder === "asc")
-				return new Date(a.createdAt) - new Date(b.createdAt);
-			return new Date(b.createdAt) - new Date(a.createdAt);
-		});
+	const filteredProjects = projectsData.filter(
+		(project) =>
+			project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			project.description.toLowerCase().includes(searchTerm.toLowerCase())
+	);
 
 	return (
 		<Box
@@ -238,10 +219,6 @@ const Projects = () => {
 			</Typography>
 			<Box
 				sx={{
-					display: "flex",
-					justifyContent: "space-between",
-					flexWrap: "wrap",
-					gap: "1rem",
 					marginBottom: "2rem",
 				}}
 			>
@@ -252,7 +229,6 @@ const Projects = () => {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 					sx={{
-						flex: "1",
 						backgroundColor: "#333",
 						borderRadius: "5px",
 						"& .MuiInputLabel-root": {
@@ -263,8 +239,6 @@ const Projects = () => {
 							color: "#a569bd",
 						},
 						"& .MuiOutlinedInput-root": {
-							backgroundColor: "#333",
-							borderRadius: "5px",
 							"& fieldset": {
 								borderColor: "#4fd1c5",
 								transition: "border-color 0.3s ease",
@@ -281,114 +255,6 @@ const Projects = () => {
 						},
 					}}
 				/>
-				<TextField
-					select
-					label="Sort By"
-					value={sortOrder}
-					onChange={(e) => setSortOrder(e.target.value)}
-					sx={{
-						flex: "0.4",
-						backgroundColor: "#333",
-						borderRadius: "5px",
-						"& .MuiInputLabel-root": {
-							color: "#4fd1c5",
-							transition: "color 0.3s ease",
-						},
-						"& .MuiInputLabel-root.Mui-focused": {
-							color: "#a569bd",
-						},
-						"& .MuiOutlinedInput-root": {
-							backgroundColor: "#333",
-							borderRadius: "5px",
-							"& fieldset": {
-								borderColor: "#4fd1c5",
-								transition: "border-color 0.3s ease",
-							},
-							"&:hover fieldset": {
-								borderColor: "#4fd1c5",
-							},
-							"&.Mui-focused fieldset": {
-								borderColor: "#a569bd",
-							},
-						},
-						"& .MuiInputBase-input": {
-							color: "#e0e0e0",
-						},
-					}}
-				>
-					<MenuItem value="asc">Ascending</MenuItem>
-					<MenuItem value="desc">Descending</MenuItem>
-				</TextField>
-				<Box sx={{ display: "flex", gap: "1rem" }}>
-					<TextField
-						type="date"
-						value={startDate}
-						onChange={(e) => setStartDate(e.target.value)}
-						sx={{
-							flex: "1",
-							backgroundColor: "#333",
-							borderRadius: "5px",
-							"& .MuiInputLabel-root": {
-								color: "#4fd1c5",
-								transition: "color 0.3s ease",
-							},
-							"& .MuiInputLabel-root.Mui-focused": {
-								color: "#a569bd",
-							},
-							"& .MuiOutlinedInput-root": {
-								backgroundColor: "#333",
-								borderRadius: "5px",
-								"& fieldset": {
-									borderColor: "#4fd1c5",
-									transition: "border-color 0.3s ease",
-								},
-								"&:hover fieldset": {
-									borderColor: "#4fd1c5",
-								},
-								"&.Mui-focused fieldset": {
-									borderColor: "#a569bd",
-								},
-							},
-							"& .MuiInputBase-input": {
-								color: "#e0e0e0",
-							},
-						}}
-					/>
-					<TextField
-						type="date"
-						value={endDate}
-						onChange={(e) => setEndDate(e.target.value)}
-						sx={{
-							flex: "1",
-							backgroundColor: "#333",
-							borderRadius: "5px",
-							"& .MuiInputLabel-root": {
-								color: "#4fd1c5",
-								transition: "color 0.3s ease",
-							},
-							"& .MuiInputLabel-root.Mui-focused": {
-								color: "#a569bd",
-							},
-							"& .MuiOutlinedInput-root": {
-								backgroundColor: "#333",
-								borderRadius: "5px",
-								"& fieldset": {
-									borderColor: "#4fd1c5",
-									transition: "border-color 0.3s ease",
-								},
-								"&:hover fieldset": {
-									borderColor: "#4fd1c5",
-								},
-								"&.Mui-focused fieldset": {
-									borderColor: "#a569bd",
-								},
-							},
-							"& .MuiInputBase-input": {
-								color: "#e0e0e0",
-							},
-						}}
-					/>
-				</Box>
 			</Box>
 			<Box
 				sx={{
@@ -413,5 +279,4 @@ const Projects = () => {
 		</Box>
 	);
 };
-
 export default Projects;
