@@ -2,7 +2,6 @@ import SocialIcons from "./SocialIcons";
 import { useState } from "react";
 import { TextField, Button, Box, Typography, Grid } from "@mui/material";
 import { Send } from "@mui/icons-material";
-import "../css/style.css";
 
 const ContactMe = () => {
 	const [formData, setFormData] = useState({
