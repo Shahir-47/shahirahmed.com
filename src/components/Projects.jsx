@@ -277,13 +277,15 @@ const Projects = () => {
 	);
 
 	const breakpointColumnsObj = {
-		default: 3,
+		2560: 4,
+		1440: 3,
 		1100: 2,
 		700: 1,
 	};
 
 	return (
 		<Box
+			className="projects"
 			sx={{
 				color: "#e0e0e0",
 				maxWidth: "1200px",

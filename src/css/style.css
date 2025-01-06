@@ -1834,6 +1834,22 @@ button.live-preview {
 		font-size: 2rem;
 		margin-bottom: 3rem;
 	}
+
+	div.projects {
+		max-width: none;
+	}
+
+	div.my-masonry-grid_column h5 {
+		font-size: 2rem;
+	}
+
+	div.my-masonry-grid_column p {
+		font-size: 1.5rem;
+	}
+
+	div.my-masonry-grid_column a {
+		font-size: 1.5rem;
+	}
 }
 
 p.projects-link-p {
@@ -1863,4 +1879,8 @@ p.projects-link-p {
 	font-weight: bold;
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
+}
+
+.projects {
+	max-width: 1200px;
 }
