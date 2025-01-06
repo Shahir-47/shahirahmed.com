@@ -1,3 +1,4 @@
+import emailjs from "emailjs-com";
 import SocialIcons from "./SocialIcons";
 import { useState } from "react";
 import { TextField, Button, Box, Typography, Grid } from "@mui/material";
@@ -21,10 +22,22 @@ const ContactMe = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setStatus("Sending...");
-		setTimeout(() => {
-			setStatus("Message sent!");
-			setFormData({ name: "", email: "", subject: "", message: "" });
-		}, 1500);
+
+		const serviceID = "service_1s78mke";
+		const templateID = "template_z3p11k8";
+		const userID = "bUvTWoqR4veEvjIYF";
+
+		emailjs.send(serviceID, templateID, formData, userID).then(
+			(response) => {
+				setStatus("Message sent!");
+				setFormData({ name: "", email: "", subject: "", message: "" });
+				console.log("SUCCESS!", response.status, response.text);
+			},
+			(err) => {
+				setStatus("Failed to send message. Please try again.");
+				console.error("FAILED...", err);
+			}
+		);
 	};
 
 	const inputStyle = {
