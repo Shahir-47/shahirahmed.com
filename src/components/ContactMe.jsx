@@ -81,13 +81,14 @@ const ContactMe = () => {
 	return (
 		<div className="contact-me-section">
 			<Box
+				className="contact-form"
 				sx={{
 					color: "#e0e0e0",
 					backgroundColor: "#222",
 					padding: "2rem",
 					borderRadius: "10px",
 					border: "2px solid #4fd1c5",
-					maxWidth: "800px",
+					width: "80%",
 					margin: "2rem auto",
 					boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)",
 				}}

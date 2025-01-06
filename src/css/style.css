@@ -379,6 +379,7 @@ div.nav-links a.nav-box.active:after {
 	margin: 0;
 }
 
+.icon-container-last,
 .social-icons {
 	display: flex;
 	align-items: center;
@@ -1180,6 +1181,7 @@ html {
 		font-size: 2rem;
 	}
 
+	div.icon-container-last,
 	div.social-icons {
 		gap: 4rem;
 	}
@@ -1298,6 +1300,11 @@ html {
 }
 
 @media (max-width: 768px) {
+	.second-block-text-container img.hacker {
+		width: 30%;
+		height: auto;
+	}
+
 	.vertical-timeline-element-content ul {
 		padding-left: 1rem;
 	}
@@ -1649,7 +1656,7 @@ button.live-preview {
 		font-size: 1.2rem;
 	}
 
-	div.second-block-home {
+	div.main-container div.second-block-home {
 		padding: 0 1.5rem;
 	}
 
@@ -1658,6 +1665,7 @@ button.live-preview {
 		height: 1.5rem;
 	}
 
+	div.icon-container-last,
 	div.social-icons {
 		gap: 1.2rem;
 	}
@@ -1702,6 +1710,7 @@ button.live-preview {
 	word-break: break-word;
 }
 
+.icon-container-last,
 .social-icons {
 	display: flex;
 	gap: 1.5rem;
@@ -1716,6 +1725,10 @@ button.live-preview {
 
 	img.hacker {
 		width: 63%;
+	}
+
+	div.timeline-section h2 {
+		margin-left: 1rem;
 	}
 
 	div.second-block-home {
@@ -1849,6 +1862,14 @@ button.live-preview {
 
 	div.my-masonry-grid_column a {
 		font-size: 1.5rem;
+	}
+
+	div.contact-form * {
+		font-size: 1.2rem;
+	}
+
+	div.contact-form h4 {
+		font-size: 2rem;
 	}
 }
 

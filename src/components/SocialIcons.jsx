@@ -46,24 +46,27 @@ const SocialIcons = () => {
 			>
 				<FaInstagram />
 			</a>
-			<a
-				href="https://devpost.com/ahmeds561"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="icon-container"
-				aria-label="Devpost"
-			>
-				<SiDevpost />
-			</a>
-			<a
-				href="https://shahir-47.blogspot.com/"
-				target="_blank"
-				rel="noopener noreferrer"
-				className="icon-container"
-				aria-label="Blog"
-			>
-				<FaBlogger />
-			</a>
+			<div className="icon-container-last" style={{ marginTop: "0.5rem" }}>
+				{" "}
+				<a
+					href="https://devpost.com/ahmeds561"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="icon-container"
+					aria-label="Devpost"
+				>
+					<SiDevpost />
+				</a>
+				<a
+					href="https://shahir-47.blogspot.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="icon-container"
+					aria-label="Blog"
+				>
+					<FaBlogger />
+				</a>
+			</div>
 		</div>
 	);
 };
