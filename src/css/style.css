@@ -1810,4 +1810,57 @@ button.live-preview {
 	h2.projects-link-h2 {
 		font-size: 2.5rem;
 	}
+
+	div.about-page p.projects-link-p {
+		font-size: 2rem;
+	}
+
+	div.github-stats-section div.github-stats-container a img {
+		max-width: 750px;
+		width: 750px;
+	}
+
+	.about-page #projects-link {
+		margin-top: 2rem;
+		font-size: 2rem;
+	}
+
+	.about-page #projects-link svg {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.about-page #social-connect {
+		font-size: 2rem;
+		margin-bottom: 3rem;
+	}
+}
+
+p.projects-link-p {
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+	max-width: 800px;
+}
+
+#projects-link {
+	background-color: #4fd1c5;
+	color: #222;
+	font-weight: bold;
+}
+
+#projects-link svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+#projects-link:hover {
+	background-color: #2c3e50;
+	color: #e0e0e0;
+	box-shadow: 0 0 20px rgba(79, 209, 197, 0.6);
+}
+
+#social-connect {
+	font-weight: bold;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
 }

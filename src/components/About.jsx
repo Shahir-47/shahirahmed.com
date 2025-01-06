@@ -9,6 +9,7 @@ import HackHarvard from "../assets/hackharvardlogo.png";
 import Prospectus from "../assets/prospectus.jpg";
 import SweetFriend from "../assets/sweetFriend.jpg";
 import Albatross from "../assets/albatross.png";
+import CodeIcon from "@mui/icons-material/Code";
 import { SiDevpost } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { MdVisibility } from "react-icons/md";
@@ -1017,14 +1018,7 @@ const About = () => {
 				<h2 className="projects-link-h2">
 					Check Out My <span style={{ color: "#fff" }}>Projects</span> 🚀
 				</h2>
-				<Typography
-					sx={{
-						fontSize: "1.2rem",
-						marginBottom: "1.5rem",
-						maxWidth: "800px",
-						className: "projects-link-p",
-					}}
-				>
+				<Typography className="projects-link-p">
 					I’ve worked on a variety of exciting projects showcasing my skills in
 					web development, software engineering, and more. Click the button
 					below to see them!
@@ -1032,16 +1026,8 @@ const About = () => {
 				<Button
 					href="/projects" // Redirects to the projects page
 					variant="contained"
-					sx={{
-						backgroundColor: "#4fd1c5",
-						color: "#222",
-						fontWeight: "bold",
-						"&:hover": {
-							backgroundColor: "#2c3e50",
-							color: "#e0e0e0",
-							boxShadow: "0 0 20px rgba(79, 209, 197, 0.6)",
-						},
-					}}
+					id="projects-link"
+					startIcon={<CodeIcon />}
 				>
 					View Projects
 				</Button>
@@ -1054,10 +1040,7 @@ const About = () => {
 					color: "#e0e0e0",
 				}}
 			>
-				<Typography
-					variant="h5"
-					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
-				>
+				<Typography variant="h5" id="social-connect">
 					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
 				</Typography>
 				<SocialIcons />
