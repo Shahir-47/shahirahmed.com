@@ -6,8 +6,8 @@ import { Send } from "@mui/icons-material";
 
 const ContactMe = () => {
 	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
+		user_name: "",
+		user_email: "",
 		subject: "",
 		message: "",
 	});
@@ -27,10 +27,22 @@ const ContactMe = () => {
 		const templateID = "template_z3p11k8";
 		const userID = "bUvTWoqR4veEvjIYF";
 
-		emailjs.send(serviceID, templateID, formData, userID).then(
+		const combinedMessage = `Subject: ${formData.subject}\n\nMessage: ${formData.message}`;
+
+		const submissionData = {
+			...formData,
+			message: combinedMessage,
+		};
+
+		emailjs.send(serviceID, templateID, submissionData, userID).then(
 			(response) => {
 				setStatus("Message sent!");
-				setFormData({ name: "", email: "", subject: "", message: "" });
+				setFormData({
+					user_name: "",
+					user_email: "",
+					subject: "",
+					message: "",
+				});
 				console.log("SUCCESS!", response.status, response.text);
 			},
 			(err) => {
@@ -100,7 +112,7 @@ const ContactMe = () => {
 								fullWidth
 								required
 								label="Name"
-								name="name"
+								name="user_name"
 								value={formData.name}
 								onChange={handleChange}
 								sx={inputStyle}
@@ -111,7 +123,7 @@ const ContactMe = () => {
 								fullWidth
 								required
 								label="Email"
-								name="email"
+								name="user_email"
 								type="email"
 								value={formData.email}
 								onChange={handleChange}
