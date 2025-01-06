@@ -224,6 +224,7 @@ const ProjectItem = ({
 					target="_blank"
 					rel="noopener noreferrer"
 					sx={{
+						textAlign: "center",
 						backgroundColor: "#4fd1c5",
 						color: "#222",
 						fontWeight: "bold",
@@ -243,6 +244,7 @@ const ProjectItem = ({
 				target="_blank"
 				rel="noopener noreferrer"
 				sx={{
+					textAlign: "center",
 					borderColor: "#4fd1c5",
 					color: "#4fd1c5",
 					fontWeight: "bold",

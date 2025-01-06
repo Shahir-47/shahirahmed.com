@@ -1,6 +1,93 @@
+import { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 
 const GitHubStats = () => {
+	const [config, setConfig] = useState({
+		blockSize: 15,
+		blockMargin: 5,
+		fontSize: 24,
+		trimDateRange: false,
+	});
+
+	useEffect(() => {
+		const updateConfig = () => {
+			const width = window.innerWidth;
+
+			if (width >= 2560) {
+				setConfig({
+					blockSize: 20,
+					blockMargin: 8,
+					fontSize: 30,
+					trimDateRange: false,
+				});
+			} else if (width >= 1440) {
+				setConfig({
+					blockSize: 18,
+					blockMargin: 6,
+					fontSize: 26,
+					trimDateRange: false,
+				});
+			} else if (width >= 1024) {
+				setConfig({
+					blockSize: 12,
+					blockMargin: 5,
+					fontSize: 22,
+					trimDateRange: false,
+				});
+			} else if (width >= 768) {
+				setConfig({
+					blockSize: 8,
+					blockMargin: 4,
+					fontSize: 20,
+					trimDateRange: false,
+				});
+			} else if (width >= 425) {
+				setConfig({
+					blockSize: 10,
+					blockMargin: 3,
+					fontSize: 18,
+					trimDateRange: true,
+				});
+			} else if (width >= 375) {
+				setConfig({
+					blockSize: 8,
+					blockMargin: 2,
+					fontSize: 15,
+					trimDateRange: true,
+				});
+			} else if (width >= 320) {
+				setConfig({
+					blockSize: 7,
+					blockMargin: 2,
+					fontSize: 14,
+					trimDateRange: true,
+				});
+			}
+		};
+
+		updateConfig();
+
+		window.addEventListener("resize", updateConfig);
+
+		return () => {
+			window.removeEventListener("resize", updateConfig);
+		};
+	}, []);
+
+	const transformData = (contributions) => {
+		const currentDate = new Date();
+		const startDate = new Date();
+		startDate.setMonth(currentDate.getMonth() - 6);
+
+		startDate.setHours(0, 0, 0, 0);
+		currentDate.setHours(23, 59, 59, 999);
+
+		return contributions.filter((activity) => {
+			const activityDate = new Date(activity.date);
+			return activityDate >= startDate && activityDate <= currentDate;
+		});
+	};
+
 	return (
 		<div className="github-stats-section">
 			<h2>📊 My GitHub Stats</h2>
@@ -9,10 +96,15 @@ const GitHubStats = () => {
 			<div className="github-activity-calendar">
 				<GitHubCalendar
 					username="Shahir-47"
-					blockSize={15}
-					blockMargin={5}
-					fontSize={24}
-					fontWeight={600}
+					blockSize={config.blockSize}
+					blockMargin={config.blockMargin}
+					fontSize={config.fontSize}
+					transformData={config.trimDateRange ? transformData : undefined}
+					labels={{
+						totalCount: config.trimDateRange
+							? "{{count}} contributions in the last 6 months"
+							: "{{count}} contributions in the last year",
+					}}
 				/>
 			</div>
 

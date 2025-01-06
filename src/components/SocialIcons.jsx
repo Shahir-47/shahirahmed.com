@@ -9,7 +9,7 @@ import {
 
 const SocialIcons = () => {
 	return (
-		<div style={{ display: "flex", gap: "1.5rem", justifyContent: "center" }}>
+		<div className="social-icons">
 			<a
 				href="mailto:ahmeds@dickinson.edu"
 				target="_blank"

@@ -939,7 +939,7 @@ html {
 	}
 
 	.text-div {
-		gap: 1rem;
+		gap: 2rem;
 	}
 
 	.text-div h3 {
@@ -1101,13 +1101,14 @@ html {
 		text-align: center;
 	}
 
-	.hamburger-menu a:nth-of-type(4) {
+	.hamburger-menu a:nth-of-type(5) {
 		border-bottom: none;
+		padding-bottom: 0.65rem;
 	}
 
 	.hamburger-menu a {
 		font-size: 1.5rem;
-		padding-bottom: 0.5rem;
+		padding-bottom: 0.65rem;
 	}
 
 	.first-text-container h3 {
@@ -1301,10 +1302,6 @@ html {
 		padding-left: 1rem;
 	}
 
-	.react-activity-calendar__scroll-container {
-		padding-bottom: 1rem;
-	}
-
 	.react-activity-calendar__footer * {
 		font-size: 1rem;
 		margin-bottom: 0.5rem;
@@ -1479,6 +1476,10 @@ button.live-preview:hover {
 	gap: 2rem;
 }
 
+div.react-activity-calendar__scroll-container {
+	align-self: center;
+}
+
 .contact-me-section {
 	padding: 0 2rem;
 }
@@ -1641,4 +1642,172 @@ button.live-preview {
 
 .sub-text strong {
 	color: #a569bd;
+}
+
+@media (max-width: 425px) {
+	p.sub-text {
+		font-size: 1.2rem;
+	}
+
+	div.second-block-home {
+		padding: 0 1.5rem;
+	}
+
+	a.icon-container svg {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	div.social-icons {
+		gap: 1.2rem;
+	}
+}
+
+@media (max-width: 320px) {
+	a.icon-container svg {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	.sub-div .button-container a {
+		font-size: 0.8rem;
+	}
+
+	div.first-block-home {
+		margin-bottom: 2rem;
+	}
+
+	div.hamburger-menu a {
+		font-size: 1.3rem;
+	}
+
+	div.tools-section {
+		padding: 0;
+	}
+
+	.vertical-timeline-element-subtitle {
+		margin-top: 0.55rem;
+	}
+}
+
+@media (max-width: 375px) {
+	h2.projects-link-h2 {
+		font-size: 1.4rem;
+	}
+}
+
+.vertical-timeline-element-subtitle a {
+	display: inline;
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+	div.timeline {
+		margin-left: 1rem;
+	}
+
+	img.hacker {
+		width: 63%;
+	}
+
+	div.second-block-home {
+		padding: 0;
+	}
+
+	div.sub-div {
+		text-align: center;
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 2560px) {
+	div.first-block-home {
+		margin-bottom: 10rem;
+	}
+
+	div.second-block-home {
+		margin: 0 5rem;
+		padding-bottom: 7rem;
+	}
+
+	div.button-container svg {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	div.button-container a {
+		font-size: 1.3rem;
+	}
+
+	.social-icons svg {
+		width: 3rem;
+		height: 3rem;
+		padding: 0.35rem;
+	}
+
+	div.tools-header h2 {
+		font-size: 2.5rem;
+	}
+
+	div.tools-category h3 {
+		font-size: 2rem;
+	}
+
+	div.tools-icons img {
+		width: auto;
+		height: 3rem;
+	}
+
+	a.logo-box h1 {
+		font-size: 3rem;
+		font-weight: 500;
+	}
+
+	div.vertical-timeline-element-content {
+		padding: 1.75rem 3rem;
+	}
+
+	div.vertical-timeline-element-content * {
+		font-size: 2rem;
+	}
+
+	div.vertical-timeline {
+		max-width: 1500px;
+	}
+
+	.timeline-section h2 {
+		font-size: 3rem;
+	}
+
+	div.vertical-timeline-element-content span.custom-date {
+		float: left;
+		padding: 0.8em 0;
+		opacity: 0.7;
+		font-size: 2rem;
+	}
+
+	div.tech-stack img {
+		height: 3rem;
+		width: auto;
+	}
+
+	div.github-stats-section h2 {
+		font-size: 2.5rem;
+	}
+
+	div.github-stats-container img {
+		max-width: 750px;
+	}
+
+	h2.projects-link-h2 {
+		font-size: 2.5rem;
+	}
 }

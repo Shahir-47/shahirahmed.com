@@ -80,7 +80,13 @@ const HomePage = () => {
 								<strong>Resume</strong>.
 							</p>
 							<Box
-								sx={{ display: "flex", gap: "2rem", justifyContent: "center" }}
+								sx={{
+									display: "flex",
+									gap: "2rem",
+									justifyContent: "center",
+									flexWrap: "wrap",
+								}}
+								className="button-container"
 							>
 								<Button
 									variant="contained"

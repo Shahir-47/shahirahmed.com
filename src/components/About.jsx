@@ -337,6 +337,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="Expected May 2025"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
@@ -387,6 +388,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
 						date="January 2021"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
@@ -451,6 +453,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="May 2024 - Present"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
 							<img
@@ -517,6 +520,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
 						date="September 2023 - January 2024"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
@@ -579,6 +583,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
 						date="January 2022 - Present"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
@@ -646,6 +651,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="HoyaHacks 2024"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
@@ -684,7 +690,7 @@ const About = () => {
 						<p>
 							<strong>Tech Stack:</strong>
 						</p>
-						<div style={{ marginTop: "1rem" }}>
+						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
 								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
 								alt="React"
@@ -763,6 +769,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(45, 45, 45)" }}
 						date="PennApps 2024"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
@@ -801,7 +808,7 @@ const About = () => {
 						<p>
 							<strong>Tech Stack:</strong>
 						</p>
-						<div style={{ marginTop: "1rem" }}>
+						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
 								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
 								alt="React"
@@ -877,6 +884,7 @@ const About = () => {
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="HackHarvard 2024"
+						dateClassName={"custom-date"}
 						iconStyle={{ background: "#fff", color: "#fff" }}
 						icon={
 							<img
@@ -916,7 +924,7 @@ const About = () => {
 						<p>
 							<strong>Tech Stack:</strong>
 						</p>
-						<div style={{ marginTop: "1rem" }}>
+						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
 								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
 								alt="Vue.js"
