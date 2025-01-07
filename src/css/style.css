@@ -1240,19 +1240,6 @@ html {
 		font-size: 2rem;
 	}
 
-	div.project-div h1 {
-		font-size: 3rem;
-	}
-
-	div.project-item-div p {
-		font-size: 2rem;
-	}
-
-	div.project-link-div a {
-		font-size: 2rem;
-		border: 2px solid #4fd1c5;
-	}
-
 	div.social-text-div h3,
 	p#typed-text,
 	span.typed-cursor,
@@ -1861,22 +1848,6 @@ button.live-preview {
 		margin-bottom: 3rem;
 	}
 
-	div.projects {
-		max-width: none;
-	}
-
-	div.my-masonry-grid_column h5 {
-		font-size: 2rem;
-	}
-
-	div.my-masonry-grid_column p {
-		font-size: 1.5rem;
-	}
-
-	div.my-masonry-grid_column a {
-		font-size: 1.5rem;
-	}
-
 	div.contact-form * {
 		font-size: 1.2rem;
 	}
@@ -1947,5 +1918,23 @@ p.projects-link-p {
 @media (max-width: 1400px) {
 	div.vertical-timeline {
 		max-width: 800px;
+	}
+}
+
+@media (min-width: 2000px) {
+	div.projects {
+		max-width: none;
+	}
+
+	div.my-masonry-grid_column h5 {
+		font-size: 2rem;
+	}
+
+	div.my-masonry-grid_column p {
+		font-size: 1.5rem;
+	}
+
+	div.my-masonry-grid_column a {
+		font-size: 1.5rem;
 	}
 }

@@ -277,8 +277,8 @@ const Projects = () => {
 	);
 
 	const breakpointColumnsObj = {
-		2560: 4,
-		1440: 3,
+		default: 4,
+		2500: 3,
 		1100: 2,
 		700: 1,
 	};
