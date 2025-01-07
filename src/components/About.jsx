@@ -862,7 +862,7 @@ const About = () => {
 								</button>
 							</a>
 							<a
-								href="https://sweet-friend.vercel.app/"
+								href="https://sweet-friend.vercel.app/app/dashboard"
 								target="_blank"
 								rel="noopener noreferrer"
 								style={{ textDecoration: "none" }}

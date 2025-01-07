@@ -40,7 +40,7 @@ const projectsData = [
 		title: "SweetFriend",
 		description:
 			"SweetFriend is a diabetes management web app integrating Dexcom glucose monitors for real-time glucose tracking, AI-powered meal recognition, and personalized health insights. It simplifies carb counting, meal logging, and glucose trend analysis to empower users in managing diabetes effectively.",
-		liveDemo: "https://sweet-friend.vercel.app/",
+		liveDemo: "https://sweet-friend.vercel.app/app/dashboard",
 		sourceCode: "https://github.com/dmicz/SweetFriend",
 		repo: "SweetFriend",
 	},
