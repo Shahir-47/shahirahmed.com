@@ -1,3 +1,4 @@
+import Error from "../assets/error.svg";
 import { Button, Box, Typography } from "@mui/material";
 import {
 	Home as HomeIcon,
@@ -23,10 +24,50 @@ const ErrorPage = () => {
 				alignItems: "center",
 			}}
 		>
-			<Typography variant="h2" sx={{ color: "#4fd1c5", marginBottom: "1rem" }}>
+			<img src={Error} alt="Error" className="error-img" />
+			<Typography
+				variant="h2"
+				sx={{
+					color: "#4fd1c5",
+					marginBottom: "1rem",
+					fontSize: "2.5rem", // Default
+					// Font size breakpoints
+					"@media (max-width: 1024px)": {
+						fontSize: "2rem",
+					},
+					"@media (max-width: 768px)": {
+						fontSize: "1.75rem",
+					},
+					"@media (max-width: 425px)": {
+						fontSize: "1.5rem",
+					},
+					"@media (min-width: 2560px)": {
+						fontSize: "3.5rem",
+					},
+				}}
+			>
 				404 - Page Not Found
 			</Typography>
-			<Typography variant="h6" sx={{ marginBottom: "2rem" }}>
+			<Typography
+				variant="h6"
+				sx={{
+					marginBottom: "2rem",
+					fontSize: "1.25rem", // Default
+					// Font size breakpoints
+					"@media (max-width: 1024px)": {
+						fontSize: "1rem",
+					},
+					"@media (max-width: 768px)": {
+						fontSize: "1rem",
+					},
+					"@media (max-width: 425px)": {
+						fontSize: "1rem",
+					},
+					"@media (min-width: 2560px)": {
+						fontSize: "1.5rem",
+					},
+				}}
+			>
 				The page you are looking for does not exist.
 			</Typography>
 			<Box
@@ -45,10 +86,24 @@ const ErrorPage = () => {
 						backgroundColor: "#4fd1c5",
 						color: "#222",
 						fontWeight: "bold",
+						fontSize: "1rem",
 						"&:hover": {
 							backgroundColor: "#a569bd",
 							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 							color: "#fff",
+						},
+						// Font size breakpoints for buttons
+						"@media (max-width: 1024px)": {
+							fontSize: "0.875rem",
+						},
+						"@media (max-width: 768px)": {
+							fontSize: "0.75rem",
+						},
+						"@media (max-width: 425px)": {
+							fontSize: "0.65rem",
+						},
+						"@media (min-width: 2560px)": {
+							fontSize: "1.25rem",
 						},
 					}}
 				>
@@ -62,10 +117,24 @@ const ErrorPage = () => {
 						backgroundColor: "#4fd1c5",
 						color: "#222",
 						fontWeight: "bold",
+						fontSize: "1rem",
 						"&:hover": {
 							backgroundColor: "#a569bd",
 							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 							color: "#fff",
+						},
+						// Font size breakpoints for buttons
+						"@media (max-width: 1024px)": {
+							fontSize: "0.875rem",
+						},
+						"@media (max-width: 768px)": {
+							fontSize: "0.75rem",
+						},
+						"@media (max-width: 425px)": {
+							fontSize: "0.65rem",
+						},
+						"@media (min-width: 2560px)": {
+							fontSize: "1.25rem",
 						},
 					}}
 				>
@@ -79,10 +148,24 @@ const ErrorPage = () => {
 						backgroundColor: "#4fd1c5",
 						color: "#222",
 						fontWeight: "bold",
+						fontSize: "1rem",
 						"&:hover": {
 							backgroundColor: "#a569bd",
 							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 							color: "#fff",
+						},
+						// Font size breakpoints for buttons
+						"@media (max-width: 1024px)": {
+							fontSize: "0.875rem",
+						},
+						"@media (max-width: 768px)": {
+							fontSize: "0.75rem",
+						},
+						"@media (max-width: 425px)": {
+							fontSize: "0.65rem",
+						},
+						"@media (min-width: 2560px)": {
+							fontSize: "1.25rem",
 						},
 					}}
 				>
@@ -96,10 +179,24 @@ const ErrorPage = () => {
 						backgroundColor: "#4fd1c5",
 						color: "#222",
 						fontWeight: "bold",
+						fontSize: "1rem",
 						"&:hover": {
 							backgroundColor: "#a569bd",
 							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 							color: "#fff",
+						},
+						// Font size breakpoints for buttons
+						"@media (max-width: 1024px)": {
+							fontSize: "0.875rem",
+						},
+						"@media (max-width: 768px)": {
+							fontSize: "0.75rem",
+						},
+						"@media (max-width: 425px)": {
+							fontSize: "0.65rem",
+						},
+						"@media (min-width: 2560px)": {
+							fontSize: "1.25rem",
 						},
 					}}
 				>

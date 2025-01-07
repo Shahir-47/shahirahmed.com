@@ -1938,3 +1938,26 @@ p.projects-link-p {
 		font-size: 1.5rem;
 	}
 }
+
+.error-img {
+	width: 18rem;
+	height: auto;
+}
+
+@media (max-width: 1024px) {
+	.error-img {
+		width: 12rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.error-img {
+		width: 18rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.error-img {
+		width: 12rem;
+	}
+}
