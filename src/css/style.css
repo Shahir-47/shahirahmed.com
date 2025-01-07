@@ -1943,3 +1943,9 @@ p.projects-link-p {
 		width: 80%;
 	}
 }
+
+@media (max-width: 1400px) {
+	div.vertical-timeline {
+		max-width: 800px;
+	}
+}
