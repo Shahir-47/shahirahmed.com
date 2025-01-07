@@ -11,7 +11,6 @@ import DescriptionIcon from "@mui/icons-material/Description";
 
 const HomePage = () => {
 	useEffect(() => {
-		// Initialize Typed.js
 		const typed = new Typed("#typed-text", {
 			strings: [
 				"Full Stack Developer",
@@ -38,7 +37,6 @@ const HomePage = () => {
 		});
 
 		return () => {
-			// Destroy Typed instance on component unmount
 			typed.destroy();
 		};
 	}, []);

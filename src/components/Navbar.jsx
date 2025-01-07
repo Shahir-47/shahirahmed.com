@@ -9,9 +9,9 @@ import Doc from "../assets/doc.svg";
 import hamburgerImg from "../assets/hamburger.svg";
 
 const Navbar = () => {
-	const [hamburgerClass, setHamburgerClass] = useState(""); // No initial class
+	const [hamburgerClass, setHamburgerClass] = useState("");
 	const [isScrolled, setIsScrolled] = useState(false);
-	const location = useLocation(); // Get the current location
+	const location = useLocation();
 
 	const toggleHamburgerMenu = () => {
 		if (hamburgerClass === "" || hamburgerClass === "inactive") {
@@ -33,8 +33,15 @@ const Navbar = () => {
 		};
 	}, []);
 
-	// Function to determine if a link is active
-	const isActive = (path) => (location.pathname === path ? "active" : "");
+	const isActive = (path) => {
+		if (
+			path === "/" &&
+			(location.pathname === "/" || location.pathname === "/home")
+		) {
+			return "active";
+		}
+		return location.pathname === path ? "active" : "";
+	};
 
 	return (
 		<nav className={`nav-bar ${isScrolled ? "nav-bar-scrolled" : ""}`}>
