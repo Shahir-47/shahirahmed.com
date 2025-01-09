@@ -49,7 +49,7 @@ const SocialIcons = () => {
 			<div className="icon-container-last" style={{ marginTop: "0.5rem" }}>
 				{" "}
 				<a
-					href="https://devpost.com/ahmeds561"
+					href="https://devpost.com/Shahir-47"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="icon-container"
