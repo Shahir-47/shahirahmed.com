@@ -1,5 +1,9 @@
 # **🌐 shahirahmed.com**
 
+![image](https://github.com/user-attachments/assets/49e456e2-cbed-4db5-97f4-8cb5561c389a)
+
+
+
 Welcome to **shahirahmed.com**—my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a software developer. Whether you’re here to explore my work, learn more about me, or get in touch—this is the place to do it. 🌟
 
 ---
