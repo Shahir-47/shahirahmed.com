@@ -158,6 +158,10 @@ const About = () => {
 								alt="JavaScript"
 							/>
 							<img
+								src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+								alt="TypeScript"
+							/>
+							<img
 								src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
 								alt="C"
 							/>
