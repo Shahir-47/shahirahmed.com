@@ -1487,6 +1487,8 @@ div.react-activity-calendar__scroll-container {
 }
 
 .contact-me-section {
+	display: grid;
+	align-content: space-evenly;
 	padding: 0 2rem;
 	flex: 1;
 }
