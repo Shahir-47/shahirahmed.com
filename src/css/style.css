@@ -494,6 +494,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
+	flex: 1;
 }
 
 .about-container {
@@ -1487,6 +1488,7 @@ div.react-activity-calendar__scroll-container {
 
 .contact-me-section {
 	padding: 0 2rem;
+	flex: 1;
 }
 
 .about-me-text a {

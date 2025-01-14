@@ -13,6 +13,7 @@ import Albatross from "../assets/albatross.png";
 import ResumeApp from "../assets/resume-app.png";
 import SpaceAccuracy from "../assets/space.png";
 import SocialIcons from "./SocialIcons";
+import bittorrent from "../assets/bittorrent.svg";
 import { Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
 
@@ -43,6 +44,15 @@ const projectsData = [
 		liveDemo: "https://sweet-friend.vercel.app/app/dashboard",
 		sourceCode: "https://github.com/dmicz/SweetFriend",
 		repo: "SweetFriend",
+	},
+	{
+		image: bittorrent,
+		title: "BitTorrent Client JS",
+		description:
+			"A lightweight BitTorrent client implemented in JavaScript that seamlessly handles both .torrent files and magnet links. It features a modular architecture for peer discovery, piece verification, and metadata exchange. The client demonstrates advanced networking concepts through its implementation of the BitTorrent protocol, supporting concurrent downloads, SHA-1 integrity checking, and HTTP tracker communication.",
+		liveDemo: null,
+		sourceCode: "https://github.com/Shahir-47/bittorrent-client-js",
+		repo: "bittorrent-client-js",
 	},
 	{
 		image: Weather,
