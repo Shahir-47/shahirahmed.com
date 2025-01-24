@@ -501,10 +501,10 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer (Volunteer)
+							Software Engineer – Volunteer
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Remote • 84 Lumber
+							84 Lumber
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://tinyurl.com/bp5j9uwa"
