@@ -118,8 +118,9 @@ const About = () => {
 							</p>
 							<p className="about-me-text">
 								Want to know more? Scroll down to explore my{" "}
-								<strong>education</strong>, <strong>work experience</strong>,{" "}
-								<strong>hackathon adventures</strong>, and the{" "}
+								<strong>work experience</strong>,{" "}
+								<strong>hackathon adventures</strong>,{" "}
+								<strong>education</strong>, and the{" "}
 								<strong>tools and technologies</strong> I’ve worked with. You
 								can also visit my{" "}
 								<a href="/contact" target="_self">
@@ -324,122 +325,6 @@ const About = () => {
 				</div>
 			</div>
 
-			{/* Education Timeline */}
-			<div className="timeline-section">
-				<h2>🎓 Education</h2>
-				<VerticalTimeline
-					lineColor="#4fd1c5"
-					layout="1-column-left"
-					className="timeline"
-				>
-					{/* Dickinson College */}
-					<VerticalTimelineElement
-						className="vertical-timeline-element--education"
-						contentStyle={{
-							background: "rgb(33, 33, 33)",
-							color: "#fff",
-							boxShadow: "0 3px 0 #4fd1c5",
-						}}
-						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
-						date="Expected May 2025"
-						dateClassName={"custom-date"}
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={
-							<img
-								src={Dickinson}
-								alt="Dickinson College"
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "contain",
-									borderRadius: "50%",
-								}}
-							/>
-						}
-					>
-						<h3 className="vertical-timeline-element-title">
-							Dickinson College
-						</h3>
-						<h4 className="vertical-timeline-element-subtitle">Carlisle, PA</h4>
-						<p>
-							<strong>Degree:</strong> Bachelor of Science in Computer Science &
-							Mathematics
-							<br />
-							<strong>GPA:</strong> 3.58
-						</p>
-						<p>
-							<strong>Relevant Coursework:</strong>
-							<ul>
-								<li>Data Structures & Analysis of Algorithms</li>
-								<li>Object-Oriented Programming & Computer Architecture</li>
-								<li>Computer Networks & Operating Systems</li>
-								<li>Database Systems & Computational Mathematics</li>
-								<li>Graph Theory & Computability and Complexity</li>
-								<li>Probability, Statistics, & Linear Algebra</li>
-								<li>Discrete Mathematics & Logic</li>
-								<li>Operations Research & Introduction to Data Science</li>
-								<li>Open Source Development & Number Theory</li>
-							</ul>
-						</p>
-					</VerticalTimelineElement>
-
-					{/* HarvardX CS50x */}
-					<VerticalTimelineElement
-						className="vertical-timeline-element--education"
-						contentStyle={{
-							background: "rgb(33, 33, 33)",
-							color: "#fff",
-							boxShadow: "0 3px 0 #4fd1c5",
-						}}
-						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
-						date="January 2021"
-						dateClassName={"custom-date"}
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={
-							<img
-								src={HarvardX}
-								alt="HarvardX CS50x"
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "contain",
-									borderRadius: "50%",
-								}}
-							/>
-						}
-					>
-						<h3 className="vertical-timeline-element-title">HarvardX CS50x</h3>
-						<h4 className="vertical-timeline-element-subtitle">
-							Online Certification
-						</h4>
-						<p>
-							<strong>Description:</strong> An intensive introduction to
-							computer science concepts, focusing on problem-solving and
-							programming fundamentals.
-						</p>
-						<p>
-							<strong>Key Topics:</strong>
-							<ul>
-								<li>Programming in C, Python, SQL, JavaScript, HTML/CSS</li>
-								<li>Algorithms, Data Structures, & Software Engineering</li>
-								<li>Web Development & Database Management</li>
-							</ul>
-						</p>
-						<p>
-							<strong>Certificate:</strong>{" "}
-							<a
-								href="https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
-								target="_blank"
-								rel="noopener noreferrer"
-								style={{ color: "#4fd1c5" }}
-							>
-								View Certification
-							</a>
-						</p>
-					</VerticalTimelineElement>
-				</VerticalTimeline>
-			</div>
-
 			{/* Work Experience Timeline */}
 			<div className="timeline-section">
 				<h2>💼 Work Experience</h2>
@@ -448,7 +333,7 @@ const About = () => {
 					layout="1-column-left"
 					className="timeline"
 				>
-					{/* FarmData2 */}
+					{/* FarmData2 (Part-Time) */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--work"
 						contentStyle={{
@@ -457,7 +342,7 @@ const About = () => {
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
-						date="May 2024 - Present"
+						date="September 2024 - Present"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
@@ -473,10 +358,10 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer
+							Software Engineer – Part-Time
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Dickinson College • FarmData2
+							FarmData2
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://github.com/FarmData2"
@@ -492,14 +377,84 @@ const About = () => {
 							<strong>Key Achievements:</strong>
 							<ul>
 								<li>
-									Resolved 55+ GitHub issues in 8 weeks by refactoring Vue.js
-									components and implementing Cypress tests, increasing code
-									reliability by 30%.
+									Implemented a precise crop x bed termination feature,
+									supporting 20+ beds across 500+ acres, enabling more accurate
+									record-keeping for organic certification.
 								</li>
 								<li>
-									Optimized back-end integration by configuring Axios requests
-									and collaborating with farmOS APIs, reducing data transfer
-									times by 25%.
+									Refactored reactivity models in Vue.js components, reducing
+									error rates by 30% and improving performance during real-time
+									data entry.
+								</li>
+								<li>
+									Developed and documented new log types to track soil
+									disturbance and seeding activities, expanding functionality to
+									meet organic certification requirements.
+								</li>
+								<li>
+									Achieved 90% test coverage by creating unit, E2E, and
+									component tests, identifying and resolving 10+ edge cases in
+									critical workflows.
+								</li>
+								<li>
+									Enhanced user experience by redesigning key forms, decreasing
+									user input time by 40% and improving data accuracy.
+								</li>
+							</ul>
+						</p>
+					</VerticalTimelineElement>
+
+					{/* FarmData2 (Summer Intern) */}
+					<VerticalTimelineElement
+						className="vertical-timeline-element--work"
+						contentStyle={{
+							background: "rgb(33, 33, 33)",
+							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
+						date="May 2024 - July 2024"
+						dateClassName={"custom-date"}
+						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
+						icon={
+							<img
+								src={FarmData2}
+								alt="FarmData2"
+								style={{
+									width: "100%",
+									height: "100%",
+									borderRadius: "50%",
+								}}
+							/>
+						}
+					>
+						<h3 className="vertical-timeline-element-title">
+							Software Engineer – Summer Intern
+						</h3>
+						<h4 className="vertical-timeline-element-subtitle">
+							FarmData2
+							<span style={{ marginLeft: "8px" }}>
+								<a
+									href="https://github.com/FarmData2"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[https://github.com/FarmData2]
+								</a>
+							</span>
+						</h4>
+						<p>
+							<strong>Key Achievements:</strong>
+							<ul>
+								<li>
+									Resolved 55+ features and issues over 8 weeks, implementing
+									solutions for soil disturbance, seeding, and harvesting
+									workflows, enhancing core functionality.
+								</li>
+								<li>
+									Built reusable Vue.js components and streamlined workflows for
+									future developers with modular design patterns.
 								</li>
 								<li>
 									Improved test coverage from 50% to 80% by developing unit and
@@ -507,15 +462,20 @@ const About = () => {
 									disturbance and seeding workflows.
 								</li>
 								<li>
-									Engineered front-end forms with Vue.js, HTML, Bootstrap, and
+									Developed front-end forms with Vue.js, HTML, Bootstrap, and
 									JavaScript, reducing manual record-keeping errors by 40% and
 									streamlining data collection for organic certification.
+								</li>
+								<li>
+									Collaborated with a team of developers in an Agile
+									environment, accelerating feature delivery by 20% through
+									efficient sprint planning and task prioritization.
 								</li>
 							</ul>
 						</p>
 					</VerticalTimelineElement>
 
-					{/* 84 Lumber */}
+					{/* 84 Lumber (Volunteer) */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--work"
 						contentStyle={{
@@ -544,7 +504,7 @@ const About = () => {
 							Software Engineer (Volunteer)
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							84 Lumber
+							Remote • 84 Lumber
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://tinyurl.com/bp5j9uwa"
@@ -560,8 +520,8 @@ const About = () => {
 							<strong>Key Achievements:</strong>
 							<ul>
 								<li>
-									Engineered an NLP-based pipeline leveraging ANTLR to parse and
-									convert legacy CBASIC code into modern languages (Python,
+									Constructed an NLP-based pipeline leveraging ANTLR to parse
+									and convert legacy CBASIC code into modern languages (Python,
 									Java, .NET), reducing manual code review by 40%.
 								</li>
 								<li>
@@ -570,67 +530,8 @@ const About = () => {
 									by 30% using Doxygen.
 								</li>
 								<li>
-									Developed a .NET Core 7 REST API with MySQL integration,
-									streamlining CRUD operations from a Unix-based environment and
-									modernizing critical backend workflows.
-								</li>
-							</ul>
-						</p>
-					</VerticalTimelineElement>
-
-					{/* Teaching Assistant */}
-					<VerticalTimelineElement
-						className="vertical-timeline-element--work"
-						contentStyle={{
-							background: "rgb(33, 33, 33)",
-							color: "#fff",
-							boxShadow: "0 3px 0 #4fd1c5",
-						}}
-						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
-						date="January 2022 - Present"
-						dateClassName={"custom-date"}
-						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
-						icon={
-							<img
-								src={Dickinson}
-								alt="Dickinson College"
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "contain",
-									borderRadius: "50%",
-								}}
-							/>
-						}
-					>
-						<h3 className="vertical-timeline-element-title">
-							Teaching Assistant
-						</h3>
-						<h4 className="vertical-timeline-element-subtitle">
-							Dickinson College
-							<span style={{ marginLeft: "8px" }}>
-								<a
-									href="https://tinyurl.com/329pkspw"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: "#4fd1c5", textDecoration: "underline" }}
-								>
-									[https://tinyurl.com/329pkspw]
-								</a>
-							</span>
-						</h4>
-						<p>
-							<strong>Key Achievements:</strong>
-							<ul>
-								<li>
-									Facilitated weekly lab sessions for 25+ students, increasing
-									average assignment completion rate by 20% through one-on-one
-									code reviews and debugging guidance in Python and Java.
-								</li>
-								<li>
-									Guided undergraduates in data structures and algorithms,
-									boosting overall exam performance by 15% through targeted
-									review sessions and collaborative problem-solving exercises.
+									Created a .NET Core 7 REST API with MySQL integration,
+									streamlining CRUD operations from a Unix-based environment.
 								</li>
 							</ul>
 						</p>
@@ -1001,6 +902,122 @@ const About = () => {
 								</button>
 							</a>
 						</div>
+					</VerticalTimelineElement>
+				</VerticalTimeline>
+			</div>
+
+			{/* Education Timeline */}
+			<div className="timeline-section">
+				<h2>🎓 Education</h2>
+				<VerticalTimeline
+					lineColor="#4fd1c5"
+					layout="1-column-left"
+					className="timeline"
+				>
+					{/* Dickinson College */}
+					<VerticalTimelineElement
+						className="vertical-timeline-element--education"
+						contentStyle={{
+							background: "rgb(33, 33, 33)",
+							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
+						date="Expected May 2025"
+						dateClassName={"custom-date"}
+						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+						icon={
+							<img
+								src={Dickinson}
+								alt="Dickinson College"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
+					>
+						<h3 className="vertical-timeline-element-title">
+							Dickinson College
+						</h3>
+						<h4 className="vertical-timeline-element-subtitle">Carlisle, PA</h4>
+						<p>
+							<strong>Degree:</strong> Bachelor of Science in Computer Science &
+							Mathematics
+							<br />
+							<strong>GPA:</strong> 3.58
+						</p>
+						<p>
+							<strong>Relevant Coursework:</strong>
+							<ul>
+								<li>Data Structures & Analysis of Algorithms</li>
+								<li>Object-Oriented Programming & Computer Architecture</li>
+								<li>Computer Networks & Operating Systems</li>
+								<li>Database Systems & Computational Mathematics</li>
+								<li>Graph Theory & Computability and Complexity</li>
+								<li>Probability, Statistics, & Linear Algebra</li>
+								<li>Discrete Mathematics & Logic</li>
+								<li>Operations Research & Introduction to Data Science</li>
+								<li>Open Source Development & Number Theory</li>
+							</ul>
+						</p>
+					</VerticalTimelineElement>
+
+					{/* HarvardX CS50x */}
+					<VerticalTimelineElement
+						className="vertical-timeline-element--education"
+						contentStyle={{
+							background: "rgb(33, 33, 33)",
+							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
+						date="January 2021"
+						dateClassName={"custom-date"}
+						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+						icon={
+							<img
+								src={HarvardX}
+								alt="HarvardX CS50x"
+								style={{
+									width: "100%",
+									height: "100%",
+									objectFit: "contain",
+									borderRadius: "50%",
+								}}
+							/>
+						}
+					>
+						<h3 className="vertical-timeline-element-title">HarvardX CS50x</h3>
+						<h4 className="vertical-timeline-element-subtitle">
+							Online Certification
+						</h4>
+						<p>
+							<strong>Description:</strong> An intensive introduction to
+							computer science concepts, focusing on problem-solving and
+							programming fundamentals.
+						</p>
+						<p>
+							<strong>Key Topics:</strong>
+							<ul>
+								<li>Programming in C, Python, SQL, JavaScript, HTML/CSS</li>
+								<li>Algorithms, Data Structures, & Software Engineering</li>
+								<li>Web Development & Database Management</li>
+							</ul>
+						</p>
+						<p>
+							<strong>Certificate:</strong>{" "}
+							<a
+								href="https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
+								target="_blank"
+								rel="noopener noreferrer"
+								style={{ color: "#4fd1c5" }}
+							>
+								View Certification
+							</a>
+						</p>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
 			</div>
