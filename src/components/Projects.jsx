@@ -14,6 +14,7 @@ import ResumeApp from "../assets/resume-app.png";
 import SpaceAccuracy from "../assets/space.png";
 import SocialIcons from "./SocialIcons";
 import bittorrent from "../assets/bittorrent.svg";
+import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
 
@@ -273,6 +274,7 @@ const ProjectItem = ({
 
 const Projects = () => {
 	const [searchTerm, setSearchTerm] = useState("");
+	const [showAllProjects, setShowAllProjects] = useState(false);
 
 	const highlightText = (text) => {
 		if (!searchTerm) return text;
@@ -285,6 +287,10 @@ const Projects = () => {
 			project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			project.description.toLowerCase().includes(searchTerm.toLowerCase())
 	);
+
+	const displayedProjects = showAllProjects
+		? filteredProjects
+		: filteredProjects.slice(0, 4);
 
 	const breakpointColumnsObj = {
 		default: 4,
@@ -359,10 +365,52 @@ const Projects = () => {
 				className="my-masonry-grid"
 				columnClassName="my-masonry-grid_column"
 			>
-				{filteredProjects.map((project, index) => (
+				{filteredProjects.slice(0, 4).map((project, index) => (
 					<ProjectItem key={index} {...project} highlight={highlightText} />
 				))}
 			</Masonry>
+
+			{filteredProjects.length > 4 && (
+				<Box sx={{ textAlign: "center", margin: "2rem 0" }}>
+					<Button
+						variant="contained"
+						onClick={() => setShowAllProjects(!showAllProjects)}
+						endIcon={
+							showAllProjects ? <KeyboardArrowUp /> : <KeyboardArrowDown />
+						}
+						sx={{
+							width: "100%",
+							backgroundColor: "#4fd1c5",
+							color: "#222",
+							fontWeight: "bold",
+							"&:hover": {
+								backgroundColor: "#a569bd",
+								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+								color: "#fff",
+							},
+						}}
+					>
+						{showAllProjects ? "Show Less" : "Show More"}
+					</Button>
+				</Box>
+			)}
+
+			{showAllProjects && (
+				<Masonry
+					breakpointCols={breakpointColumnsObj}
+					className="my-masonry-grid"
+					columnClassName="my-masonry-grid_column"
+				>
+					{filteredProjects.slice(4).map((project, index) => (
+						<ProjectItem
+							key={index + 4}
+							{...project}
+							highlight={highlightText}
+						/>
+					))}
+				</Masonry>
+			)}
+
 			<Box sx={{ textAlign: "center", color: "#e0e0e0", marginTop: "3rem" }}>
 				<Typography
 					variant="h5"
