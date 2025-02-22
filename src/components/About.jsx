@@ -2,6 +2,7 @@ import Shahir from "../assets/shahir.jpeg";
 import Dickinson from "../assets/dickinson.png";
 import HarvardX from "../assets/Harvard_x_logo.png";
 import FarmData2 from "../assets/farmData2.png";
+import MermaidJS from "../assets/mermaid.webp";
 import Lumber84 from "../assets/84.png";
 import Hoya from "../assets/hoya.png";
 import PennApps from "../assets/penn.png";
@@ -69,9 +70,16 @@ const About = () => {
 								>
 									<strong>84 Lumber</strong>
 								</a>
-								, where I worked on modernizing legacy systems. These
-								experiences have taught me the value of collaboration,
-								persistence, and writing clean, maintainable code.
+								, where I worked on modernizing legacy systems. More recently,
+								I&apos;ve been contributing to{" "}
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<strong>Mermaid.js</strong>
+								</a>
+								, improving Journey diagram rendering and customization options.
 							</p>
 							<p className="about-me-text">
 								Hackathons have been another exciting part of my journey. From
@@ -135,6 +143,7 @@ const About = () => {
 						{/* Social Section */}
 						<SocialIcons />
 					</div>
+
 					<img src={Shahir} alt="Shahir" className="about-me-picture" />
 				</div>
 			</div>
@@ -163,12 +172,16 @@ const About = () => {
 								alt="TypeScript"
 							/>
 							<img
+								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+								alt="Python"
+							/>
+							<img
 								src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
 								alt="C"
 							/>
 							<img
-								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
-								alt="Python"
+								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
+								alt="SQL"
 							/>
 							<img
 								src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"
@@ -182,24 +195,12 @@ const About = () => {
 								src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white"
 								alt="MATLAB"
 							/>
-							<img
-								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
-								alt="SQL"
-							/>
 						</div>
 					</div>
 
 					<div className="tools-category">
-						<h3>Web Development</h3>
+						<h3>Frontend</h3>
 						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-								alt="HTML"
-							/>
-							<img
-								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-								alt="CSS"
-							/>
 							<img
 								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
 								alt="Vue.js"
@@ -209,35 +210,47 @@ const About = () => {
 								alt="React"
 							/>
 							<img
-								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
-								alt="Node.js"
+								src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white"
+								alt="Electron"
 							/>
 							<img
 								src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black"
 								alt="Webpack"
 							/>
 							<img
-								src="https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=black"
-								alt="Babel"
+								src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
+								alt="Bootstrap"
 							/>
 							<img
-								src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"
-								alt="ESLint"
+								src="https://img.shields.io/badge/Mermaid.js-009688?style=for-the-badge&logo=data:image/png;base64,..."
+								alt="Mermaid.js"
 							/>
 							<img
-								src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"
-								alt="Prettier"
+								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+								alt="HTML"
 							/>
 							<img
-								src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
-								alt="npm"
+								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+								alt="CSS"
 							/>
 						</div>
 					</div>
 
 					<div className="tools-category">
-						<h3>Databases</h3>
+						<h3>Backend & Databases</h3>
 						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
+								alt="Node.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
+								alt="Express.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+								alt="Flask"
+							/>
 							<img
 								src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
 								alt="PostgreSQL"
@@ -250,32 +263,12 @@ const About = () => {
 								src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"
 								alt="SQLite"
 							/>
-							<img
-								src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
-								alt="MySQL"
-							/>
 						</div>
 					</div>
 
 					<div className="tools-category">
-						<h3>Tools & Platforms</h3>
+						<h3>Other Tools</h3>
 						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
-								alt="AWS"
-							/>
-							<img
-								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
-								alt="Cloudflare"
-							/>
-							<img
-								src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white"
-								alt="Databricks"
-							/>
-							<img
-								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
-								alt="Flask"
-							/>
 							<img
 								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
 								alt="Vercel"
@@ -320,6 +313,10 @@ const About = () => {
 								src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
 								alt="Jest"
 							/>
+							<img
+								src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"
+								alt="Vitest"
+							/>
 						</div>
 					</div>
 				</div>
@@ -341,24 +338,20 @@ const About = () => {
 							color: "#fff",
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
-						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
-						date="September 2024 - Present"
+						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+						date="August 2024 - Present"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
 							<img
 								src={FarmData2}
 								alt="FarmData2"
-								style={{
-									width: "100%",
-									height: "100%",
-									borderRadius: "50%",
-								}}
+								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
 							/>
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer – Part-Time
+							Software Developer – Part-Time
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							FarmData2
@@ -369,42 +362,38 @@ const About = () => {
 									rel="noopener noreferrer"
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 								>
-									[https://github.com/FarmData2]
+									[GitHub Repository]
 								</a>
 							</span>
 						</h4>
 						<p>
 							<strong>Key Achievements:</strong>
-							<ul>
-								<li>
-									Implemented a precise crop x bed termination feature,
-									supporting 20+ beds across 500+ acres, enabling more accurate
-									record-keeping for organic certification.
-								</li>
-								<li>
-									Refactored reactivity models in Vue.js components, reducing
-									error rates by 30% and improving performance during real-time
-									data entry.
-								</li>
-								<li>
-									Developed and documented new log types to track soil
-									disturbance and seeding activities, expanding functionality to
-									meet organic certification requirements.
-								</li>
-								<li>
-									Achieved 90% test coverage by creating unit, E2E, and
-									component tests, identifying and resolving 10+ edge cases in
-									critical workflows.
-								</li>
-								<li>
-									Enhanced user experience by redesigning key forms, decreasing
-									user input time by 40% and improving data accuracy.
-								</li>
-							</ul>
 						</p>
+						<ul>
+							<li>
+								Built REST API endpoints with Node.js and Express.js to enable
+								farmers to selectively terminate crops across 20+ beds on an
+								80-acre USDA-certified organic farm.
+							</li>
+							<li>
+								Designed and implemented API endpoints for soil disturbance,
+								seeding, and transplanting logs using PostgreSQL and the farmOS
+								API, saving farm staff 3+ hours per week.
+							</li>
+							<li>
+								Developed and refined 30+ Cypress E2E, component, and API tests,
+								ensuring data integrity, network reliability, and correct
+								permission handling.
+							</li>
+							<li>
+								Built front-end forms with Vue.js, Bootstrap, and JavaScript to
+								replace spreadsheet-based tracking, reducing manual errors and
+								aligning with USDA organic certification requirements.
+							</li>
+						</ul>
 					</VerticalTimelineElement>
 
-					{/* FarmData2 (Summer Intern) */}
+					{/* Mermaid.js (Open Source) */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--work"
 						contentStyle={{
@@ -412,24 +401,89 @@ const About = () => {
 							color: "#fff",
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
-						contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
-						date="May 2024 - July 2024"
+						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+						date="January 2025 - Present"
+						dateClassName={"custom-date"}
+						iconStyle={{ background: "#009688", color: "#fff" }}
+						icon={
+							<img
+								src={MermaidJS}
+								alt="Mermaid.js"
+								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+							/>
+						}
+					>
+						<h3 className="vertical-timeline-element-title">
+							Open Source Developer
+						</h3>
+						<h4 className="vertical-timeline-element-subtitle">
+							Mermaid.js
+							<span style={{ marginLeft: "8px" }}>
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[GitHub Repository]
+								</a>
+							</span>
+						</h4>
+						<p>
+							<strong>Key Contributions:</strong>
+						</p>
+						<ul>
+							<li>
+								Fixed a rendering issue where long legend labels in Journey
+								diagrams overlapped with diagram elements, improving layout
+								accuracy for 100K+ users and adding E2E tests.
+								<a
+									href="https://github.com/mermaid-js/mermaid/pull/6274"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[PR #6274]
+								</a>
+							</li>
+							<li>
+								Enhanced title customization for Journey diagrams by introducing
+								diagram-specific variables, allowing 100K+ users to style titles
+								more flexibly.
+								<a
+									href="https://github.com/mermaid-js/mermaid/pull/6225"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[PR #6225]
+								</a>
+							</li>
+						</ul>
+					</VerticalTimelineElement>
+
+					{/* FarmData2 (Internship) */}
+					<VerticalTimelineElement
+						className="vertical-timeline-element--work"
+						contentStyle={{
+							background: "rgb(33, 33, 33)",
+							color: "#fff",
+							boxShadow: "0 3px 0 #4fd1c5",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+						date="May 2024 - August 2024"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
 							<img
 								src={FarmData2}
 								alt="FarmData2"
-								style={{
-									width: "100%",
-									height: "100%",
-									borderRadius: "50%",
-								}}
+								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
 							/>
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer – Summer Intern
+							Software Developer Intern
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							FarmData2
@@ -440,39 +494,34 @@ const About = () => {
 									rel="noopener noreferrer"
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 								>
-									[https://github.com/FarmData2]
+									[GitHub Repository]
 								</a>
 							</span>
 						</h4>
 						<p>
 							<strong>Key Achievements:</strong>
-							<ul>
-								<li>
-									Resolved 55+ features and issues over 8 weeks, implementing
-									solutions for soil disturbance, seeding, and harvesting
-									workflows, enhancing core functionality.
-								</li>
-								<li>
-									Built reusable Vue.js components and streamlined workflows for
-									future developers with modular design patterns.
-								</li>
-								<li>
-									Improved test coverage from 50% to 80% by developing unit and
-									E2E tests, minimizing deployment regressions in soil
-									disturbance and seeding workflows.
-								</li>
-								<li>
-									Developed front-end forms with Vue.js, HTML, Bootstrap, and
-									JavaScript, reducing manual record-keeping errors by 40% and
-									streamlining data collection for organic certification.
-								</li>
-								<li>
-									Collaborated with a team of developers in an Agile
-									environment, accelerating feature delivery by 20% through
-									efficient sprint planning and task prioritization.
-								</li>
-							</ul>
 						</p>
+						<ul>
+							<li>
+								Developed a Bash script to automate Cypress E2E, component, and
+								unit tests across different environments, streamlining test
+								execution.
+							</li>
+							<li>
+								Optimized Vue.js reactivity models by restructuring computed
+								properties and watchers, reducing form rendering latency and
+								data errors.
+							</li>
+							<li>
+								Managed sprint planning and issue tracking in GitHub Projects,
+								improving task prioritization and iteration workflow.
+							</li>
+							<li>
+								Improved test coverage from 50% to 80% by writing Jest and
+								Cypress tests, reducing deployment regressions in seeding
+								workflows.
+							</li>
+						</ul>
 					</VerticalTimelineElement>
 
 					{/* 84 Lumber (Volunteer) */}
@@ -483,7 +532,7 @@ const About = () => {
 							color: "#fff",
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
-						contentArrowStyle={{ borderRight: "7px solid  rgb(45, 45, 45)" }}
+						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
 						date="September 2023 - January 2024"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
@@ -491,17 +540,12 @@ const About = () => {
 							<img
 								src={Lumber84}
 								alt="84 Lumber"
-								style={{
-									width: "100%",
-									height: "100%",
-									objectFit: "contain",
-									borderRadius: "50%",
-								}}
+								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
 							/>
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer – Volunteer
+							Software Developer – Volunteer
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							84 Lumber
@@ -512,29 +556,24 @@ const About = () => {
 									rel="noopener noreferrer"
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 								>
-									[https://tinyurl.com/bp5j9uwa]
+									[Featured in Dickinson News]
 								</a>
 							</span>
 						</h4>
 						<p>
-							<strong>Key Achievements:</strong>
-							<ul>
-								<li>
-									Constructed an NLP-based pipeline leveraging ANTLR to parse
-									and convert legacy CBASIC code into modern languages (Python,
-									Java, .NET), reducing manual code review by 40%.
-								</li>
-								<li>
-									Constructed an Abstract Syntax Tree (AST) framework for
-									automated documentation, accelerating new developer onboarding
-									by 30% using Doxygen.
-								</li>
-								<li>
-									Created a .NET Core 7 REST API with MySQL integration,
-									streamlining CRUD operations from a Unix-based environment.
-								</li>
-							</ul>
+							<strong>Key Contributions:</strong>
 						</p>
+						<ul>
+							<li>
+								Developed an NLP-based pipeline using ANTLR to convert legacy
+								CBASIC code into modern languages, reducing manual code review
+								effort.
+							</li>
+							<li>
+								Designed an Abstract Syntax Tree (AST) framework for automated
+								documentation using Doxygen, improving developer onboarding.
+							</li>
+						</ul>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
 			</div>

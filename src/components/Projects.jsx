@@ -288,10 +288,6 @@ const Projects = () => {
 			project.description.toLowerCase().includes(searchTerm.toLowerCase())
 	);
 
-	const displayedProjects = showAllProjects
-		? filteredProjects
-		: filteredProjects.slice(0, 4);
-
 	const breakpointColumnsObj = {
 		default: 4,
 		2500: 3,
