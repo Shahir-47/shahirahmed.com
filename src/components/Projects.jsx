@@ -1,22 +1,51 @@
 import PropTypes from "prop-types";
 import Masonry from "react-masonry-css";
-import Todo from "../assets/todo.png";
-import Battleship from "../assets/battleship.png";
-import Weather from "../assets/weather.png";
-import Tictac from "../assets/tictac.png";
-import Calculator from "../assets/calculator.png";
-import Restaurant from "../assets/restaurant.png";
 import Etch from "../assets/etch.png";
 import FD2 from "../assets/fd2.png";
 import SweetFriend from "../assets/sweetFriend.jpg";
 import Albatross from "../assets/albatross.png";
-import ResumeApp from "../assets/resume-app.png";
 import SpaceAccuracy from "../assets/space.png";
 import SocialIcons from "./SocialIcons";
 import bittorrent from "../assets/bittorrent.svg";
+import Peer from "../assets/peer.png";
+import Sarva from "../assets/sarva.png";
+import Open from "../assets/open.png";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
+import { SiDevpost } from "react-icons/si";
+import { Launch } from "@mui/icons-material";
+import { FaGithub } from "react-icons/fa";
+
+const DevpostButton = ({ link }) => (
+	<Button
+		variant="contained"
+		href={link}
+		target="_blank"
+		rel="noopener noreferrer"
+		fullWidth
+		sx={{
+			backgroundColor: "#0066ff",
+			color: "#fff",
+			fontWeight: "bold",
+			"&:hover": {
+				backgroundColor: "#0044bb",
+				color: "#fff",
+				boxShadow: "0 4px 15px rgba(0, 102, 255, 0.25)",
+			},
+			minWidth: 0,
+			padding: "8px 0",
+			fontSize: "1rem",
+		}}
+		startIcon={<SiDevpost />}
+	>
+		Devpost
+	</Button>
+);
+
+DevpostButton.propTypes = {
+	link: PropTypes.string.isRequired,
+};
 
 const projectsData = [
 	{
@@ -29,12 +58,60 @@ const projectsData = [
 		repo: "FarmData2",
 	},
 	{
+		image: Open,
+		title: "Open Source Contributions",
+		description: `
+			Top contributor to <b>Mermaid.js</b> (Top 25, key features & PRs) and <b>FarmData2</b> (#2 overall, 25+ PRs, 14K+ lines added).<br/>
+			Check out my open source journey, major PRs, stats, and merged features for both projects.<br/>
+			<ul style="margin: 0 0 0 1.5em; padding: 0;">
+				<li>
+					<a href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
+						Mermaid.js PRs (Top 25 contributor)
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
+						FarmData2 PRs (#2 contributor)
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/Shahir-47/open-source-contributions" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
+						See full OSS portfolio & stats
+					</a>
+				</li>
+			</ul>
+		`,
+		sourceCode: "https://github.com/Shahir-47/open-source-contributions", // 'Source Code' button also points here
+		devpost: null,
+		repo: "Open-Source-Contributions",
+	},
+	{
+		image: Sarva, // Add your Sarva app logo or screenshot if available
+		title: "Sarva (Public Template)",
+		description:
+			"Sarva is a full-stack grocery delivery platform for South Asian markets. This open template demonstrates a real-world, role-based marketplace built with Next.js, Firebase, Stripe, and Google Maps API. Features include customer ordering, vendor management, driver delivery flows, real-time order tracking, and split payments. The live production app operates at sarvabazaar.com with private code, while this repo is a complete, secure public demo.",
+		liveDemo: "https://www.sarvabazaar.com/",
+		sourceCode: "https://github.com/Shahir-47/sarva-template", // Replace with your public template repo
+		devpost: null, // No Devpost link, leave as null
+		repo: "sarva-template",
+	},
+	{
+		image: Peer, // Add your Peer-to-Playlist screenshot here, or leave blank for now
+		title: "Peer-to-Playlist",
+		description:
+			"Peer-to-Playlist is a social web app that matches users based on Spotify music preferences, featuring real-time chat, multimedia messaging, and music sharing. Built with React, Express, MongoDB, and AWS S3. I designed the architecture, led backend development, and built the music-based matching and real-time messaging systems. Includes secure authentication, file sharing, and Spotify data integration.",
+		liveDemo: "https://peer-to-playlist.onrender.com/",
+		sourceCode: "https://github.com/Shahir-47/Peer-to-Playlist",
+		repo: "Peer-to-Playlist",
+	},
+	{
 		image: Albatross,
 		title: "Albatross",
 		description:
 			"Albatross is a hackathon project leveraging AI and real-time crime data to enhance urban safety by calculating and displaying the safest navigation routes. Built with Vue.js, it features an interactive map highlighting high-risk zones and optimized routes, currently operating in demo mode.",
 		liveDemo: "https://albatross-hack.netlify.app/",
 		sourceCode: "https://github.com/orgs/HackHarvard2024-Team/repositories",
+		devpost: "https://devpost.com/software/albatross",
 		repo: "Albatross",
 	},
 	{
@@ -44,6 +121,7 @@ const projectsData = [
 			"SweetFriend is a diabetes management web app integrating Dexcom glucose monitors for real-time glucose tracking, AI-powered meal recognition, and personalized health insights. It simplifies carb counting, meal logging, and glucose trend analysis to empower users in managing diabetes effectively.",
 		liveDemo: "https://sweet-friend.vercel.app/app/dashboard",
 		sourceCode: "https://github.com/dmicz/SweetFriend",
+		devpost: "https://devpost.com/software/sweetfriend",
 		repo: "SweetFriend",
 	},
 	{
@@ -56,49 +134,12 @@ const projectsData = [
 		repo: "bittorrent-client-js",
 	},
 	{
-		image: Weather,
-		title: "Weather App",
+		image: SpaceAccuracy,
+		title: "SpaceAccuracy",
 		description:
-			"Weather Whiz is a web app providing current weather, hourly & 2-day forecasts for different locations. Switch between imperial & metric units. Built with HTML, CSS, JS, Webpack, Babel, ESLint & Prettier. APIs: OpenWeather & Mapbox. Stay prepared with accurate weather data!",
-		liveDemo: "https://shahir-47.github.io/Weather-Whiz/",
-		sourceCode: "https://github.com/Shahir-47/Weather-Whiz",
-		repo: "Weather-Whiz",
-	},
-	{
-		image: Todo,
-		title: "Todo List",
-		description:
-			"Todo List is a powerful task management application that helps you stay organized and productive. Manage tasks, projects, and notes effortlessly. Features include priority levels, due dates, search functionality, and dark/light theme. Get started and boost your productivity today!",
-		liveDemo: "https://shahir-47.github.io/Todo-List/",
-		sourceCode: "https://github.com/Shahir-47/Todo-List",
-		repo: "Todo-List",
-	},
-	{
-		image: Battleship,
-		title: "Battleship",
-		description:
-			"A web-based Battleship game with a strategic AI. Players engage in classic naval warfare against a computer. Code is open for contributions and tests ensure robust gameplay. Play now!",
-		liveDemo: "https://shahir-47.github.io/Battleship/",
-		sourceCode: "https://github.com/Shahir-47/Battleship",
-		repo: "Battleship",
-	},
-	{
-		image: Tictac,
-		title: "Tic Tac Toe",
-		description:
-			"Enjoy the classic Tic Tac Toe game with customizable markers, colors, and player names. Play against a friend or challenging AI. Responsive design, visually appealing interface. Source code for HTML, CSS, JavaScript implementation. Experience hours of interactive and addictive fun!",
-		liveDemo: "https://shahir-47.github.io/Tic-Tac-Toe/",
-		sourceCode: "https://github.com/Shahir-47/Tic-Tac-toe",
-		repo: "Tic-Tac-Toe",
-	},
-	{
-		image: ResumeApp,
-		title: "Resume Builder",
-		description:
-			"A user-friendly web application for creating, editing, and previewing professional resumes. Features include customizable sections, reorder functionality, and PDF export. Perfect for users looking to design structured and visually appealing resumes.",
-		liveDemo: "https://resume-maker-template.netlify.app/",
-		sourceCode: "https://github.com/Shahir-47/CV-Application",
-		repo: "CV-Application",
+			"A 2D shooter game where players aim to hit an alien and score points while the challenge increases with each hit. Developed in Lua with robust OOP principles, the game highlights skills in game logic, animations, and shooting mechanics.",
+		sourceCode: "https://github.com/Shahir-47/SpaceAccuracy",
+		repo: "SpaceAccuracy",
 	},
 	{
 		image: "",
@@ -110,13 +151,6 @@ const projectsData = [
 	},
 	{
 		image: "",
-		title: "DNA Profiling",
-		description:
-			"A forensic DNA profiling program that matches a DNA sequence to an individual based on Short Tandem Repeats (STRs). The tool reads STR counts from a CSV database, analyzes the longest runs of STR repeats in a DNA sequence, and identifies a match or declares 'No match.'",
-		sourceCode: "https://github.com/Shahir-47/DNA",
-	},
-	{
-		image: "",
 		title: "Speller",
 		description:
 			"A high-performance spell-checking program built with C, leveraging hash tables for efficient word lookups. It identifies misspelled words in a text file, supports customizable dictionaries, and provides detailed performance metrics for operations like loading, checking, and memory management.",
@@ -125,19 +159,18 @@ const projectsData = [
 	},
 	{
 		image: "",
+		title: "DNA Profiling",
+		description:
+			"A forensic DNA profiling program that matches a DNA sequence to an individual based on Short Tandem Repeats (STRs). The tool reads STR counts from a CSV database, analyzes the longest runs of STR repeats in a DNA sequence, and identifies a match or declares 'No match.'",
+		sourceCode: "https://github.com/Shahir-47/DNA",
+	},
+	{
+		image: "",
 		title: "Filter",
 		description:
 			"An image processing program in C that applies grayscale, sepia, reflection, and blur filters to BMP images. Demonstrates low-level pixel manipulation and memory-efficient algorithms to transform images with high performance.",
 		sourceCode: "https://github.com/Shahir-47/filter",
 		repo: "filter",
-	},
-	{
-		image: SpaceAccuracy,
-		title: "SpaceAccuracy",
-		description:
-			"A 2D shooter game where players aim to hit an alien and score points while the challenge increases with each hit. Developed in Lua with robust OOP principles, the game highlights skills in game logic, animations, and shooting mechanics.",
-		sourceCode: "https://github.com/Shahir-47/SpaceAccuracy",
-		repo: "SpaceAccuracy",
 	},
 	{
 		image: "",
@@ -164,24 +197,6 @@ const projectsData = [
 		sourceCode: "https://github.com/Shahir-47/Etch-a-Sketch/",
 		repo: "Etch-a-Sketch",
 	},
-	{
-		image: Calculator,
-		title: "Calculator",
-		description:
-			"This is a simple calculator application with keyboard support. It allows you to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It also includes additional features like calculating the factorial and exponentiation.",
-		liveDemo: "https://shahir-47.github.io/Calculator/",
-		sourceCode: "https://github.com/Shahir-47/Calculator",
-		repo: "Calculator",
-	},
-	{
-		image: Restaurant,
-		title: "Restaurant Page",
-		description:
-			"A web-based platform that provides information and features related to a fictional restaurant called the Galactic Cantina. The application allows users to explore various sections such as the home page, menu page, contact page, about us page, review page, and FAQ page.",
-		liveDemo: "https://shahir-47.github.io/Restaurant-Page/",
-		sourceCode: "https://github.com/Shahir-47/Restaurant-Page",
-		repo: "Restaurant-Page",
-	},
 ];
 
 const ProjectItem = ({
@@ -190,6 +205,7 @@ const ProjectItem = ({
 	description,
 	liveDemo,
 	sourceCode,
+	devpost,
 	highlight,
 }) => (
 	<Box
@@ -227,15 +243,24 @@ const ProjectItem = ({
 			sx={{ color: "#e0e0e0", marginBottom: "1rem" }}
 			dangerouslySetInnerHTML={{ __html: highlight(description) }}
 		/>
-		<Box sx={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
+		<Box
+			sx={{
+				width: "100%",
+				display: "flex",
+				flexDirection: "column",
+				gap: "0.75rem",
+				mt: 2,
+			}}
+		>
 			{liveDemo && (
 				<Button
 					variant="contained"
 					href={liveDemo}
 					target="_blank"
 					rel="noopener noreferrer"
+					fullWidth
+					startIcon={<Launch />}
 					sx={{
-						textAlign: "center",
 						backgroundColor: "#4fd1c5",
 						color: "#222",
 						fontWeight: "bold",
@@ -244,9 +269,11 @@ const ProjectItem = ({
 							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 							color: "#fff",
 						},
+						fontSize: "1rem",
+						py: 1.1,
 					}}
 				>
-					Live Demo
+					Visit Website
 				</Button>
 			)}
 			<Button
@@ -254,8 +281,9 @@ const ProjectItem = ({
 				href={sourceCode}
 				target="_blank"
 				rel="noopener noreferrer"
+				fullWidth
+				startIcon={<FaGithub />}
 				sx={{
-					textAlign: "center",
 					borderColor: "#4fd1c5",
 					color: "#4fd1c5",
 					fontWeight: "bold",
@@ -264,10 +292,36 @@ const ProjectItem = ({
 						color: "#a569bd",
 						boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 					},
+					fontSize: "1rem",
+					py: 1.1,
 				}}
 			>
 				Source Code
 			</Button>
+			{devpost && (
+				<Button
+					variant="contained"
+					href={devpost}
+					target="_blank"
+					rel="noopener noreferrer"
+					fullWidth
+					startIcon={<SiDevpost />}
+					sx={{
+						backgroundColor: "#0066ff",
+						color: "#fff",
+						fontWeight: "bold",
+						"&:hover": {
+							backgroundColor: "#0044bb",
+							color: "#fff",
+							boxShadow: "0 4px 15px rgba(0, 102, 255, 0.25)",
+						},
+						fontSize: "1rem",
+						py: 1.1,
+					}}
+				>
+					Devpost
+				</Button>
+			)}
 		</Box>
 	</Box>
 );
@@ -361,12 +415,12 @@ const Projects = () => {
 				className="my-masonry-grid"
 				columnClassName="my-masonry-grid_column"
 			>
-				{filteredProjects.slice(0, 4).map((project, index) => (
+				{filteredProjects.slice(0, 8).map((project, index) => (
 					<ProjectItem key={index} {...project} highlight={highlightText} />
 				))}
 			</Masonry>
 
-			{filteredProjects.length > 4 && (
+			{filteredProjects.length > 8 && (
 				<Box sx={{ textAlign: "center", margin: "2rem 0" }}>
 					<Button
 						variant="contained"
@@ -397,9 +451,9 @@ const Projects = () => {
 					className="my-masonry-grid"
 					columnClassName="my-masonry-grid_column"
 				>
-					{filteredProjects.slice(4).map((project, index) => (
+					{filteredProjects.slice(8).map((project, index) => (
 						<ProjectItem
-							key={index + 4}
+							key={index + 8}
 							{...project}
 							highlight={highlightText}
 						/>
@@ -426,6 +480,7 @@ ProjectItem.propTypes = {
 	description: PropTypes.string.isRequired,
 	liveDemo: PropTypes.string.isRequired,
 	sourceCode: PropTypes.string.isRequired,
+	devpost: PropTypes.string,
 	highlight: PropTypes.func.isRequired,
 };
 
