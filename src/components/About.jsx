@@ -130,6 +130,280 @@ const About = () => {
 				</div>
 			</div>
 
+			{/* OSS Contributions */}
+			<div className="oss-section">
+				{/* Open Source Contributions Section */}
+				<h2
+					className="section-title"
+					style={{
+						textAlign: "center",
+						fontSize: "2.3rem",
+						fontWeight: 700,
+						margin: "0 0 3rem 0",
+						letterSpacing: "0.02em",
+						color: "#4fd1c5",
+						textShadow: "0 2px 16px #0009",
+					}}
+				>
+					🌟 Open Source Contributions
+				</h2>
+
+				<div
+					className="open-source-section"
+					style={{
+						maxWidth: 950,
+						margin: "0 auto",
+						padding: "0 1.2rem",
+					}}
+				>
+					{/* Mermaid.js */}
+					<div
+						style={{
+							display: "flex",
+							alignItems: "flex-start",
+							background: "#222",
+							borderRadius: 16,
+							marginBottom: "2.1rem",
+							boxShadow: "0 1px 12px 0 rgba(0,0,0,0.13)",
+							padding: "1.5rem 2rem",
+							gap: "2.3rem",
+						}}
+					>
+						<img
+							src={MermaidJS}
+							alt="Mermaid.js"
+							style={{
+								width: 65,
+								height: 65,
+								borderRadius: 14,
+								objectFit: "cover",
+								background: "#fff",
+								marginRight: 0,
+								boxShadow: "0 0 10px 1px #0005",
+							}}
+						/>
+						<div style={{ flex: 1 }}>
+							<div
+								style={{
+									fontWeight: 600,
+									fontSize: "1.33rem",
+									color: "#69f9e6",
+									marginBottom: 3,
+								}}
+							>
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#f992cf" }}
+								>
+									Mermaid.js
+								</a>
+								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
+									(Top 25 contributor)
+								</span>
+							</div>
+							<div style={{ fontSize: 16, color: "#f3f6fa", marginBottom: 13 }}>
+								• 75+ commits. Delivered innovative charting features, resolved
+								core rendering bugs, and improved overall usability for millions
+								of users.
+							</div>
+							<ul
+								style={{
+									fontSize: 15,
+									color: "#c7e9f1",
+									margin: 0,
+									marginBottom: 9,
+									paddingLeft: 18,
+								}}
+							>
+								<li>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pull/6475"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#43e8d8", textDecoration: "underline" }}
+									>
+										Added dynamic, auto-scaling data labels for bar charts
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pull/6274"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#43e8d8", textDecoration: "underline" }}
+									>
+										Engineered smart word wrapping to prevent legend/label
+										overlap
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pull/6225"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#43e8d8", textDecoration: "underline" }}
+									>
+										Enabled full theme customization for Journey diagrams
+									</a>
+								</li>
+							</ul>
+							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
+								<a
+									href="https://github.com/mermaid-js/mermaid/graphs/contributors"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										color: "#61ffe7",
+										marginRight: 18,
+									}}
+								>
+									Contributor graph
+								</a>
+								<a
+									href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#61ffe7" }}
+								>
+									All PRs
+								</a>
+							</div>
+						</div>
+					</div>
+
+					{/* FarmData2 */}
+					<div
+						style={{
+							display: "flex",
+							alignItems: "flex-start",
+							background: "#222",
+							borderRadius: 16,
+							marginBottom: "2.1rem",
+							boxShadow: "0 1px 12px 0 rgba(0,0,0,0.13)",
+							padding: "1.5rem 2rem",
+							gap: "2.3rem",
+						}}
+					>
+						<img
+							src={FarmData2}
+							alt="FarmData2"
+							style={{
+								width: 65,
+								height: 65,
+								borderRadius: 14,
+								objectFit: "cover",
+								background: "#fff",
+								marginRight: 0,
+								boxShadow: "0 0 10px 1px #0005",
+							}}
+						/>
+						<div style={{ flex: 1 }}>
+							<div
+								style={{
+									fontWeight: 600,
+									fontSize: "1.33rem",
+									color: "#69f9e6",
+									marginBottom: 3,
+								}}
+							>
+								<a
+									href="https://github.com/FarmData2/FarmData2"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#a3ffad" }}
+								>
+									FarmData2
+								</a>
+								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
+									(#2 overall contributor)
+								</span>
+							</div>
+							<div style={{ fontSize: 16, color: "#f3f6fa", marginBottom: 13 }}>
+								• 25+ PRs, 14,000+ lines added. Built complex data entry forms,
+								elevated user experience, and modernized backend architecture
+								for real-world farm operations.
+							</div>
+							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
+								<a
+									href="https://github.com/FarmData2/FarmData2/graphs/contributors"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										color: "#61ffe7",
+										marginRight: 18,
+									}}
+								>
+									Contributor graph
+								</a>
+								<a
+									href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#61ffe7" }}
+								>
+									All PRs
+								</a>
+							</div>
+						</div>
+					</div>
+
+					{/* Full Portfolio */}
+					<div
+						style={{
+							display: "flex",
+							alignItems: "center",
+							background: "rgba(52, 21, 65, 0.75)",
+							borderRadius: 16,
+							marginBottom: 0,
+							boxShadow: "0 1px 8px 0 rgba(121,82,179,0.08)",
+							padding: "1.45rem 2rem",
+							gap: "2.1rem",
+						}}
+					>
+						<span style={{ fontSize: 32, marginRight: 18 }}>🗂️</span>
+						<div style={{ flex: 1 }}>
+							<div
+								style={{
+									fontWeight: 600,
+									fontSize: "1.17rem",
+									color: "#b8fffb",
+									marginBottom: 5,
+								}}
+							>
+								See My Full Open Source Portfolio
+							</div>
+							<div style={{ fontSize: 15, color: "#e9e9f3", marginBottom: 7 }}>
+								Get a detailed breakdown, merged PRs, and stats for every major
+								project.
+							</div>
+							<a
+								href="https://github.com/Shahir-47/open-source-contributions"
+								target="_blank"
+								rel="noopener noreferrer"
+								id="open-source-button"
+								style={{
+									display: "inline-block",
+									background: "#7952B3",
+									color: "#fff",
+									borderRadius: 8,
+									padding: "5px 17px",
+									fontWeight: 500,
+									fontSize: 15,
+									marginTop: 2,
+									boxShadow: "0 1px 3px 0 rgba(121,82,179,0.1)",
+									transition: "background 0.3s ease",
+								}}
+							>
+								Open Source Portfolio →
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Tools and Technologies */}
 			<div className="tools-section">
 				<div className="tools-header">
 					<h2>
@@ -362,7 +636,6 @@ const About = () => {
 				</div>
 			</div>
 
-			{/* Work Experience Timeline */}
 			{/* Work Experience Timeline */}
 			<div className="timeline-section">
 				<h2>💼 Work Experience</h2>

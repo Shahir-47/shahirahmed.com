@@ -1575,6 +1575,21 @@ div.react-activity-calendar__scroll-container {
 	gap: 2rem;
 }
 
+.oss-section a {
+	transition: color 0.18s, text-shadow 0.18s;
+}
+
+.oss-section a:hover {
+	color: #a569bd !important;
+	text-decoration: underline !important;
+	text-shadow: 0 0 6px #43e8d899;
+}
+
+#open-source-button:hover {
+	background-color: #9a6e08 !important;
+	color: #fff !important;
+}
+
 @media (min-width: 700px) {
 	.tools-grid {
 		grid-template-columns: repeat(2, 1fr);
