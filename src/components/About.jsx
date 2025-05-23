@@ -42,18 +42,21 @@ const About = () => {
 					<div className="about-me-text-div">
 						<div className="paragraph">
 							<p className="about-me-text">
-								Hi, I’m Shahir—a senior at <strong>Dickinson College</strong>,
-								majoring in <strong>Computer Science</strong> and{" "}
-								<strong>Mathematics</strong>. My coding journey started with
-								curiosity and has grown into a passion for exploring new
-								technologies and solving problems through code. Whether
-								it&apos;s tackling bugs or creating something from scratch, I
-								genuinely enjoy the process (even the occasional debugging
-								marathons 😅).
+								Hey, I’m Shahir. I build scalable full-stack web apps with
+								React, Vue, Node.js, Express, AWS, and Firebase. I enjoy solving
+								tough problems, modern web architecture, and taking projects
+								from “just an idea” to production.
 							</p>
 							<p className="about-me-text">
-								Over the years, I’ve had the chance to contribute to impactful
-								projects like{" "}
+								My open source journey includes being a top 25 contributor to{" "}
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<strong>Mermaid.js</strong>
+								</a>{" "}
+								and ranking #2 at{" "}
 								<a
 									href="https://github.com/FarmData2"
 									target="_blank"
@@ -61,51 +64,41 @@ const About = () => {
 								>
 									<strong>FarmData2</strong>
 								</a>
-								, where I enhanced system reliability and streamlined workflows,
-								and{" "}
+								. I focus on feature development, bug fixes, and designing
+								systems people actually use. You can browse my open source work{" "}
 								<a
-									href="https://tinyurl.com/bp5j9uwa"
+									href="https://github.com/Shahir-47/open-source-contributions"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<strong>84 Lumber</strong>
+									here
 								</a>
-								, where I worked on modernizing legacy systems. More recently,
-								I&apos;ve been contributing to{" "}
-								<a
-									href="https://github.com/mermaid-js/mermaid"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<strong>Mermaid.js</strong>
-								</a>
-								, improving Journey diagram rendering and customization options.
+								.
 							</p>
 							<p className="about-me-text">
-								Hackathons have been another exciting part of my journey. From
-								my first project at HoyaHacks, which was a learning experience
-								(to say the least), to building{" "}
+								Some of my recent projects include{" "}
 								<a
-									href="https://devpost.com/software/sweetfriend"
+									href="https://www.sarvabazaar.com"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<strong>SweetFriend</strong>
+									<strong>Sarva</strong>
 								</a>{" "}
-								at PennApps and{" "}
+								(a grocery delivery platform) and{" "}
 								<a
-									href="https://devpost.com/software/albatross"
+									href="https://peer-to-playlist.onrender.com"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<strong>Albatross</strong>
+									<strong>Peer-to-Playlist</strong>
 								</a>{" "}
-								at HackHarvard, every event has pushed me to think outside the
-								box, work under tight deadlines, and grow as a developer.
+								(a music matching app). I have shipped hacks at PennApps and
+								HackHarvard, which challenged me to level up and build under
+								pressure.
 							</p>
 							<p className="about-me-text">
-								When I’m not coding, you can find me mentoring fellow students
-								as a teaching assistant, cheering for{" "}
+								Outside of code, you’ll find me helping new devs, playing
+								soccer, and following{" "}
 								<a
 									href="https://www.realmadrid.com/en"
 									target="_blank"
@@ -113,8 +106,7 @@ const About = () => {
 								>
 									<strong>Real Madrid</strong>
 								</a>{" "}
-								⚽, or working on personal projects that let me experiment with
-								new tools and ideas. You can explore my{" "}
+								like my life depends on it. If you want to connect, check out my{" "}
 								<a
 									href="https://github.com/Shahir-47"
 									target="_blank"
@@ -122,21 +114,11 @@ const About = () => {
 								>
 									<strong>GitHub</strong>
 								</a>{" "}
-								to see what I’ve been up to!
+								or socials below.
 							</p>
 							<p className="about-me-text">
-								Want to know more? Scroll down to explore my{" "}
-								<strong>work experience</strong>,{" "}
-								<strong>hackathon adventures</strong>,{" "}
-								<strong>education</strong>, and the{" "}
-								<strong>tools and technologies</strong> I’ve worked with. You
-								can also visit my{" "}
-								<a href="/contact" target="_self">
-									<strong>Contact</strong>
-								</a>{" "}
-								page or connect directly using the social icons below. However
-								you choose, I’d love to hear from you and collaborate on
-								something exciting! 😊
+								Reach out if you want to collaborate or just talk tech. Always
+								up for new projects or swapping dev jokes.
 							</p>
 						</div>
 
@@ -156,6 +138,7 @@ const About = () => {
 					</h2>
 				</div>
 				<div className="tools-grid">
+					{/* Programming Languages */}
 					<div className="tools-category">
 						<h3>Programming Languages</h3>
 						<div className="tools-icons">
@@ -180,10 +163,6 @@ const About = () => {
 								alt="C"
 							/>
 							<img
-								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
-								alt="SQL"
-							/>
-							<img
 								src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"
 								alt="Lua"
 							/>
@@ -198,9 +177,18 @@ const About = () => {
 						</div>
 					</div>
 
+					{/* Frontend */}
 					<div className="tools-category">
 						<h3>Frontend</h3>
 						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+								alt="HTML"
+							/>
+							<img
+								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+								alt="CSS"
+							/>
 							<img
 								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
 								alt="Vue.js"
@@ -214,30 +202,39 @@ const About = () => {
 								alt="Electron"
 							/>
 							<img
-								src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black"
-								alt="Webpack"
-							/>
-							<img
 								src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
 								alt="Bootstrap"
 							/>
 							<img
-								src="https://img.shields.io/badge/Mermaid.js-009688?style=for-the-badge&logo=data:image/png;base64,..."
-								alt="Mermaid.js"
+								src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
+								alt="TailwindCSS"
 							/>
 							<img
-								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-								alt="HTML"
+								src="https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black"
+								alt="Webpack"
 							/>
 							<img
-								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-								alt="CSS"
+								src="https://img.shields.io/badge/Babel-F9DC3E?style=for-the-badge&logo=babel&logoColor=black"
+								alt="Babel"
+							/>
+							<img
+								src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"
+								alt="ESLint"
+							/>
+							<img
+								src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"
+								alt="Prettier"
+							/>
+							<img
+								src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
+								alt="npm"
 							/>
 						</div>
 					</div>
 
+					{/* Backend */}
 					<div className="tools-category">
-						<h3>Backend & Databases</h3>
+						<h3>Backend</h3>
 						<div className="tools-icons">
 							<img
 								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
@@ -252,6 +249,21 @@ const About = () => {
 								alt="Flask"
 							/>
 							<img
+								src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+								alt="Firebase"
+							/>
+							<img
+								src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
+								alt="Socket.IO"
+							/>
+						</div>
+					</div>
+
+					{/* Databases */}
+					<div className="tools-category">
+						<h3>Databases</h3>
+						<div className="tools-icons">
+							<img
 								src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
 								alt="PostgreSQL"
 							/>
@@ -263,15 +275,44 @@ const About = () => {
 								src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"
 								alt="SQLite"
 							/>
+							<img
+								src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+								alt="MySQL"
+							/>
+							<img
+								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
+								alt="SQL"
+							/>
 						</div>
 					</div>
 
+					{/* Cloud, DevOps & Utilities */}
 					<div className="tools-category">
-						<h3>Other Tools</h3>
+						<h3>Cloud, DevOps & Utilities</h3>
 						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
+								alt="AWS"
+							/>
 							<img
 								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
 								alt="Vercel"
+							/>
+							<img
+								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+								alt="Docker"
+							/>
+							<img
+								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
+								alt="Cloudflare"
+							/>
+							<img
+								src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"
+								alt="VM VirtualBox"
+							/>
+							<img
+								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+								alt="Linux"
 							/>
 							<img
 								src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
@@ -290,21 +331,20 @@ const About = () => {
 								alt="Eclipse"
 							/>
 							<img
-								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
-								alt="Docker"
-							/>
-							<img
-								src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"
-								alt="VM VirtualBox"
-							/>
-							<img
-								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
-								alt="Linux"
-							/>
-							<img
 								src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
 								alt="Bash"
 							/>
+							<img
+								src="https://img.shields.io/badge/Mermaid.js-009688?style=for-the-badge&logo=data:image/png;base64,..."
+								alt="Mermaid.js"
+							/>
+						</div>
+					</div>
+
+					{/* Testing */}
+					<div className="tools-category">
+						<h3>Testing</h3>
+						<div className="tools-icons">
 							<img
 								src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
 								alt="Cypress"
@@ -323,6 +363,7 @@ const About = () => {
 			</div>
 
 			{/* Work Experience Timeline */}
+			{/* Work Experience Timeline */}
 			<div className="timeline-section">
 				<h2>💼 Work Experience</h2>
 				<VerticalTimeline
@@ -339,7 +380,7 @@ const About = () => {
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
-						date="August 2024 - Present"
+						date="Aug 2024 – May 2025"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
@@ -354,7 +395,7 @@ const About = () => {
 							Software Developer – Part-Time
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							FarmData2
+							FarmData2 | Dickinson College
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://github.com/FarmData2"
@@ -366,29 +407,20 @@ const About = () => {
 								</a>
 							</span>
 						</h4>
-						<p>
-							<strong>Key Achievements:</strong>
-						</p>
 						<ul>
 							<li>
-								Built REST API endpoints with Node.js and Express.js to enable
-								farmers to selectively terminate crops across 20+ beds on an
-								80-acre USDA-certified organic farm.
+								Designed and built REST API endpoints with Node.js, Express, and
+								PostgreSQL for real-time crop management, enabling selective
+								termination across 20+ farm beds on an 80-acre USDA-certified
+								organic farm.
 							</li>
 							<li>
-								Designed and implemented API endpoints for soil disturbance,
-								seeding, and transplanting logs using PostgreSQL and the farmOS
-								API, saving farm staff 3+ hours per week.
+								Developed front-end forms in Vue.js, integrating state
+								management and automating record-keeping for USDA compliance.
 							</li>
 							<li>
-								Developed and refined 30+ Cypress E2E, component, and API tests,
-								ensuring data integrity, network reliability, and correct
-								permission handling.
-							</li>
-							<li>
-								Built front-end forms with Vue.js, Bootstrap, and JavaScript to
-								replace spreadsheet-based tracking, reducing manual errors and
-								aligning with USDA organic certification requirements.
+								Optimized Vue.js reactivity by restructuring computed properties
+								and watchers, reducing form rendering latency by 25%.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -402,7 +434,7 @@ const About = () => {
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
-						date="January 2025 - Present"
+						date="Jan 2025 – May 2025"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "#009688", color: "#fff" }}
 						icon={
@@ -414,7 +446,7 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Open Source Developer
+							Open Source Contributor
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							Mermaid.js
@@ -429,34 +461,57 @@ const About = () => {
 								</a>
 							</span>
 						</h4>
-						<p>
-							<strong>Key Contributions:</strong>
-						</p>
 						<ul>
 							<li>
-								Fixed a rendering issue where long legend labels in Journey
-								diagrams overlapped with diagram elements, improving layout
-								accuracy for 100K+ users and adding E2E tests.
+								Built a configurable text wrapping system for diagram labels
+								using a custom line-breaking algorithm, letting users set max
+								label width and improving layout flexibility for millions of
+								users.
 								<a
 									href="https://github.com/mermaid-js/mermaid/pull/6274"
 									target="_blank"
 									rel="noopener noreferrer"
-									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+									style={{
+										color: "#4fd1c5",
+										textDecoration: "underline",
+										marginLeft: "5px",
+									}}
 								>
 									[PR #6274]
 								</a>
 							</li>
 							<li>
-								Enhanced title customization for Journey diagrams by introducing
-								diagram-specific variables, allowing 100K+ users to style titles
-								more flexibly.
+								Added customizable title styling (color, font, size) for Journey
+								diagrams with new YAML-based config options, enhancing
+								accessibility and supporting enterprise branding.
 								<a
 									href="https://github.com/mermaid-js/mermaid/pull/6225"
 									target="_blank"
 									rel="noopener noreferrer"
-									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+									style={{
+										color: "#4fd1c5",
+										textDecoration: "underline",
+										marginLeft: "5px",
+									}}
 								>
 									[PR #6225]
+								</a>
+							</li>
+							<li>
+								Engineered auto-scaling data labels for XY bar charts using
+								JavaScript and D3.js, improving readability for visualizations
+								across GitHub and Notion.
+								<a
+									href="https://github.com/mermaid-js/mermaid/pull/6475"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										color: "#4fd1c5",
+										textDecoration: "underline",
+										marginLeft: "5px",
+									}}
+								>
+									[PR #6475]
 								</a>
 							</li>
 						</ul>
@@ -471,7 +526,7 @@ const About = () => {
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
-						date="May 2024 - August 2024"
+						date="May 2024 – Aug 2024"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
@@ -486,7 +541,7 @@ const About = () => {
 							Software Developer Intern
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							FarmData2
+							FarmData2 | Dickinson College
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://github.com/FarmData2"
@@ -498,28 +553,19 @@ const About = () => {
 								</a>
 							</span>
 						</h4>
-						<p>
-							<strong>Key Achievements:</strong>
-						</p>
 						<ul>
 							<li>
-								Developed a Bash script to automate Cypress E2E, component, and
-								unit tests across different environments, streamlining test
-								execution.
+								Developed and refined 30+ Cypress and Jest tests, boosting
+								system reliability and raising test coverage from 50% to 80%.
 							</li>
 							<li>
-								Optimized Vue.js reactivity models by restructuring computed
-								properties and watchers, reducing form rendering latency and
-								data errors.
+								Built Vue.js front-end forms to replace spreadsheets, cutting
+								manual entry errors for USDA certification.
 							</li>
 							<li>
-								Managed sprint planning and issue tracking in GitHub Projects,
-								improving task prioritization and iteration workflow.
-							</li>
-							<li>
-								Improved test coverage from 50% to 80% by writing Jest and
-								Cypress tests, reducing deployment regressions in seeding
-								workflows.
+								Integrated farmOS API for soil disturbance, seeding, and
+								transplanting logs, saving staff 3 hours of weekly
+								record-keeping.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -533,7 +579,7 @@ const About = () => {
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
-						date="September 2023 - January 2024"
+						date="Sept 2023 – Jan 2024"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
@@ -551,7 +597,7 @@ const About = () => {
 							84 Lumber
 							<span style={{ marginLeft: "8px" }}>
 								<a
-									href="https://tinyurl.com/bp5j9uwa"
+									href="https://www.dickinson.edu/news/article/5821/dickinson_students_work_with_alum_to_breathe_new_life_into_84_lumbers_legacy_systems"
 									target="_blank"
 									rel="noopener noreferrer"
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
@@ -560,18 +606,16 @@ const About = () => {
 								</a>
 							</span>
 						</h4>
-						<p>
-							<strong>Key Contributions:</strong>
-						</p>
 						<ul>
 							<li>
-								Developed an NLP-based pipeline using ANTLR to convert legacy
-								CBASIC code into modern languages, reducing manual code review
-								effort.
+								Developed an NLP-based pipeline using ANTLR to parse and convert
+								legacy CBASIC code into Python, Java, and .NET, making code
+								migration faster and reducing manual review effort.
 							</li>
 							<li>
-								Designed an Abstract Syntax Tree (AST) framework for automated
-								documentation using Doxygen, improving developer onboarding.
+								Designed and implemented an Abstract Syntax Tree (AST) framework
+								for automated code documentation with Doxygen, making it easier
+								for new developers to understand and work with legacy code.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -586,7 +630,7 @@ const About = () => {
 					layout="1-column-left"
 					className="timeline"
 				>
-					{/* HoyaHacks */}
+					{/* HoyaHacks: Prospectus */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--hackathon"
 						contentStyle={{
@@ -627,13 +671,28 @@ const About = () => {
 							}}
 						/>
 						<p>
-							At my first hackathon, I faced the challenge of building a complex
-							AI assistant for college admissions. Despite our efforts, the
-							project remained incomplete. This experience motivated me to hone
-							my skills and push harder at subsequent hackathons.
+							Prospectus was my very first hackathon project, where I jumped
+							right into building an ambitious AI-powered college admissions
+							assistant. Our idea was to leverage React, Django, Azure OpenAI,
+							and custom vector embeddings for smart, query-based guidance about
+							universities.
 						</p>
 						<p>
-							<strong>Tech Stack:</strong>
+							While we didn’t end up with a fully functional product, the
+							experience was incredibly valuable. I learned a ton about
+							designing architectures, working with unfamiliar tools, and
+							collaborating under real-world constraints. Even though we only
+							got a frontend demo and a high-level architecture, it gave me
+							first-hand insight into how complex building real applications can
+							be.
+						</p>
+						<p>
+							Prospectus motivated me to level up my technical and teamwork
+							skills for future hackathons. That first weekend set the stage for
+							actually shipping working projects at later events.
+						</p>
+						<p>
+							<strong>Tech Stack (planned and prototyped):</strong>
 						</p>
 						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
@@ -647,10 +706,6 @@ const About = () => {
 							<img
 								src="https://img.shields.io/badge/Azure%20OpenAI-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white"
 								alt="Azure OpenAI"
-							/>
-							<img
-								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-								alt="GitHub"
 							/>
 							<img
 								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
@@ -671,6 +726,10 @@ const About = () => {
 							<img
 								src="https://img.shields.io/badge/VoyageAI-FF5722?style=for-the-badge&logo=ai&logoColor=white"
 								alt="VoyageAI"
+							/>
+							<img
+								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+								alt="GitHub"
 							/>
 						</div>
 						<div
@@ -704,7 +763,7 @@ const About = () => {
 						</div>
 					</VerticalTimelineElement>
 
-					{/* SweetFriend */}
+					{/* PennApps: SweetFriend */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--hackathon"
 						contentStyle={{
@@ -745,10 +804,24 @@ const About = () => {
 							}}
 						/>
 						<p>
-							Determined to succeed, I contributed as the frontend developer to
-							SweetFriend, a web app for managing diabetes. This time, we
-							delivered a fully functional product, leveraging lessons learned
-							from HoyaHacks.
+							SweetFriend is a full-stack diabetes management app that gives
+							users real-time glucose tracking, AI meal recognition, and instant
+							health insights. I led the frontend development using React,
+							building a responsive dashboard, custom chart components for live
+							blood sugar graphs, and an intuitive photo upload feature for meal
+							recognition powered by Tune Studio’s vision model.
+						</p>
+						<p>
+							I implemented the integration with the Dexcom API, bringing
+							continuous glucose data into the app and linking it with event
+							logging. The Flask backend connects user events and meal
+							predictions, stores data in MongoDB, and uses Cerebras for
+							ultra-fast AI health advice. I also helped wire up Twilio for
+							notifications, alerting users about critical changes in their
+							glucose levels. Shipping a polished MVP with this level of
+							integration in just 36 hours took grit, and the project made me
+							much more confident with complex health tech stacks and real-time
+							API workflows.
 						</p>
 						<p>
 							<strong>Tech Stack:</strong>
@@ -763,12 +836,24 @@ const About = () => {
 								alt="Flask"
 							/>
 							<img
+								src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+								alt="MongoDB"
+							/>
+							<img
+								src="https://img.shields.io/badge/Dexcom-5CBB5B?style=for-the-badge&logo=ai&logoColor=white"
+								alt="Dexcom"
+							/>
+							<img
 								src="https://img.shields.io/badge/Tune%20AI-4A90E2?style=for-the-badge&logo=ai&logoColor=white"
 								alt="Tune AI"
 							/>
 							<img
 								src="https://img.shields.io/badge/Cerebras-F7B93E?style=for-the-badge&logo=ai&logoColor=white"
 								alt="Cerebras"
+							/>
+							<img
+								src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white"
+								alt="Twilio"
 							/>
 							<img
 								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
@@ -790,8 +875,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="devpost">
-									<SiDevpost style={iconSize} />
-									View on DevPost
+									<SiDevpost style={iconSize} /> View on DevPost
 								</button>
 							</a>
 							<a
@@ -801,8 +885,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="github">
-									<FaGithub style={iconSize} />
-									GitHub Repo
+									<FaGithub style={iconSize} /> GitHub Repo
 								</button>
 							</a>
 							<a
@@ -812,14 +895,13 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="live-preview">
-									<MdVisibility style={iconSize} />
-									Live Preview
+									<MdVisibility style={iconSize} /> Live Preview
 								</button>
 							</a>
 						</div>
 					</VerticalTimelineElement>
 
-					{/* HackHarvard */}
+					{/* HackHarvard: Albatross */}
 					<VerticalTimelineElement
 						className="vertical-timeline-element--hackathon"
 						contentStyle={{
@@ -860,11 +942,24 @@ const About = () => {
 							}}
 						/>
 						<p>
-							With the confidence gained from PennApps, I tackled the more
-							complex Albatross project, a safe-routing tool using real-time
-							crime data. After a challenging weekend in Boston, we successfully
-							delivered a working product, demonstrating significant growth in
-							my skills.
+							Albatross is an AI-powered navigation app that helps users avoid
+							high-risk areas in any city by finding the safest routes using
+							real-time crime data. My role was building the Vue.js frontend,
+							where I designed and implemented the interactive dashboard that
+							overlays crime polygons and safe routes on a dynamic map. I
+							connected the frontend with a backend pipeline using AWS and
+							Databricks for data processing, MLflow for clustering high-crime
+							zones, and Cloudflare Workers to serve the routing data to the
+							HERE Routing API.
+						</p>
+						<p>
+							I focused on getting geospatial data and route overlays working
+							smoothly so users could instantly see where to travel more safely.
+							We built and deployed a working demo for New York City during the
+							hackathon, and even in demo mode the system visualizes hot zones
+							and safer paths in real time. Building Albatross pushed me to the
+							next level with map rendering, geospatial data, and full-stack
+							cloud integration.
 						</p>
 						<p>
 							<strong>Tech Stack:</strong>
@@ -887,6 +982,14 @@ const About = () => {
 								alt="Databricks"
 							/>
 							<img
+								src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=ai&logoColor=white"
+								alt="MLflow"
+							/>
+							<img
+								src="https://img.shields.io/badge/Here%20Routing-7D3F98?style=for-the-badge&logo=here&logoColor=white"
+								alt="Here Routing"
+							/>
+							<img
 								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
 								alt="Python"
 							/>
@@ -895,8 +998,8 @@ const About = () => {
 								alt="Scala"
 							/>
 							<img
-								src="https://img.shields.io/badge/Here%20Routing-7D3F98?style=for-the-badge&logo=here&logoColor=white"
-								alt="Here Routing"
+								src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+								alt="JavaScript"
 							/>
 						</div>
 						<div
@@ -914,8 +1017,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="devpost">
-									<SiDevpost style={iconSize} />
-									View on DevPost
+									<SiDevpost style={iconSize} /> View on DevPost
 								</button>
 							</a>
 							<a
@@ -925,8 +1027,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="github">
-									<FaGithub style={iconSize} />
-									GitHub Repo
+									<FaGithub style={iconSize} /> GitHub Repo
 								</button>
 							</a>
 							<a
@@ -936,8 +1037,7 @@ const About = () => {
 								style={{ textDecoration: "none" }}
 							>
 								<button className="live-preview">
-									<MdVisibility style={iconSize} />
-									Live Preview
+									<MdVisibility style={iconSize} /> Live Preview
 								</button>
 							</a>
 						</div>
@@ -986,20 +1086,27 @@ const About = () => {
 							<strong>Degree:</strong> Bachelor of Science in Computer Science &
 							Mathematics
 							<br />
-							<strong>GPA:</strong> 3.58
+							<strong>GPA:</strong> 3.52 / 4.00
+						</p>
+						<p>
+							<strong>Honors:</strong> Dean&apos;s List, Pi Mu Epsilon (Math
+							Honor Society), 1783 Scholarship Recipient
 						</p>
 						<p>
 							<strong>Relevant Coursework:</strong>
-							<ul>
-								<li>Data Structures & Analysis of Algorithms</li>
-								<li>Object-Oriented Programming & Computer Architecture</li>
-								<li>Computer Networks & Operating Systems</li>
-								<li>Database Systems & Computational Mathematics</li>
-								<li>Graph Theory & Computability and Complexity</li>
-								<li>Probability, Statistics, & Linear Algebra</li>
-								<li>Discrete Mathematics & Logic</li>
-								<li>Operations Research & Introduction to Data Science</li>
-								<li>Open Source Development & Number Theory</li>
+							<ul
+								style={{ columnCount: 2, marginTop: "0.5rem", marginBottom: 0 }}
+							>
+								<li>Data Structures</li>
+								<li>Analysis of Algorithms</li>
+								<li>Object-Oriented Programming</li>
+								<li>Computer Architecture</li>
+								<li>Operating Systems</li>
+								<li>Database Systems</li>
+								<li>Computer Networks</li>
+								<li>Computability & Complexity</li>
+								<li>Open Source Development</li>
+								<li>Graph Theory</li>
 							</ul>
 						</p>
 					</VerticalTimelineElement>
@@ -1034,20 +1141,21 @@ const About = () => {
 							Online Certification
 						</h4>
 						<p>
-							<strong>Description:</strong> An intensive introduction to
-							computer science concepts, focusing on problem-solving and
-							programming fundamentals.
+							<strong>Description:</strong> An intensive, hands-on introduction
+							to computer science, focused on problem-solving and programming
+							fundamentals.
 						</p>
 						<p>
 							<strong>Key Topics:</strong>
-							<ul>
+							<ul style={{ marginTop: "0.5rem" }}>
 								<li>Programming in C, Python, SQL, JavaScript, HTML/CSS</li>
-								<li>Algorithms, Data Structures, & Software Engineering</li>
-								<li>Web Development & Database Management</li>
+								<li>Algorithms and Data Structures</li>
+								<li>Software Engineering Principles</li>
+								<li>Web Development and Database Management</li>
 							</ul>
 						</p>
 						<p>
-							<strong>Certificate:</strong>{" "}
+							<strong>Certificate: </strong>
 							<a
 								href="https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
 								target="_blank"
