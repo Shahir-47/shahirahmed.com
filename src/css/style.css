@@ -1569,6 +1569,10 @@ div.react-activity-calendar__scroll-container {
 	font-weight: 700;
 }
 
+ul li {
+	margin-bottom: 0.5rem;
+}
+
 .tools-grid {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
