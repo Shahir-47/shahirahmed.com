@@ -189,10 +189,16 @@ const ProjectItem = ({
 	<Box
 		sx={{
 			backgroundColor: "#222",
-			padding: "1.5rem",
-			borderRadius: "12px",
+			padding: {
+				xs: "1rem",
+				sm: "1.25rem",
+				md: "1.5rem",
+				lg: "2rem",
+				xl: "2.5rem",
+			},
+			borderRadius: { xs: "8px", sm: "10px", md: "12px" },
 			boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
-			marginBottom: "1.5rem",
+			marginBottom: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
 			transition: "transform 0.3s ease, box-shadow 0.3s ease",
 			"&:hover": {
 				transform: "translateY(-3px)",
@@ -200,8 +206,15 @@ const ProjectItem = ({
 			},
 			display: "flex",
 			flexDirection: { xs: "column", md: "row" },
-			gap: "1.5rem",
+			gap: { xs: "1rem", sm: "1.25rem", md: "1.5rem", lg: "2rem" },
 			alignItems: "flex-start",
+			// Extra large screens (2560px+)
+			"@media (min-width: 2560px)": {
+				padding: "3.5rem",
+				borderRadius: "16px",
+				marginBottom: "2rem",
+				gap: "2.5rem",
+			},
 		}}
 	>
 		{/* Image Section */}
@@ -209,8 +222,25 @@ const ProjectItem = ({
 			<Box
 				sx={{
 					flexShrink: 0,
-					width: { xs: "100%", md: "250px" },
-					height: { xs: "180px", md: "160px" },
+					width: {
+						xs: "100%",
+						sm: "100%",
+						md: "200px",
+						lg: "250px",
+						xl: "300px",
+					},
+					height: {
+						xs: "150px",
+						sm: "180px",
+						md: "140px",
+						lg: "160px",
+						xl: "180px",
+					},
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						width: "450px",
+						height: "280px",
+					},
 				}}
 			>
 				<img
@@ -234,8 +264,20 @@ const ProjectItem = ({
 				sx={{
 					color: "#4fd1c5",
 					fontWeight: "bold",
-					marginBottom: "0.75rem",
-					fontSize: { xs: "1.25rem", md: "1.5rem" },
+					marginBottom: { xs: "0.5rem", sm: "0.625rem", md: "0.75rem" },
+					fontSize: {
+						xs: "1.1rem",
+						sm: "1.2rem",
+						md: "1.3rem",
+						lg: "1.4rem",
+						xl: "1.5rem",
+					},
+					lineHeight: 1.2,
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						fontSize: "2.4rem",
+						marginBottom: "1rem",
+					},
 				}}
 				dangerouslySetInnerHTML={{ __html: highlight(title) }}
 			/>
@@ -243,9 +285,21 @@ const ProjectItem = ({
 			<Typography
 				sx={{
 					color: "#e0e0e0",
-					marginBottom: "1.5rem",
-					fontSize: "0.95rem",
-					lineHeight: 1.5,
+					marginBottom: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+					fontSize: {
+						xs: "0.85rem",
+						sm: "0.9rem",
+						md: "0.95rem",
+						lg: "1rem",
+						xl: "1.1rem",
+					},
+					lineHeight: { xs: 1.4, sm: 1.45, md: 1.5 },
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						fontSize: "1.6rem",
+						lineHeight: 1.6,
+						marginBottom: "2rem",
+					},
 				}}
 				dangerouslySetInnerHTML={{ __html: highlight(description) }}
 			/>
@@ -255,8 +309,12 @@ const ProjectItem = ({
 				sx={{
 					display: "flex",
 					flexDirection: { xs: "column", sm: "row" },
-					gap: "0.75rem",
+					gap: { xs: "0.5rem", sm: "0.625rem", md: "0.75rem" },
 					flexWrap: "wrap",
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						gap: "1rem",
+					},
 				}}
 			>
 				{liveDemo && (
@@ -270,15 +328,25 @@ const ProjectItem = ({
 							backgroundColor: "#4fd1c5",
 							color: "#222",
 							fontWeight: "bold",
-							px: 2,
-							py: 0.75,
+							px: { xs: 1.5, sm: 2 },
+							py: { xs: 0.5, sm: 0.625, md: 0.75 },
 							"&:hover": {
 								backgroundColor: "#a569bd",
 								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 								color: "#fff",
 							},
-							fontSize: "0.9rem",
-							minWidth: "120px",
+							fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
+							minWidth: { xs: "100px", sm: "110px", md: "120px" },
+							// Extra large screens (2560px+)
+							"@media (min-width: 2560px)": {
+								fontSize: "1.2rem",
+								px: 3,
+								py: 1.2,
+								minWidth: "180px",
+								"& .MuiSvgIcon-root": {
+									fontSize: "1.4rem",
+								},
+							},
 						}}
 					>
 						Visit Website
@@ -295,15 +363,29 @@ const ProjectItem = ({
 						borderColor: "#4fd1c5",
 						color: "#4fd1c5",
 						fontWeight: "bold",
-						px: 2,
-						py: 0.75,
+						px: { xs: 1.5, sm: 2 },
+						py: { xs: 0.5, sm: 0.625, md: 0.75 },
 						"&:hover": {
 							borderColor: "#a569bd",
 							color: "#a569bd",
 							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 						},
-						fontSize: "0.9rem",
-						minWidth: "120px",
+						fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
+						minWidth: { xs: "100px", sm: "110px", md: "120px" },
+						// Extra large screens (2560px+)
+						"@media (min-width: 2560px)": {
+							fontSize: "1.2rem",
+							px: 3,
+							py: 1.2,
+							minWidth: "180px",
+							borderWidth: "2px",
+							"&:hover": {
+								borderWidth: "2px",
+								borderColor: "#a569bd",
+								color: "#a569bd",
+								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+							},
+						},
 					}}
 				>
 					Source Code
@@ -320,15 +402,25 @@ const ProjectItem = ({
 							backgroundColor: "#0066ff",
 							color: "#fff",
 							fontWeight: "bold",
-							px: 2,
-							py: 0.75,
+							px: { xs: 1.5, sm: 2 },
+							py: { xs: 0.5, sm: 0.625, md: 0.75 },
 							"&:hover": {
 								backgroundColor: "#0044bb",
 								color: "#fff",
 								boxShadow: "0 4px 15px rgba(0, 102, 255, 0.25)",
 							},
-							fontSize: "0.9rem",
-							minWidth: "120px",
+							fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
+							minWidth: { xs: "100px", sm: "110px", md: "120px" },
+							// Extra large screens (2560px+)
+							"@media (min-width: 2560px)": {
+								fontSize: "1.2rem",
+								px: 3,
+								py: 1.2,
+								minWidth: "180px",
+								"& .MuiSvgIcon-root": {
+									fontSize: "1.4rem",
+								},
+							},
 						}}
 					>
 						Devpost
@@ -367,10 +459,21 @@ const Projects = () => {
 			className="projects"
 			sx={{
 				color: "#e0e0e0",
-				maxWidth: "1200px",
+				maxWidth: {
+					xs: "100%",
+					sm: "900px",
+					md: "1000px",
+					lg: "1200px",
+					xl: "1400px",
+				},
 				margin: "0 auto",
-				padding: "2rem",
+				padding: { xs: "1rem", sm: "1.5rem", md: "2rem", xl: "2.5rem" },
 				flex: "1",
+				// Extra large screens (2560px+)
+				"@media (min-width: 2560px)": {
+					maxWidth: "1800px",
+					padding: "4rem",
+				},
 			}}
 		>
 			<Typography
@@ -379,15 +482,44 @@ const Projects = () => {
 					textAlign: "center",
 					color: "#4fd1c5",
 					fontWeight: "bold",
-					marginBottom: "2rem",
-					fontSize: { xs: "1.8rem", md: "2.2rem" },
+					marginBottom: {
+						xs: "1.5rem",
+						sm: "1.75rem",
+						md: "2rem",
+						xl: "2.5rem",
+					},
+					fontSize: {
+						xs: "1.5rem",
+						sm: "1.7rem",
+						md: "2rem",
+						lg: "2.2rem",
+						xl: "2.4rem",
+					},
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						fontSize: "3.5rem",
+						marginBottom: "3rem",
+					},
 				}}
 			>
 				📂 Projects
 			</Typography>
 
 			{/* Search Bar */}
-			<Box sx={{ marginBottom: "2rem" }}>
+			<Box
+				sx={{
+					marginBottom: {
+						xs: "1.5rem",
+						sm: "1.75rem",
+						md: "2rem",
+						xl: "2.5rem",
+					},
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						marginBottom: "3rem",
+					},
+				}}
+			>
 				<TextField
 					fullWidth
 					label="Search Projects"
@@ -400,6 +532,11 @@ const Projects = () => {
 						"& .MuiInputLabel-root": {
 							color: "#4fd1c5",
 							transition: "color 0.3s ease",
+							fontSize: { xs: "0.9rem", sm: "1rem", xl: "1.1rem" },
+							// Extra large screens (2560px+)
+							"@media (min-width: 2560px)": {
+								fontSize: "1.4rem",
+							},
 						},
 						"& .MuiInputLabel-root.Mui-focused": {
 							color: "#a569bd",
@@ -408,6 +545,10 @@ const Projects = () => {
 							"& fieldset": {
 								borderColor: "#4fd1c5",
 								transition: "border-color 0.3s ease",
+								// Extra large screens (2560px+)
+								"@media (min-width: 2560px)": {
+									borderWidth: "2px",
+								},
 							},
 							"&:hover fieldset": {
 								borderColor: "#4fd1c5",
@@ -418,8 +559,12 @@ const Projects = () => {
 						},
 						"& .MuiInputBase-input": {
 							color: "#e0e0e0",
-							fontSize: "1rem",
-							padding: "0.75rem 1rem",
+							fontSize: { xs: "0.9rem", sm: "1rem", xl: "1.1rem" },
+
+							// Extra large screens (2560px+)
+							"@media (min-width: 2560px)": {
+								fontSize: "1.4rem",
+							},
 						},
 					}}
 				/>
@@ -434,7 +579,16 @@ const Projects = () => {
 
 			{/* Show More/Less Button */}
 			{filteredProjects.length > 8 && (
-				<Box sx={{ textAlign: "center", margin: "2rem 0" }}>
+				<Box
+					sx={{
+						textAlign: "center",
+						margin: { xs: "1.5rem 0", sm: "2rem 0", xl: "2.5rem 0" },
+						// Extra large screens (2560px+)
+						"@media (min-width: 2560px)": {
+							margin: "3rem 0",
+						},
+					}}
+				>
 					<Button
 						variant="contained"
 						onClick={() => setShowAllProjects(!showAllProjects)}
@@ -445,13 +599,27 @@ const Projects = () => {
 							backgroundColor: "#4fd1c5",
 							color: "#222",
 							fontWeight: "bold",
-							px: 3,
-							py: 1,
-							fontSize: "0.95rem",
+							px: { xs: 2, sm: 2.5, md: 3, xl: 3.5 },
+							py: { xs: 0.75, sm: 0.875, md: 1, xl: 1.125 },
+							fontSize: {
+								xs: "0.85rem",
+								sm: "0.9rem",
+								md: "0.95rem",
+								xl: "1rem",
+							},
 							"&:hover": {
 								backgroundColor: "#a569bd",
 								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
 								color: "#fff",
+							},
+							// Extra large screens (2560px+)
+							"@media (min-width: 2560px)": {
+								fontSize: "1.3rem",
+								px: 4,
+								py: 1.5,
+								"& .MuiSvgIcon-root": {
+									fontSize: "1.6rem",
+								},
 							},
 						}}
 					>
@@ -463,13 +631,39 @@ const Projects = () => {
 			)}
 
 			{/* Social Section */}
-			<Box sx={{ textAlign: "center", color: "#e0e0e0", marginTop: "3rem" }}>
+			<Box
+				sx={{
+					textAlign: "center",
+					color: "#e0e0e0",
+					marginTop: { xs: "2rem", sm: "2.5rem", md: "3rem", xl: "3.5rem" },
+					// Extra large screens (2560px+)
+					"@media (min-width: 2560px)": {
+						marginTop: "4rem",
+					},
+				}}
+			>
 				<Typography
 					variant="h4"
 					sx={{
 						fontWeight: "bold",
-						marginBottom: "1.5rem",
-						fontSize: "1.4rem",
+						marginBottom: {
+							xs: "1rem",
+							sm: "1.25rem",
+							md: "1.5rem",
+							xl: "1.75rem",
+						},
+						fontSize: {
+							xs: "1.1rem",
+							sm: "1.2rem",
+							md: "1.3rem",
+							lg: "1.4rem",
+							xl: "1.5rem",
+						},
+						// Extra large screens (2560px+)
+						"@media (min-width: 2560px)": {
+							fontSize: "2rem",
+							marginBottom: "2rem",
+						},
 					}}
 				>
 					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
