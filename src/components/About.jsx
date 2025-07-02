@@ -157,7 +157,6 @@ const About = () => {
 					className="section-title"
 					style={{
 						textAlign: "center",
-						fontSize: "2.3rem",
 						fontWeight: 700,
 						margin: "0 0 3rem 0",
 						letterSpacing: "0.02em",
@@ -177,18 +176,7 @@ const About = () => {
 					}}
 				>
 					{/* Mermaid.js */}
-					<div
-						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							background: "#222",
-							borderRadius: 16,
-							marginBottom: "2.1rem",
-							boxShadow: "0 1px 12px 0 rgba(0,0,0,0.13)",
-							padding: "1.5rem 2rem",
-							gap: "2.3rem",
-						}}
-					>
+					<div className="oss-item">
 						<img
 							src={MermaidJS}
 							alt="Mermaid.js"
@@ -307,18 +295,7 @@ const About = () => {
 					</div>
 
 					{/* FarmData2 */}
-					<div
-						style={{
-							display: "flex",
-							alignItems: "flex-start",
-							background: "#222",
-							borderRadius: 16,
-							marginBottom: "2.1rem",
-							boxShadow: "0 1px 12px 0 rgba(0,0,0,0.13)",
-							padding: "1.5rem 2rem",
-							gap: "2.3rem",
-						}}
-					>
+					<div className="oss-item">
 						<img
 							src={FarmData2}
 							alt="FarmData2"
@@ -391,18 +368,7 @@ const About = () => {
 					</div>
 
 					{/* Full Portfolio */}
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							background: "rgba(52, 21, 65, 0.75)",
-							borderRadius: 16,
-							marginBottom: 0,
-							boxShadow: "0 1px 8px 0 rgba(121,82,179,0.08)",
-							padding: "1.45rem 2rem",
-							gap: "2.1rem",
-						}}
-					>
+					<div className="oss-item">
 						<span style={{ fontSize: 32, marginRight: 18 }}>🗂️</span>
 						<div style={{ flex: 1 }}>
 							<div
@@ -1560,18 +1526,7 @@ const About = () => {
 					}}
 				>
 					{/* CS50 Certification */}
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							background: "#222",
-							borderRadius: 16,
-							marginBottom: "1.5rem",
-							boxShadow: "0 1px 12px 0 rgba(0,0,0,0.13)",
-							padding: "1.5rem 2rem",
-							gap: "2rem",
-						}}
-					>
+					<div className="cert-section">
 						<img
 							src={HarvardX}
 							alt="HarvardX"
@@ -1632,18 +1587,7 @@ const About = () => {
 					</div>
 
 					{/* MATLAB Certification */}
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							background: "#222",
-							borderRadius: 16,
-							marginBottom: "1.5rem",
-							boxShadow: "0 1px 12px 0 rgba(0,0,0,0.13)",
-							padding: "1.5rem 2rem",
-							gap: "2rem",
-						}}
-					>
+					<div className="cert-section">
 						<div
 							style={{
 								width: 60,
@@ -1709,6 +1653,7 @@ const About = () => {
 
 					{/* Academic Honors */}
 					<div
+						className="academic"
 						style={{
 							background: "rgba(52, 21, 65, 0.75)",
 							borderRadius: 16,
