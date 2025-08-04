@@ -59,9 +59,9 @@ const About = () => {
 								>
 									<strong>Sarva</strong>
 								</a>
-								, architecting a full-stack grocery marketplace platform serving
-								30+ active users. My open source journey includes being a top 25
-								contributor to{" "}
+								, architecting a full-stack vendor management and grocery
+								marketplace platform. My open source journey includes being a
+								top 25 contributor out of 600+ contributors to{" "}
 								<a
 									href="https://github.com/mermaid-js/mermaid"
 									target="_blank"
@@ -97,7 +97,7 @@ const About = () => {
 								>
 									<strong>Sarva Bazaar</strong>
 								</a>{" "}
-								(a grocery delivery platform),{" "}
+								(a vendor management and grocery delivery platform),{" "}
 								<a
 									href="https://peer-to-playlist.onrender.com"
 									target="_blank"
@@ -119,15 +119,8 @@ const About = () => {
 							</p>
 							<p className="about-me-text">
 								Outside of code, you&apos;ll find me helping new devs, playing
-								soccer, and following{" "}
-								<a
-									href="https://www.realmadrid.com/en"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<strong>Real Madrid</strong>
-								</a>{" "}
-								like my life depends on it. If you want to connect, check out my{" "}
+								soccer, and following Real Madrid like my life depends on it. If
+								you want to connect, check out my{" "}
 								<a
 									href="https://github.com/Shahir-47"
 									target="_blank"
@@ -139,7 +132,7 @@ const About = () => {
 							</p>
 							<p className="about-me-text">
 								Reach out if you want to collaborate or just talk tech. Always
-								up for new projects or swapping dev jokes.
+								up for new projects.
 							</p>
 						</div>
 
