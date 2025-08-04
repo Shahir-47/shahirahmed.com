@@ -1357,14 +1357,8 @@ html {
 }
 
 @media (min-width: 768px) {
-	.timeline-section h2 {
-		margin-left: 5rem;
-	}
-
 	div.timeline {
 		padding: 0;
-		margin: 0;
-		margin-left: 7rem;
 		margin-top: 3.5rem;
 	}
 
@@ -1390,6 +1384,7 @@ html {
 	font-size: 2.5rem;
 	font-weight: 700;
 	color: #4fd1c5;
+	text-align: center;
 }
 
 .timeline-section button {
@@ -1571,7 +1566,7 @@ div.react-activity-calendar__scroll-container {
 }
 
 ul li {
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .tools-grid {
@@ -1656,6 +1651,8 @@ ul li {
 }
 
 div.timeline {
+	margin-left: auto;
+	margin-right: auto;
 	padding: 0;
 }
 
@@ -1774,16 +1771,8 @@ button.live-preview {
 }
 
 @media (max-width: 1024px) {
-	div.timeline {
-		margin-left: 1rem;
-	}
-
 	img.hacker {
 		width: 63%;
-	}
-
-	div.timeline-section h2 {
-		margin-left: 1rem;
 	}
 
 	div.second-block-home {
