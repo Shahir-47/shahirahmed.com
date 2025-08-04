@@ -151,260 +151,269 @@ const About = () => {
 				</div>
 			</div>
 
-			{/* OSS Contributions */}
-			<div className="oss-section">
-				<h2
-					className="section-title"
-					style={{
-						textAlign: "center",
-						fontWeight: 700,
-						margin: "0 0 3rem 0",
-						letterSpacing: "0.02em",
-						color: "#4fd1c5",
-						textShadow: "0 2px 16px #0009",
-					}}
-				>
-					🌟 Open Source Contributions
-				</h2>
-
-				<div
-					className="open-source-section"
-					style={{
-						maxWidth: 950,
-						margin: "0 auto",
-						padding: "0 1.2rem",
-					}}
-				>
-					{/* Mermaid.js */}
-					<div className="oss-item">
-						<img
-							src={MermaidJS}
-							alt="Mermaid.js"
-							style={{
-								width: 65,
-								height: 65,
-								borderRadius: 14,
-								objectFit: "cover",
-								background: "#fff",
-								marginRight: 0,
-								boxShadow: "0 0 10px 1px #0005",
-							}}
-						/>
-						<div style={{ flex: 1 }}>
-							<div
-								style={{
-									fontWeight: 600,
-									fontSize: "1.33rem",
-									color: "#69f9e6",
-									marginBottom: 3,
-								}}
-							>
-								<a
-									href="https://github.com/mermaid-js/mermaid"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: "#f992cf" }}
-								>
-									Mermaid.js
-								</a>
-								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
-									(Top 25 contributor)
-								</span>
-							</div>
-							<div
-								style={{
-									fontSize: 16,
-									color: "#f3f6fa",
-									marginBottom: 12,
-									marginTop: 12,
-								}}
-							>
-								• 75+ commits. Delivered innovative charting features, resolved
-								core rendering bugs, and improved overall for a library serving
-								over{" "}
-								<a
-									style={{ color: "#4fd1c5", textDecoration: "underline" }}
-									href="https://npmtrends.com/mermaid"
-								>
-									1.2M+ weekly downloads
-								</a>
-								.
-							</div>
-							<ul
-								style={{
-									fontSize: 15,
-									color: "#c7e9f1",
-									margin: 0,
-									marginBottom: 9,
-									paddingLeft: 18,
-								}}
-							>
-								<li>
-									<a
-										href="https://github.com/mermaid-js/mermaid/pull/6475"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#43e8d8", textDecoration: "underline" }}
-									>
-										Added dynamic, auto-scaling data labels for bar charts
-									</a>
-								</li>
-								<li>
-									<a
-										href="https://github.com/mermaid-js/mermaid/pull/6274"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#43e8d8", textDecoration: "underline" }}
-									>
-										Engineered smart word wrapping using Knuth-Plass algorithm
-									</a>
-								</li>
-								<li>
-									<a
-										href="https://github.com/mermaid-js/mermaid/pull/6225"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#43e8d8", textDecoration: "underline" }}
-									>
-										Enabled full theme customization for Journey diagrams
-									</a>
-								</li>
-							</ul>
-							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 15 }}>
-								<a
-									href="https://github.com/mermaid-js/mermaid/graphs/contributors"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										color: "#61ffe7",
-										marginRight: 18,
-									}}
-								>
-									Contributor graph
-								</a>
-								<a
-									href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: "#61ffe7" }}
-								>
-									All PRs
-								</a>
-							</div>
+			{/* Tools and Technologies */}
+			<div className="tools-section">
+				<div className="tools-header">
+					<h2>
+						🛠️ <span className="highlight">Tools</span> and{" "}
+						<span className="highlight">Technologies</span> I&apos;ve worked
+						with
+					</h2>
+				</div>
+				<div className="tools-grid">
+					{/* Programming Languages */}
+					<div className="tools-category">
+						<h3>Programming Languages</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+								alt="JavaScript"
+							/>
+							<img
+								src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+								alt="TypeScript"
+							/>
+							<img
+								src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+								alt="Java"
+							/>
+							<img
+								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
+								alt="Python"
+							/>
+							<img
+								src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
+								alt="C"
+							/>
+							<img
+								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
+								alt="SQL"
+							/>
+							<img
+								src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"
+								alt="Lua"
+							/>
+							<img
+								src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white"
+								alt="R"
+							/>
+							<img
+								src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white"
+								alt="MATLAB"
+							/>
 						</div>
 					</div>
 
-					{/* FarmData2 */}
-					<div className="oss-item">
-						<img
-							src={FarmData2}
-							alt="FarmData2"
-							style={{
-								width: 65,
-								height: 65,
-								borderRadius: 14,
-								objectFit: "cover",
-								background: "#fff",
-								marginRight: 0,
-								boxShadow: "0 0 10px 1px #0005",
-							}}
-						/>
-						<div style={{ flex: 1 }}>
-							<div
-								style={{
-									fontWeight: 600,
-									fontSize: "1.33rem",
-									color: "#69f9e6",
-									marginBottom: 3,
-								}}
-							>
-								<a
-									href="https://github.com/FarmData2/FarmData2"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: "#a3ffad" }}
-								>
-									FarmData2
-								</a>
-								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
-									(#2 overall contributor)
-								</span>
-							</div>
-							<div
-								style={{
-									fontSize: 16,
-									color: "#f3f6fa",
-									marginBottom: 12,
-									marginTop: 12,
-								}}
-							>
-								• 25+ PRs, 14,000+ lines added. Built complex data entry forms,
-								elevated user experience, and modernized backend architecture
-								for real-world farm operations. Promoted from Intern to Software
-								Engineer.
-							</div>
-							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
-								<a
-									href="https://github.com/FarmData2/FarmData2/graphs/contributors"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										color: "#61ffe7",
-										marginRight: 18,
-									}}
-								>
-									Contributor graph
-								</a>
-								<a
-									href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: "#61ffe7" }}
-								>
-									All PRs
-								</a>
-							</div>
+					{/* Frontend Frameworks */}
+					<div className="tools-category">
+						<h3>Frontend Frameworks</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
+								alt="React"
+							/>
+							<img
+								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
+								alt="Vue.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
+								alt="Next.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+								alt="HTML5"
+							/>
+							<img
+								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+								alt="CSS3"
+							/>
+							<img
+								src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
+								alt="TailwindCSS"
+							/>
+							<img
+								src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
+								alt="Bootstrap"
+							/>
+							<img
+								src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white"
+								alt="Electron"
+							/>
 						</div>
 					</div>
 
-					{/* Full Portfolio */}
-					<div className="oss-item">
-						<span style={{ fontSize: 32, marginRight: 18 }}>🗂️</span>
-						<div style={{ flex: 1 }}>
-							<div
-								style={{
-									fontWeight: 600,
-									fontSize: "1.17rem",
-									color: "#b8fffb",
-									marginBottom: 5,
-								}}
-							>
-								See My Full Open Source Portfolio
-							</div>
-							<div style={{ fontSize: 15, color: "#e9e9f3", marginBottom: 7 }}>
-								Get a detailed breakdown, merged PRs, and stats for every major
-								project.
-							</div>
-							<a
-								href="https://github.com/Shahir-47/open-source-contributions"
-								target="_blank"
-								rel="noopener noreferrer"
-								id="open-source-button"
-								style={{
-									display: "inline-block",
-									background: "#7952B3",
-									color: "#fff",
-									borderRadius: 8,
-									padding: "5px 17px",
-									fontWeight: 500,
-									fontSize: 15,
-									marginTop: 2,
-									boxShadow: "0 1px 3px 0 rgba(121,82,179,0.1)",
-									transition: "background 0.3s ease",
-								}}
-							>
-								Open Source Portfolio →
-							</a>
+					{/* Backend & Server */}
+					<div className="tools-category">
+						<h3>Backend & Server</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
+								alt="Node.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
+								alt="Express.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+								alt="Firebase"
+							/>
+							<img
+								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+								alt="Flask"
+							/>
+							<img
+								src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
+								alt="Socket.IO"
+							/>
+							<img
+								src="https://img.shields.io/badge/RESTful%20APIs-02569B?style=for-the-badge&logo=api&logoColor=white"
+								alt="RESTful APIs"
+							/>
+							<img
+								src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=webrtc&logoColor=white"
+								alt="WebRTC"
+							/>
+						</div>
+					</div>
+
+					{/* Databases & Storage */}
+					<div className="tools-category">
+						<h3>Databases & Storage</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
+								alt="PostgreSQL"
+							/>
+							<img
+								src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
+								alt="MongoDB"
+							/>
+							<img
+								src="https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+								alt="Firestore"
+							/>
+							<img
+								src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"
+								alt="SQLite"
+							/>
+							<img
+								src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+								alt="MySQL"
+							/>
+						</div>
+					</div>
+
+					{/* Cloud & Infrastructure */}
+					<div className="tools-category">
+						<h3>Cloud & Infrastructure</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
+								alt="AWS"
+							/>
+							<img
+								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+								alt="Docker"
+							/>
+							<img
+								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
+								alt="Vercel"
+							/>
+							<img
+								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
+								alt="Cloudflare"
+							/>
+							<img
+								src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"
+								alt="VirtualBox"
+							/>
+							<img
+								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+								alt="Linux"
+							/>
+						</div>
+					</div>
+
+					{/* Payment & External APIs */}
+					<div className="tools-category">
+						<h3>Payment & External APIs</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white"
+								alt="Stripe"
+							/>
+							<img
+								src="https://img.shields.io/badge/Spotify%20API-1ED760?style=for-the-badge&logo=spotify&logoColor=white"
+								alt="Spotify API"
+							/>
+							<img
+								src="https://img.shields.io/badge/Google%20Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white"
+								alt="Google Maps"
+							/>
+							<img
+								src="https://img.shields.io/badge/farmOS%20API-8BC34A?style=for-the-badge&logo=api&logoColor=white"
+								alt="farmOS API"
+							/>
+						</div>
+					</div>
+
+					{/* Testing & Quality */}
+					<div className="tools-category">
+						<h3>Testing & Quality</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
+								alt="Cypress"
+							/>
+							<img
+								src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
+								alt="Jest"
+							/>
+							<img
+								src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"
+								alt="Vitest"
+							/>
+							<img
+								src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"
+								alt="ESLint"
+							/>
+							<img
+								src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"
+								alt="Prettier"
+							/>
+						</div>
+					</div>
+
+					{/* Development Tools */}
+					<div className="tools-category">
+						<h3>Development Tools</h3>
+						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+								alt="Git"
+							/>
+							<img
+								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+								alt="GitHub"
+							/>
+							<img
+								src="https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
+								alt="VS Code"
+							/>
+							<img
+								src="https://img.shields.io/badge/ANTLR-FF6B35?style=for-the-badge&logo=antlr&logoColor=white"
+								alt="ANTLR"
+							/>
+							<img
+								src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
+								alt="Bash"
+							/>
+							<img
+								src="https://img.shields.io/badge/Agile/Scrum-0052CC?style=for-the-badge&logo=jira&logoColor=white"
+								alt="Agile/Scrum"
+							/>
 						</div>
 					</div>
 				</div>
@@ -739,269 +748,260 @@ const About = () => {
 				</VerticalTimeline>
 			</div>
 
-			{/* Tools and Technologies */}
-			<div className="tools-section">
-				<div className="tools-header">
-					<h2>
-						🛠️ <span className="highlight">Tools</span> and{" "}
-						<span className="highlight">Technologies</span> I&apos;ve worked
-						with
-					</h2>
-				</div>
-				<div className="tools-grid">
-					{/* Programming Languages */}
-					<div className="tools-category">
-						<h3>Programming Languages</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
-								alt="JavaScript"
-							/>
-							<img
-								src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
-								alt="TypeScript"
-							/>
-							<img
-								src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
-								alt="Java"
-							/>
-							<img
-								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
-								alt="Python"
-							/>
-							<img
-								src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
-								alt="C"
-							/>
-							<img
-								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
-								alt="SQL"
-							/>
-							<img
-								src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"
-								alt="Lua"
-							/>
-							<img
-								src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white"
-								alt="R"
-							/>
-							<img
-								src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white"
-								alt="MATLAB"
-							/>
+			{/* OSS Contributions */}
+			<div className="oss-section">
+				<h2
+					className="section-title"
+					style={{
+						textAlign: "center",
+						fontWeight: 700,
+						margin: "0 0 3rem 0",
+						letterSpacing: "0.02em",
+						color: "#4fd1c5",
+						textShadow: "0 2px 16px #0009",
+					}}
+				>
+					🌟 Open Source Contributions
+				</h2>
+
+				<div
+					className="open-source-section"
+					style={{
+						maxWidth: 950,
+						margin: "0 auto",
+						padding: "0 1.2rem",
+					}}
+				>
+					{/* Mermaid.js */}
+					<div className="oss-item">
+						<img
+							src={MermaidJS}
+							alt="Mermaid.js"
+							style={{
+								width: 65,
+								height: 65,
+								borderRadius: 14,
+								objectFit: "cover",
+								background: "#fff",
+								marginRight: 0,
+								boxShadow: "0 0 10px 1px #0005",
+							}}
+						/>
+						<div style={{ flex: 1 }}>
+							<div
+								style={{
+									fontWeight: 600,
+									fontSize: "1.33rem",
+									color: "#69f9e6",
+									marginBottom: 3,
+								}}
+							>
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#f992cf" }}
+								>
+									Mermaid.js
+								</a>
+								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
+									(Top 25 contributor)
+								</span>
+							</div>
+							<div
+								style={{
+									fontSize: 16,
+									color: "#f3f6fa",
+									marginBottom: 12,
+									marginTop: 12,
+								}}
+							>
+								• 75+ commits. Delivered innovative charting features, resolved
+								core rendering bugs, and improved overall for a library serving
+								over{" "}
+								<a
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+									href="https://npmtrends.com/mermaid"
+								>
+									1.2M+ weekly downloads
+								</a>
+								.
+							</div>
+							<ul
+								style={{
+									fontSize: 15,
+									color: "#c7e9f1",
+									margin: 0,
+									marginBottom: 9,
+									paddingLeft: 18,
+								}}
+							>
+								<li>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pull/6475"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#43e8d8", textDecoration: "underline" }}
+									>
+										Added dynamic, auto-scaling data labels for bar charts
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pull/6274"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#43e8d8", textDecoration: "underline" }}
+									>
+										Engineered smart word wrapping using Knuth-Plass algorithm
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pull/6225"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#43e8d8", textDecoration: "underline" }}
+									>
+										Enabled full theme customization for Journey diagrams
+									</a>
+								</li>
+							</ul>
+							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 15 }}>
+								<a
+									href="https://github.com/mermaid-js/mermaid/graphs/contributors"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										color: "#61ffe7",
+										marginRight: 18,
+									}}
+								>
+									Contributor graph
+								</a>
+								<a
+									href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#61ffe7" }}
+								>
+									All PRs
+								</a>
+							</div>
 						</div>
 					</div>
 
-					{/* Frontend Frameworks */}
-					<div className="tools-category">
-						<h3>Frontend Frameworks</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
-								alt="React"
-							/>
-							<img
-								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
-								alt="Vue.js"
-							/>
-							<img
-								src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
-								alt="Next.js"
-							/>
-							<img
-								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-								alt="HTML5"
-							/>
-							<img
-								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-								alt="CSS3"
-							/>
-							<img
-								src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
-								alt="TailwindCSS"
-							/>
-							<img
-								src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
-								alt="Bootstrap"
-							/>
-							<img
-								src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white"
-								alt="Electron"
-							/>
+					{/* FarmData2 */}
+					<div className="oss-item">
+						<img
+							src={FarmData2}
+							alt="FarmData2"
+							style={{
+								width: 65,
+								height: 65,
+								borderRadius: 14,
+								objectFit: "cover",
+								background: "#fff",
+								marginRight: 0,
+								boxShadow: "0 0 10px 1px #0005",
+							}}
+						/>
+						<div style={{ flex: 1 }}>
+							<div
+								style={{
+									fontWeight: 600,
+									fontSize: "1.33rem",
+									color: "#69f9e6",
+									marginBottom: 3,
+								}}
+							>
+								<a
+									href="https://github.com/FarmData2/FarmData2"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#a3ffad" }}
+								>
+									FarmData2
+								</a>
+								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
+									(#2 overall contributor)
+								</span>
+							</div>
+							<div
+								style={{
+									fontSize: 16,
+									color: "#f3f6fa",
+									marginBottom: 12,
+									marginTop: 12,
+								}}
+							>
+								• 25+ PRs, 14,000+ lines added. Built complex data entry forms,
+								elevated user experience, and modernized backend architecture
+								for real-world farm operations. Promoted from Intern to Software
+								Engineer.
+							</div>
+							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
+								<a
+									href="https://github.com/FarmData2/FarmData2/graphs/contributors"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{
+										color: "#61ffe7",
+										marginRight: 18,
+									}}
+								>
+									Contributor graph
+								</a>
+								<a
+									href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#61ffe7" }}
+								>
+									All PRs
+								</a>
+							</div>
 						</div>
 					</div>
 
-					{/* Backend & Server */}
-					<div className="tools-category">
-						<h3>Backend & Server</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
-								alt="Node.js"
-							/>
-							<img
-								src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
-								alt="Express.js"
-							/>
-							<img
-								src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
-								alt="Firebase"
-							/>
-							<img
-								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
-								alt="Flask"
-							/>
-							<img
-								src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
-								alt="Socket.IO"
-							/>
-							<img
-								src="https://img.shields.io/badge/RESTful%20APIs-02569B?style=for-the-badge&logo=api&logoColor=white"
-								alt="RESTful APIs"
-							/>
-							<img
-								src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=webrtc&logoColor=white"
-								alt="WebRTC"
-							/>
-						</div>
-					</div>
-
-					{/* Databases & Storage */}
-					<div className="tools-category">
-						<h3>Databases & Storage</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
-								alt="PostgreSQL"
-							/>
-							<img
-								src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
-								alt="MongoDB"
-							/>
-							<img
-								src="https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
-								alt="Firestore"
-							/>
-							<img
-								src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"
-								alt="SQLite"
-							/>
-							<img
-								src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
-								alt="MySQL"
-							/>
-						</div>
-					</div>
-
-					{/* Cloud & Infrastructure */}
-					<div className="tools-category">
-						<h3>Cloud & Infrastructure</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
-								alt="AWS"
-							/>
-							<img
-								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
-								alt="Docker"
-							/>
-							<img
-								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
-								alt="Vercel"
-							/>
-							<img
-								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
-								alt="Cloudflare"
-							/>
-							<img
-								src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"
-								alt="VirtualBox"
-							/>
-							<img
-								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
-								alt="Linux"
-							/>
-						</div>
-					</div>
-
-					{/* Payment & External APIs */}
-					<div className="tools-category">
-						<h3>Payment & External APIs</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white"
-								alt="Stripe"
-							/>
-							<img
-								src="https://img.shields.io/badge/Spotify%20API-1ED760?style=for-the-badge&logo=spotify&logoColor=white"
-								alt="Spotify API"
-							/>
-							<img
-								src="https://img.shields.io/badge/Google%20Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white"
-								alt="Google Maps"
-							/>
-							<img
-								src="https://img.shields.io/badge/farmOS%20API-8BC34A?style=for-the-badge&logo=api&logoColor=white"
-								alt="farmOS API"
-							/>
-						</div>
-					</div>
-
-					{/* Testing & Quality */}
-					<div className="tools-category">
-						<h3>Testing & Quality</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
-								alt="Cypress"
-							/>
-							<img
-								src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
-								alt="Jest"
-							/>
-							<img
-								src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"
-								alt="Vitest"
-							/>
-							<img
-								src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"
-								alt="ESLint"
-							/>
-							<img
-								src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"
-								alt="Prettier"
-							/>
-						</div>
-					</div>
-
-					{/* Development Tools */}
-					<div className="tools-category">
-						<h3>Development Tools</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
-								alt="Git"
-							/>
-							<img
-								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-								alt="GitHub"
-							/>
-							<img
-								src="https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
-								alt="VS Code"
-							/>
-							<img
-								src="https://img.shields.io/badge/ANTLR-FF6B35?style=for-the-badge&logo=antlr&logoColor=white"
-								alt="ANTLR"
-							/>
-							<img
-								src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
-								alt="Bash"
-							/>
-							<img
-								src="https://img.shields.io/badge/Agile/Scrum-0052CC?style=for-the-badge&logo=jira&logoColor=white"
-								alt="Agile/Scrum"
-							/>
+					{/* Full Portfolio */}
+					<div className="oss-item">
+						<span style={{ fontSize: 32, marginRight: 18 }}>🗂️</span>
+						<div style={{ flex: 1 }}>
+							<div
+								style={{
+									fontWeight: 600,
+									fontSize: "1.17rem",
+									color: "#b8fffb",
+									marginBottom: 5,
+								}}
+							>
+								See My Full Open Source Portfolio
+							</div>
+							<div style={{ fontSize: 15, color: "#e9e9f3", marginBottom: 7 }}>
+								Get a detailed breakdown, merged PRs, and stats for every major
+								project.
+							</div>
+							<a
+								href="https://github.com/Shahir-47/open-source-contributions"
+								target="_blank"
+								rel="noopener noreferrer"
+								id="open-source-button"
+								style={{
+									display: "inline-block",
+									background: "#7952B3",
+									color: "#fff",
+									borderRadius: 8,
+									padding: "5px 17px",
+									fontWeight: 500,
+									fontSize: 15,
+									marginTop: 2,
+									boxShadow: "0 1px 3px 0 rgba(121,82,179,0.1)",
+									transition: "background 0.3s ease",
+								}}
+							>
+								Open Source Portfolio →
+							</a>
 						</div>
 					</div>
 				</div>
