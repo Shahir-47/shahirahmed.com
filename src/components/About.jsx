@@ -713,7 +713,7 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Facilitated weekly lab sessions for 50+ students, improving
+								Facilitated weekly lab sessions for 40+ students, improving
 								assignment completion rates by 20% through personalized code
 								reviews in Python and Java.
 							</li>
