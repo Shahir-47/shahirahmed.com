@@ -791,7 +791,7 @@ const About = () => {
 									Mermaid.js
 								</a>
 								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
-									(Top 25 contributor)
+									(Top 25 contributor out of 600+ contributors)
 								</span>
 							</div>
 							<div
