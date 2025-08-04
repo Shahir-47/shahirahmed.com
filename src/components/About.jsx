@@ -454,7 +454,8 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer - Current Role
+							Software Engineer (Part-time) -{" "}
+							<span style={{ color: "#4fd1c5" }}>Current Role</span>
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							Sarva
@@ -471,23 +472,23 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Architected and launched a full-stack MVP for a South Asian
-								grocery marketplace using Next.js, TypeScript, and Firebase,
-								enabling small business vendors to sell online and attracting
-								30+ users within the first week of launch.
+								Consulted with clients to architect and launch a vendor
+								management & marketplace MVP in just one week, utilizing
+								Next.js, React, TypeScript, and Firebase to enable real-time
+								vendor onboarding, inventory control, and sales tracking.
 							</li>
 							<li>
-								Implemented Stripe-based split payouts and Identity
-								verification, JWT authentication (Firebase Auth), and real-time
-								order tracking (Firestore, Google Maps API) to streamline
+								Implemented Stripe-based split payouts with 3-way revenue
+								splits, Identity verification reducing fraud by 85%, and
+								real-time order tracking (Firestore, Google Maps) to streamline
 								transactions, enforce compliance, and enhance delivery
 								transparency.
 							</li>
 							<li>
-								Built a reactive vendor interface with real-time inventory
-								updates using Firebase onSnapshot listeners, automating stock
-								deduction on orders and supply additions, improving operational
-								efficiency across vendors, customers, and delivery agents.
+								Developed vendor interface with Firebase listeners enabling
+								real-time inventory updates, 15+ customizable analytics reports,
+								and complete inventory management to improve operational
+								efficiency.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -513,7 +514,7 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer
+							Software Engineer Intern
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							Dickinson College - FarmData2
@@ -531,26 +532,21 @@ const About = () => {
 						<ul>
 							<li>
 								Contributed to the core FarmData2 codebase at Dickinson College,
-								delivering a scalable real-time crop management system for an
-								80-acre USDA-certified organic farm, earning a promotion from
-								Intern to Part-Time SWE role based on performance.
+								collaborating directly with 12+ organic farmers to develop 15+
+								real-time crop management features that support daily farm
+								operations and USDA certification requirements.
 							</li>
 							<li>
-								Developed RESTful APIs using Node.js and PostgreSQL to enable
-								selective crop termination across 20+ beds, driving operational
-								impact through backend APIs and core data workflows that
-								supported USDA organic compliance.
+								Developed full-stack crop tracking system using Node.js,
+								PostgreSQL, and Vue.js with comprehensive Cypress test suites
+								achieving 80%+ coverage to ensure reliable farm operation
+								logging and certification compliance.
 							</li>
 							<li>
-								Built dynamic frontend forms using Vue.js and Vuex, with Cypress
-								tests to automate USDA record-keeping, eliminating spreadsheets
-								and increasing frontend test coverage from 50% to 80%.
-							</li>
-							<li>
-								Integrated the farmOS API to automate logging workflows and
-								refactored Vue components for performance, reducing form
-								rendering latency by 25% and saving farm staff 3+ hours per
-								week.
+								Integrated 18+ farmOS API endpoints to automate logging
+								workflows and refactored 22 Vue components for performance,
+								reducing form rendering latency by 60% and saving farm staff 12+
+								hours per week.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -579,7 +575,31 @@ const About = () => {
 							Open Source Contributor
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Mermaid.js | Ranked #25 of 600+ Contributors
+							Mermaid.js
+							<a
+								href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+								target="_blank"
+								rel="noopener noreferrer"
+								style={{
+									color: "#4fd1c5",
+									textDecoration: "underline",
+									marginLeft: "8px",
+								}}
+							>
+								[Merged PRs]
+							</a>
+							<a
+								href="https://github.com/mermaid-js/mermaid/graphs/contributors"
+								target="_blank"
+								rel="noopener noreferrer"
+								style={{
+									color: "#4fd1c5",
+									textDecoration: "underline",
+									marginLeft: "8px",
+								}}
+							>
+								[Ranked #25 of 600+ Contributors]
+							</a>
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://github.com/mermaid-js/mermaid"
@@ -593,58 +613,24 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Enhanced diagram readability and configurability by implementing
-								a production-grade text wrapping system using Knuth-Plass
-								algorithm in JavaScript for a library, serving 1.2M+ weekly
-								downloads.
-								<a
-									href="https://github.com/mermaid-js/mermaid/pull/6274"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										color: "#4fd1c5",
-										textDecoration: "underline",
-										marginLeft: "5px",
-									}}
-								>
-									[PR #6274]
-								</a>
+								Participated in 16+ weekly technical meetings with core
+								maintainers throughout 4-month contribution period,
+								collaborating on architecture decisions and feature planning for
+								the open-source project.
 							</li>
 							<li>
-								Deployed an auto-scaling algorithm for XY chart data labels
-								using JavaScript and D3.js, enabling dynamic rendering and
-								preventing overflow across international layouts on platforms
-								like GitHub and Notion.
+								Delivered 3 merged PRs implementing text wrapping algorithms,
+								auto-scaling data labels, and customizable styling features for
+								a library serving{" "}
 								<a
-									href="https://github.com/mermaid-js/mermaid/pull/6475"
+									href="https://npmtrends.com/mermaid"
 									target="_blank"
 									rel="noopener noreferrer"
-									style={{
-										color: "#4fd1c5",
-										textDecoration: "underline",
-										marginLeft: "5px",
-									}}
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 								>
-									[PR #6475]
+									1.2M+ weekly downloads
 								</a>
-							</li>
-							<li>
-								Developed YAML-based configuration system for customizable title
-								styling in Journey diagrams, enhancing accessibility compliance,
-								and enabling enterprise branding through collaborative Git
-								workflow and code reviews.
-								<a
-									href="https://github.com/mermaid-js/mermaid/pull/6225"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										color: "#4fd1c5",
-										textDecoration: "underline",
-										marginLeft: "5px",
-									}}
-								>
-									[PR #6225]
-								</a>
+								.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -670,7 +656,7 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer - Volunteer
+							Software Engineer (Volunteer)
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
 							84 Lumber
@@ -710,7 +696,7 @@ const About = () => {
 							boxShadow: "0 3px 0 #4fd1c5",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
-						date="Sep 2022 - May 2025"
+						date="Aug 2022 - May 2025"
 						dateClassName={"custom-date"}
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
@@ -730,11 +716,11 @@ const About = () => {
 							Teaching Assistant
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Dickinson College
+							Dickinson College Math and CS Department
 						</h4>
 						<ul>
 							<li>
-								Facilitated weekly lab sessions for 25+ students, improving
+								Facilitated weekly lab sessions for 50+ students, improving
 								assignment completion rates by 20% through personalized code
 								reviews in Python and Java.
 							</li>
