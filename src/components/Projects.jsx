@@ -98,7 +98,8 @@ const projectsData = [
 		description:
 			"PandOS is a complete custom operating system kernel implemented in C for the uMPS3 RISC emulator. Features include time-sharing, multiprogramming, TLB-based virtual memory management, system calls, and interrupt handling for concurrent process execution and memory safety. This project demonstrates deep understanding of operating system concepts and low-level systems programming.",
 		liveDemo: null,
-		sourceCode: "https://gitshare.me/repo/6b7c1429-cd00-4bf9-b1b3-264596607faa",
+		sourceCode:
+			"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
 		devpost: null,
 		repo: "PandOS",
 	},
