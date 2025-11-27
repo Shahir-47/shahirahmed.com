@@ -70,7 +70,7 @@ const Navbar = () => {
 				</Link>
 
 				<a
-					href="https://drive.google.com/file/d/1mm60vOZ3USwgjAFHp-_knDZiP3XpyI5M/view?usp=sharing"
+					href="https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view?usp=sharing"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="nav-box"
@@ -95,7 +95,7 @@ const Navbar = () => {
 						</Link>
 
 						<a
-							href="https://drive.google.com/file/d/1mm60vOZ3USwgjAFHp-_knDZiP3XpyI5M/view?usp=sharing"
+							href="https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view?usp=sharing"
 							target="_blank"
 							rel="noopener noreferrer"
 							onClick={() => setHamburgerClass("inactive")}
