@@ -8,8 +8,11 @@ import { Box, Button } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import CodeIcon from "@mui/icons-material/Code";
 import DescriptionIcon from "@mui/icons-material/Description";
+import { useNavigate, Link } from "react-router-dom";
 
 const HomePage = () => {
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		const typed = new Typed("#typed-text", {
 			strings: [
@@ -88,7 +91,7 @@ const HomePage = () => {
 							>
 								<Button
 									variant="contained"
-									href="/about"
+									onClick={() => navigate("/about")}
 									startIcon={<PersonIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
@@ -105,7 +108,7 @@ const HomePage = () => {
 								</Button>
 								<Button
 									variant="contained"
-									href="/projects"
+									onClick={() => navigate("/projects")}
 									startIcon={<CodeIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
@@ -142,7 +145,7 @@ const HomePage = () => {
 							</Box>
 							<p className="sub-text">
 								You can also <strong>Contact Me</strong> via the{" "}
-								<a href="/contact">Contact Me page</a> or through my social
+								<Link to="/contact">Contact Me page</Link> or through my social
 								links below.
 							</p>
 						</div>

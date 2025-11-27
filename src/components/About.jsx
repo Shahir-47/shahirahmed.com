@@ -17,6 +17,7 @@ import { FaGithub } from "react-icons/fa";
 import { MdVisibility } from "react-icons/md";
 import { FaCertificate } from "react-icons/fa";
 import GitHubStats from "./GitHubStats";
+import { useNavigate } from "react-router-dom";
 import "react-vertical-timeline-component/style.min.css";
 import {
 	VerticalTimeline,
@@ -31,6 +32,8 @@ const iconSize = {
 };
 
 const About = () => {
+	const navigate = useNavigate();
+
 	return (
 		<div className="about-page">
 			{/* About Me */}
@@ -1700,7 +1703,7 @@ const About = () => {
 					button below to see them!
 				</Typography>
 				<Button
-					href="/projects" // Redirects to the projects page
+					onClick={() => navigate("/projects")}
 					variant="contained"
 					id="projects-link"
 					startIcon={<CodeIcon />}

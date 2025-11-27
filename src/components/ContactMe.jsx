@@ -1,4 +1,4 @@
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import SocialIcons from "./SocialIcons";
 import { useState } from "react";
 import { TextField, Button, Box, Typography, Grid } from "@mui/material";
@@ -23,14 +23,15 @@ const ContactMe = () => {
 		e.preventDefault();
 		setStatus("Sending...");
 
-		const serviceID = "service_1s78mke";
-		const templateID = "template_z3p11k8";
-		const userID = "bUvTWoqR4veEvjIYF";
+		const serviceID = "service_iyuxx8p";
+		const templateID = "template_74oen19";
+		const userID = "AiHK5cxHw1zrw4AYR";
 
 		const submissionData = {
-			from_name: `${formData.name} <${formData.email}>`,
-			to_name: "Shahir",
-			message: `Subject: ${formData.subject}\n\n${formData.message}`,
+			from_name: formData.name,
+			from_email: formData.email,
+			subject: formData.subject,
+			message: formData.message,
 		};
 
 		emailjs.send(serviceID, templateID, submissionData, userID).then(
