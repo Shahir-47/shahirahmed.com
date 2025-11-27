@@ -272,7 +272,7 @@ div.nav-links a.nav-box.active:after {
 	display: flex;
 	flex-direction: row-reverse;
 	gap: 0.5rem;
-	align-items: flex-end;
+	align-items: center;
 }
 
 .nav-box img {
