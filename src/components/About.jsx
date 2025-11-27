@@ -450,11 +450,12 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Software Engineer (Part-time) -{" "}
+							Software Engineer -{" "}
 							<span style={{ color: "#4fd1c5" }}>Current Role</span>
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Sarva
+							Sarva - Vendor Management Platform & Marketplace for Grocery
+							Supply Chains
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://www.sarvabazaar.com"
@@ -462,29 +463,39 @@ const About = () => {
 									rel="noopener noreferrer"
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 								>
-									[Live Platform]
+									[sarvabazaar.com]
 								</a>
 							</span>
 						</h4>
 						<ul>
 							<li>
-								Consulted with clients to architect and launch a vendor
-								management & marketplace MVP in just one week, utilizing
-								Next.js, React, TypeScript, and Firebase to enable real-time
-								vendor onboarding, inventory control, and sales tracking.
+								Designed 4 role-specific AI assistants with RAG over Firestore
+								and Algolia to handle search, ordering, and analytics in chat,
+								cutting task time by 50% and saving about 15 hours of operations
+								work per week.
 							</li>
 							<li>
-								Implemented Stripe-based split payouts with 3-way revenue
-								splits, Identity verification reducing fraud by 85%, and
-								real-time order tracking (Firestore, Google Maps) to streamline
-								transactions, enforce compliance, and enhance delivery
-								transparency.
+								Built a vendor AI toolkit to auto-generate product descriptions,
+								pricing, and nutrition, cutting per-item setup time by 80% and
+								enabling 50+ product catalogs to launch in under 1 hour.
 							</li>
 							<li>
-								Developed vendor interface with Firebase listeners enabling
-								real-time inventory updates, 15+ customizable analytics reports,
-								and complete inventory management to improve operational
-								efficiency.
+								Implemented a batch inventory management system with voice input
+								via Whisper, enabling vendors to add, edit, and delete 20+
+								products at once in 90+ languages, cutting weekly inventory work
+								by 60% and saving users 3 to 5 hours per week.
+							</li>
+							<li>
+								Implemented Stripe Connect split payouts with Identity checks
+								and real-time order tracking via Firestore and Google Maps,
+								cutting chargebacks and suspected fraud by 85% while enabling
+								transparent deliveries.
+							</li>
+							<li>
+								Built 20+ pages in Next.js (React, TypeScript) backed by
+								Firebase Auth, Firestore, Storage, and Cloud Functions so users
+								can sign up securely, browse vendor catalogs, place orders, and
+								upload images on a scalable serverless stack deployed to Vercel.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -513,7 +524,7 @@ const About = () => {
 							Software Engineer Intern
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Dickinson College - FarmData2
+							FarmData2 - Organic Farm Management Software at Dickinson College
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://github.com/FarmData2/FarmData2"
@@ -524,19 +535,29 @@ const About = () => {
 									[GitHub Repository]
 								</a>
 							</span>
+							<span style={{ marginLeft: "8px" }}>
+								<a
+									href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ color: "#4fd1c5", textDecoration: "underline" }}
+								>
+									[Contributions]
+								</a>
+							</span>
 						</h4>
 						<ul>
 							<li>
 								Contributed to the core FarmData2 codebase at Dickinson College,
-								collaborating directly with 12+ organic farmers to develop 15+
-								real-time crop management features that support daily farm
-								operations and USDA certification requirements.
+								partnering with 12+ farmers to build 15+ real-time crop
+								management features that support daily farm operations and USDA
+								certification requirements.
 							</li>
 							<li>
-								Developed full-stack crop tracking system using Node.js,
-								PostgreSQL, and Vue.js with comprehensive Cypress test suites
-								achieving 80%+ coverage to ensure reliable farm operation
-								logging and certification compliance.
+								Developed a full-stack crop tracking system using Node.js,
+								PostgreSQL, and Vue.js with Cypress end-to-end tests at 80%+
+								coverage, enabling real-time logging of concurrent farm
+								operations to meet USDA audit standards.
 							</li>
 							<li>
 								Integrated 18+ farmOS API endpoints to automate logging
@@ -571,7 +592,7 @@ const About = () => {
 							Open Source Contributor
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							Mermaid.js
+							Mermaid.js - Open-Source Data Visualization Library
 							<a
 								href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
 								target="_blank"
@@ -582,7 +603,7 @@ const About = () => {
 									marginLeft: "8px",
 								}}
 							>
-								[Merged PRs]
+								[Contributions]
 							</a>
 							<a
 								href="https://github.com/mermaid-js/mermaid/graphs/contributors"
@@ -609,24 +630,24 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Participated in 16+ weekly technical meetings with core
-								maintainers throughout 4-month contribution period,
-								collaborating on architecture decisions and feature planning for
-								the open-source project.
-							</li>
-							<li>
 								Delivered 3 merged PRs implementing text wrapping algorithms,
 								auto-scaling data labels, and customizable styling features for
-								a library serving{" "}
+								a library serving more than{" "}
 								<a
 									href="https://npmtrends.com/mermaid"
 									target="_blank"
 									rel="noopener noreferrer"
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 								>
-									1.2M+ weekly downloads
+									1.2 million weekly downloads
 								</a>
-								.
+								, achieving #25 contributor ranking among 600+ contributors.
+							</li>
+							<li>
+								Contributed to a 100K+ line codebase via Git, clearing automated
+								CI/CD checks and multi-stage code reviews to ship features now
+								powering diagrams for millions across GitHub, VS Code, Notion,
+								and Microsoft Word.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -655,7 +676,7 @@ const About = () => {
 							Software Engineer (Volunteer)
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">
-							84 Lumber
+							84 Lumber - Building Materials Distribution & Retail Company
 							<span style={{ marginLeft: "8px" }}>
 								<a
 									href="https://www.dickinson.edu/news/article/5821/dickinson_students_work_with_alum_to_breathe_new_life_into_84_lumbers_legacy_systems"
@@ -669,16 +690,10 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Led a NLP-powered code migration pipeline with ANTLR parser
-								generator, automatically converting 10K+ lines of legacy CBASIC
-								to modern Python, Java, and .NET, accelerating a $9B
-								company&apos;s modernization initiative.
-							</li>
-							<li>
-								Engineered an Abstract Syntax Tree framework with Doxygen for
-								automated documentation generation, cutting new developer
-								onboarding time by 50% using clearer and more maintainable
-								documentation.
+								Contributed to an ANTLR based code migration pipeline that
+								automatically converted 10K+ lines of legacy CBASIC into Python
+								and Java, helping a $9B company modernize its legacy systems and
+								cut down manual rewrite work.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
