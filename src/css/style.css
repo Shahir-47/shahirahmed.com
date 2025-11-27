@@ -283,7 +283,9 @@ div.nav-links a.nav-box.active:after {
 .nav-box:nth-of-type(1) img {
 	width: 1.65rem;
 	height: auto;
-	align-self: flex-start;
+	align-self: center;
+	margin-bottom: 0.25rem;
+	margin-right: 0.25rem;
 }
 
 .nav-box:last-of-type img {
