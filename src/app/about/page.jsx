@@ -12,7 +12,15 @@ export const metadata = {
 		title: "About Shahir Ahmed | Full Stack Developer & Software Engineer",
 		description:
 			"Learn about Shahir Ahmed's background, experience, skills, and journey as a Full Stack Developer and Software Engineer.",
-		url: "https://shahirahmed.com/about",
+		url: "https://www.shahirahmed.com/about",
+		images: [
+			{
+				url: "https://www.shahirahmed.com/shahir.jpeg",
+				width: 400,
+				height: 400,
+				alt: "Shahir Ahmed - Full Stack Developer",
+			},
+		],
 	},
 };
 
