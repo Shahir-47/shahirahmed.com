@@ -1003,6 +1003,7 @@ const About = () => {
 									fontWeight: 500,
 									fontSize: 15,
 									marginTop: 2,
+									textDecoration: "none",
 									boxShadow: "0 1px 3px 0 rgba(121,82,179,0.1)",
 									transition: "background 0.3s ease",
 								}}
