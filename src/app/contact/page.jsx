@@ -13,14 +13,6 @@ export const metadata = {
 		description:
 			"Get in touch with Shahir Ahmed for freelance projects, collaborations, and job opportunities.",
 		url: "https://www.shahirahmed.com/contact",
-		images: [
-			{
-				url: "https://www.shahirahmed.com/shahir.jpeg",
-				width: 400,
-				height: 400,
-				alt: "Shahir Ahmed - Full Stack Developer",
-			},
-		],
 	},
 };
 

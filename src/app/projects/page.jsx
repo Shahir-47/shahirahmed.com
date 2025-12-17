@@ -13,14 +13,6 @@ export const metadata = {
 		description:
 			"Explore Shahir Ahmed's portfolio of full stack projects including Sarva, Peer-to-Playlist, Albatross, and open source contributions.",
 		url: "https://www.shahirahmed.com/projects",
-		images: [
-			{
-				url: "https://www.shahirahmed.com/shahir.jpeg",
-				width: 400,
-				height: 400,
-				alt: "Shahir Ahmed - Full Stack Developer",
-			},
-		],
 	},
 };
 

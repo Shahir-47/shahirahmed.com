@@ -59,21 +59,12 @@ export const metadata = {
 		title: "Shahir Ahmed | Full Stack Developer & Software Engineer",
 		description:
 			"Shahir Ahmed is a Full Stack Developer specializing in React, Next.js, Node.js, and cloud technologies. Open source contributor with production experience at Sarva, Mermaid.js, and FarmData2.",
-		images: [
-			{
-				url: "https://www.shahirahmed.com/shahir.jpeg",
-				width: 400,
-				height: 400,
-				alt: "Shahir Ahmed - Full Stack Developer",
-			},
-		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Shahir Ahmed | Full Stack Developer & Software Engineer",
 		description:
 			"Full Stack Developer specializing in React, Next.js, Node.js. Open source contributor to Mermaid.js and FarmData2.",
-		images: ["https://www.shahirahmed.com/shahir.jpeg"],
 		creator: "@shahirahmed",
 	},
 	robots: {

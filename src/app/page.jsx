@@ -13,14 +13,6 @@ export const metadata = {
 		description:
 			"Welcome to Shahir Ahmed's portfolio. Full Stack Developer specializing in React, Next.js, Node.js, and cloud technologies.",
 		url: "https://www.shahirahmed.com",
-		images: [
-			{
-				url: "https://www.shahirahmed.com/shahir.jpeg",
-				width: 400,
-				height: 400,
-				alt: "Shahir Ahmed - Full Stack Developer",
-			},
-		],
 	},
 };
 
