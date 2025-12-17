@@ -36,7 +36,7 @@ export default function robots() {
 				allow: "/",
 			},
 		],
-		sitemap: "https://shahirahmed.com/sitemap.xml",
-		host: "https://shahirahmed.com",
+		sitemap: "https://www.shahirahmed.com/sitemap.xml",
+		host: "https://www.shahirahmed.com",
 	};
 }

@@ -6,13 +6,13 @@ export const metadata = {
 	description:
 		"Learn about Shahir Ahmed - Full Stack Developer and Software Engineer at Sarva. Computer Science & Mathematics graduate from Dickinson College. Top contributor to Mermaid.js and FarmData2. Skilled in React, Next.js, Node.js, Vue.js, AWS, Firebase, and more.",
 	alternates: {
-		canonical: "https://shahirahmed.com/about",
+		canonical: "https://www.shahirahmed.com/about",
 	},
 	openGraph: {
 		title: "About Shahir Ahmed | Full Stack Developer & Software Engineer",
 		description:
 			"Learn about Shahir Ahmed's background, experience, skills, and journey as a Full Stack Developer and Software Engineer.",
-		url: "https://shahirahmed.com/about",
+		url: "https://www.shahirahmed.com/about",
 	},
 };
 
@@ -20,16 +20,16 @@ export const metadata = {
 const aboutPageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "AboutPage",
-	"@id": "https://shahirahmed.com/about#aboutpage",
-	url: "https://shahirahmed.com/about",
+	"@id": "https://www.shahirahmed.com/about#aboutpage",
+	url: "https://www.shahirahmed.com/about",
 	name: "About Shahir Ahmed",
 	description:
 		"Learn about Shahir Ahmed's background, skills, experience, and journey as a Full Stack Developer and Software Engineer.",
 	isPartOf: {
-		"@id": "https://shahirahmed.com/#website",
+		"@id": "https://www.shahirahmed.com/#website",
 	},
 	mainEntity: {
-		"@id": "https://shahirahmed.com/#person",
+		"@id": "https://www.shahirahmed.com/#person",
 	},
 	breadcrumb: {
 		"@type": "BreadcrumbList",
@@ -38,13 +38,13 @@ const aboutPageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://shahirahmed.com",
+				item: "https://www.shahirahmed.com",
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
 				name: "About",
-				item: "https://shahirahmed.com/about",
+				item: "https://www.shahirahmed.com/about",
 			},
 		],
 	},

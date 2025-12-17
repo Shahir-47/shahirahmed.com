@@ -1,5 +1,5 @@
 export default function sitemap() {
-	const baseUrl = "https://shahirahmed.com";
+	const baseUrl = "https://www.shahirahmed.com";
 
 	// Static pages with their last modified dates and priorities
 	const routes = [

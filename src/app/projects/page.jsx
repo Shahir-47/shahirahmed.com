@@ -6,13 +6,13 @@ export const metadata = {
 	description:
 		"Explore Shahir Ahmed's portfolio of software development projects. Features Sarva (grocery marketplace), Peer-to-Playlist, Albatross (AI navigation), open source contributions to Mermaid.js and FarmData2, and more full stack applications.",
 	alternates: {
-		canonical: "https://shahirahmed.com/projects",
+		canonical: "https://www.shahirahmed.com/projects",
 	},
 	openGraph: {
 		title: "Projects | Shahir Ahmed - Full Stack Developer",
 		description:
 			"Explore Shahir Ahmed's portfolio of full stack projects including Sarva, Peer-to-Playlist, Albatross, and open source contributions.",
-		url: "https://shahirahmed.com/projects",
+		url: "https://www.shahirahmed.com/projects",
 	},
 };
 
@@ -20,16 +20,16 @@ export const metadata = {
 const projectsPageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "CollectionPage",
-	"@id": "https://shahirahmed.com/projects#projectspage",
-	url: "https://shahirahmed.com/projects",
+	"@id": "https://www.shahirahmed.com/projects#projectspage",
+	url: "https://www.shahirahmed.com/projects",
 	name: "Projects by Shahir Ahmed",
 	description:
 		"A collection of software development projects by Shahir Ahmed including web applications, open source contributions, and hackathon projects.",
 	isPartOf: {
-		"@id": "https://shahirahmed.com/#website",
+		"@id": "https://www.shahirahmed.com/#website",
 	},
 	about: {
-		"@id": "https://shahirahmed.com/#person",
+		"@id": "https://www.shahirahmed.com/#person",
 	},
 	breadcrumb: {
 		"@type": "BreadcrumbList",
@@ -38,13 +38,13 @@ const projectsPageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://shahirahmed.com",
+				item: "https://www.shahirahmed.com",
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
 				name: "Projects",
-				item: "https://shahirahmed.com/projects",
+				item: "https://www.shahirahmed.com/projects",
 			},
 		],
 	},
@@ -61,7 +61,7 @@ const projectsPageJsonLd = {
 				programmingLanguage: ["JavaScript", "TypeScript"],
 				runtimePlatform: "Next.js",
 				author: {
-					"@id": "https://shahirahmed.com/#person",
+					"@id": "https://www.shahirahmed.com/#person",
 				},
 			},
 			{
@@ -75,7 +75,7 @@ const projectsPageJsonLd = {
 				programmingLanguage: "JavaScript",
 				runtimePlatform: "React",
 				author: {
-					"@id": "https://shahirahmed.com/#person",
+					"@id": "https://www.shahirahmed.com/#person",
 				},
 			},
 			{
@@ -88,7 +88,7 @@ const projectsPageJsonLd = {
 				programmingLanguage: "JavaScript",
 				runtimePlatform: "Vue.js",
 				author: {
-					"@id": "https://shahirahmed.com/#person",
+					"@id": "https://www.shahirahmed.com/#person",
 				},
 			},
 			{
@@ -100,7 +100,7 @@ const projectsPageJsonLd = {
 				codeRepository: "https://github.com/FarmData2/FarmData2",
 				programmingLanguage: ["JavaScript", "Vue.js"],
 				author: {
-					"@id": "https://shahirahmed.com/#person",
+					"@id": "https://www.shahirahmed.com/#person",
 				},
 			},
 		],

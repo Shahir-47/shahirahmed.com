@@ -2,8 +2,8 @@
 	"redirects": [
 		{
 			"source": "/:path*",
-			"has": [{ "type": "host", "value": "www.shahirahmed.com" }],
-			"destination": "https://shahirahmed.com/:path*",
+			"has": [{ "type": "host", "value": "shahirahmed.com" }],
+			"destination": "https://www.shahirahmed.com/:path*",
 			"permanent": true
 		}
 	],

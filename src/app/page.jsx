@@ -6,13 +6,13 @@ export const metadata = {
 	description:
 		"Welcome to Shahir Ahmed's portfolio. Full Stack Developer and Software Engineer specializing in React, Next.js, Node.js, Vue.js, AWS, and Firebase. View projects, experience, and get in touch.",
 	alternates: {
-		canonical: "https://shahirahmed.com",
+		canonical: "https://www.shahirahmed.com",
 	},
 	openGraph: {
 		title: "Shahir Ahmed | Full Stack Developer & Software Engineer",
 		description:
 			"Welcome to Shahir Ahmed's portfolio. Full Stack Developer specializing in React, Next.js, Node.js, and cloud technologies.",
-		url: "https://shahirahmed.com",
+		url: "https://www.shahirahmed.com",
 	},
 };
 
@@ -20,16 +20,16 @@ export const metadata = {
 const homePageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "WebPage",
-	"@id": "https://shahirahmed.com/#homepage",
-	url: "https://shahirahmed.com",
+	"@id": "https://www.shahirahmed.com/#homepage",
+	url: "https://www.shahirahmed.com",
 	name: "Shahir Ahmed - Full Stack Developer Portfolio",
 	description:
 		"Personal portfolio of Shahir Ahmed, a Full Stack Developer and Software Engineer with expertise in React, Next.js, Node.js, Vue.js, and cloud technologies.",
 	isPartOf: {
-		"@id": "https://shahirahmed.com/#website",
+		"@id": "https://www.shahirahmed.com/#website",
 	},
 	about: {
-		"@id": "https://shahirahmed.com/#person",
+		"@id": "https://www.shahirahmed.com/#person",
 	},
 	breadcrumb: {
 		"@type": "BreadcrumbList",
@@ -38,7 +38,7 @@ const homePageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://shahirahmed.com",
+				item: "https://www.shahirahmed.com",
 			},
 		],
 	},
