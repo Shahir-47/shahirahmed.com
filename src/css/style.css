@@ -6,15 +6,20 @@
 	flex: 1;
 }
 
+html {
+	overscroll-behavior: none;
+}
+
 body {
 	color: #e0e0e0;
 	background-color: #000000;
 	background-image: url(../assets/background.jpg);
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
 	font-family: sans-serif;
+	overscroll-behavior: none;
 }
 
 div#content {
