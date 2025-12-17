@@ -1,0 +1,20 @@
+/* TEAM */
+Developer: Shahir Ahmed
+Contact: shahir@shahirahmed.com
+GitHub: https://github.com/Shahir-47
+LinkedIn: https://www.linkedin.com/in/shahir47/
+Location: United States
+
+/* SITE */
+Last update: 2024/12/16
+Language: English
+Standards: HTML5, CSS3, JavaScript ES6+
+Framework: Next.js 15, React 18
+Components: Material-UI, React Icons
+Deployment: Netlify
+Software: Visual Studio Code
+
+/* THANKS */
+Open Source Communities
+Mermaid.js Contributors
+FarmData2 Team

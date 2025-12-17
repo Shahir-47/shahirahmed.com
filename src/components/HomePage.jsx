@@ -1,17 +1,21 @@
+"use client";
+
 import { useEffect } from "react";
 import Typed from "typed.js";
-import Computer from "../assets/computer.png";
-import Hand from "../assets/hand.svg";
-import Hacker from "../assets/hacker.svg";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import Computer from "@/assets/computer.png";
+import Hand from "@/assets/hand.svg";
+import Hacker from "@/assets/hacker.svg";
 import SocialIcons from "./SocialIcons";
 import { Box, Button } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import CodeIcon from "@mui/icons-material/Code";
 import DescriptionIcon from "@mui/icons-material/Description";
-import { useNavigate, Link } from "react-router-dom";
 
 const HomePage = () => {
-	const navigate = useNavigate();
+	const router = useRouter();
 
 	useEffect(() => {
 		const typed = new Typed("#typed-text", {
@@ -47,12 +51,18 @@ const HomePage = () => {
 	return (
 		<div className="main-container">
 			{/* First Block */}
-			<div className="first-block-home">
+			<section className="first-block-home" aria-label="Introduction">
 				<div className="text-container">
 					<div className="sub-text-container">
 						<div className="first-text-container">
 							<h3>Hi, There!</h3>
-							<img className="wave" src={Hand} alt="Wave" />
+							<Image
+								className="wave"
+								src={Hand}
+								alt="Waving hand"
+								width={40}
+								height={40}
+							/>
 						</div>
 						<div className="second-text-container">
 							<h5>
@@ -61,16 +71,27 @@ const HomePage = () => {
 						</div>
 					</div>
 					<div className="typed-text-container">
-						<p id="typed-text" className="typed-text"></p>
+						<p
+							id="typed-text"
+							className="typed-text"
+							aria-label="Full Stack Developer"
+						></p>
 					</div>
 				</div>
 				<div className="image-container">
-					<img className="computer" src={Computer} alt="Computer" />
+					<Image
+						className="computer"
+						src={Computer}
+						alt="Computer illustration representing software development"
+						width={500}
+						height={400}
+						priority
+					/>
 				</div>
-			</div>
+			</section>
 
 			{/* Second Block */}
-			<div className="second-block-home">
+			<section className="second-block-home" aria-label="Quick navigation">
 				<div className="second-block-text-container">
 					<div className="text-div">
 						<div className="sub-div">
@@ -91,7 +112,7 @@ const HomePage = () => {
 							>
 								<Button
 									variant="contained"
-									onClick={() => navigate("/about")}
+									onClick={() => router.push("/about")}
 									startIcon={<PersonIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
@@ -108,7 +129,7 @@ const HomePage = () => {
 								</Button>
 								<Button
 									variant="contained"
-									onClick={() => navigate("/projects")}
+									onClick={() => router.push("/projects")}
 									startIcon={<CodeIcon />}
 									sx={{
 										backgroundColor: "#4fd1c5",
@@ -145,15 +166,21 @@ const HomePage = () => {
 							</Box>
 							<p className="sub-text">
 								You can also <strong>Contact Me</strong> via the{" "}
-								<Link to="/contact">Contact Me page</Link> or through my social
-								links below.
+								<Link href="/contact">Contact Me page</Link> or through my
+								social links below.
 							</p>
 						</div>
 						<SocialIcons />
 					</div>
-					<img className="hacker" src={Hacker} alt="Hacker" />
+					<Image
+						className="hacker"
+						src={Hacker}
+						alt="Developer illustration"
+						width={400}
+						height={400}
+					/>
 				</div>
-			</div>
+			</section>
 		</div>
 	);
 };

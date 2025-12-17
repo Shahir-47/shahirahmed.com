@@ -1,0 +1,79 @@
+{
+	"name": "Shahir Ahmed",
+	"type": "Person",
+	"occupation": "Full Stack Developer & Software Engineer",
+	"description": "Full Stack Developer and Software Engineer with expertise in React, Next.js, Node.js, Vue.js, AWS, and Firebase. Recent Computer Science & Mathematics graduate with professional experience at Sarva and significant open source contributions to Mermaid.js and FarmData2.",
+	"url": "https://shahirahmed.com",
+	"email": "shahir@shahirahmed.com",
+	"skills": [
+		"JavaScript",
+		"TypeScript",
+		"React",
+		"Next.js",
+		"Vue.js",
+		"Node.js",
+		"Express.js",
+		"Python",
+		"Java",
+		"MongoDB",
+		"PostgreSQL",
+		"Firebase",
+		"AWS",
+		"Git",
+		"Docker"
+	],
+	"education": {
+		"institution": "Dickinson College",
+		"degree": "Computer Science & Mathematics",
+		"graduationYear": 2025
+	},
+	"currentRole": {
+		"title": "Software Engineer",
+		"company": "Sarva",
+		"website": "https://www.sarvabazaar.com"
+	},
+	"openSourceContributions": [
+		{
+			"project": "Mermaid.js",
+			"role": "Top 25 contributor",
+			"description": "Delivered text wrapping algorithms, auto-scaling data labels, and customizable styling"
+		},
+		{
+			"project": "FarmData2",
+			"role": "#2 overall contributor",
+			"description": "25+ PRs, 14K+ lines of code, full-stack crop tracking system"
+		}
+	],
+	"projects": [
+		{
+			"name": "Sarva",
+			"url": "https://www.sarvabazaar.com/",
+			"description": "Full-stack vendor management and grocery marketplace platform"
+		},
+		{
+			"name": "Peer-to-Playlist",
+			"url": "https://peer-to-playlist.onrender.com/",
+			"github": "https://github.com/Shahir-47/Peer-to-Playlist",
+			"description": "Music matching social app using Spotify data"
+		},
+		{
+			"name": "Albatross",
+			"url": "https://albatross-hack.netlify.app/",
+			"description": "AI-powered safe navigation (HackHarvard 2024)"
+		}
+	],
+	"socialLinks": {
+		"github": "https://github.com/Shahir-47",
+		"linkedin": "https://www.linkedin.com/in/shahir47/",
+		"devpost": "https://devpost.com/Shahir-47",
+		"instagram": "https://instagram.com/shahirahmed._",
+		"blog": "https://shahir-47.blogspot.com/"
+	},
+	"resumeUrl": "https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view",
+	"availableFor": [
+		"Full-time positions",
+		"Freelance projects",
+		"Open source collaboration",
+		"Technical consulting"
+	]
+}

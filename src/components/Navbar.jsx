@@ -1,17 +1,21 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Icon from "../assets/icon.svg";
-import Home from "../assets/home.svg";
-import About from "../assets/about.svg";
-import Code from "../assets/code.svg";
-import phone from "../assets/phone.svg";
-import Doc from "../assets/doc.svg";
-import hamburgerImg from "../assets/hamburger.svg";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Icon from "@/assets/icon.svg";
+import Home from "@/assets/home.svg";
+import AboutIcon from "@/assets/about.svg";
+import Code from "@/assets/code.svg";
+import phone from "@/assets/phone.svg";
+import Doc from "@/assets/doc.svg";
+import hamburgerImg from "@/assets/hamburger.svg";
 
 const Navbar = () => {
 	const [hamburgerClass, setHamburgerClass] = useState("");
 	const [isScrolled, setIsScrolled] = useState(false);
-	const location = useLocation();
+	const pathname = usePathname();
 
 	const toggleHamburgerMenu = () => {
 		if (hamburgerClass === "" || hamburgerClass === "inactive") {
@@ -34,39 +38,61 @@ const Navbar = () => {
 	}, []);
 
 	const isActive = (path) => {
-		if (
-			path === "/" &&
-			(location.pathname === "/" || location.pathname === "/home")
-		) {
+		if (path === "/" && (pathname === "/" || pathname === "/home")) {
 			return "active";
 		}
-		return location.pathname === path ? "active" : "";
+		return pathname === path ? "active" : "";
 	};
 
 	return (
-		<nav className={`nav-bar ${isScrolled ? "nav-bar-scrolled" : ""}`}>
+		<nav
+			className={`nav-bar ${isScrolled ? "nav-bar-scrolled" : ""}`}
+			aria-label="Main navigation"
+		>
 			<div className="log-container">
-				<Link to="/" className="logo-box">
-					<img src={Icon} alt="logo" />
+				<Link href="/" className="logo-box" aria-label="Shahir Ahmed - Home">
+					<Image src={Icon} alt="Shahir Ahmed logo" width={28} height={28} />
 					<h1>Shahir Ahmed</h1>
 				</Link>
 			</div>
 			<div className="nav-links">
-				<Link to="/" className={`nav-box ${isActive("/")}`}>
+				<Link
+					href="/"
+					className={`nav-box ${isActive("/")}`}
+					aria-label="Home page"
+				>
 					<span>Home</span>
-					<img src={Home} alt="home" />
+					<Image src={Home} alt="" width={24} height={24} aria-hidden="true" />
 				</Link>
-				<Link to="/about" className={`nav-box ${isActive("/about")}`}>
+				<Link
+					href="/about"
+					className={`nav-box ${isActive("/about")}`}
+					aria-label="About page"
+				>
 					<span>About</span>
-					<img src={About} alt="about" />
+					<Image
+						src={AboutIcon}
+						alt=""
+						width={24}
+						height={24}
+						aria-hidden="true"
+					/>
 				</Link>
-				<Link to="/projects" className={`nav-box ${isActive("/projects")}`}>
+				<Link
+					href="/projects"
+					className={`nav-box ${isActive("/projects")}`}
+					aria-label="Projects page"
+				>
 					<span>Projects</span>
-					<img src={Code} alt="projects" />
+					<Image src={Code} alt="" width={24} height={24} aria-hidden="true" />
 				</Link>
-				<Link to="/contact" className={`nav-box ${isActive("/contact")}`}>
+				<Link
+					href="/contact"
+					className={`nav-box ${isActive("/contact")}`}
+					aria-label="Contact page"
+				>
 					<span>Contact</span>
-					<img src={phone} alt="contact" />
+					<Image src={phone} alt="" width={24} height={24} aria-hidden="true" />
 				</Link>
 
 				<a
@@ -74,23 +100,53 @@ const Navbar = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					className="nav-box"
+					aria-label="View Resume (opens in new tab)"
 				>
 					<span>Resume</span>
-					<img src={Doc} alt="resume" />
+					<Image src={Doc} alt="" width={24} height={24} aria-hidden="true" />
 				</a>
-				<div className="hamburger" onClick={toggleHamburgerMenu}>
-					<img src={hamburgerImg} alt="hamburger menu" />
-					<div className={`hamburger-menu ${hamburgerClass}`}>
-						<Link to="/" onClick={() => setHamburgerClass("inactive")}>
+				<div
+					className="hamburger"
+					onClick={toggleHamburgerMenu}
+					role="button"
+					aria-label="Toggle navigation menu"
+					tabIndex={0}
+					onKeyDown={(e) => e.key === "Enter" && toggleHamburgerMenu()}
+				>
+					<Image
+						src={hamburgerImg}
+						alt=""
+						width={24}
+						height={24}
+						aria-hidden="true"
+					/>
+					<div className={`hamburger-menu ${hamburgerClass}`} role="menu">
+						<Link
+							href="/"
+							onClick={() => setHamburgerClass("inactive")}
+							role="menuitem"
+						>
 							Home
 						</Link>
-						<Link to="/about" onClick={() => setHamburgerClass("inactive")}>
+						<Link
+							href="/about"
+							onClick={() => setHamburgerClass("inactive")}
+							role="menuitem"
+						>
 							About
 						</Link>
-						<Link to="/projects" onClick={() => setHamburgerClass("inactive")}>
+						<Link
+							href="/projects"
+							onClick={() => setHamburgerClass("inactive")}
+							role="menuitem"
+						>
 							Projects
 						</Link>
-						<Link to="/contact" onClick={() => setHamburgerClass("inactive")}>
+						<Link
+							href="/contact"
+							onClick={() => setHamburgerClass("inactive")}
+							role="menuitem"
+						>
 							Contact
 						</Link>
 
@@ -99,6 +155,7 @@ const Navbar = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 							onClick={() => setHamburgerClass("inactive")}
+							role="menuitem"
 						>
 							Resume
 						</a>

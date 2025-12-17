@@ -1,13 +1,16 @@
+"use client";
+
 import PropTypes from "prop-types";
-import Etch from "../assets/etch.png";
-import FD2 from "../assets/fd2.png";
-import SweetFriend from "../assets/sweetFriend.jpg";
-import Albatross from "../assets/albatross.png";
-import SpaceAccuracy from "../assets/space.png";
+import Image from "next/image";
+import Etch from "@/assets/etch.png";
+import FD2 from "@/assets/fd2.png";
+import SweetFriend from "@/assets/sweetFriend.jpg";
+import Albatross from "@/assets/albatross.png";
+import SpaceAccuracy from "@/assets/space.png";
 import SocialIcons from "./SocialIcons";
-import Peer from "../assets/peer.png";
-import Sarva from "../assets/sarva.png";
-import Open from "../assets/open.png";
+import Peer from "@/assets/peer.png";
+import Sarva from "@/assets/sarva.png";
+import Open from "@/assets/open.png";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Box, Typography, Button, TextField, Chip } from "@mui/material";
 import { useState } from "react";
@@ -277,7 +280,7 @@ const ProjectItem = ({
 				}}
 			>
 				<img
-					src={image}
+					src={image.src}
 					alt={title}
 					style={{
 						width: "100%",

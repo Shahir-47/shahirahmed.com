@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Shahir Ahmed</ShortName>
+  <Description>Search Shahir Ahmed's portfolio - Full Stack Developer and Software Engineer</Description>
+  <Url type="text/html" template="https://shahirahmed.com/?q={searchTerms}"/>
+  <Contact>shahir@shahirahmed.com</Contact>
+  <Image width="16" height="16" type="image/svg+xml">https://shahirahmed.com/icon.svg</Image>
+  <Developer>Shahir Ahmed</Developer>
+  <Attribution>Shahir Ahmed - Full Stack Developer</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <Language>en-US</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>

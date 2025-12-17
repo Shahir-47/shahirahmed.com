@@ -2,8 +2,6 @@
 
 ![image](https://github.com/user-attachments/assets/49e456e2-cbed-4db5-97f4-8cb5561c389a)
 
-
-
 Welcome to **shahirahmed.com**—my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a software developer. Whether you’re here to explore my work, learn more about me, or get in touch—this is the place to do it. 🌟
 
 ---
@@ -39,12 +37,23 @@ This portfolio is designed to provide visitors with an intuitive and engaging ex
 
 This project is built using modern web development tools:
 
-- **Frontend**: React.js ⚛️
+- **Framework**: Next.js 15 (App Router) ⚛️
+- **Frontend**: React 18 ⚛️
 - **Styling**: Material UI & custom CSS 🎨
-- **Animations**: React Router transitions for a polished look.
+- **Animations**: Typed.js, React Vertical Timeline
 - **Form Handling**: EmailJS for contact form integration 📧
 - **Hosting**: Deployed on Netlify 🚀
 - **Custom Domain**: Fully integrated with [shahirahmed.com](https://shahirahmed.com).
+
+### **SEO & Discoverability**
+
+- Server-side rendering for optimal SEO
+- Structured data (JSON-LD) for rich search results
+- Dynamic sitemap.xml and robots.txt
+- Open Graph and Twitter Card meta tags
+- AI-friendly content in /llms.txt and /.well-known/ai-plugin.json
+- PWA manifest for app-like experience
+- Optimized images with Next.js Image component
 
 ---
 

@@ -1,4 +1,8 @@
-import Error from "../assets/error.svg";
+"use client";
+
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Error from "@/assets/error.svg";
 import { Button, Box, Typography } from "@mui/material";
 import {
 	Home as HomeIcon,
@@ -6,10 +10,9 @@ import {
 	Code as CodeIcon,
 	ContactMail as ContactMailIcon,
 } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
-	const navigate = useNavigate();
+	const router = useRouter();
 
 	return (
 		<Box
@@ -24,7 +27,14 @@ const ErrorPage = () => {
 				alignItems: "center",
 			}}
 		>
-			<img src={Error} alt="Error" className="error-img" />
+			<Image
+				src={Error}
+				alt="404 Error"
+				className="error-img"
+				width={300}
+				height={300}
+				priority
+			/>
 			<Typography
 				variant="h2"
 				sx={{
@@ -81,7 +91,7 @@ const ErrorPage = () => {
 				<Button
 					variant="contained"
 					startIcon={<HomeIcon />}
-					onClick={() => navigate("/home")}
+					onClick={() => router.push("/")}
 					sx={{
 						backgroundColor: "#4fd1c5",
 						color: "#222",
@@ -112,7 +122,7 @@ const ErrorPage = () => {
 				<Button
 					variant="contained"
 					startIcon={<InfoIcon />}
-					onClick={() => navigate("/about")}
+					onClick={() => router.push("/about")}
 					sx={{
 						backgroundColor: "#4fd1c5",
 						color: "#222",
@@ -143,7 +153,7 @@ const ErrorPage = () => {
 				<Button
 					variant="contained"
 					startIcon={<CodeIcon />}
-					onClick={() => navigate("/projects")}
+					onClick={() => router.push("/projects")}
 					sx={{
 						backgroundColor: "#4fd1c5",
 						color: "#222",
@@ -174,7 +184,7 @@ const ErrorPage = () => {
 				<Button
 					variant="contained"
 					startIcon={<ContactMailIcon />}
-					onClick={() => navigate("/contact")}
+					onClick={() => router.push("/contact")}
 					sx={{
 						backgroundColor: "#4fd1c5",
 						color: "#222",

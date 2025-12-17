@@ -1,0 +1,83 @@
+# Shahir Ahmed - Full Stack Developer & Software Engineer
+
+## Quick Summary
+Shahir Ahmed is a Full Stack Developer and Software Engineer based in the United States. He specializes in modern web technologies including React, Next.js, Vue.js, Node.js, and cloud platforms like AWS and Firebase.
+
+## Professional Experience
+
+### Software Engineer at Sarva (Current)
+- Architecting a full-stack vendor management and grocery marketplace platform
+- Building AI-powered features with RAG over Firestore and Algolia
+- Implementing Stripe Connect payment processing with identity verification
+- Developing real-time order tracking with Google Maps integration
+- Tech stack: Next.js, Firebase, Vercel, Stripe, Google Maps API
+
+### Open Source Contributions
+- **Mermaid.js**: Top 25 contributor out of 600+ contributors
+  - Implemented text wrapping algorithms
+  - Added auto-scaling data labels
+  - Created customizable styling features
+  - Library serves 1.2M+ weekly downloads
+  
+- **FarmData2**: Ranked #2 overall contributor
+  - 25+ pull requests merged
+  - 14,000+ lines of code contributed
+  - Built full-stack crop tracking system
+  - Integrated 18+ farmOS API endpoints
+
+## Education
+- **Dickinson College** - Computer Science & Mathematics Graduate (May 2025)
+
+## Technical Skills
+
+### Programming Languages
+JavaScript, TypeScript, Python, Java, C, SQL, Lua, R, MATLAB
+
+### Frontend
+React, Vue.js, Next.js, HTML5, CSS3, TailwindCSS, Bootstrap, Electron
+
+### Backend
+Node.js, Express.js, Firebase, Flask, Socket.IO, RESTful APIs, WebRTC
+
+### Databases
+PostgreSQL, MongoDB, Firestore, SQLite, MySQL
+
+### Cloud & DevOps
+AWS (S3, Lambda, EC2), Firebase, Google Cloud, Vercel, Netlify, Docker, Git
+
+## Featured Projects
+
+### Sarva Bazaar
+Full-stack vendor management platform and grocery marketplace for South Asian supply chains.
+- URL: https://www.sarvabazaar.com/
+- Features: AI assistants, Stripe payments, real-time order tracking, voice input
+
+### Peer-to-Playlist
+Music matching social networking app that connects users based on Spotify listening history.
+- URL: https://peer-to-playlist.onrender.com/
+- GitHub: https://github.com/Shahir-47/Peer-to-Playlist
+- Features: Real-time messaging, file sharing, Spotify integration
+
+### Albatross
+AI-powered safe navigation app built at HackHarvard 2024.
+- URL: https://albatross-hack.netlify.app/
+- Features: Safety-based routing, crime zone analysis, real-time rerouting
+
+### SweetFriend
+Diabetes management app with Dexcom integration, built at PennApps 2024.
+- URL: https://sweet-friend.vercel.app/app/dashboard
+- Features: Real-time glucose tracking, AI meal recognition, health insights
+
+## Contact Information
+- Email: shahir@shahirahmed.com
+- LinkedIn: https://www.linkedin.com/in/shahir47/
+- GitHub: https://github.com/Shahir-47
+- Instagram: https://instagram.com/shahirahmed._
+- Devpost: https://devpost.com/Shahir-47
+- Blog: https://shahir-47.blogspot.com/
+
+## Resume
+View resume: https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view
+
+---
+This file is specifically formatted for AI chatbots and language models to easily understand and reference information about Shahir Ahmed.

@@ -1,3 +1,5 @@
+"use client";
+
 import emailjs from "@emailjs/browser";
 import SocialIcons from "./SocialIcons";
 import { useState } from "react";

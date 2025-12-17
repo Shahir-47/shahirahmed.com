@@ -1,23 +1,26 @@
-import Shahir from "../assets/shahir.jpeg";
-import Dickinson from "../assets/dickinson.png";
-import FarmData2 from "../assets/farmData2.png";
-import MermaidJS from "../assets/mermaid.webp";
-import Lumber84 from "../assets/84.png";
-import Sarva from "../assets/sarva_logo.jpeg";
-import Hoya from "../assets/hoya.png";
-import PennApps from "../assets/penn.png";
-import HackHarvard from "../assets/hackharvardlogo.png";
-import Prospectus from "../assets/prospectus.jpg";
-import SweetFriend from "../assets/sweetFriend.jpg";
-import Albatross from "../assets/albatross.png";
-import HarvardX from "../assets/Harvard_x_logo.png";
+"use client";
+
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Shahir from "@/assets/shahir.jpeg";
+import Dickinson from "@/assets/dickinson.png";
+import FarmData2 from "@/assets/farmData2.png";
+import MermaidJS from "@/assets/mermaid.webp";
+import Lumber84 from "@/assets/84.png";
+import Sarva from "@/assets/sarva_logo.jpeg";
+import Hoya from "@/assets/hoya.png";
+import PennApps from "@/assets/penn.png";
+import HackHarvard from "@/assets/hackharvardlogo.png";
+import Prospectus from "@/assets/prospectus.jpg";
+import SweetFriend from "@/assets/sweetFriend.jpg";
+import Albatross from "@/assets/albatross.png";
+import HarvardX from "@/assets/Harvard_x_logo.png";
 import CodeIcon from "@mui/icons-material/Code";
 import { SiDevpost } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { MdVisibility } from "react-icons/md";
 import { FaCertificate } from "react-icons/fa";
 import GitHubStats from "./GitHubStats";
-import { useNavigate } from "react-router-dom";
 import "react-vertical-timeline-component/style.min.css";
 import {
 	VerticalTimeline,
@@ -32,7 +35,7 @@ const iconSize = {
 };
 
 const About = () => {
-	const navigate = useNavigate();
+	const router = useRouter();
 
 	return (
 		<div className="about-page">
@@ -143,7 +146,14 @@ const About = () => {
 						<SocialIcons />
 					</div>
 
-					<img src={Shahir} alt="Shahir" className="about-me-picture" />
+					<Image
+						src={Shahir}
+						alt="Shahir Ahmed - Full Stack Developer"
+						className="about-me-picture"
+						width={300}
+						height={300}
+						priority
+					/>
 				</div>
 			</div>
 
@@ -438,7 +448,7 @@ const About = () => {
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
-								src={Sarva}
+								src={Sarva.src}
 								alt="Sarva"
 								style={{
 									width: "100%",
@@ -514,7 +524,7 @@ const About = () => {
 						iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
 						icon={
 							<img
-								src={FarmData2}
+								src={FarmData2.src}
 								alt="FarmData2"
 								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
 							/>
@@ -582,7 +592,7 @@ const About = () => {
 						iconStyle={{ background: "#009688", color: "#fff" }}
 						icon={
 							<img
-								src={MermaidJS}
+								src={MermaidJS.src}
 								alt="Mermaid.js"
 								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
 							/>
@@ -666,7 +676,7 @@ const About = () => {
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
-								src={Lumber84}
+								src={Lumber84.src}
 								alt="84 Lumber"
 								style={{ width: "100%", height: "100%", borderRadius: "50%" }}
 							/>
@@ -712,7 +722,7 @@ const About = () => {
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
-								src={Dickinson}
+								src={Dickinson.src}
 								alt="Dickinson College"
 								style={{
 									width: "100%",
@@ -772,7 +782,7 @@ const About = () => {
 					{/* Mermaid.js */}
 					<div className="oss-item">
 						<img
-							src={MermaidJS}
+							src={MermaidJS.src}
 							alt="Mermaid.js"
 							style={{
 								width: 65,
@@ -891,7 +901,7 @@ const About = () => {
 					{/* FarmData2 */}
 					<div className="oss-item">
 						<img
-							src={FarmData2}
+							src={FarmData2.src}
 							alt="FarmData2"
 							style={{
 								width: 65,
@@ -1026,7 +1036,7 @@ const About = () => {
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
-								src={Hoya}
+								src={Hoya.src}
 								alt="HoyaHacks"
 								style={{
 									width: "100%",
@@ -1040,7 +1050,7 @@ const About = () => {
 						<h3 className="vertical-timeline-element-title">Prospectus</h3>
 						<h4 className="vertical-timeline-element-subtitle">HoyaHacks</h4>
 						<img
-							src={Prospectus}
+							src={Prospectus.src}
 							alt="Prospectus"
 							style={{
 								width: "100%",
@@ -1159,7 +1169,7 @@ const About = () => {
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
-								src={PennApps}
+								src={PennApps.src}
 								alt="PennApps"
 								style={{
 									width: "100%",
@@ -1173,7 +1183,7 @@ const About = () => {
 						<h3 className="vertical-timeline-element-title">SweetFriend</h3>
 						<h4 className="vertical-timeline-element-subtitle">PennApps</h4>
 						<img
-							src={SweetFriend}
+							src={SweetFriend.src}
 							alt="SweetFriend"
 							style={{
 								width: "100%",
@@ -1297,7 +1307,7 @@ const About = () => {
 						iconStyle={{ background: "#fff", color: "#fff" }}
 						icon={
 							<img
-								src={HackHarvard}
+								src={HackHarvard.src}
 								alt="HackHarvard"
 								style={{
 									width: "100%",
@@ -1311,7 +1321,7 @@ const About = () => {
 						<h3 className="vertical-timeline-element-title">Albatross</h3>
 						<h4 className="vertical-timeline-element-subtitle">HackHarvard</h4>
 						<img
-							src={Albatross}
+							src={Albatross.src}
 							alt="Albatross"
 							style={{
 								width: "100%",
@@ -1449,7 +1459,7 @@ const About = () => {
 						iconStyle={{ background: "#4fd1c5", color: "#fff" }}
 						icon={
 							<img
-								src={Dickinson}
+								src={Dickinson.src}
 								alt="Dickinson College"
 								style={{
 									width: "100%",
@@ -1476,7 +1486,7 @@ const About = () => {
 							<strong>Honors:</strong> Dean&apos;s List, Pi Mu Epsilon (Math
 							Honor Society), 1783 Scholarship Recipient
 						</p>
-						<p>
+						<div>
 							<strong>Relevant Coursework:</strong>
 							<ul
 								style={{ columnCount: 2, marginTop: "0.5rem", marginBottom: 0 }}
@@ -1492,7 +1502,7 @@ const About = () => {
 								<li>Open Source Development</li>
 								<li>Graph Theory</li>
 							</ul>
-						</p>
+						</div>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
 			</div>
@@ -1525,7 +1535,7 @@ const About = () => {
 					{/* CS50 Certification */}
 					<div className="cert-section">
 						<img
-							src={HarvardX}
+							src={HarvardX.src}
 							alt="HarvardX"
 							style={{
 								width: 60,
@@ -1718,7 +1728,7 @@ const About = () => {
 					button below to see them!
 				</Typography>
 				<Button
-					onClick={() => navigate("/projects")}
+					onClick={() => router.push("/projects")}
 					variant="contained"
 					id="projects-link"
 					startIcon={<CodeIcon />}
