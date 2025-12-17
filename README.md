@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/49e456e2-cbed-4db5-97f4-8cb5561c389a)
 
-Welcome to **shahirahmed.com**—my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a software developer. Whether you're here to explore my work, learn more about me, or get in touch—this is the place to do it. 🌟
+Welcome to **shahirahmed.com**, my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a software developer. Whether you're here to explore my work, learn more about me, or get in touch, this is the place to do it. 🌟
 
 ---
 
@@ -17,7 +17,7 @@ Visit the live site: [shahirahmed.com](https://shahirahmed.com)
 This portfolio is designed to provide visitors with an intuitive and engaging experience while exploring who I am and what I do. It includes:
 
 - **Home Page**: A friendly introduction to welcome you.
-- **About Page**: My background, education, skills, and experience—all in one place.
+- **About Page**: My background, education, skills, and experience, all in one place.
 - **Projects Page**: A gallery of my best work with links to live demos and source code.
 - **Contact Page**: A fully functional contact form, plus links to all my socials.
 - **404 Page**: A helpful (and fun) guide for lost visitors.
@@ -39,15 +39,15 @@ This portfolio is designed to provide visitors with an intuitive and engaging ex
 
 This project is built using modern web development tools:
 
-| Category | Technologies |
-|----------|-------------|
-| **Framework** | Next.js 15 (App Router) |
-| **Frontend** | React 18 |
-| **Styling** | Material UI 6 & Custom CSS |
-| **Animations** | Typed.js, React Vertical Timeline |
-| **Form Handling** | EmailJS |
-| **Hosting** | Vercel |
-| **Domain** | [shahirahmed.com](https://shahirahmed.com) |
+| Category          | Technologies                               |
+| ----------------- | ------------------------------------------ |
+| **Framework**     | Next.js 15 (App Router)                    |
+| **Frontend**      | React 18                                   |
+| **Styling**       | Material UI 6 & Custom CSS                 |
+| **Animations**    | Typed.js, React Vertical Timeline          |
+| **Form Handling** | EmailJS                                    |
+| **Hosting**       | Vercel                                     |
+| **Domain**        | [shahirahmed.com](https://shahirahmed.com) |
 
 ### **🔍 SEO & Discoverability**
 
@@ -205,7 +205,7 @@ Feel free to reach out through:
 
 ## **📜 License**
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use and adapt it for your own purposes—just give credit where it's due!
+This project is licensed under the [MIT License](LICENSE). Feel free to use and adapt it for your own purposes. Just give credit where it's due!
 
 ---
 
