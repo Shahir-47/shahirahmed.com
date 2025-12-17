@@ -12,7 +12,7 @@ export const metadata = {
 		title: "Projects | Shahir Ahmed - Full Stack Developer",
 		description:
 			"Explore Shahir Ahmed's portfolio of full stack projects including Sarva, Peer-to-Playlist, Albatross, and open source contributions.",
-		url: "https://www.shahirahmed.com/projects",
+		url: "https://shahirahmed.com/projects",
 	},
 };
 

@@ -8,7 +8,7 @@ import "@/css/style.css";
 
 // SEO: Site-wide metadata defaults
 export const metadata = {
-	metadataBase: new URL("https://www.shahirahmed.com"),
+	metadataBase: new URL("https://shahirahmed.com"),
 	title: {
 		default: "Shahir Ahmed | Full Stack Developer & Software Engineer",
 		template: "%s | Shahir Ahmed",
@@ -40,7 +40,7 @@ export const metadata = {
 		"MongoDB",
 		"PostgreSQL",
 	],
-	authors: [{ name: "Shahir Ahmed", url: "https://www.shahirahmed.com" }],
+	authors: [{ name: "Shahir Ahmed", url: "https://shahirahmed.com" }],
 	creator: "Shahir Ahmed",
 	publisher: "Shahir Ahmed",
 	formatDetection: {
@@ -49,12 +49,12 @@ export const metadata = {
 		telephone: false,
 	},
 	alternates: {
-		canonical: "https://www.shahirahmed.com",
+		canonical: "https://shahirahmed.com",
 	},
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://www.shahirahmed.com",
+		url: "https://shahirahmed.com",
 		siteName: "Shahir Ahmed - Portfolio",
 		title: "Shahir Ahmed | Full Stack Developer & Software Engineer",
 		description:
@@ -97,26 +97,26 @@ const jsonLd = {
 	"@graph": [
 		{
 			"@type": "WebSite",
-			"@id": "https://www.shahirahmed.com/#website",
-			url: "https://www.shahirahmed.com",
+			"@id": "https://shahirahmed.com/#website",
+			url: "https://shahirahmed.com",
 			name: "Shahir Ahmed - Full Stack Developer Portfolio",
 			description:
 				"Personal portfolio website of Shahir Ahmed, a Full Stack Developer and Software Engineer.",
 			publisher: {
-				"@id": "https://www.shahirahmed.com/#person",
+				"@id": "https://shahirahmed.com/#person",
 			},
 			inLanguage: "en-US",
 		},
 		{
 			"@type": "Person",
-			"@id": "https://www.shahirahmed.com/#person",
+			"@id": "https://shahirahmed.com/#person",
 			name: "Shahir Ahmed",
 			givenName: "Shahir",
 			familyName: "Ahmed",
-			url: "https://www.shahirahmed.com",
+			url: "https://shahirahmed.com",
 			image: {
 				"@type": "ImageObject",
-				url: "https://www.shahirahmed.com/shahir.jpeg",
+				url: "https://shahirahmed.com/shahir.jpeg",
 				width: 400,
 				height: 400,
 			},
@@ -160,17 +160,17 @@ const jsonLd = {
 		},
 		{
 			"@type": "ProfilePage",
-			"@id": "https://www.shahirahmed.com/#profilepage",
-			url: "https://www.shahirahmed.com",
+			"@id": "https://shahirahmed.com/#profilepage",
+			url: "https://shahirahmed.com",
 			name: "Shahir Ahmed Portfolio",
 			isPartOf: {
-				"@id": "https://www.shahirahmed.com/#website",
+				"@id": "https://shahirahmed.com/#website",
 			},
 			about: {
-				"@id": "https://www.shahirahmed.com/#person",
+				"@id": "https://shahirahmed.com/#person",
 			},
 			mainEntity: {
-				"@id": "https://www.shahirahmed.com/#person",
+				"@id": "https://shahirahmed.com/#person",
 			},
 		},
 	],

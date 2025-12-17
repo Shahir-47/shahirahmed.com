@@ -34,7 +34,7 @@ export default async function Image() {
 					}}
 				>
 					<img
-						src="https://www.shahirahmed.com/shahir.jpeg"
+						src="https://shahirahmed.com/shahir.jpeg"
 						alt="Shahir Ahmed"
 						width={280}
 						height={280}

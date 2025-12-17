@@ -12,7 +12,7 @@ export const metadata = {
 		title: "Contact Shahir Ahmed | Full Stack Developer",
 		description:
 			"Get in touch with Shahir Ahmed for freelance projects, collaborations, and job opportunities.",
-		url: "https://www.shahirahmed.com/contact",
+		url: "https://shahirahmed.com/contact",
 	},
 };
 
