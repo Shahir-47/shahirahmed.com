@@ -1,5 +1,6 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "@/css/normalize.css";
@@ -225,6 +226,7 @@ export default function RootLayout({ children }) {
 					</div>
 				</AppRouterCacheProvider>
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
