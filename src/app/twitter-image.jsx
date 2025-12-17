@@ -21,6 +21,8 @@ export default async function Image() {
 					justifyContent: "center",
 					padding: "60px",
 					position: "relative",
+					background: "#000",
+					overflow: "hidden",
 				}}
 			>
 				{/* Background Image */}
