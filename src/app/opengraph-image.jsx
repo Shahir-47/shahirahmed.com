@@ -105,6 +105,7 @@ export default async function Image() {
 							color: "#0a0a0a",
 							fontSize: "24px",
 							fontWeight: "bold",
+							textAlign: "center",
 						}}
 					>
 						View Portfolio →
