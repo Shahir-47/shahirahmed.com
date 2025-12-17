@@ -20,34 +20,9 @@ export default async function Image() {
 					alignItems: "center",
 					justifyContent: "center",
 					padding: "60px",
-					position: "relative",
-					background: "#000",
-					overflow: "hidden",
+					background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%)",
 				}}
 			>
-				{/* Background Image */}
-				<img
-					src="https://www.shahirahmed.com/background.jpg"
-					alt=""
-					style={{
-						position: "absolute",
-						top: "50%",
-						left: "50%",
-						transform: "translate(-50%, -50%)",
-					}}
-				/>
-				{/* Dark overlay for better text readability */}
-				<div
-					style={{
-						position: "absolute",
-						top: 0,
-						left: 0,
-						width: "100%",
-						height: "100%",
-						background: "rgba(0, 0, 0, 0.5)",
-					}}
-				/>
-
 				{/* Left side - Photo */}
 				<div
 					style={{
@@ -55,7 +30,6 @@ export default async function Image() {
 						alignItems: "center",
 						justifyContent: "center",
 						marginRight: "60px",
-						zIndex: 1,
 					}}
 				>
 					<img
@@ -79,7 +53,6 @@ export default async function Image() {
 						alignItems: "flex-start",
 						justifyContent: "center",
 						maxWidth: "700px",
-						zIndex: 1,
 					}}
 				>
 					{/* Name */}
