@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/49e456e2-cbed-4db5-97f4-8cb5561c389a)
 
-Welcome to **shahirahmed.com**—my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a software developer. Whether you’re here to explore my work, learn more about me, or get in touch—this is the place to do it. 🌟
+Welcome to **shahirahmed.com**—my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a software developer. Whether you're here to explore my work, learn more about me, or get in touch—this is the place to do it. 🌟
 
 ---
 
@@ -30,6 +30,8 @@ This portfolio is designed to provide visitors with an intuitive and engaging ex
 - **Smooth Page Transitions**: Seamless animations enhance the browsing experience.
 - **Custom Domain**: Hosted at [shahirahmed.com](https://shahirahmed.com).
 - **404 Error Page**: User-friendly error handling with quick navigation options.
+- **SEO Optimized**: Server-side rendering, structured data, and meta tags for maximum discoverability.
+- **AI-Friendly**: Content optimized for AI chatbots and search engines.
 
 ---
 
@@ -37,42 +39,61 @@ This portfolio is designed to provide visitors with an intuitive and engaging ex
 
 This project is built using modern web development tools:
 
-- **Framework**: Next.js 15 (App Router) ⚛️
-- **Frontend**: React 18 ⚛️
-- **Styling**: Material UI & custom CSS 🎨
-- **Animations**: Typed.js, React Vertical Timeline
-- **Form Handling**: EmailJS for contact form integration 📧
-- **Hosting**: Deployed on Netlify 🚀
-- **Custom Domain**: Fully integrated with [shahirahmed.com](https://shahirahmed.com).
+| Category | Technologies |
+|----------|-------------|
+| **Framework** | Next.js 15 (App Router) |
+| **Frontend** | React 18 |
+| **Styling** | Material UI 6 & Custom CSS |
+| **Animations** | Typed.js, React Vertical Timeline |
+| **Form Handling** | EmailJS |
+| **Hosting** | Vercel |
+| **Domain** | [shahirahmed.com](https://shahirahmed.com) |
 
-### **SEO & Discoverability**
+### **🔍 SEO & Discoverability**
 
-- Server-side rendering for optimal SEO
-- Structured data (JSON-LD) for rich search results
-- Dynamic sitemap.xml and robots.txt
-- Open Graph and Twitter Card meta tags
-- AI-friendly content in /llms.txt and /.well-known/ai-plugin.json
-- PWA manifest for app-like experience
-- Optimized images with Next.js Image component
+- **Server-Side Rendering (SSR)** for optimal SEO performance
+- **JSON-LD Structured Data** (Person, WebSite, ProfilePage schemas)
+- **Dynamic sitemap.xml** (`/sitemap.xml`) for search engine crawling
+- **Optimized robots.txt** (`/robots.txt`) with AI bot allowances
+- **Open Graph & Twitter Cards** for rich social media previews
+- **AI-Friendly Content**:
+  - `/llms.txt` - Structured content for AI chatbots
+  - `/.well-known/ai-plugin.json` - AI plugin manifest
+- **PWA Manifest** (`/manifest.json`) for app-like experience
+- **OpenSearch** (`/opensearch.xml`) for browser search integration
+- **Optimized Images** with Next.js Image component
 
 ---
 
 ## **📂 Project Structure**
 
-Here’s how the project is organized:
-
 ```plaintext
 ├── README.md
-├── eslint.config.js
-├── index.html
+├── jsconfig.json
+├── next.config.js
 ├── package.json
-├── vite.config.js
+├── vercel.json
 ├── public/
-│   └── _redirects
+│   ├── .well-known/
+│   │   └── ai-plugin.json
+│   ├── humans.txt
+│   ├── llms.txt
+│   ├── manifest.json
+│   └── opensearch.xml
 └── src/
-    ├── App.jsx
-    ├── main.jsx
-    ├── assets/
+    ├── app/
+    │   ├── layout.jsx          # Root layout with SEO metadata
+    │   ├── page.jsx            # Home page
+    │   ├── not-found.jsx       # 404 page
+    │   ├── robots.js           # Dynamic robots.txt
+    │   ├── sitemap.js          # Dynamic sitemap.xml
+    │   ├── about/
+    │   │   └── page.jsx
+    │   ├── contact/
+    │   │   └── page.jsx
+    │   └── projects/
+    │       └── page.jsx
+    ├── assets/                 # Images and static assets
     ├── components/
     │   ├── About.jsx
     │   ├── ContactMe.jsx
@@ -83,7 +104,6 @@ Here’s how the project is organized:
     │   ├── Navbar.jsx
     │   ├── Projects.jsx
     │   ├── Resume.jsx
-    │   ├── ScrollToTop.jsx
     │   └── SocialIcons.jsx
     └── css/
         ├── normalize.css
@@ -94,7 +114,7 @@ Here’s how the project is organized:
 
 ## **🚀 Get Started**
 
-Here’s how you can run the website locally:
+Here's how you can run the website locally:
 
 1. **Clone the Repository**
 
@@ -110,17 +130,52 @@ Here’s how you can run the website locally:
    ```
 
 3. **Run the Development Server**
+
    ```bash
    npm run dev
    ```
 
-Now you’re all set! 🎉
+4. **Build for Production**
+
+   ```bash
+   npm run build
+   ```
+
+5. **Start Production Server**
+
+   ```bash
+   npm run start
+   ```
+
+Now you're all set! 🎉
+
+---
+
+## **🌐 Deployment**
+
+This project is deployed on **Vercel** with automatic deployments on push to `main`.
+
+### Deploy Your Own
+
+1. Fork this repository
+2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+3. Click "Add New Project" and import your forked repo
+4. Vercel will auto-detect Next.js settings
+5. Click "Deploy"
+
+### Environment Variables (Optional)
+
+If you want to use the contact form, add these to Vercel:
+
+- `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
+- `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
+- `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
 
 ---
 
 ## **🤝 Contributing**
 
-Suggestions or contributions are always welcome! Here’s how you can contribute:
+Suggestions or contributions are always welcome! Here's how you can contribute:
 
 1. Fork the repository.
 2. Create a new branch:
@@ -144,17 +199,15 @@ Suggestions or contributions are always welcome! Here’s how you can contribute
 Feel free to reach out through:
 
 - **[Contact Page](https://shahirahmed.com/contact)**: Use the built-in form to send me a message.
-- **[LinkedIn](https://www.linkedin.com/in/shahir47/)**: Let’s connect!
+- **[LinkedIn](https://www.linkedin.com/in/shahir47/)**: Let's connect!
 
 ---
 
 ## **📜 License**
 
-This project is licensed under the [MIT License](LICENSE). Feel free to use and adapt it for your own purposes—just give credit where it’s due!
+This project is licensed under the [MIT License](LICENSE). Feel free to use and adapt it for your own purposes—just give credit where it's due!
 
 ---
 
-Thank you for checking out my portfolio! 🎉  
+Thank you for checking out my portfolio! 🎉
 Let me know if you need anything else! 😊
-
----
