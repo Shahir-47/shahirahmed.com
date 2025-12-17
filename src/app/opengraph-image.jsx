@@ -14,16 +14,40 @@ export default async function Image() {
 		(
 			<div
 				style={{
-					background:
-						"linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)",
 					width: "100%",
 					height: "100%",
 					display: "flex",
 					alignItems: "center",
 					justifyContent: "center",
 					padding: "60px",
+					position: "relative",
 				}}
 			>
+				{/* Background Image */}
+				<img
+					src="https://www.shahirahmed.com/background.jpg"
+					alt=""
+					style={{
+						position: "absolute",
+						top: 0,
+						left: 0,
+						width: "100%",
+						height: "100%",
+						objectFit: "cover",
+					}}
+				/>
+				{/* Dark overlay for better text readability */}
+				<div
+					style={{
+						position: "absolute",
+						top: 0,
+						left: 0,
+						width: "100%",
+						height: "100%",
+						background: "rgba(0, 0, 0, 0.5)",
+					}}
+				/>
+
 				{/* Left side - Photo */}
 				<div
 					style={{
@@ -31,6 +55,7 @@ export default async function Image() {
 						alignItems: "center",
 						justifyContent: "center",
 						marginRight: "60px",
+						zIndex: 1,
 					}}
 				>
 					<img
@@ -54,6 +79,7 @@ export default async function Image() {
 						alignItems: "flex-start",
 						justifyContent: "center",
 						maxWidth: "700px",
+						zIndex: 1,
 					}}
 				>
 					{/* Name */}
