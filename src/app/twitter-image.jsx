@@ -20,7 +20,8 @@ export default async function Image() {
 					alignItems: "center",
 					justifyContent: "center",
 					padding: "60px",
-					background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%)",
+					background:
+						"linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%)",
 				}}
 			>
 				{/* Left side - Photo */}
