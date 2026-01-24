@@ -154,7 +154,6 @@ const jsonLd = {
 				"https://www.linkedin.com/in/shahir47/",
 				"https://devpost.com/Shahir-47",
 				"https://instagram.com/shahirahmed._",
-				"https://shahir-47.blogspot.com/",
 			],
 			email: "shahir@shahirahmed.com",
 		},

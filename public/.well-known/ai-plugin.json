@@ -51,10 +51,16 @@
 			"description": "Full-stack vendor management and grocery marketplace platform"
 		},
 		{
-			"name": "Peer-to-Playlist",
-			"url": "https://peer-to-playlist.onrender.com/",
-			"github": "https://github.com/Shahir-47/Peer-to-Playlist",
-			"description": "Music matching social app using Spotify data"
+			"name": "Queue Up",
+			"url": "https://queue-up.onrender.com",
+			"github": "https://github.com/Shahir-47/Queue-Up",
+			"description": "Music-based social platform with weighted Spotify similarity and real-time chat"
+		},
+		{
+			"name": "CoSign",
+			"url": "https://cosign-nwwl.onrender.com",
+			"github": "https://github.com/Shahir-47/CoSign",
+			"description": "Task management with external verification, WebSockets, and encrypted data"
 		},
 		{
 			"name": "Albatross",
@@ -67,7 +73,6 @@
 		"linkedin": "https://www.linkedin.com/in/shahir47/",
 		"devpost": "https://devpost.com/Shahir-47",
 		"instagram": "https://instagram.com/shahirahmed._",
-		"blog": "https://shahir-47.blogspot.com/"
 	},
 	"resumeUrl": "https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view",
 	"availableFor": [

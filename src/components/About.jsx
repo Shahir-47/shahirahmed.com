@@ -105,13 +105,21 @@ const About = () => {
 								</a>{" "}
 								(a vendor management and grocery delivery platform),{" "}
 								<a
-									href="https://peer-to-playlist.onrender.com"
+									href="https://queue-up.onrender.com"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<strong>Peer-to-Playlist</strong>
+									<strong>Queue Up</strong>
 								</a>{" "}
-								(a music matching app), and{" "}
+								(a music-based social platform),{" "}
+								<a
+									href="https://cosign-nwwl.onrender.com"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<strong>CoSign</strong>
+								</a>{" "}
+								(task management with external verification), and{" "}
 								<a
 									href="https://albatross-hack.netlify.app/map"
 									target="_blank"

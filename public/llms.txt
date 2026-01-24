@@ -52,11 +52,17 @@ Full-stack vendor management platform and grocery marketplace for South Asian su
 - URL: https://www.sarvabazaar.com/
 - Features: AI assistants, Stripe payments, real-time order tracking, voice input
 
-### Peer-to-Playlist
-Music matching social networking app that connects users based on Spotify listening history.
-- URL: https://peer-to-playlist.onrender.com/
-- GitHub: https://github.com/Shahir-47/Peer-to-Playlist
-- Features: Real-time messaging, file sharing, Spotify integration
+### Queue Up
+Music-based social platform that matches users using weighted Spotify similarity with real-time chat and notifications.
+- URL: https://queue-up.onrender.com
+- GitHub: https://github.com/Shahir-47/Queue-Up
+- Features: Weighted Spotify similarity, WebSockets chat/notifications, JWT auth, S3 presigned uploads
+
+### CoSign
+Task management with external verification and automated penalty emails for missed deadlines.
+- URL: https://cosign-nwwl.onrender.com
+- GitHub: https://github.com/Shahir-47/CoSign
+- Features: Verification workflow, recurring tasks (RRULE), AES encryption at rest, WebSockets, S3 presigned uploads
 
 ### Albatross
 AI-powered safe navigation app built at HackHarvard 2024.
@@ -74,7 +80,6 @@ Diabetes management app with Dexcom integration, built at PennApps 2024.
 - GitHub: https://github.com/Shahir-47
 - Instagram: https://instagram.com/shahirahmed._
 - Devpost: https://devpost.com/Shahir-47
-- Blog: https://shahir-47.blogspot.com/
 
 ## Resume
 View resume: https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view

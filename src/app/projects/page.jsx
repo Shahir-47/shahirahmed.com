@@ -4,14 +4,14 @@ import Projects from "@/components/Projects";
 export const metadata = {
 	title: "Projects",
 	description:
-		"Explore Shahir Ahmed's portfolio of software development projects. Features Sarva (grocery marketplace), Peer-to-Playlist, Albatross (AI navigation), open source contributions to Mermaid.js and FarmData2, and more full stack applications.",
+		"Explore Shahir Ahmed's portfolio of software development projects. Features Sarva (grocery marketplace), Queue Up (music matching), CoSign (task verification), Albatross (AI navigation), open source contributions to Mermaid.js and FarmData2, and more full stack applications.",
 	alternates: {
 		canonical: "https://www.shahirahmed.com/projects",
 	},
 	openGraph: {
 		title: "Projects | Shahir Ahmed - Full Stack Developer",
 		description:
-			"Explore Shahir Ahmed's portfolio of full stack projects including Sarva, Peer-to-Playlist, Albatross, and open source contributions.",
+			"Explore Shahir Ahmed's portfolio of full stack projects including Sarva, Queue Up, CoSign, Albatross, and open source contributions.",
 		url: "https://www.shahirahmed.com/projects",
 	},
 };
@@ -67,13 +67,13 @@ const projectsPageJsonLd = {
 			{
 				"@type": "SoftwareSourceCode",
 				position: 2,
-				name: "Peer-to-Playlist",
+				name: "Queue Up",
 				description:
-					"Full-stack social networking app that matches users through Spotify listening history with real-time messaging and file sharing.",
-				url: "https://peer-to-playlist.onrender.com/",
-				codeRepository: "https://github.com/Shahir-47/Peer-to-Playlist",
-				programmingLanguage: "JavaScript",
-				runtimePlatform: "React",
+					"Music-based social platform that matches users with weighted Spotify similarity and real-time chat.",
+				url: "https://queue-up.onrender.com",
+				codeRepository: "https://github.com/Shahir-47/Queue-Up",
+				programmingLanguage: ["Java", "JavaScript"],
+				runtimePlatform: "Spring Boot, React",
 				author: {
 					"@id": "https://www.shahirahmed.com/#person",
 				},
@@ -81,6 +81,20 @@ const projectsPageJsonLd = {
 			{
 				"@type": "SoftwareSourceCode",
 				position: 3,
+				name: "CoSign",
+				description:
+					"Task management platform with external verification, real-time WebSockets, and encrypted data storage.",
+				url: "https://cosign-nwwl.onrender.com",
+				codeRepository: "https://github.com/Shahir-47/CoSign",
+				programmingLanguage: ["Java", "JavaScript"],
+				runtimePlatform: "Spring Boot, React",
+				author: {
+					"@id": "https://www.shahirahmed.com/#person",
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 4,
 				name: "Albatross",
 				description:
 					"AI-powered navigation app that reroutes users based on safety levels, built at HackHarvard 2024.",
@@ -93,7 +107,7 @@ const projectsPageJsonLd = {
 			},
 			{
 				"@type": "SoftwareSourceCode",
-				position: 4,
+				position: 5,
 				name: "FarmData2",
 				description:
 					"Open-source farm management platform with crop tracking, farmOS API integration, and Vue.js components.",

@@ -1,11 +1,5 @@
 import { SiDevpost } from "react-icons/si";
-import {
-	FaGithub,
-	FaLinkedin,
-	FaEnvelope,
-	FaInstagram,
-	FaBlogger,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const SocialIcons = () => {
 	return (
@@ -56,15 +50,6 @@ const SocialIcons = () => {
 					aria-label="Devpost"
 				>
 					<SiDevpost />
-				</a>
-				<a
-					href="https://shahir-47.blogspot.com/"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="icon-container"
-					aria-label="Blog"
-				>
-					<FaBlogger />
 				</a>
 			</div>
 		</div>

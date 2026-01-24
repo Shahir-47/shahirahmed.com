@@ -1,14 +1,13 @@
 "use client";
 
 import PropTypes from "prop-types";
-import Image from "next/image";
-import Etch from "@/assets/etch.png";
 import FD2 from "@/assets/fd2.png";
 import SweetFriend from "@/assets/sweetFriend.jpg";
 import Albatross from "@/assets/albatross.png";
 import SpaceAccuracy from "@/assets/space.png";
+import QueueUp from "@/assets/queue-up.png";
+import CoSignImg from "@/assets/CoSignImg.png";
 import SocialIcons from "./SocialIcons";
-import Peer from "@/assets/peer.png";
 import Sarva from "@/assets/sarva.png";
 import Open from "@/assets/open.png";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
@@ -83,13 +82,25 @@ const projectsData = [
 
 	// === PERSONAL ===
 	{
-		image: Peer,
-		title: "Peer-to-Playlist",
+		image: QueueUp,
+		title: "Queue Up",
 		description:
-			"Full-stack social networking app that matches users through a weighted scoring algorithm analyzing their Spotify listening history, playlists, and top artists. Built with React, Express.js, and MongoDB. Features a real-time messaging system with Socket.IO handling 500+ concurrent connections, file sharing via AWS S3 and Cloudinary CDN, embedded Spotify playback, and automated link previews. Includes secure authentication and complete Spotify API integration.",
-		liveDemo: "https://peer-to-playlist.onrender.com/",
-		sourceCode: "https://github.com/Shahir-47/Peer-to-Playlist",
-		repo: "Peer-to-Playlist",
+			"Music-based social platform that matches users using a weighted Spotify similarity score across top artists, top tracks, saved tracks, and followed artists. Ships as a single Spring Boot deployable that bundles the React build, with real-time chat and notifications over WebSockets. JWT auth via HttpOnly cookies, PostgreSQL via JPA, Cloudinary avatars, and S3 presigned uploads for chat attachments.",
+		liveDemo: "https://queue-up.onrender.com",
+		sourceCode: "https://github.com/Shahir-47/Queue-Up",
+		devpost: null,
+		repo: "Queue-Up",
+		category: CATEGORIES.PERSONAL,
+	},
+	{
+		image: CoSignImg,
+		title: "CoSign",
+		description:
+			"Task management with external verification. You submit proof, a verifier approves or rejects, and missed deadlines automatically expose hidden penalty content via email. Built with Spring Boot + React, real-time WebSockets, AES encryption at rest for sensitive fields, recurring tasks via RRULE, and S3 presigned uploads. Deployed as a single Dockerized artifact on Render.",
+		liveDemo: "https://cosign-nwwl.onrender.com",
+		sourceCode: "https://github.com/Shahir-47/CoSign",
+		devpost: null,
+		repo: "CoSign",
 		category: CATEGORIES.PERSONAL,
 	},
 
@@ -332,10 +343,10 @@ const ProjectItem = ({
 							category === CATEGORIES.PROFESSIONAL
 								? "#7952B3"
 								: category === CATEGORIES.OPENSOURCE
-								? "#28a745"
-								: category === CATEGORIES.HACKATHON
-								? "#fd7e14"
-								: "#6c757d",
+									? "#28a745"
+									: category === CATEGORIES.HACKATHON
+										? "#fd7e14"
+										: "#6c757d",
 						color: "#fff",
 						fontWeight: 600,
 						fontSize: { xs: "0.7rem", sm: "0.75rem", md: "0.8rem" },
@@ -349,6 +360,7 @@ const ProjectItem = ({
 			</Box>
 
 			<Typography
+				component="div"
 				sx={{
 					color: "#e0e0e0",
 					marginBottom: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
@@ -504,7 +516,7 @@ const Projects = () => {
 		const regex = new RegExp(`(${searchTerm})`, "gi");
 		return text.replace(
 			regex,
-			"<mark style='background-color: #4fd1c5; color: #222; padding: 2px 4px; border-radius: 3px;'>$1</mark>"
+			"<mark style='background-color: #4fd1c5; color: #222; padding: 2px 4px; border-radius: 3px;'>$1</mark>",
 		);
 	};
 
@@ -604,35 +616,35 @@ const Projects = () => {
 									? category === CATEGORIES.PROFESSIONAL
 										? "#7952B3"
 										: category === CATEGORIES.OPENSOURCE
-										? "#28a745"
-										: category === CATEGORIES.HACKATHON
-										? "#fd7e14"
-										: category === CATEGORIES.PERSONAL
-										? "#6c757d"
-										: "#4fd1c5"
+											? "#28a745"
+											: category === CATEGORIES.HACKATHON
+												? "#fd7e14"
+												: category === CATEGORIES.PERSONAL
+													? "#6c757d"
+													: "#4fd1c5"
 									: "transparent",
 							borderColor:
 								category === CATEGORIES.PROFESSIONAL
 									? "#7952B3"
 									: category === CATEGORIES.OPENSOURCE
-									? "#28a745"
-									: category === CATEGORIES.HACKATHON
-									? "#fd7e14"
-									: category === CATEGORIES.PERSONAL
-									? "#6c757d"
-									: "#4fd1c5",
+										? "#28a745"
+										: category === CATEGORIES.HACKATHON
+											? "#fd7e14"
+											: category === CATEGORIES.PERSONAL
+												? "#6c757d"
+												: "#4fd1c5",
 							color:
 								activeFilter === category
 									? "#fff"
 									: category === CATEGORIES.PROFESSIONAL
-									? "#7952B3"
-									: category === CATEGORIES.OPENSOURCE
-									? "#28a745"
-									: category === CATEGORIES.HACKATHON
-									? "#fd7e14"
-									: category === CATEGORIES.PERSONAL
-									? "#6c757d"
-									: "#4fd1c5",
+										? "#7952B3"
+										: category === CATEGORIES.OPENSOURCE
+											? "#28a745"
+											: category === CATEGORIES.HACKATHON
+												? "#fd7e14"
+												: category === CATEGORIES.PERSONAL
+													? "#6c757d"
+													: "#4fd1c5",
 							fontWeight: 600,
 							fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.9rem" },
 							px: { xs: 1.5, sm: 2, md: 2.5 },
@@ -645,23 +657,23 @@ const Projects = () => {
 									category === CATEGORIES.PROFESSIONAL
 										? "#7952B3"
 										: category === CATEGORIES.OPENSOURCE
-										? "#28a745"
-										: category === CATEGORIES.HACKATHON
-										? "#fd7e14"
-										: category === CATEGORIES.PERSONAL
-										? "#6c757d"
-										: "#4fd1c5",
+											? "#28a745"
+											: category === CATEGORIES.HACKATHON
+												? "#fd7e14"
+												: category === CATEGORIES.PERSONAL
+													? "#6c757d"
+													: "#4fd1c5",
 								color: "#fff",
 								borderColor:
 									category === CATEGORIES.PROFESSIONAL
 										? "#7952B3"
 										: category === CATEGORIES.OPENSOURCE
-										? "#28a745"
-										: category === CATEGORIES.HACKATHON
-										? "#fd7e14"
-										: category === CATEGORIES.PERSONAL
-										? "#6c757d"
-										: "#4fd1c5",
+											? "#28a745"
+											: category === CATEGORIES.HACKATHON
+												? "#fd7e14"
+												: category === CATEGORIES.PERSONAL
+													? "#6c757d"
+													: "#4fd1c5",
 							},
 							"@media (min-width: 2560px)": {
 								fontSize: "1.2rem",
@@ -692,6 +704,7 @@ const Projects = () => {
 			>
 				<TextField
 					fullWidth
+					id="projects-search"
 					label="Search Projects"
 					variant="outlined"
 					value={searchTerm}
