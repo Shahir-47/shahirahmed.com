@@ -52,9 +52,10 @@ const About = () => {
 							<p className="about-me-text">
 								Hey, I&apos;m Shahir. I&apos;m a recent Computer Science &
 								Mathematics graduate (May 2025) who builds scalable full-stack
-								web apps with React, Vue, Node.js, Express, AWS, and Firebase. I
-								enjoy solving tough problems, modern web architecture, and
-								taking projects from &quot;just an idea&quot; to production.
+								web apps with React, Next.js, Spring Boot, Python, and AWS. I
+								enjoy architecting complex backend systems, optimizing frontend
+								performance, and taking projects from &quot;just an idea&quot;
+								to production.
 							</p>
 							<p className="about-me-text">
 								I&apos;m currently a Software Engineer at{" "}
@@ -65,9 +66,9 @@ const About = () => {
 								>
 									<strong>Sarva</strong>
 								</a>
-								, architecting a full-stack vendor management and grocery
-								marketplace platform. My open source journey includes being a
-								top 25 contributor out of 600+ contributors to{" "}
+								, where I architect full-stack solutions for a vendor management
+								and grocery marketplace platform. My open source journey
+								includes being a top 25 contributor to{" "}
 								<a
 									href="https://github.com/mermaid-js/mermaid"
 									target="_blank"
@@ -83,8 +84,9 @@ const About = () => {
 								>
 									<strong>FarmData2</strong>
 								</a>
-								. I focus on feature development, bug fixes, and designing
-								systems people actually use. You can browse my open source work{" "}
+								. I focus on high-impact feature development, system
+								optimization, and designing tools people actually use. You can
+								browse my open source work{" "}
 								<a
 									href="https://github.com/Shahir-47/open-source-contributions"
 									target="_blank"
@@ -111,7 +113,7 @@ const About = () => {
 								>
 									<strong>Queue Up</strong>
 								</a>{" "}
-								(a music-based social platform),{" "}
+								(a music-based social platform with Spotify integration),{" "}
 								<a
 									href="https://cosign-nwwl.onrender.com"
 									target="_blank"
@@ -119,7 +121,7 @@ const About = () => {
 								>
 									<strong>CoSign</strong>
 								</a>{" "}
-								(task management with external verification), and{" "}
+								(an accountability platform with deadline enforcement), and{" "}
 								<a
 									href="https://albatross-hack.netlify.app/map"
 									target="_blank"
@@ -127,9 +129,7 @@ const About = () => {
 								>
 									<strong>Albatross</strong>
 								</a>{" "}
-								(AI-powered safe navigation). I have shipped hacks at PennApps
-								and HackHarvard, which challenged me to level up and build under
-								pressure.
+								(AI-powered safe navigation).
 							</p>
 							<p className="about-me-text">
 								Outside of code, you&apos;ll find me helping new devs, playing
@@ -261,6 +261,10 @@ const About = () => {
 					<div className="tools-category">
 						<h3>Backend & Server</h3>
 						<div className="tools-icons">
+							<img
+								src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
+								alt="Spring Boot"
+							/>
 							<img
 								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
 								alt="Node.js"
@@ -487,33 +491,30 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Designed 4 role-specific AI assistants with RAG over Firestore
-								and Algolia to handle search, ordering, and analytics in chat,
-								cutting task time by 50% and saving about 15 hours of operations
-								work per week.
+								Built and delivered 20+ production-ready Next.js (React,
+								TypeScript) user-facing pages, backed by Firebase services
+								(Auth, Firestore, Cloud Functions) for secure catalog browsing
+								and ordering.
 							</li>
 							<li>
-								Built a vendor AI toolkit to auto-generate product descriptions,
-								pricing, and nutrition, cutting per-item setup time by 80% and
-								enabling 50+ product catalogs to launch in under 1 hour.
+								Designed and owned backend services using Python, including
+								asynchronous workflows and persistence, which minimized
+								operational overheads by 15+ hours weekly.
 							</li>
 							<li>
-								Developed a batch inventory management system with voice input
-								via Whisper, enabling vendors to add, edit, and delete 20+
-								products at once in 90+ languages, cutting weekly inventory work
-								by 60% and saving users 3 to 5 hours per week.
+								Developed a vendor AI toolkit that auto-generates product
+								descriptions, pricing, and nutrition info, cutting per-item
+								setup time by 80% and launching 50+ catalogs in under 1 hour.
 							</li>
 							<li>
-								Implemented Stripe Connect split payouts with Identity checks
-								and real-time order tracking via Firestore and Google Maps,
-								cutting chargebacks and suspected fraud by 85% while enabling
-								transparent deliveries.
+								Implemented a retrieval-backed request processing pipeline with
+								vector indexing and request-level caching, cutting p95 query
+								latency by 50% while reducing invalid outputs.
 							</li>
 							<li>
-								Built 20+ pages in Next.js (React, TypeScript) backed by
-								Firebase Auth, Firestore, Storage, and Cloud Functions so users
-								can sign up securely, browse vendor catalogs, place orders, and
-								upload images on a scalable serverless stack deployed to Vercel.
+								Delivered payment and delivery tracking functionality using
+								Stripe Connect and Google Maps, enabling real-time tracking and
+								reducing chargeback transactions by 85%.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -566,22 +567,19 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Contributed to the core FarmData2 codebase at Dickinson College,
-								partnering with 12+ farmers to build 15+ real-time crop
-								management features that support daily farm operations and USDA
-								certification requirements.
+								Modernized a PostgreSQL-backed Node.js system, designing
+								concurrent-safe logging workflows to support real-time farm
+								operations and USDA audit requirements.
 							</li>
 							<li>
-								Developed a full-stack crop tracking system using Node.js,
-								PostgreSQL, and Vue.js with Cypress end-to-end tests at 80%+
-								coverage, enabling real-time logging of concurrent farm
-								operations to meet USDA audit standards.
+								Refactored 22 Vue components, improving form rendering and
+								frontend usability, reducing UI latency by 60% and saving farm
+								staff 12+ hours per week.
 							</li>
 							<li>
-								Integrated 18+ farmOS API endpoints to automate logging
-								workflows and refactored 22 Vue components for performance,
-								reducing form rendering latency by 60% and saving farm staff 12+
-								hours per week.
+								Integrated 18+ external APIs and refactored backend-facing
+								components, establishing a centralized form workflow that
+								improved data consistency across farm operations.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -648,24 +646,19 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Delivered 3 merged PRs implementing text wrapping algorithms,
-								auto-scaling data labels, and customizable styling features for
-								a library serving more than{" "}
-								<a
-									href="https://npmtrends.com/mermaid"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{ color: "#4fd1c5", textDecoration: "underline" }}
-								>
-									1.2 million weekly downloads
-								</a>
-								, achieving #25 contributor ranking among 600+ contributors.
+								Delivered 3 merged PRs to a 100K+ LOC TypeScript codebase,
+								implementing layout algorithms and rendering logic used by 1.4M+
+								weekly users.
 							</li>
 							<li>
-								Contributed to a 100K+ line codebase via Git, clearing automated
-								CI/CD checks and multi-stage code reviews to ship features now
-								powering diagrams for millions across GitHub, VS Code, Notion,
-								and Microsoft Word.
+								Improved diagram layout and readability by implementing text
+								wrapping, auto-scaling labels, and customizable styling
+								features.
+							</li>
+							<li>
+								Navigated CI/CD pipelines and multi-stage code reviews to
+								deliver production features consumed across GitHub, VS Code, and
+								Notion.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -708,10 +701,10 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Contributed to an ANTLR based code migration pipeline that
-								automatically converted 10K+ lines of legacy CBASIC into Python
-								and Java, helping a $9B company modernize its legacy systems and
-								cut down manual rewrite work.
+								Engineered a legacy code transpilation pipeline using ANTLR to
+								automate the migration of 10K+ lines of legacy CBASIC into
+								Python and Java, helping a $9B company modernize its legacy
+								systems and cut down manual rewrite work.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
