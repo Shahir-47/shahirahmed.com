@@ -498,7 +498,7 @@ const About = () => {
 								enabling 50+ product catalogs to launch in under 1 hour.
 							</li>
 							<li>
-								Implemented a batch inventory management system with voice input
+								Developed a batch inventory management system with voice input
 								via Whisper, enabling vendors to add, edit, and delete 20+
 								products at once in 90+ languages, cutting weekly inventory work
 								by 60% and saving users 3 to 5 hours per week.
