@@ -31,7 +31,7 @@ const projectsData = [
 		image: Sarva,
 		title: "Sarva",
 		description:
-			"Full-stack vendor management platform and grocery marketplace for South Asian supply chains. Designed 4 role-specific AI assistants with RAG over Firestore and Algolia, cutting task time by 50%. Built a vendor AI toolkit to auto-generate product descriptions, pricing, and nutrition (80% faster setup). Implemented batch inventory management with Whisper voice input supporting 90+ languages, Stripe Connect split payouts with Identity verification (85% fraud reduction), and real-time order tracking via Google Maps. Built 20+ pages in Next.js with Firebase Auth, Firestore, Storage, and Cloud Functions deployed to Vercel.",
+			"Vendor management platform and marketplace for grocery supply chains. Architected a Next.js + TypeScript app with serverless Firebase microservices for secure auth and catalog workflows. Built a retrieval-backed AI pipeline in Python with vector indexing to automate product metadata (50% p95 latency reduction, 80% faster setup). Developed voice-enabled batch inventory with OpenAI Whisper supporting 90+ languages, plus real-time logistics and payments using Stripe Connect and Google Maps with identity verification (85% chargeback reduction).",
 		liveDemo: "https://www.sarvabazaar.com/",
 		sourceCode: null,
 		devpost: null,
@@ -42,7 +42,7 @@ const projectsData = [
 		image: FD2,
 		title: "FarmData2",
 		description:
-			"Open-source farm management platform at Dickinson College. Partnered with 12+ farmers to build 15+ real-time crop management features supporting daily operations and USDA certification requirements. Developed a full-stack crop tracking system using Node.js, PostgreSQL, and Vue.js with Cypress end-to-end tests at 80%+ coverage. Integrated 18+ farmOS API endpoints to automate logging workflows and refactored 22 Vue components, reducing form rendering latency by 60% and saving farm staff 12+ hours per week.",
+			"Open-source farm management platform at Dickinson College. Engineered a concurrent-safe crop tracking system in Node.js + PostgreSQL with transactional consistency to meet USDA audit standards. Revamped the Vue.js frontend with centralized state management, refactoring 22+ components to cut form latency by 60% and replace manual spreadsheet workflows. Integrated 18+ REST APIs and added Cypress E2E tests with 80%+ coverage, saving farm staff 12+ hours per week.",
 		liveDemo: null,
 		sourceCode: "https://github.com/FarmData2/FarmData2",
 		repo: "FarmData2",
@@ -54,8 +54,8 @@ const projectsData = [
 		image: Open,
 		title: "Open Source Contributions",
 		description: `
-			Top contributor to <b>Mermaid.js</b> (#25 of 600+ contributors) and <b>FarmData2</b> (#2 overall, 25+ PRs, 14K+ lines).<br/><br/>
-			<b>Mermaid.js:</b> Delivered 3 merged PRs implementing text wrapping algorithms, auto-scaling data labels, and customizable styling for a library serving 1.2M+ weekly downloads. Contributed to a 100K+ line codebase, shipping features now powering diagrams across GitHub, VS Code, Notion, and Microsoft Word.<br/><br/>
+			Top contributor to <b>Mermaid.js</b> (#25 of 600+ contributors) and <b>FarmData2</b> (25+ PRs, 14K+ lines).<br/><br/>
+			<b>Mermaid.js:</b> Delivered 3 merged PRs implementing text wrapping algorithms, auto-scaling data labels, and customizable styling for a library serving 1.4M+ weekly downloads. Contributed to a 100K+ line codebase, shipping features now powering diagrams across GitHub, VS Code, Notion, and Microsoft Word.<br/><br/>
 			<ul style="margin: 0 0 0 1.5em; padding: 0;">
 				<li>
 					<a href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #4fd1c5; text-decoration: underline;">

@@ -4,14 +4,14 @@ import ContactMe from "@/components/ContactMe";
 export const metadata = {
 	title: "Contact Me",
 	description:
-		"Get in touch with Shahir Ahmed. Full Stack Developer available for freelance projects, collaborations, and job opportunities. Connect via email, LinkedIn, GitHub, or the contact form.",
+		"Get in touch with Shahir Ahmed. Software Engineer available for collaborations and job opportunities. Connect via email, LinkedIn, GitHub, or the contact form.",
 	alternates: {
 		canonical: "https://www.shahirahmed.com/contact",
 	},
 	openGraph: {
-		title: "Contact Shahir Ahmed | Full Stack Developer",
+		title: "Contact Shahir Ahmed | Software Engineer",
 		description:
-			"Get in touch with Shahir Ahmed for freelance projects, collaborations, and job opportunities.",
+			"Get in touch with Shahir Ahmed for collaborations and job opportunities.",
 		url: "https://www.shahirahmed.com/contact",
 	},
 };
@@ -24,7 +24,7 @@ const contactPageJsonLd = {
 	url: "https://www.shahirahmed.com/contact",
 	name: "Contact Shahir Ahmed",
 	description:
-		"Get in touch with Shahir Ahmed for project inquiries, collaborations, or job opportunities.",
+		"Get in touch with Shahir Ahmed for collaborations or job opportunities.",
 	isPartOf: {
 		"@id": "https://www.shahirahmed.com/#website",
 	},

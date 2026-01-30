@@ -4,14 +4,14 @@ import Projects from "@/components/Projects";
 export const metadata = {
 	title: "Projects",
 	description:
-		"Explore Shahir Ahmed's portfolio of software development projects. Features Sarva (grocery marketplace), Queue Up (music matching), CoSign (task verification), Albatross (AI navigation), open source contributions to Mermaid.js and FarmData2, and more full stack applications.",
+		"Explore Shahir Ahmed's portfolio of software projects. Features Sarva (vendor management platform), Queue Up (music matching), CoSign (task verification), Albatross (AI navigation), and open source contributions to Mermaid.js and FarmData2.",
 	alternates: {
 		canonical: "https://www.shahirahmed.com/projects",
 	},
 	openGraph: {
-		title: "Projects | Shahir Ahmed - Full Stack Developer",
+		title: "Projects | Shahir Ahmed - Software Engineer",
 		description:
-			"Explore Shahir Ahmed's portfolio of full stack projects including Sarva, Queue Up, CoSign, Albatross, and open source contributions.",
+			"Explore Shahir Ahmed's portfolio of projects including Sarva, Queue Up, CoSign, Albatross, and open source contributions.",
 		url: "https://www.shahirahmed.com/projects",
 	},
 };
@@ -56,10 +56,10 @@ const projectsPageJsonLd = {
 				position: 1,
 				name: "Sarva",
 				description:
-					"Full-stack vendor management platform and grocery marketplace for South Asian supply chains with AI assistants, Stripe payments, and real-time order tracking.",
+					"Vendor management platform and marketplace for grocery supply chains with serverless Firebase workflows, AI metadata generation, voice inventory, Stripe Connect, and Google Maps tracking.",
 				url: "https://www.sarvabazaar.com/",
-				programmingLanguage: ["JavaScript", "TypeScript"],
-				runtimePlatform: "Next.js",
+				programmingLanguage: ["TypeScript", "JavaScript", "Python"],
+				runtimePlatform: "Next.js, Firebase",
 				author: {
 					"@id": "https://www.shahirahmed.com/#person",
 				},
@@ -73,7 +73,7 @@ const projectsPageJsonLd = {
 				url: "https://queue-up.onrender.com",
 				codeRepository: "https://github.com/Shahir-47/Queue-Up",
 				programmingLanguage: ["Java", "JavaScript"],
-				runtimePlatform: "Spring Boot, React",
+				runtimePlatform: "Spring Boot, React, WebSockets",
 				author: {
 					"@id": "https://www.shahirahmed.com/#person",
 				},
@@ -86,8 +86,8 @@ const projectsPageJsonLd = {
 					"Task management platform with external verification, real-time WebSockets, and encrypted data storage.",
 				url: "https://cosign-nwwl.onrender.com",
 				codeRepository: "https://github.com/Shahir-47/CoSign",
-				programmingLanguage: ["Java", "JavaScript"],
-				runtimePlatform: "Spring Boot, React",
+				programmingLanguage: ["Java", "TypeScript", "JavaScript"],
+				runtimePlatform: "Spring Boot, React, WebSockets",
 				author: {
 					"@id": "https://www.shahirahmed.com/#person",
 				},
@@ -99,7 +99,7 @@ const projectsPageJsonLd = {
 				description:
 					"AI-powered navigation app that reroutes users based on safety levels, built at HackHarvard 2024.",
 				url: "https://albatross-hack.netlify.app/",
-				programmingLanguage: "JavaScript",
+				programmingLanguage: ["JavaScript"],
 				runtimePlatform: "Vue.js",
 				author: {
 					"@id": "https://www.shahirahmed.com/#person",
@@ -110,9 +110,10 @@ const projectsPageJsonLd = {
 				position: 5,
 				name: "FarmData2",
 				description:
-					"Open-source farm management platform with crop tracking, farmOS API integration, and Vue.js components.",
+					"Open-source farm management platform with crop tracking, PostgreSQL logging, farmOS API integration, and Vue.js components.",
 				codeRepository: "https://github.com/FarmData2/FarmData2",
-				programmingLanguage: ["JavaScript", "Vue.js"],
+				programmingLanguage: ["JavaScript", "SQL"],
+				runtimePlatform: "Node.js, Vue.js",
 				author: {
 					"@id": "https://www.shahirahmed.com/#person",
 				},

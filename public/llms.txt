@@ -1,29 +1,34 @@
-# Shahir Ahmed - Full Stack Developer & Software Engineer
+# Shahir Ahmed - Software Engineer
 
 ## Quick Summary
-Shahir Ahmed is a Full Stack Developer and Software Engineer based in the United States. He specializes in modern web technologies including React, Next.js, Vue.js, Node.js, and cloud platforms like AWS and Firebase.
+Shahir Ahmed is a Software Engineer based in the United States. He builds full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase, focusing on scalable systems, real-time workflows, and AI-assisted automation.
 
 ## Professional Experience
 
-### Software Engineer at Sarva (Current)
-- Architecting a full-stack vendor management and grocery marketplace platform
-- Building AI-powered features with RAG over Firestore and Algolia
-- Implementing Stripe Connect payment processing with identity verification
-- Developing real-time order tracking with Google Maps integration
-- Tech stack: Next.js, Firebase, Vercel, Stripe, Google Maps API
+### Software Engineer at Sarva (May 2025 - Present)
+- Architected a vendor management platform and marketplace using Next.js and TypeScript
+- Deployed serverless microservices via Firebase to maintain 99.9% uptime for secure auth and catalog workflows
+- Built a retrieval-backed AI pipeline in Python with vector indexing to automate product metadata (50% p95 latency reduction, 80% faster setup)
+- Developed voice-enabled batch inventory with OpenAI Whisper supporting 90+ languages
+- Delivered real-time logistics and payments with Stripe Connect and Google Maps, using identity verification to reduce chargebacks by 85%
+- Tech stack: Next.js, TypeScript, Firebase, Python, Stripe, Google Maps API
 
-### Open Source Contributions
-- **Mermaid.js**: Top 25 contributor out of 600+ contributors
-  - Implemented text wrapping algorithms
-  - Added auto-scaling data labels
-  - Created customizable styling features
-  - Library serves 1.2M+ weekly downloads
-  
-- **FarmData2**: Ranked #2 overall contributor
-  - 25+ pull requests merged
-  - 14,000+ lines of code contributed
-  - Built full-stack crop tracking system
-  - Integrated 18+ farmOS API endpoints
+### Software Engineer Intern at FarmData2 (May 2024 - May 2025)
+- Engineered a concurrent-safe crop tracking system using Node.js and PostgreSQL with transactional consistency for USDA audit standards
+- Revamped the Vue.js frontend with centralized state management, refactoring 22+ components to reduce form latency by 60%
+- Integrated 18+ REST APIs and built Cypress E2E tests with 80%+ coverage, saving farm staff 12+ hours per week
+- Tech stack: Node.js, PostgreSQL, Vue.js, Cypress
+
+## Open Source Contributions
+
+### Mermaid.js
+- Top 25 contributor out of 600+ contributors
+- Delivered 3 merged PRs implementing text wrapping, auto-scaling data labels, and customizable styling
+- Library serves 1.4M+ weekly downloads
+
+### FarmData2
+- 25+ pull requests merged and 14,000+ lines contributed
+- Built crop tracking and data-entry improvements used by real-world farm operations
 
 ## Education
 - **Dickinson College** - Computer Science & Mathematics Graduate (May 2025)
@@ -31,38 +36,35 @@ Shahir Ahmed is a Full Stack Developer and Software Engineer based in the United
 ## Technical Skills
 
 ### Programming Languages
-JavaScript, TypeScript, Python, Java, C, SQL, Lua, R, MATLAB
+Java, TypeScript, JavaScript, Python, SQL, HTML5, CSS3
 
 ### Frontend
-React, Vue.js, Next.js, HTML5, CSS3, TailwindCSS, Bootstrap, Electron
+React, Next.js, Vue.js, TailwindCSS, state management, responsive design
 
-### Backend
-Node.js, Express.js, Firebase, Flask, Socket.IO, RESTful APIs, WebRTC
+### Backend & Data
+Spring Boot, Express, REST APIs, WebSockets, PostgreSQL, MongoDB, Firebase
 
-### Databases
-PostgreSQL, MongoDB, Firestore, SQLite, MySQL
-
-### Cloud & DevOps
-AWS (S3, Lambda, EC2), Firebase, Google Cloud, Vercel, Netlify, Docker, Git
+### Cloud & Tooling
+Cypress, AWS S3, Maven, NPM, PNPM, Vite, Docker, Vercel, Git, Linux
 
 ## Featured Projects
 
-### Sarva Bazaar
-Full-stack vendor management platform and grocery marketplace for South Asian supply chains.
+### Sarva
+Vendor management platform and marketplace for grocery supply chains.
 - URL: https://www.sarvabazaar.com/
-- Features: AI assistants, Stripe payments, real-time order tracking, voice input
+- Features: AI metadata automation, Stripe Connect payments, Google Maps tracking, voice-enabled inventory
 
 ### Queue Up
 Music-based social platform that matches users using weighted Spotify similarity with real-time chat and notifications.
 - URL: https://queue-up.onrender.com
 - GitHub: https://github.com/Shahir-47/Queue-Up
-- Features: Weighted Spotify similarity, WebSockets chat/notifications, JWT auth, S3 presigned uploads
+- Features: Spotify matching, WebSockets chat, JWT auth, PostgreSQL, AWS S3
 
 ### CoSign
 Task management with external verification and automated penalty emails for missed deadlines.
 - URL: https://cosign-nwwl.onrender.com
 - GitHub: https://github.com/Shahir-47/CoSign
-- Features: Verification workflow, recurring tasks (RRULE), AES encryption at rest, WebSockets, S3 presigned uploads
+- Features: Verification workflow, recurring tasks, WebSockets, AWS S3, Docker
 
 ### Albatross
 AI-powered safe navigation app built at HackHarvard 2024.
@@ -78,7 +80,6 @@ Diabetes management app with Dexcom integration, built at PennApps 2024.
 - Email: shahir@shahirahmed.com
 - LinkedIn: https://www.linkedin.com/in/shahir47/
 - GitHub: https://github.com/Shahir-47
-- Instagram: https://instagram.com/shahirahmed._
 - Devpost: https://devpost.com/Shahir-47
 
 ## Resume

@@ -20,19 +20,16 @@ const HomePage = () => {
 	useEffect(() => {
 		const typed = new Typed("#typed-text", {
 			strings: [
-				"Full Stack Developer",
-				"Creative Coder",
-				"Computer Science Student",
-				"Mathematics Student",
-				"Aspiring Software Developer",
-				"Emerging Full Stack Developer",
-				"Programming Enthusiast",
-				"Future Tech Professional",
-				"Student of Software Engineering",
-				"Coding Hobbyist",
-				"Software Engineer in Training",
-				"Software Engineer in the Making",
-				"Software Engineer in the Works",
+				"Software Engineer",
+				"Full Stack Engineer",
+				"Backend Systems Builder",
+				"Frontend Performance Optimizer",
+				"Open Source Contributor",
+				"Next.js & TypeScript Developer",
+				"Spring Boot Developer",
+				"Python & Data Engineer",
+				"API & WebSocket Builder",
+				"Product-Minded Engineer",
 			],
 			typeSpeed: 50,
 			backSpeed: 25,
@@ -74,7 +71,7 @@ const HomePage = () => {
 						<p
 							id="typed-text"
 							className="typed-text"
-							aria-label="Full Stack Developer"
+							aria-label="Software Engineer"
 						></p>
 					</div>
 				</div>

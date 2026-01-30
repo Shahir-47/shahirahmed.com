@@ -50,12 +50,11 @@ const About = () => {
 					<div className="about-me-text-div">
 						<div className="paragraph">
 							<p className="about-me-text">
-								Hey, I&apos;m Shahir. I&apos;m a recent Computer Science &
-								Mathematics graduate (May 2025) who builds scalable full-stack
-								web apps with React, Next.js, Spring Boot, Python, and AWS. I
-								enjoy architecting complex backend systems, optimizing frontend
-								performance, and taking projects from &quot;just an idea&quot;
-								to production.
+								Hey, I&apos;m Shahir - a Computer Science & Mathematics graduate
+								from Dickinson College (May 2025) and Software Engineer. I
+								build scalable full-stack products with React, Next.js,
+								TypeScript, Spring Boot, Python, and PostgreSQL, and I love
+								turning ideas into reliable production systems.
 							</p>
 							<p className="about-me-text">
 								I&apos;m currently a Software Engineer at{" "}
@@ -66,17 +65,11 @@ const About = () => {
 								>
 									<strong>Sarva</strong>
 								</a>
-								, where I architect full-stack solutions for a vendor management
-								and grocery marketplace platform. My open source journey
-								includes being a top 25 contributor to{" "}
-								<a
-									href="https://github.com/mermaid-js/mermaid"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<strong>Mermaid.js</strong>
-								</a>{" "}
-								and ranking #2 at{" "}
+								, building a vendor management platform and marketplace for
+								grocery supply chains. My work spans serverless workflows on
+								Firebase, AI-powered automation in Python, and real-time
+								logistics and payments with Stripe Connect and Google Maps.
+								Previously, I was a Software Engineer Intern on{" "}
 								<a
 									href="https://github.com/FarmData2"
 									target="_blank"
@@ -84,9 +77,17 @@ const About = () => {
 								>
 									<strong>FarmData2</strong>
 								</a>
-								. I focus on high-impact feature development, system
-								optimization, and designing tools people actually use. You can
-								browse my open source work{" "}
+								, and I contribute to{" "}
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<strong>Mermaid.js</strong>
+								</a>{" "}
+								(Top 25 contributor). I focus on high-impact feature
+								development, system optimization, and designing tools people
+								actually use. You can browse my open source work{" "}
 								<a
 									href="https://github.com/Shahir-47/open-source-contributions"
 									target="_blank"
@@ -97,15 +98,7 @@ const About = () => {
 								.
 							</p>
 							<p className="about-me-text">
-								Some of my recent projects include{" "}
-								<a
-									href="https://www.sarvabazaar.com"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<strong>Sarva Bazaar</strong>
-								</a>{" "}
-								(a vendor management and grocery delivery platform),{" "}
+								Recent personal projects include{" "}
 								<a
 									href="https://queue-up.onrender.com"
 									target="_blank"
@@ -156,7 +149,7 @@ const About = () => {
 
 					<Image
 						src={Shahir}
-						alt="Shahir Ahmed - Full Stack Developer"
+						alt="Shahir Ahmed - Software Engineer"
 						className="about-me-picture"
 						width={300}
 						height={300}
@@ -196,24 +189,16 @@ const About = () => {
 								alt="Python"
 							/>
 							<img
-								src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"
-								alt="C"
-							/>
-							<img
 								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
 								alt="SQL"
 							/>
 							<img
-								src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"
-								alt="Lua"
+								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+								alt="HTML5"
 							/>
 							<img
-								src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white"
-								alt="R"
-							/>
-							<img
-								src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white"
-								alt="MATLAB"
+								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+								alt="CSS3"
 							/>
 						</div>
 					</div>
@@ -235,24 +220,8 @@ const About = () => {
 								alt="Next.js"
 							/>
 							<img
-								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-								alt="HTML5"
-							/>
-							<img
-								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-								alt="CSS3"
-							/>
-							<img
 								src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
 								alt="TailwindCSS"
-							/>
-							<img
-								src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
-								alt="Bootstrap"
-							/>
-							<img
-								src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white"
-								alt="Electron"
 							/>
 						</div>
 					</div>
@@ -266,10 +235,6 @@ const About = () => {
 								alt="Spring Boot"
 							/>
 							<img
-								src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
-								alt="Node.js"
-							/>
-							<img
 								src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
 								alt="Express.js"
 							/>
@@ -278,20 +243,12 @@ const About = () => {
 								alt="Firebase"
 							/>
 							<img
-								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
-								alt="Flask"
-							/>
-							<img
-								src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
-								alt="Socket.IO"
-							/>
-							<img
 								src="https://img.shields.io/badge/RESTful%20APIs-02569B?style=for-the-badge&logo=api&logoColor=white"
 								alt="RESTful APIs"
 							/>
 							<img
-								src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=webrtc&logoColor=white"
-								alt="WebRTC"
+								src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
+								alt="WebSockets"
 							/>
 						</div>
 					</div>
@@ -312,14 +269,6 @@ const About = () => {
 								src="https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
 								alt="Firestore"
 							/>
-							<img
-								src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"
-								alt="SQLite"
-							/>
-							<img
-								src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
-								alt="MySQL"
-							/>
 						</div>
 					</div>
 
@@ -328,8 +277,8 @@ const About = () => {
 						<h3>Cloud & Infrastructure</h3>
 						<div className="tools-icons">
 							<img
-								src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
-								alt="AWS"
+								src="https://img.shields.io/badge/AWS%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"
+								alt="AWS S3"
 							/>
 							<img
 								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
@@ -340,39 +289,8 @@ const About = () => {
 								alt="Vercel"
 							/>
 							<img
-								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
-								alt="Cloudflare"
-							/>
-							<img
-								src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"
-								alt="VirtualBox"
-							/>
-							<img
 								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
 								alt="Linux"
-							/>
-						</div>
-					</div>
-
-					{/* Payment & External APIs */}
-					<div className="tools-category">
-						<h3>Payment & External APIs</h3>
-						<div className="tools-icons">
-							<img
-								src="https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white"
-								alt="Stripe"
-							/>
-							<img
-								src="https://img.shields.io/badge/Spotify%20API-1ED760?style=for-the-badge&logo=spotify&logoColor=white"
-								alt="Spotify API"
-							/>
-							<img
-								src="https://img.shields.io/badge/Google%20Maps-4285F4?style=for-the-badge&logo=google-maps&logoColor=white"
-								alt="Google Maps"
-							/>
-							<img
-								src="https://img.shields.io/badge/farmOS%20API-8BC34A?style=for-the-badge&logo=api&logoColor=white"
-								alt="farmOS API"
 							/>
 						</div>
 					</div>
@@ -385,52 +303,32 @@ const About = () => {
 								src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
 								alt="Cypress"
 							/>
-							<img
-								src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"
-								alt="Jest"
-							/>
-							<img
-								src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"
-								alt="Vitest"
-							/>
-							<img
-								src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"
-								alt="ESLint"
-							/>
-							<img
-								src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=white"
-								alt="Prettier"
-							/>
 						</div>
 					</div>
 
 					{/* Development Tools */}
 					<div className="tools-category">
-						<h3>Development Tools</h3>
+						<h3>Tooling</h3>
 						<div className="tools-icons">
 							<img
 								src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
 								alt="Git"
 							/>
 							<img
-								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-								alt="GitHub"
+								src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"
+								alt="Maven"
 							/>
 							<img
-								src="https://img.shields.io/badge/VS%20Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"
-								alt="VS Code"
+								src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
+								alt="NPM"
 							/>
 							<img
-								src="https://img.shields.io/badge/ANTLR-FF6B35?style=for-the-badge&logo=antlr&logoColor=white"
-								alt="ANTLR"
+								src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white"
+								alt="PNPM"
 							/>
 							<img
-								src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white"
-								alt="Bash"
-							/>
-							<img
-								src="https://img.shields.io/badge/Agile/Scrum-0052CC?style=for-the-badge&logo=jira&logoColor=white"
-								alt="Agile/Scrum"
+								src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"
+								alt="Vite"
 							/>
 						</div>
 					</div>
@@ -491,30 +389,26 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Built and delivered 20+ production-ready Next.js (React,
-								TypeScript) user-facing pages, backed by Firebase services
-								(Auth, Firestore, Cloud Functions) for secure catalog browsing
-								and ordering.
+								Architected a scalable vendor management platform with Next.js
+								and TypeScript, deploying serverless microservices via Firebase
+								to maintain 99.9% uptime for secure authentication and catalog
+								workflows.
 							</li>
 							<li>
-								Designed and owned backend services using Python, including
-								asynchronous workflows and persistence, which minimized
-								operational overheads by 15+ hours weekly.
+								Engineered a retrieval-backed AI pipeline in Python with vector
+								indexing to automate product metadata generation, cutting p95
+								query latency by 50% and reducing per-item setup time by 80%.
 							</li>
 							<li>
-								Developed a vendor AI toolkit that auto-generates product
-								descriptions, pricing, and nutrition info, cutting per-item
-								setup time by 80% and launching 50+ catalogs in under 1 hour.
+								Developed a voice-enabled batch inventory system integrating
+								OpenAI Whisper, allowing vendors to process updates in 90+
+								languages and cutting weekly manual labor by 60%.
 							</li>
 							<li>
-								Implemented a retrieval-backed request processing pipeline with
-								vector indexing and request-level caching, cutting p95 query
-								latency by 50% while reducing invalid outputs.
-							</li>
-							<li>
-								Delivered payment and delivery tracking functionality using
-								Stripe Connect and Google Maps, enabling real-time tracking and
-								reducing chargeback transactions by 85%.
+								Delivered a real-time logistics and payment engine using Stripe
+								Connect and Google Maps with identity verification, reducing
+								chargeback fraud by 85% and enabling transparent delivery
+								tracking.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -567,19 +461,19 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Modernized a PostgreSQL-backed Node.js system, designing
-								concurrent-safe logging workflows to support real-time farm
-								operations and USDA audit requirements.
+								Engineered a concurrent-safe crop tracking system using Node.js
+								and PostgreSQL, leveraging transactional consistency to ensure
+								accurate real-time logging aligned with USDA audit standards.
 							</li>
 							<li>
-								Refactored 22 Vue components, improving form rendering and
-								frontend usability, reducing UI latency by 60% and saving farm
-								staff 12+ hours per week.
+								Revamped the Vue.js frontend with centralized state management,
+								refactoring 22+ components to reduce form rendering latency by
+								60% and replace manual spreadsheet dependencies.
 							</li>
 							<li>
-								Integrated 18+ external APIs and refactored backend-facing
-								components, establishing a centralized form workflow that
-								improved data consistency across farm operations.
+								Integrated 18+ REST APIs and built Cypress end-to-end tests with
+								80%+ coverage, stabilizing the system and automating workflows
+								that saved farm staff 12+ hours per week.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -646,19 +540,15 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Delivered 3 merged PRs to a 100K+ LOC TypeScript codebase,
-								implementing layout algorithms and rendering logic used by 1.4M+
-								weekly users.
+								Delivered 3 merged PRs implementing text wrapping algorithms,
+								auto-scaling data labels, and customizable styling for a library
+								serving 1.4M+ weekly downloads, achieving #25 contributor
+								ranking among 600+ contributors.
 							</li>
 							<li>
-								Improved diagram layout and readability by implementing text
-								wrapping, auto-scaling labels, and customizable styling
-								features.
-							</li>
-							<li>
-								Navigated CI/CD pipelines and multi-stage code reviews to
-								deliver production features consumed across GitHub, VS Code, and
-								Notion.
+								Contributed to a 100K+ line codebase, clearing automated CI/CD
+								checks and multi-stage reviews to ship features now powering
+								diagrams across GitHub, VS Code, Notion, and Microsoft Word.
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -824,14 +714,13 @@ const About = () => {
 									marginTop: 12,
 								}}
 							>
-								• 75+ commits. Delivered innovative charting features, resolved
-								core rendering bugs, and improved overall for a library serving
-								over{" "}
+								• Delivered 3 merged PRs implementing text wrapping, auto-scaling
+								data labels, and customizable styling for a library serving{" "}
 								<a
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 									href="https://npmtrends.com/mermaid"
 								>
-									1.2M+ weekly downloads
+									1.4M+ weekly downloads
 								</a>
 								.
 							</div>
@@ -932,7 +821,7 @@ const About = () => {
 									FarmData2
 								</a>
 								<span style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}>
-									(#2 overall contributor)
+									(Open-source contributor)
 								</span>
 							</div>
 							<div
@@ -943,10 +832,10 @@ const About = () => {
 									marginTop: 12,
 								}}
 							>
-								• 25+ PRs, 14,000+ lines added. Built complex data entry forms,
-								elevated user experience, and modernized backend architecture
-								for real-world farm operations. Promoted from Intern to Software
-								Engineer.
+								• 25+ PRs, 14,000+ lines added. Built concurrent-safe crop
+								tracking, refactored 22+ Vue components, integrated 18+ APIs,
+								and added Cypress tests to streamline real-world farm
+								operations.
 							</div>
 							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
 								<a
@@ -1493,16 +1382,10 @@ const About = () => {
 							<ul
 								style={{ columnCount: 2, marginTop: "0.5rem", marginBottom: 0 }}
 							>
-								<li>Data Structures</li>
-								<li>Analysis of Algorithms</li>
-								<li>Object-Oriented Programming</li>
-								<li>Computer Architecture</li>
-								<li>Operating Systems</li>
-								<li>Database Systems</li>
-								<li>Computer Networks</li>
-								<li>Computability & Complexity</li>
-								<li>Open Source Development</li>
-								<li>Graph Theory</li>
+								<li>Data Structures (Java)</li>
+								<li>Object-Oriented Programming (Java)</li>
+								<li>Computer Networks (Java)</li>
+								<li>Database Systems (SQL)</li>
 							</ul>
 						</div>
 					</VerticalTimelineElement>

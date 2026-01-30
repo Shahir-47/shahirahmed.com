@@ -4,14 +4,14 @@ import About from "@/components/About";
 export const metadata = {
 	title: "About Me",
 	description:
-		"Learn about Shahir Ahmed - Full Stack Developer and Software Engineer at Sarva. Computer Science & Mathematics graduate from Dickinson College. Top contributor to Mermaid.js and FarmData2. Skilled in React, Next.js, Node.js, Vue.js, AWS, Firebase, and more.",
+		"Learn about Shahir Ahmed - Software Engineer at Sarva and Computer Science & Mathematics graduate from Dickinson College. Contributor to Mermaid.js and FarmData2. Skilled in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 	alternates: {
 		canonical: "https://www.shahirahmed.com/about",
 	},
 	openGraph: {
-		title: "About Shahir Ahmed | Full Stack Developer & Software Engineer",
+		title: "About Shahir Ahmed | Software Engineer",
 		description:
-			"Learn about Shahir Ahmed's background, experience, skills, and journey as a Full Stack Developer and Software Engineer.",
+			"Learn about Shahir Ahmed's background, experience, and skills as a Software Engineer and full-stack builder.",
 		url: "https://www.shahirahmed.com/about",
 	},
 };
@@ -24,7 +24,7 @@ const aboutPageJsonLd = {
 	url: "https://www.shahirahmed.com/about",
 	name: "About Shahir Ahmed",
 	description:
-		"Learn about Shahir Ahmed's background, skills, experience, and journey as a Full Stack Developer and Software Engineer.",
+		"Learn about Shahir Ahmed's background, skills, experience, and journey as a Software Engineer.",
 	isPartOf: {
 		"@id": "https://www.shahirahmed.com/#website",
 	},

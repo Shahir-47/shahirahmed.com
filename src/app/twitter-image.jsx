@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Shahir Ahmed - Full Stack Developer & Software Engineer";
+export const alt = "Shahir Ahmed - Software Engineer";
 export const size = {
 	width: 1200,
 	height: 630,
@@ -78,7 +78,7 @@ export default async function Image() {
 							fontWeight: "600",
 						}}
 					>
-						Full Stack Developer
+						Software Engineer
 					</p>
 
 					{/* Description */}
@@ -90,7 +90,7 @@ export default async function Image() {
 							lineHeight: 1.4,
 						}}
 					>
-						React • Next.js • Node.js • TypeScript • AWS
+						Next.js • TypeScript • Spring Boot • Python • PostgreSQL
 					</p>
 
 					{/* CTA */}

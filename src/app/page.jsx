@@ -2,16 +2,16 @@ import HomePage from "@/components/HomePage";
 
 // Page-specific metadata for SEO
 export const metadata = {
-	title: "Shahir Ahmed | Full Stack Developer & Software Engineer",
+	title: "Shahir Ahmed | Software Engineer",
 	description:
-		"Welcome to Shahir Ahmed's portfolio. Full Stack Developer and Software Engineer specializing in React, Next.js, Node.js, Vue.js, AWS, and Firebase. View projects, experience, and get in touch.",
+		"Welcome to Shahir Ahmed's portfolio. Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase. View projects, experience, and get in touch.",
 	alternates: {
 		canonical: "https://www.shahirahmed.com",
 	},
 	openGraph: {
-		title: "Shahir Ahmed | Full Stack Developer & Software Engineer",
+		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Welcome to Shahir Ahmed's portfolio. Full Stack Developer specializing in React, Next.js, Node.js, and cloud technologies.",
+			"Welcome to Shahir Ahmed's portfolio. Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 		url: "https://www.shahirahmed.com",
 	},
 };
@@ -22,9 +22,9 @@ const homePageJsonLd = {
 	"@type": "WebPage",
 	"@id": "https://www.shahirahmed.com/#homepage",
 	url: "https://www.shahirahmed.com",
-	name: "Shahir Ahmed - Full Stack Developer Portfolio",
+	name: "Shahir Ahmed - Software Engineer Portfolio",
 	description:
-		"Personal portfolio of Shahir Ahmed, a Full Stack Developer and Software Engineer with expertise in React, Next.js, Node.js, Vue.js, and cloud technologies.",
+		"Personal portfolio of Shahir Ahmed, a Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 	isPartOf: {
 		"@id": "https://www.shahirahmed.com/#website",
 	},
