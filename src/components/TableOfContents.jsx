@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const sections = [
 	{ id: "about-me", label: "About Me" },
@@ -15,52 +15,79 @@ const sections = [
 	{ id: "connect", label: "Connect" },
 ];
 
+const SCROLL_OFFSET = 120;
+
 const TableOfContents = () => {
-	const [activeId, setActiveId] = useState("");
-	const observerRef = useRef(null);
+	const [activeId, setActiveId] = useState(sections[0].id);
+	const isClickScrolling = useRef(false);
+	const clickTarget = useRef(null);
+
+	const getActiveSection = useCallback(() => {
+		// At the bottom of the page, activate the last section
+		if (
+			window.innerHeight + Math.ceil(window.scrollY) >=
+			document.documentElement.scrollHeight - 50
+		) {
+			return sections[sections.length - 1].id;
+		}
+
+		// Walk through sections and find the last one whose top has passed the offset
+		let current = sections[0].id;
+		for (const { id } of sections) {
+			const el = document.getElementById(id);
+			if (el) {
+				const top = el.getBoundingClientRect().top + window.scrollY;
+				if (window.scrollY >= top - SCROLL_OFFSET) {
+					current = id;
+				}
+			}
+		}
+		return current;
+	}, []);
 
 	useEffect(() => {
-		const handleObserver = (entries) => {
-			const visibleEntries = entries.filter((entry) => entry.isIntersecting);
-			if (visibleEntries.length > 0) {
-				// Pick the one closest to the top of the viewport
-				const closest = visibleEntries.reduce((prev, curr) => {
-					return Math.abs(curr.boundingClientRect.top) <
-						Math.abs(prev.boundingClientRect.top)
-						? curr
-						: prev;
-				});
-				setActiveId(closest.target.id);
-			}
+		const handleScroll = () => {
+			// While smooth-scrolling from a click, lock to the target
+			if (isClickScrolling.current) return;
+			setActiveId(getActiveSection());
 		};
 
-		observerRef.current = new IntersectionObserver(handleObserver, {
-			rootMargin: "-80px 0px -60% 0px",
-			threshold: [0, 0.1],
-		});
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		// Set initial active section
+		handleScroll();
 
-		// Small delay to ensure DOM sections are rendered
-		const timer = setTimeout(() => {
-			sections.forEach(({ id }) => {
-				const el = document.getElementById(id);
-				if (el) observerRef.current.observe(el);
-			});
-		}, 100);
-
-		return () => {
-			clearTimeout(timer);
-			if (observerRef.current) observerRef.current.disconnect();
-		};
-	}, []);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [getActiveSection]);
 
 	const handleClick = (e, id) => {
 		e.preventDefault();
 		const el = document.getElementById(id);
-		if (el) {
-			const yOffset = -80;
-			const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-			window.scrollTo({ top: y, behavior: "smooth" });
-		}
+		if (!el) return;
+
+		// Immediately highlight the clicked section
+		isClickScrolling.current = true;
+		clickTarget.current = id;
+		setActiveId(id);
+
+		const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET + 40;
+		window.scrollTo({ top, behavior: "smooth" });
+
+		// Release the lock after scrolling settles
+		const checkScrollEnd = () => {
+			let lastY = window.scrollY;
+			const poll = setInterval(() => {
+				if (window.scrollY === lastY) {
+					clearInterval(poll);
+					isClickScrolling.current = false;
+					clickTarget.current = null;
+					// Sync to actual position after scroll finishes
+					setActiveId(getActiveSection());
+				}
+				lastY = window.scrollY;
+			}, 80);
+		};
+		// Give the smooth scroll a moment to start
+		setTimeout(checkScrollEnd, 100);
 	};
 
 	return (
