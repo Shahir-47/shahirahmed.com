@@ -58,7 +58,8 @@ This project is built using modern web development tools:
 - **Open Graph & Twitter Cards** for rich social media previews
 - **AI-Friendly Content**:
   - `/llms.txt` - Structured content for AI chatbots
-  - `/.well-known/ai-plugin.json` - AI plugin manifest
+  - `/llms.json` - Machine-readable AI profile and project data
+  - `/.well-known/ai-plugin.json` + `/openapi.yaml` - AI plugin-style discovery manifest
 - **PWA Manifest** (`/manifest.json`) for app-like experience
 - **OpenSearch** (`/opensearch.xml`) for browser search integration
 - **Optimized Images** with Next.js Image component
@@ -78,7 +79,9 @@ This project is built using modern web development tools:
 │   │   └── ai-plugin.json
 │   ├── humans.txt
 │   ├── llms.txt
+│   ├── llms.json
 │   ├── manifest.json
+│   ├── openapi.yaml
 │   └── opensearch.xml
 └── src/
     ├── app/

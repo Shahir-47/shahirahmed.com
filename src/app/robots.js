@@ -1,4 +1,6 @@
 export default function robots() {
+	const baseUrl = "https://www.shahirahmed.com";
+
 	return {
 		rules: [
 			{
@@ -6,37 +8,21 @@ export default function robots() {
 				allow: "/",
 				disallow: [],
 			},
-			// Specific rules for AI crawlers
+			// Explicit allowances for common AI crawlers.
 			{
-				userAgent: "GPTBot",
-				allow: "/",
-			},
-			{
-				userAgent: "ChatGPT-User",
-				allow: "/",
-			},
-			{
-				userAgent: "Claude-Web",
-				allow: "/",
-			},
-			{
-				userAgent: "Anthropic-AI",
-				allow: "/",
-			},
-			{
-				userAgent: "Google-Extended",
-				allow: "/",
-			},
-			{
-				userAgent: "Bingbot",
-				allow: "/",
-			},
-			{
-				userAgent: "CCBot",
+				userAgent: [
+					"GPTBot",
+					"ChatGPT-User",
+					"Google-Extended",
+					"anthropic-ai",
+					"ClaudeBot",
+					"CCBot",
+					"PerplexityBot",
+				],
 				allow: "/",
 			},
 		],
-		sitemap: "https://www.shahirahmed.com/sitemap.xml",
-		host: "https://www.shahirahmed.com",
+		sitemap: `${baseUrl}/sitemap.xml`,
+		host: baseUrl,
 	};
 }

@@ -1,18 +1,30 @@
 import About from "@/components/About";
 
+const siteUrl = "https://www.shahirahmed.com";
+const ogImageUrl = "/opengraph-image";
+
 // About page SEO metadata
 export const metadata = {
 	title: "About Me",
 	description:
-		"Learn about Shahir Ahmed - Software Engineer at Sarva and Computer Science & Mathematics graduate from Dickinson College. Contributor to Mermaid.js and FarmData2. Skilled in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+		"Learn about Shahir Ahmed's experience at Sarva, FarmData2, Mermaid.js, and hackathons including HackHarvard and PennApps, plus tools and certifications.",
 	alternates: {
-		canonical: "https://www.shahirahmed.com/about",
+		canonical: `${siteUrl}/about`,
 	},
 	openGraph: {
+		type: "profile",
 		title: "About Shahir Ahmed | Software Engineer",
 		description:
-			"Learn about Shahir Ahmed's background, experience, and skills as a Software Engineer and full-stack builder.",
-		url: "https://www.shahirahmed.com/about",
+			"Background, work experience, open source contributions, hackathons, education, and certifications for Shahir Ahmed.",
+		url: `${siteUrl}/about`,
+		images: [ogImageUrl],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "About Shahir Ahmed | Software Engineer",
+		description:
+			"Work experience, OSS contributions, hackathons, education, and certifications.",
+		images: [ogImageUrl],
 	},
 };
 
@@ -20,16 +32,16 @@ export const metadata = {
 const aboutPageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "AboutPage",
-	"@id": "https://www.shahirahmed.com/about#aboutpage",
-	url: "https://www.shahirahmed.com/about",
+	"@id": `${siteUrl}/about#aboutpage`,
+	url: `${siteUrl}/about`,
 	name: "About Shahir Ahmed",
 	description:
-		"Learn about Shahir Ahmed's background, skills, experience, and journey as a Software Engineer.",
+		"About page covering Shahir Ahmed's professional background, technical skills, open source contributions, hackathon work, education, and certifications.",
 	isPartOf: {
-		"@id": "https://www.shahirahmed.com/#website",
+		"@id": `${siteUrl}/#website`,
 	},
 	mainEntity: {
-		"@id": "https://www.shahirahmed.com/#person",
+		"@id": `${siteUrl}/#person`,
 	},
 	breadcrumb: {
 		"@type": "BreadcrumbList",
@@ -38,13 +50,13 @@ const aboutPageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://www.shahirahmed.com",
+				item: siteUrl,
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
 				name: "About",
-				item: "https://www.shahirahmed.com/about",
+				item: `${siteUrl}/about`,
 			},
 		],
 	},

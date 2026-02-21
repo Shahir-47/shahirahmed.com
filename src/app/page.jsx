@@ -1,18 +1,30 @@
 import HomePage from "@/components/HomePage";
 
+const siteUrl = "https://www.shahirahmed.com";
+const ogImageUrl = "/opengraph-image";
+
 // Page-specific metadata for SEO
 export const metadata = {
-	title: "Shahir Ahmed | Software Engineer",
+	title: "Software Engineer Portfolio",
 	description:
-		"Welcome to Shahir Ahmed's portfolio. Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase. View projects, experience, and get in touch.",
+		"Portfolio of Shahir Ahmed, a Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 	alternates: {
-		canonical: "https://www.shahirahmed.com",
+		canonical: siteUrl,
 	},
 	openGraph: {
+		type: "website",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Welcome to Shahir Ahmed's portfolio. Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
-		url: "https://www.shahirahmed.com",
+			"Software Engineer at Sarva building AI-powered products with Next.js, TypeScript, Python, and Firebase.",
+		url: siteUrl,
+		images: [ogImageUrl],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Shahir Ahmed | Software Engineer",
+		description:
+			"Explore projects, experience, open source work, and contact info for Shahir Ahmed.",
+		images: [ogImageUrl],
 	},
 };
 
@@ -20,16 +32,16 @@ export const metadata = {
 const homePageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "WebPage",
-	"@id": "https://www.shahirahmed.com/#homepage",
-	url: "https://www.shahirahmed.com",
+	"@id": `${siteUrl}/#homepage`,
+	url: siteUrl,
 	name: "Shahir Ahmed - Software Engineer Portfolio",
 	description:
-		"Personal portfolio of Shahir Ahmed, a Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+		"Home page of Shahir Ahmed's portfolio, highlighting AI-assisted full-stack projects, work experience, and open source contributions.",
 	isPartOf: {
-		"@id": "https://www.shahirahmed.com/#website",
+		"@id": `${siteUrl}/#website`,
 	},
 	about: {
-		"@id": "https://www.shahirahmed.com/#person",
+		"@id": `${siteUrl}/#person`,
 	},
 	breadcrumb: {
 		"@type": "BreadcrumbList",
@@ -38,7 +50,7 @@ const homePageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://www.shahirahmed.com",
+				item: siteUrl,
 			},
 		],
 	},

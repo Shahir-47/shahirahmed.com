@@ -1,18 +1,30 @@
 import Projects from "@/components/Projects";
 
+const siteUrl = "https://www.shahirahmed.com";
+const ogImageUrl = "/opengraph-image";
+
 // Projects page SEO metadata
 export const metadata = {
 	title: "Projects",
 	description:
-		"Explore Shahir Ahmed's portfolio of software projects. Features Sarva (vendor management platform), Queue Up (music matching), CoSign (task verification), Albatross (AI navigation), and open source contributions to Mermaid.js and FarmData2.",
+		"Explore projects by Shahir Ahmed across professional, open source, hackathon, and personal work including Sarva, FarmData2, Queue Up, CoSign, Albatross, and SweetFriend.",
 	alternates: {
-		canonical: "https://www.shahirahmed.com/projects",
+		canonical: `${siteUrl}/projects`,
 	},
 	openGraph: {
+		type: "website",
 		title: "Projects | Shahir Ahmed - Software Engineer",
 		description:
-			"Explore Shahir Ahmed's portfolio of projects including Sarva, Queue Up, CoSign, Albatross, and open source contributions.",
-		url: "https://www.shahirahmed.com/projects",
+			"Professional and personal software projects including AI-assisted products, hackathon builds, and open source contributions.",
+		url: `${siteUrl}/projects`,
+		images: [ogImageUrl],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Projects | Shahir Ahmed",
+		description:
+			"Browse Sarva, FarmData2, Queue Up, CoSign, Albatross, SweetFriend, and more.",
+		images: [ogImageUrl],
 	},
 };
 
@@ -20,16 +32,16 @@ export const metadata = {
 const projectsPageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "CollectionPage",
-	"@id": "https://www.shahirahmed.com/projects#projectspage",
-	url: "https://www.shahirahmed.com/projects",
+	"@id": `${siteUrl}/projects#projectspage`,
+	url: `${siteUrl}/projects`,
 	name: "Projects by Shahir Ahmed",
 	description:
-		"A collection of software development projects by Shahir Ahmed including web applications, open source contributions, and hackathon projects.",
+		"A collection of software projects by Shahir Ahmed across professional work, open source contributions, hackathons, and personal projects.",
 	isPartOf: {
-		"@id": "https://www.shahirahmed.com/#website",
+		"@id": `${siteUrl}/#website`,
 	},
 	about: {
-		"@id": "https://www.shahirahmed.com/#person",
+		"@id": `${siteUrl}/#person`,
 	},
 	breadcrumb: {
 		"@type": "BreadcrumbList",
@@ -38,13 +50,13 @@ const projectsPageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://www.shahirahmed.com",
+				item: siteUrl,
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
 				name: "Projects",
-				item: "https://www.shahirahmed.com/projects",
+				item: `${siteUrl}/projects`,
 			},
 		],
 	},
@@ -56,66 +68,95 @@ const projectsPageJsonLd = {
 				position: 1,
 				name: "Sarva",
 				description:
-					"Vendor management platform and marketplace for grocery supply chains with serverless Firebase workflows, AI metadata generation, voice inventory, Stripe Connect, and Google Maps tracking.",
+					"Vendor management and marketplace platform for South Asian grocery supply chains with Python RAG search, voice inventory via OpenAI Whisper, GPT assistants, and Stripe Connect.",
 				url: "https://www.sarvabazaar.com/",
 				programmingLanguage: ["TypeScript", "JavaScript", "Python"],
 				runtimePlatform: "Next.js, Firebase",
 				author: {
-					"@id": "https://www.shahirahmed.com/#person",
+					"@id": `${siteUrl}/#person`,
 				},
 			},
 			{
 				"@type": "SoftwareSourceCode",
 				position: 2,
-				name: "Queue Up",
+				name: "FarmData2",
 				description:
-					"Music-based social platform that matches users with weighted Spotify similarity and real-time chat.",
-				url: "https://queue-up.onrender.com",
-				codeRepository: "https://github.com/Shahir-47/Queue-Up",
-				programmingLanguage: ["Java", "JavaScript"],
-				runtimePlatform: "Spring Boot, React, WebSockets",
+					"NSF-funded open-source farm management platform with Vue.js refactors, Node.js APIs, PostgreSQL transactions, and Cypress test coverage improvements.",
+				codeRepository: "https://github.com/FarmData2/FarmData2",
+				programmingLanguage: ["JavaScript", "SQL"],
+				runtimePlatform: "Node.js, Vue.js, PostgreSQL",
 				author: {
-					"@id": "https://www.shahirahmed.com/#person",
+					"@id": `${siteUrl}/#person`,
 				},
 			},
 			{
 				"@type": "SoftwareSourceCode",
 				position: 3,
-				name: "CoSign",
+				name: "Open Source Contributions",
 				description:
-					"Task management platform with external verification, real-time WebSockets, and encrypted data storage.",
-				url: "https://cosign-nwwl.onrender.com",
-				codeRepository: "https://github.com/Shahir-47/CoSign",
-				programmingLanguage: ["Java", "TypeScript", "JavaScript"],
-				runtimePlatform: "Spring Boot, React, WebSockets",
+					"Contributions to Mermaid.js and FarmData2 including merged PRs for diagram rendering and large-scale open-source maintenance work.",
+				codeRepository: "https://github.com/Shahir-47/open-source-contributions",
+				programmingLanguage: ["JavaScript", "TypeScript"],
+				runtimePlatform: "GitHub",
 				author: {
-					"@id": "https://www.shahirahmed.com/#person",
+					"@id": `${siteUrl}/#person`,
 				},
 			},
 			{
 				"@type": "SoftwareSourceCode",
 				position: 4,
-				name: "Albatross",
+				name: "Queue Up",
 				description:
-					"AI-powered navigation app that reroutes users based on safety levels, built at HackHarvard 2024.",
-				url: "https://albatross-hack.netlify.app/",
-				programmingLanguage: ["JavaScript"],
-				runtimePlatform: "Vue.js",
+					"Spotify-powered social app with user matching, real-time WebSocket chat, JWT auth, and PostgreSQL.",
+				url: "https://queue-up.onrender.com",
+				codeRepository: "https://github.com/Shahir-47/Queue-Up",
+				programmingLanguage: ["Java", "JavaScript"],
+				runtimePlatform: "Spring Boot, React, WebSockets",
 				author: {
-					"@id": "https://www.shahirahmed.com/#person",
+					"@id": `${siteUrl}/#person`,
 				},
 			},
 			{
 				"@type": "SoftwareSourceCode",
 				position: 5,
-				name: "FarmData2",
+				name: "CoSign",
 				description:
-					"Open-source farm management platform with crop tracking, PostgreSQL logging, farmOS API integration, and Vue.js components.",
-				codeRepository: "https://github.com/FarmData2/FarmData2",
-				programmingLanguage: ["JavaScript", "SQL"],
-				runtimePlatform: "Node.js, Vue.js",
+					"Task accountability platform with verification workflows, recurring tasks, encrypted stakes, and WebSocket updates.",
+				url: "https://cosign-nwwl.onrender.com",
+				codeRepository: "https://github.com/Shahir-47/CoSign",
+				programmingLanguage: ["Java", "TypeScript", "JavaScript"],
+				runtimePlatform: "Spring Boot, React, WebSockets",
 				author: {
-					"@id": "https://www.shahirahmed.com/#person",
+					"@id": `${siteUrl}/#person`,
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 6,
+				name: "Albatross",
+				description:
+					"AI-powered safe navigation app built at HackHarvard 2024 using Vue.js, Cloudflare Workers, Databricks, and crime-zone scoring.",
+				url: "https://albatross-hack.netlify.app/",
+				codeRepository:
+					"https://github.com/orgs/HackHarvard2024-Team/repositories",
+				programmingLanguage: ["JavaScript", "Python"],
+				runtimePlatform: "Vue.js, Cloudflare Workers",
+				author: {
+					"@id": `${siteUrl}/#person`,
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 7,
+				name: "SweetFriend",
+				description:
+					"Diabetes management app built at PennApps 2024 with Dexcom integration, meal recognition, Twilio alerts, and Flask/MongoDB backend services.",
+				url: "https://sweet-friend.vercel.app/app/dashboard",
+				codeRepository: "https://github.com/dmicz/SweetFriend",
+				programmingLanguage: ["JavaScript", "Python"],
+				runtimePlatform: "React, Flask, MongoDB",
+				author: {
+					"@id": `${siteUrl}/#person`,
 				},
 			},
 		],

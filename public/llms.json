@@ -1,0 +1,165 @@
+{
+	"schema_version": "1.0",
+	"last_updated": "2026-02-21",
+	"canonical_url": "https://www.shahirahmed.com",
+	"profile": {
+		"name": "Shahir Ahmed",
+		"title": "Software Engineer",
+		"location": "United States",
+		"summary": "Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+		"website": "https://www.shahirahmed.com",
+		"email": "shahir@shahirahmed.com",
+		"social": {
+			"github": "https://github.com/Shahir-47",
+			"linkedin": "https://www.linkedin.com/in/shahir47/",
+			"devpost": "https://devpost.com/Shahir-47",
+			"instagram": "https://instagram.com/shahirahmed._"
+		},
+		"resume_url": "https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view"
+	},
+	"experience": [
+		{
+			"role": "Software Engineer",
+			"organization": "Sarva",
+			"period": "2025-05 to present",
+			"website": "https://www.sarvabazaar.com/",
+			"highlights": [
+				"Cut p95 latency by 50% with vector similarity search in a Python RAG pipeline",
+				"Reduced vendor inventory time by 60% using voice-based inventory with OpenAI Whisper",
+				"Built 4 GPT assistants for order tracking, product search, and inventory workflows",
+				"Implemented Stripe Connect identity verification and Firebase AppCheck with role-based auth"
+			],
+			"skills": [
+				"Next.js",
+				"TypeScript",
+				"Python",
+				"Firebase",
+				"RAG",
+				"OpenAI Whisper",
+				"Stripe Connect"
+			]
+		},
+		{
+			"role": "Software Engineer Intern",
+			"organization": "FarmData2",
+			"period": "2024-05 to 2025-05",
+			"website": "https://github.com/FarmData2/FarmData2",
+			"highlights": [
+				"Refactored 22+ Vue.js components to Vuex and reduced form latency by 60%",
+				"Built 18+ Node.js APIs with PostgreSQL transaction rollbacks",
+				"Wrote 30+ Cypress tests"
+			],
+			"skills": ["Node.js", "Vue.js", "PostgreSQL", "Cypress"]
+		},
+		{
+			"role": "Open Source Contributor",
+			"organization": "Mermaid.js",
+			"period": "2025-01 to 2025-04",
+			"website": "https://github.com/mermaid-js/mermaid",
+			"highlights": [
+				"Ranked top 25 among 600+ contributors",
+				"Shipped merged PRs for text wrapping, auto-scaling labels, and style customization"
+			],
+			"skills": ["TypeScript", "Open Source"]
+		}
+	],
+	"projects": [
+		{
+			"name": "Sarva",
+			"category": "Professional",
+			"url": "https://www.sarvabazaar.com/",
+			"description": "Vendor management marketplace with RAG search, voice inventory, GPT assistants, and payments."
+		},
+		{
+			"name": "FarmData2",
+			"category": "Professional/Open Source",
+			"url": "https://github.com/FarmData2/FarmData2",
+			"description": "NSF-funded farm platform with Vue.js, Node.js APIs, PostgreSQL, and Cypress testing."
+		},
+		{
+			"name": "Queue Up",
+			"category": "Personal",
+			"url": "https://queue-up.onrender.com",
+			"github": "https://github.com/Shahir-47/Queue-Up",
+			"description": "Spotify-based social matching app with Spring Boot, React, JWT auth, and WebSockets."
+		},
+		{
+			"name": "CoSign",
+			"category": "Personal",
+			"url": "https://cosign-nwwl.onrender.com",
+			"github": "https://github.com/Shahir-47/CoSign",
+			"description": "Task accountability platform with verifier workflows, recurring tasks, encryption, and WebSockets."
+		},
+		{
+			"name": "Albatross",
+			"category": "Hackathon",
+			"url": "https://albatross-hack.netlify.app/",
+			"devpost": "https://devpost.com/software/albatross",
+			"description": "AI-powered safe navigation app built at HackHarvard 2024."
+		},
+		{
+			"name": "SweetFriend",
+			"category": "Hackathon",
+			"url": "https://sweet-friend.vercel.app/app/dashboard",
+			"github": "https://github.com/dmicz/SweetFriend",
+			"devpost": "https://devpost.com/software/sweetfriend",
+			"description": "Diabetes management app with Dexcom integration, meal recognition, Twilio alerts, and Flask/MongoDB backend."
+		},
+		{
+			"name": "Prospectus",
+			"category": "Hackathon",
+			"github": "https://github.com/HoyaHacks2024-Team",
+			"devpost": "https://devpost.com/software/prospectus",
+			"description": "AI-powered college admissions assistant built with React, Django, Azure OpenAI, and vector embeddings."
+		}
+	],
+	"open_source": {
+		"portfolio": "https://github.com/Shahir-47/open-source-contributions",
+		"mermaid_prs": "https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed",
+		"farmdata2_prs": "https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+	},
+	"education": {
+		"institution": "Dickinson College",
+		"degree": "B.S. Computer Science and Mathematics",
+		"period": "2021-08 to 2025-05",
+		"gpa": "3.52/4.00"
+	},
+	"certifications": [
+		{
+			"name": "CS50x: Introduction to Computer Science",
+			"issuer": "HarvardX",
+			"url": "https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
+		},
+		{
+			"name": "MATLAB Onramp",
+			"issuer": "MathWorks",
+			"url": "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=1945277d-7a1c-4899-981f-d28b4a0e68a7&"
+		}
+	],
+	"skills": {
+		"programming": ["Java", "TypeScript", "JavaScript", "Python", "SQL", "C"],
+		"frontend": ["React", "Next.js", "Vue.js", "Tailwind CSS"],
+		"backend_data": [
+			"Spring Boot",
+			"Node.js",
+			"Express",
+			"REST APIs",
+			"WebSockets",
+			"PostgreSQL",
+			"MongoDB",
+			"Firebase"
+		],
+		"ai_ml": ["RAG", "Vector Search", "OpenAI Whisper", "LLM Structured Outputs"],
+		"cloud_tooling": [
+			"Stripe Connect",
+			"Cloudflare Workers",
+			"Databricks",
+			"Cypress",
+			"Docker",
+			"AWS S3",
+			"Vercel",
+			"Git",
+			"Linux"
+		]
+	}
+}

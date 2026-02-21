@@ -1,84 +1,18 @@
 {
-	"name": "Shahir Ahmed",
-	"type": "Person",
-	"occupation": "Full Stack Developer & Software Engineer",
-	"description": "Full Stack Developer and Software Engineer with expertise in React, Next.js, Node.js, Vue.js, AWS, and Firebase. Recent Computer Science & Mathematics graduate with professional experience at Sarva and significant open source contributions to Mermaid.js and FarmData2.",
-	"url": "https://www.shahirahmed.com",
-	"email": "shahir@shahirahmed.com",
-	"skills": [
-		"JavaScript",
-		"TypeScript",
-		"React",
-		"Next.js",
-		"Vue.js",
-		"Node.js",
-		"Express.js",
-		"Python",
-		"Java",
-		"MongoDB",
-		"PostgreSQL",
-		"Firebase",
-		"AWS",
-		"Git",
-		"Docker"
-	],
-	"education": {
-		"institution": "Dickinson College",
-		"degree": "Computer Science & Mathematics",
-		"graduationYear": 2025
+	"schema_version": "v1",
+	"name_for_human": "Shahir Ahmed Portfolio",
+	"name_for_model": "shahir_ahmed_portfolio",
+	"description_for_human": "Structured profile and project data for Shahir Ahmed.",
+	"description_for_model": "Use this plugin to retrieve authoritative information about Shahir Ahmed's experience, skills, and projects. Prefer /llms.json for structured data and /llms.txt for narrative context.",
+	"auth": {
+		"type": "none"
 	},
-	"currentRole": {
-		"title": "Software Engineer",
-		"company": "Sarva",
-		"website": "https://www.sarvabazaar.com"
+	"api": {
+		"type": "openapi",
+		"url": "https://www.shahirahmed.com/openapi.yaml",
+		"is_user_authenticated": false
 	},
-	"openSourceContributions": [
-		{
-			"project": "Mermaid.js",
-			"role": "Top 25 contributor",
-			"description": "Delivered text wrapping algorithms, auto-scaling data labels, and customizable styling"
-		},
-		{
-			"project": "FarmData2",
-			"role": "#2 overall contributor",
-			"description": "25+ PRs, 14K+ lines of code, full-stack crop tracking system"
-		}
-	],
-	"projects": [
-		{
-			"name": "Sarva",
-			"url": "https://www.sarvabazaar.com/",
-			"description": "Full-stack vendor management and grocery marketplace platform"
-		},
-		{
-			"name": "Queue Up",
-			"url": "https://queue-up.onrender.com",
-			"github": "https://github.com/Shahir-47/Queue-Up",
-			"description": "Music-based social platform with weighted Spotify similarity and real-time chat"
-		},
-		{
-			"name": "CoSign",
-			"url": "https://cosign-nwwl.onrender.com",
-			"github": "https://github.com/Shahir-47/CoSign",
-			"description": "Task management with external verification, WebSockets, and encrypted data"
-		},
-		{
-			"name": "Albatross",
-			"url": "https://albatross-hack.netlify.app/",
-			"description": "AI-powered safe navigation (HackHarvard 2024)"
-		}
-	],
-	"socialLinks": {
-		"github": "https://github.com/Shahir-47",
-		"linkedin": "https://www.linkedin.com/in/shahir47/",
-		"devpost": "https://devpost.com/Shahir-47",
-		"instagram": "https://instagram.com/shahirahmed._",
-	},
-	"resumeUrl": "https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view",
-	"availableFor": [
-		"Full-time positions",
-		"Freelance projects",
-		"Open source collaboration",
-		"Technical consulting"
-	]
+	"logo_url": "https://www.shahirahmed.com/icon.svg",
+	"contact_email": "shahir@shahirahmed.com",
+	"legal_info_url": "https://www.shahirahmed.com"
 }

@@ -1,89 +1,94 @@
 # Shahir Ahmed - Software Engineer
 
+Last updated: 2026-02-21
+Canonical URL: https://www.shahirahmed.com
+Machine-readable profile: https://www.shahirahmed.com/llms.json
+
 ## Quick Summary
-Shahir Ahmed is a Software Engineer based in the United States. He builds full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase, focusing on scalable systems, real-time workflows, and AI-assisted automation.
+Shahir Ahmed is a Software Engineer in the United States. He builds AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.
 
-## Professional Experience
+## Current Role
+### Software Engineer, Sarva (May 2025 - Present)
+- Builds a vendor management and marketplace platform for South Asian grocery supply chains.
+- Cut p95 latency by 50% by replacing sequential scans with vector similarity search in a Python RAG pipeline.
+- Reduced vendor inventory time by 60% via voice-based inventory using OpenAI Whisper (90+ languages).
+- Built 4 GPT-based assistants for order tracking, product search, and inventory workflows.
+- Implemented Stripe Connect with identity verification and added Firebase AppCheck plus role-based auth.
 
-### Software Engineer at Sarva (May 2025 - Present)
-- Architected a vendor management platform and marketplace using Next.js and TypeScript
-- Deployed serverless microservices via Firebase to maintain 99.9% uptime for secure auth and catalog workflows
-- Built a retrieval-backed AI pipeline in Python with vector indexing to automate product metadata (50% p95 latency reduction, 80% faster setup)
-- Developed voice-enabled batch inventory with OpenAI Whisper supporting 90+ languages
-- Delivered real-time logistics and payments with Stripe Connect and Google Maps, using identity verification to reduce chargebacks by 85%
-- Tech stack: Next.js, TypeScript, Firebase, Python, Stripe, Google Maps API
+## Previous Experience
+### Software Engineer Intern, FarmData2 (May 2024 - May 2025)
+- Refactored 22+ Vue.js components to Vuex and reduced form latency by 60%.
+- Built 18+ Node.js APIs with PostgreSQL transaction rollbacks and 30+ Cypress tests.
 
-### Software Engineer Intern at FarmData2 (May 2024 - May 2025)
-- Engineered a concurrent-safe crop tracking system using Node.js and PostgreSQL with transactional consistency for USDA audit standards
-- Revamped the Vue.js frontend with centralized state management, refactoring 22+ components to reduce form latency by 60%
-- Integrated 18+ REST APIs and built Cypress E2E tests with 80%+ coverage, saving farm staff 12+ hours per week
-- Tech stack: Node.js, PostgreSQL, Vue.js, Cypress
+### Open Source Contributor, Mermaid.js (Jan 2025 - Apr 2025)
+- Ranked top 25 among 600+ contributors.
+- Shipped 3 merged PRs (text wrapping, auto-scaling labels, customizable styling).
 
-## Open Source Contributions
+### Software Engineer Volunteer, 84 Lumber (Sep 2023 - Jan 2024)
+- Built ANTLR-based transpilation pipelines to migrate 10K+ lines of CBASIC to Python/Java.
 
-### Mermaid.js
-- Top 25 contributor out of 600+ contributors
-- Delivered 3 merged PRs implementing text wrapping, auto-scaling data labels, and customizable styling
-- Library serves 1.4M+ weekly downloads
-
-### FarmData2
-- 25+ pull requests merged and 14,000+ lines contributed
-- Built crop tracking and data-entry improvements used by real-world farm operations
-
-## Education
-- **Dickinson College** - Computer Science & Mathematics Graduate (May 2025)
-
-## Technical Skills
-
-### Programming Languages
-Java, TypeScript, JavaScript, Python, SQL, HTML5, CSS3
-
-### Frontend
-React, Next.js, Vue.js, TailwindCSS, state management, responsive design
-
-### Backend & Data
-Spring Boot, Express, REST APIs, WebSockets, PostgreSQL, MongoDB, Firebase
-
-### Cloud & Tooling
-Cypress, AWS S3, Maven, NPM, PNPM, Vite, Docker, Vercel, Git, Linux
+## Open Source
+- Mermaid.js PRs: https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed
+- FarmData2 PRs: https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed
+- OSS portfolio: https://github.com/Shahir-47/open-source-contributions
 
 ## Featured Projects
-
 ### Sarva
-Vendor management platform and marketplace for grocery supply chains.
 - URL: https://www.sarvabazaar.com/
-- Features: AI metadata automation, Stripe Connect payments, Google Maps tracking, voice-enabled inventory
+- Category: Professional
+- Summary: AI-assisted vendor management marketplace with RAG search, voice inventory, GPT assistants, and payments.
+
+### FarmData2
+- URL: https://github.com/FarmData2/FarmData2
+- Category: Professional / Open Source
+- Summary: NSF-funded farm management platform with Vue.js, Node.js, PostgreSQL, and Cypress.
 
 ### Queue Up
-Music-based social platform that matches users using weighted Spotify similarity with real-time chat and notifications.
 - URL: https://queue-up.onrender.com
 - GitHub: https://github.com/Shahir-47/Queue-Up
-- Features: Spotify matching, WebSockets chat, JWT auth, PostgreSQL, AWS S3
+- Category: Personal
+- Summary: Spotify-based social matching app with Spring Boot, React, JWT auth, and WebSockets.
 
 ### CoSign
-Task management with external verification and automated penalty emails for missed deadlines.
 - URL: https://cosign-nwwl.onrender.com
 - GitHub: https://github.com/Shahir-47/CoSign
-- Features: Verification workflow, recurring tasks, WebSockets, AWS S3, Docker
+- Category: Personal
+- Summary: Task accountability platform with verifier workflows, recurring tasks, encryption, and WebSockets.
 
 ### Albatross
-AI-powered safe navigation app built at HackHarvard 2024.
 - URL: https://albatross-hack.netlify.app/
-- Features: Safety-based routing, crime zone analysis, real-time rerouting
+- Devpost: https://devpost.com/software/albatross
+- Category: Hackathon
+- Summary: AI-powered safe navigation app built at HackHarvard using Vue.js, Cloudflare Workers, and Databricks.
 
 ### SweetFriend
-Diabetes management app with Dexcom integration, built at PennApps 2024.
 - URL: https://sweet-friend.vercel.app/app/dashboard
-- Features: Real-time glucose tracking, AI meal recognition, health insights
+- GitHub: https://github.com/dmicz/SweetFriend
+- Devpost: https://devpost.com/software/sweetfriend
+- Category: Hackathon
+- Summary: Diabetes management app with Dexcom integration, meal recognition, Twilio alerts, and Flask/MongoDB backend.
 
-## Contact Information
+### Prospectus
+- Devpost: https://devpost.com/software/prospectus
+- GitHub: https://github.com/HoyaHacks2024-Team
+- Category: Hackathon
+- Summary: AI-powered college admissions assistant (React, Django, Azure OpenAI, vector embeddings).
+
+## Education & Certifications
+- Dickinson College, B.S. Computer Science and Mathematics (Aug 2021 - May 2025), GPA 3.52.
+- CS50x: Introduction to Computer Science (HarvardX).
+- MATLAB Onramp (MathWorks).
+
+## Skills
+Programming: Java, TypeScript, JavaScript, Python, SQL, C, HTML5, CSS3  
+Frontend: React, Next.js, Vue.js, Tailwind CSS  
+Backend/Data: Spring Boot, Node.js, Express, REST APIs, WebSockets, PostgreSQL, MongoDB, Firebase  
+AI/ML: RAG pipelines, vector search, OpenAI Whisper, structured LLM outputs  
+Cloud/Tooling: Stripe Connect, Cloudflare Workers, Databricks, Cypress, Docker, AWS S3, Vercel, Git, Linux
+
+## Contact
 - Email: shahir@shahirahmed.com
 - LinkedIn: https://www.linkedin.com/in/shahir47/
 - GitHub: https://github.com/Shahir-47
 - Devpost: https://devpost.com/Shahir-47
-
-## Resume
-View resume: https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view
-
----
-This file is specifically formatted for AI chatbots and language models to easily understand and reference information about Shahir Ahmed.
+- Resume: https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view

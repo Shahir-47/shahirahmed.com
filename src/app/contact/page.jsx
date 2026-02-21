@@ -1,18 +1,30 @@
 import ContactMe from "@/components/ContactMe";
 
+const siteUrl = "https://www.shahirahmed.com";
+const ogImageUrl = "/opengraph-image";
+
 // Contact page SEO metadata
 export const metadata = {
 	title: "Contact Me",
 	description:
-		"Get in touch with Shahir Ahmed. Software Engineer available for collaborations and job opportunities. Connect via email, LinkedIn, GitHub, or the contact form.",
+		"Get in touch with Shahir Ahmed for software engineering roles, collaborations, consulting, or open source projects.",
 	alternates: {
-		canonical: "https://www.shahirahmed.com/contact",
+		canonical: `${siteUrl}/contact`,
 	},
 	openGraph: {
+		type: "website",
 		title: "Contact Shahir Ahmed | Software Engineer",
 		description:
-			"Get in touch with Shahir Ahmed for collaborations and job opportunities.",
-		url: "https://www.shahirahmed.com/contact",
+			"Contact Shahir Ahmed for software engineering collaborations, opportunities, and project discussions.",
+		url: `${siteUrl}/contact`,
+		images: [ogImageUrl],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Contact Shahir Ahmed",
+		description:
+			"Reach out for roles, collaborations, consulting, and open source work.",
+		images: [ogImageUrl],
 	},
 };
 
@@ -20,17 +32,17 @@ export const metadata = {
 const contactPageJsonLd = {
 	"@context": "https://schema.org",
 	"@type": "ContactPage",
-	"@id": "https://www.shahirahmed.com/contact#contactpage",
-	url: "https://www.shahirahmed.com/contact",
+	"@id": `${siteUrl}/contact#contactpage`,
+	url: `${siteUrl}/contact`,
 	name: "Contact Shahir Ahmed",
 	description:
-		"Get in touch with Shahir Ahmed for collaborations or job opportunities.",
+		"Contact page for reaching Shahir Ahmed about software engineering roles and collaborations.",
 	isPartOf: {
-		"@id": "https://www.shahirahmed.com/#website",
+		"@id": `${siteUrl}/#website`,
 	},
 	mainEntity: {
 		"@type": "Person",
-		"@id": "https://www.shahirahmed.com/#person",
+		"@id": `${siteUrl}/#person`,
 		contactPoint: {
 			"@type": "ContactPoint",
 			email: "shahir@shahirahmed.com",
@@ -45,13 +57,13 @@ const contactPageJsonLd = {
 				"@type": "ListItem",
 				position: 1,
 				name: "Home",
-				item: "https://www.shahirahmed.com",
+				item: siteUrl,
 			},
 			{
 				"@type": "ListItem",
 				position: 2,
 				name: "Contact",
-				item: "https://www.shahirahmed.com/contact",
+				item: `${siteUrl}/contact`,
 			},
 		],
 	},

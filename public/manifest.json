@@ -1,7 +1,7 @@
 {
 	"name": "Shahir Ahmed - Software Engineer",
 	"short_name": "Shahir Ahmed",
-	"description": "Personal portfolio of Shahir Ahmed, a Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+	"description": "Personal portfolio of Shahir Ahmed, a Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#000000",

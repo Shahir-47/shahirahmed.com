@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Shahir Ahmed Portfolio Data API
+  version: 1.0.0
+  description: >
+    Read-only endpoints for structured portfolio and profile information
+    used by AI assistants and search tooling.
+servers:
+  - url: https://www.shahirahmed.com
+paths:
+  /llms.json:
+    get:
+      operationId: getPortfolioStructuredData
+      summary: Get structured profile and project data
+      responses:
+        "200":
+          description: Structured portfolio data.
+          content:
+            application/json:
+              schema:
+                type: object
+  /llms.txt:
+    get:
+      operationId: getPortfolioNarrativeData
+      summary: Get narrative profile and project data
+      responses:
+        "200":
+          description: Human-readable portfolio content for language models.
+          content:
+            text/plain:
+              schema:
+                type: string

@@ -6,15 +6,19 @@ import Footer from "@/components/Footer";
 import "@/css/normalize.css";
 import "@/css/style.css";
 
+const siteUrl = "https://www.shahirahmed.com";
+const ogImageUrl = "/opengraph-image";
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
 // SEO: Site-wide metadata defaults
 export const metadata = {
-	metadataBase: new URL("https://www.shahirahmed.com"),
+	metadataBase: new URL(siteUrl),
 	title: {
 		default: "Shahir Ahmed | Software Engineer",
 		template: "%s | Shahir Ahmed",
 	},
 	description:
-		"Shahir Ahmed is a Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase. Builds scalable full-stack products and contributes to Mermaid.js and FarmData2.",
+		"Shahir Ahmed is a Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, and PostgreSQL. Currently at Sarva, previously at FarmData2, and a top 25 Mermaid.js contributor.",
 	keywords: [
 		"Shahir Ahmed",
 		"Software Engineer",
@@ -35,6 +39,14 @@ export const metadata = {
 		"Mermaid.js",
 		"FarmData2",
 		"Sarva",
+		"RAG",
+		"OpenAI Whisper",
+		"AI assistants",
+		"Stripe Connect",
+		"Cloudflare Workers",
+		"Databricks",
+		"HackHarvard",
+		"PennApps",
 		"Computer Science",
 		"Software Engineering",
 		"PostgreSQL",
@@ -45,7 +57,7 @@ export const metadata = {
 		"Docker",
 		"Vercel",
 	],
-	authors: [{ name: "Shahir Ahmed", url: "https://www.shahirahmed.com" }],
+	authors: [{ name: "Shahir Ahmed", url: siteUrl }],
 	creator: "Shahir Ahmed",
 	publisher: "Shahir Ahmed",
 	formatDetection: {
@@ -54,23 +66,32 @@ export const metadata = {
 		telephone: false,
 	},
 	alternates: {
-		canonical: "https://www.shahirahmed.com",
+		canonical: siteUrl,
 	},
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://www.shahirahmed.com",
+		url: siteUrl,
 		siteName: "Shahir Ahmed - Portfolio",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Software Engineer at Sarva building full-stack products with Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase. Open source contributor to Mermaid.js and FarmData2.",
+			"Software Engineer at Sarva building AI-powered supply-chain products with Next.js, TypeScript, Python, and Firebase. Top 25 Mermaid.js contributor and former FarmData2 engineer.",
+		images: [
+			{
+				url: ogImageUrl,
+				width: 1200,
+				height: 630,
+				alt: "Shahir Ahmed - Software Engineer",
+			},
+		],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Software Engineer specializing in React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+			"Software Engineer building AI-assisted full-stack products with Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 		creator: "@shahirahmed",
+		images: [ogImageUrl],
 	},
 	robots: {
 		index: true,
@@ -85,9 +106,13 @@ export const metadata = {
 			"max-snippet": -1,
 		},
 	},
-	verification: {
-		google: "your-google-verification-code", // Replace with actual verification code
-	},
+	...(googleSiteVerification
+		? {
+			verification: {
+				google: googleSiteVerification,
+			}
+		}
+		: {}),
 	category: "technology",
 	icons: {
 		icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
@@ -102,31 +127,37 @@ const jsonLd = {
 	"@graph": [
 		{
 			"@type": "WebSite",
-			"@id": "https://www.shahirahmed.com/#website",
-			url: "https://www.shahirahmed.com",
+			"@id": `${siteUrl}/#website`,
+			url: siteUrl,
 			name: "Shahir Ahmed - Software Engineer Portfolio",
 			description:
-				"Personal portfolio website of Shahir Ahmed, a Software Engineer and full-stack builder.",
+				"Personal portfolio website of Shahir Ahmed, a Software Engineer building AI-assisted full-stack products.",
 			publisher: {
-				"@id": "https://www.shahirahmed.com/#person",
+				"@id": `${siteUrl}/#person`,
 			},
+			hasPart: [
+				{ "@id": `${siteUrl}/#homepage` },
+				{ "@id": `${siteUrl}/about#aboutpage` },
+				{ "@id": `${siteUrl}/projects#projectspage` },
+				{ "@id": `${siteUrl}/contact#contactpage` },
+			],
 			inLanguage: "en-US",
 		},
 		{
 			"@type": "Person",
-			"@id": "https://www.shahirahmed.com/#person",
+			"@id": `${siteUrl}/#person`,
 			name: "Shahir Ahmed",
 			givenName: "Shahir",
 			familyName: "Ahmed",
-			url: "https://www.shahirahmed.com",
+			url: siteUrl,
 			image: {
 				"@type": "ImageObject",
-				url: "https://www.shahirahmed.com/shahir.jpeg",
+				url: `${siteUrl}/shahir.jpeg`,
 				width: 400,
 				height: 400,
 			},
 			description:
-				"Software Engineer specializing in full-stack development with React, Next.js, TypeScript, Spring Boot, Python, and PostgreSQL. Experience at Sarva and open source contributions to Mermaid.js and FarmData2.",
+				"Software Engineer specializing in AI-assisted full-stack development with React, Next.js, TypeScript, Spring Boot, Python, and PostgreSQL. Experience at Sarva and FarmData2, plus open source contributions to Mermaid.js.",
 			jobTitle: "Software Engineer",
 			worksFor: {
 				"@type": "Organization",
@@ -148,6 +179,10 @@ const jsonLd = {
 				"Vue.js",
 				"Spring Boot",
 				"Express.js",
+				"RAG",
+				"Vector search",
+				"OpenAI Whisper",
+				"LLM structured outputs",
 				"REST APIs",
 				"WebSockets",
 				"PostgreSQL",
@@ -173,17 +208,17 @@ const jsonLd = {
 		},
 		{
 			"@type": "ProfilePage",
-			"@id": "https://www.shahirahmed.com/#profilepage",
-			url: "https://www.shahirahmed.com",
+			"@id": `${siteUrl}/#profilepage`,
+			url: siteUrl,
 			name: "Shahir Ahmed Portfolio",
 			isPartOf: {
-				"@id": "https://www.shahirahmed.com/#website",
+				"@id": `${siteUrl}/#website`,
 			},
 			about: {
-				"@id": "https://www.shahirahmed.com/#person",
+				"@id": `${siteUrl}/#person`,
 			},
 			mainEntity: {
-				"@id": "https://www.shahirahmed.com/#person",
+				"@id": `${siteUrl}/#person`,
 			},
 		},
 	],
@@ -210,6 +245,15 @@ export default function RootLayout({ children }) {
 					type="application/opensearchdescription+xml"
 					title="Shahir Ahmed"
 					href="/opensearch.xml"
+				/>
+
+				{/* AI discovery resources */}
+				<link rel="alternate" type="text/plain" title="LLMs" href="/llms.txt" />
+				<link
+					rel="alternate"
+					type="application/json"
+					title="LLMs JSON"
+					href="/llms.json"
 				/>
 
 				{/* Humans.txt for credits */}
