@@ -21,6 +21,7 @@ import { FaGithub } from "react-icons/fa";
 import { MdVisibility } from "react-icons/md";
 import { FaCertificate } from "react-icons/fa";
 import GitHubStats from "./GitHubStats";
+import TableOfContents from "./TableOfContents";
 import "react-vertical-timeline-component/style.min.css";
 import {
 	VerticalTimeline,
@@ -38,9 +39,10 @@ const About = () => {
 	const router = useRouter();
 
 	return (
-		<div className="about-page">
+		<div className="about-page-wrapper">
+			<div className="about-page">
 			{/* About Me */}
-			<div className="about-container">
+			<section id="about-me" className="about-container">
 				<div className="about-text-container">
 					<h1 className="about-me">
 						🧑‍💻 About <span>Me</span>
@@ -147,10 +149,10 @@ const About = () => {
 						priority
 					/>
 				</div>
-			</div>
+			</section>
 
 			{/* Tools and Technologies */}
-			<div className="tools-section">
+			<section id="tools-technologies" className="tools-section">
 				<div className="tools-header">
 					<h2>
 						🛠️ <span className="highlight">Tools</span> and{" "}
@@ -328,10 +330,10 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			{/* Work Experience Timeline */}
-			<div className="timeline-section">
+			<section id="work-experience" className="timeline-section">
 				<h2>💼 Work Experience</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
@@ -621,10 +623,10 @@ const About = () => {
 						</ul>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
-			</div>
+			</section>
 
 			{/* OSS Contributions */}
-			<div className="oss-section">
+			<section id="open-source" className="oss-section">
 				<h2
 					className="section-title"
 					style={{
@@ -879,10 +881,10 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			{/* Hackathon Experience Timeline */}
-			<div className="timeline-section">
+			<section id="hackathons" className="timeline-section">
 				<h2 className="hack-h2">💡 Hackathon Experience</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
@@ -1217,10 +1219,10 @@ const About = () => {
 						</div>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
-			</div>
+			</section>
 
 			{/* Education Timeline */}
-			<div className="timeline-section">
+			<section id="education" className="timeline-section">
 				<h2>🎓 Education</h2>
 				<VerticalTimeline
 					lineColor="#4fd1c5"
@@ -1266,10 +1268,10 @@ const About = () => {
 						</p>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
-			</div>
+			</section>
 
 			{/* Certifications Section */}
-			<div className="certifications-section">
+			<section id="certifications" className="certifications-section">
 				<h2
 					className="section-title"
 					style={{
@@ -1448,50 +1450,58 @@ const About = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 
 			{/* GitHub Stats */}
-			<GitHubStats />
+			<section id="github-stats">
+				<GitHubStats />
+			</section>
 
 			{/* Projects Section Link */}
-			<Box
-				sx={{
-					textAlign: "center",
-					color: "#e0e0e0",
-					padding: "1rem",
-					display: "flex",
-					flexDirection: "column",
-					alignItems: "center",
-				}}
-			>
-				<h2 className="projects-link-h2">
-					Check Out My <span style={{ color: "#fff" }}>Projects</span> 🚀
-				</h2>
-				<Typography className="projects-link-p">
-					Browse my work in web development, systems programming, and more.
-				</Typography>
-				<Button
-					onClick={() => router.push("/projects")}
-					variant="contained"
-					id="projects-link"
-					startIcon={<CodeIcon />}
+			<section id="projects-link">
+				<Box
+					sx={{
+						textAlign: "center",
+						color: "#e0e0e0",
+						padding: "1rem",
+						display: "flex",
+						flexDirection: "column",
+						alignItems: "center",
+					}}
 				>
-					View Projects
-				</Button>
-			</Box>
+					<h2 className="projects-link-h2">
+						Check Out My <span style={{ color: "#fff" }}>Projects</span> 🚀
+					</h2>
+					<Typography className="projects-link-p">
+						Browse my work in web development, systems programming, and more.
+					</Typography>
+					<Button
+						onClick={() => router.push("/projects")}
+						variant="contained"
+						id="projects-link-btn"
+						startIcon={<CodeIcon />}
+					>
+						View Projects
+					</Button>
+				</Box>
+			</section>
 
 			{/* Social Section */}
-			<Box
-				sx={{
-					textAlign: "center",
-					color: "#e0e0e0",
-				}}
-			>
-				<Typography variant="h5" id="social-connect">
-					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
-				</Typography>
-				<SocialIcons />
-			</Box>
+			<section id="connect">
+				<Box
+					sx={{
+						textAlign: "center",
+						color: "#e0e0e0",
+					}}
+				>
+					<Typography variant="h5" id="social-connect">
+						Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
+					</Typography>
+					<SocialIcons />
+				</Box>
+			</section>
+		</div>
+		<TableOfContents />
 		</div>
 	);
 };

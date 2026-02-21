@@ -14,22 +14,25 @@ const GitHubStats = () => {
 	useEffect(() => {
 		const updateConfig = () => {
 			const width = window.innerWidth;
+			// Account for TOC sidebar taking ~250px on screens > 1100px
+			const hasSidebar = width > 1100;
+			const contentWidth = hasSidebar ? width - 260 : width;
 
-			if (width >= 2560) {
+			if (contentWidth >= 2300) {
 				setConfig({
 					blockSize: 20,
 					blockMargin: 8,
 					fontSize: 30,
 					trimDateRange: false,
 				});
-			} else if (width >= 1440) {
+			} else if (contentWidth >= 1200) {
 				setConfig({
-					blockSize: 18,
-					blockMargin: 6,
+					blockSize: 16,
+					blockMargin: 5,
 					fontSize: 26,
 					trimDateRange: false,
 				});
-			} else if (width >= 1024) {
+			} else if (contentWidth >= 900) {
 				setConfig({
 					blockSize: 12,
 					blockMargin: 5,
