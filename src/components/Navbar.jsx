@@ -26,16 +26,21 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
-		const handleScroll = () => {
+		const updateScrolledState = () => {
 			setIsScrolled(window.scrollY > 0);
 		};
 
-		window.addEventListener("scroll", handleScroll);
+		updateScrolledState();
+		const rafId = window.requestAnimationFrame(updateScrolledState);
+		window.addEventListener("scroll", updateScrolledState, { passive: true });
+		window.addEventListener("pageshow", updateScrolledState);
 
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
+			window.cancelAnimationFrame(rafId);
+			window.removeEventListener("scroll", updateScrolledState);
+			window.removeEventListener("pageshow", updateScrolledState);
 		};
-	}, []);
+	}, [pathname]);
 
 	const isActive = (path) => {
 		if (path === "/" && (pathname === "/" || pathname === "/home")) {
