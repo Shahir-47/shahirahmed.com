@@ -31,7 +31,7 @@ const projectsData = [
 		image: Sarva,
 		title: "Sarva",
 		description:
-			"Vendor management platform and marketplace for grocery supply chains. Architected a Next.js + TypeScript app with serverless Firebase microservices for secure auth and catalog workflows. Built a retrieval-backed AI pipeline in Python with vector indexing to automate product metadata (50% p95 latency reduction, 80% faster setup). Developed voice-enabled batch inventory with OpenAI Whisper supporting 90+ languages, plus real-time logistics and payments using Stripe Connect and Google Maps with identity verification (85% chargeback reduction).",
+			"Vendor management platform and marketplace for South Asian grocery supply chains. Built with Next.js and TypeScript on serverless Firebase. Features include a Python RAG pipeline with vector search (cut p95 latency by 50%), voice-based inventory using OpenAI Whisper in 90+ languages, 4 GPT-powered AI assistants for order tracking and product search, and Stripe Connect payments with identity verification.",
 		liveDemo: "https://www.sarvabazaar.com/",
 		sourceCode: null,
 		devpost: null,
@@ -42,7 +42,7 @@ const projectsData = [
 		image: FD2,
 		title: "FarmData2",
 		description:
-			"Open-source farm management platform at Dickinson College. Engineered a concurrent-safe crop tracking system in Node.js + PostgreSQL with transactional consistency to meet USDA audit standards. Revamped the Vue.js frontend with centralized state management, refactoring 22+ components to cut form latency by 60% and replace manual spreadsheet workflows. Integrated 18+ REST APIs and added Cypress E2E tests with 80%+ coverage, saving farm staff 12+ hours per week.",
+			"Open-source farm management platform at Dickinson College, funded by the NSF. Refactored 22+ Vue.js components to Vuex, cutting form latency by 60%. Built 18+ Node.js REST APIs with PostgreSQL transaction rollbacks and wrote 30+ Cypress end-to-end tests.",
 		liveDemo: null,
 		sourceCode: "https://github.com/FarmData2/FarmData2",
 		repo: "FarmData2",
@@ -55,7 +55,7 @@ const projectsData = [
 		title: "Open Source Contributions",
 		description: `
 			Top contributor to <b>Mermaid.js</b> (#25 of 600+ contributors) and <b>FarmData2</b> (25+ PRs, 14K+ lines).<br/><br/>
-			<b>Mermaid.js:</b> Delivered 3 merged PRs implementing text wrapping algorithms, auto-scaling data labels, and customizable styling for a library serving 1.4M+ weekly downloads. Contributed to a 100K+ line codebase, shipping features now powering diagrams across GitHub, VS Code, Notion, and Microsoft Word.<br/><br/>
+			<b>Mermaid.js:</b> Shipped 3 merged PRs for text wrapping, auto-scaling data labels, and customizable styling in a library serving 1.4M+ weekly downloads. Features now power diagrams across GitHub, VS Code, Notion, and Microsoft Word.<br/><br/>
 			<ul style="margin: 0 0 0 1.5em; padding: 0;">
 				<li>
 					<a href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
@@ -85,7 +85,7 @@ const projectsData = [
 		image: QueueUp,
 		title: "Queue Up",
 		description:
-			"Music-based social platform that matches users using a weighted Spotify similarity score across top artists, top tracks, saved tracks, and followed artists. Ships as a single Spring Boot deployable that bundles the React build, with real-time chat and notifications over WebSockets. JWT auth via HttpOnly cookies, PostgreSQL via JPA, Cloudinary avatars, and S3 presigned uploads for chat attachments.",
+			"Spotify-powered social app that matches users by listening habits (top artists, top tracks, saved tracks, followed artists) and enables real-time chat after matching. Ships as a single Spring Boot deployable bundling the React build, with WebSocket notifications, JWT auth via HttpOnly cookies, PostgreSQL via JPA, Cloudinary avatars, and S3 presigned uploads for chat attachments.",
 		liveDemo: "https://queue-up.onrender.com",
 		sourceCode: "https://github.com/Shahir-47/Queue-Up",
 		devpost: null,
@@ -96,7 +96,7 @@ const projectsData = [
 		image: CoSignImg,
 		title: "CoSign",
 		description:
-			"Task management with external verification. You submit proof, a verifier approves or rejects, and missed deadlines automatically expose hidden penalty content via email. Built with Spring Boot + React, real-time WebSockets, AES encryption at rest for sensitive fields, recurring tasks via RRULE, and S3 presigned uploads. Deployed as a single Dockerized artifact on Render.",
+			"Task accountability app where you submit proof, a verifier approves or rejects, and missed deadlines automatically release hidden penalty content to peers via email. Built with Spring Boot and React, real-time WebSockets, AES encryption at rest for stakes, recurring tasks via RRULE, and S3 presigned uploads. Deployed as a single Dockerized artifact on Render.",
 		liveDemo: "https://cosign-nwwl.onrender.com",
 		sourceCode: "https://github.com/Shahir-47/CoSign",
 		devpost: null,
@@ -109,7 +109,7 @@ const projectsData = [
 		image: Albatross,
 		title: "Albatross",
 		description:
-			"AI-powered navigation app that reroutes users based on their selected safety level. Built with Vue.js, the app sends routes to Cloudflare Workers to check against high-crime zones. Geocoded 50K+ crime addresses using Google API, mapped them to zones using public boundary data, ranked zones by crime density, and stored them in AWS Databricks so Cloudflare Workers can check route intersections and reroute in real-time. Built at HackHarvard 2024.",
+			"AI navigation app that reroutes users around high-crime areas based on their selected safety level. Built with Vue.js and Cloudflare Workers. Processed 50K+ crime addresses into zone density scores using Google API, stored them in Databricks, and served route safety checks in real time. Built at HackHarvard 2024.",
 		liveDemo: "https://albatross-hack.netlify.app/",
 		sourceCode: "https://github.com/orgs/HackHarvard2024-Team/repositories",
 		devpost: "https://devpost.com/software/albatross",
@@ -120,7 +120,7 @@ const projectsData = [
 		image: SweetFriend,
 		title: "SweetFriend",
 		description:
-			"Diabetes management web app integrating Dexcom glucose monitors for real-time glucose tracking, AI-powered meal recognition via Tune Studio's vision model, and personalized health insights powered by Cerebras. Built with React and Flask, featuring MongoDB for data storage and Twilio for critical glucose alerts. Simplifies carb counting, meal logging, and glucose trend analysis. Built at PennApps 2024.",
+			"Diabetes management app with real-time Dexcom glucose monitoring, AI-powered meal recognition via Tune Studio's vision model, and Twilio SMS alerts for critical glucose changes. Built with React and Flask, with MongoDB for storage and Cerebras for health insights. Built at PennApps 2024.",
 		liveDemo: "https://sweet-friend.vercel.app/app/dashboard",
 		sourceCode: "https://github.com/dmicz/SweetFriend",
 		devpost: "https://devpost.com/software/sweetfriend",
@@ -133,7 +133,7 @@ const projectsData = [
 		image: "",
 		title: "PandOS",
 		description:
-			"Complete custom operating system kernel implemented in C for the uMPS3 RISC emulator. Features include time-sharing, multiprogramming, TLB-based virtual memory management, system calls, and interrupt handling for concurrent process execution and memory safety. Demonstrates deep understanding of operating system concepts and low-level systems programming.",
+			"Complete OS kernel in C for the uMPS3 RISC emulator. Supports time-sharing, multiprogramming, TLB-based virtual memory, system calls, and interrupt handling for concurrent process execution.",
 		liveDemo: null,
 		sourceCode:
 			"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
@@ -145,7 +145,7 @@ const projectsData = [
 		image: "",
 		title: "BitTorrent Client JS",
 		description:
-			"Lightweight BitTorrent client implemented in JavaScript that handles both .torrent files and magnet links. Features modular architecture for peer discovery, piece verification, and metadata exchange. Implements the full BitTorrent protocol with concurrent downloads, SHA-1 integrity checking, and HTTP tracker communication.",
+			"File-sharing client in JavaScript that downloads via peer-to-peer swarms with magnet link resolution and SHA-1 verification. Handles both .torrent files and magnet links with concurrent downloads and HTTP tracker communication.",
 		liveDemo: null,
 		sourceCode: "https://github.com/Shahir-47/bittorrent-client-js",
 		repo: "bittorrent-client-js",
@@ -155,26 +155,16 @@ const projectsData = [
 		image: SpaceAccuracy,
 		title: "SpaceAccuracy",
 		description:
-			"2D shooter game where players aim to hit an alien and score points while the challenge increases with each hit. Developed in Lua with robust OOP principles, featuring game logic, animations, and shooting mechanics.",
+			"2D shooter game in Lua where players aim to hit an alien and score points, with difficulty increasing after each hit. Built with OOP principles, animations, and shooting mechanics.",
 		sourceCode: "https://github.com/Shahir-47/SpaceAccuracy",
 		repo: "SpaceAccuracy",
 		category: CATEGORIES.PERSONAL,
 	},
-	// {
-	// 	image: Etch,
-	// 	title: "Etch a Sketch",
-	// 	description:
-	// 		"Classic Etch-a-Sketch experience online. Draw and create with this interactive web application built using HTML, CSS, and JavaScript.",
-	// 	liveDemo: "https://shahir-47.github.io/Etch-a-Sketch/",
-	// 	sourceCode: "https://github.com/Shahir-47/Etch-a-Sketch/",
-	// 	repo: "Etch-a-Sketch",
-	// 	category: CATEGORIES.PERSONAL,
-	// },
 	{
 		image: "",
 		title: "Speller",
 		description:
-			"High-performance spell-checking program built with C, leveraging hash tables for efficient word lookups. Identifies misspelled words, supports customizable dictionaries, and provides detailed performance metrics.",
+			"Spell-checking program in C using hash tables for fast word lookups. Supports custom dictionaries and reports performance metrics.",
 		sourceCode: "https://github.com/Shahir-47/speller",
 		repo: "speller",
 		category: CATEGORIES.PERSONAL,
@@ -183,7 +173,7 @@ const projectsData = [
 		image: "",
 		title: "Recover",
 		description:
-			"Forensic recovery program in C that retrieves JPEG files from a memory card image by identifying unique file signatures. Processes memory blocks and reconstructs images into standalone files.",
+			"Forensic recovery program in C that retrieves JPEG files from a memory card image by scanning for file signatures and reconstructing images from raw memory blocks.",
 		sourceCode: "https://github.com/Shahir-47/Recover",
 		repo: "Recover",
 		category: CATEGORIES.PERSONAL,
@@ -192,7 +182,7 @@ const projectsData = [
 		image: "",
 		title: "Filter",
 		description:
-			"Image processing program in C that applies grayscale, sepia, reflection, and blur filters to BMP images. Demonstrates low-level pixel manipulation and memory-efficient algorithms.",
+			"Image processing program in C that applies grayscale, sepia, reflection, and blur filters to BMP images through direct pixel manipulation.",
 		sourceCode: "https://github.com/Shahir-47/filter",
 		repo: "filter",
 		category: CATEGORIES.PERSONAL,
@@ -201,7 +191,7 @@ const projectsData = [
 		image: "",
 		title: "DNA Profiling",
 		description:
-			"Forensic DNA profiling program that matches a DNA sequence to an individual based on Short Tandem Repeats (STRs). Reads STR counts from a CSV database and analyzes the longest runs of STR repeats.",
+			"Forensic DNA profiling program that matches a DNA sequence to an individual by analyzing Short Tandem Repeat (STR) counts against a CSV database.",
 		sourceCode: "https://github.com/Shahir-47/DNA",
 		category: CATEGORIES.PERSONAL,
 	},
@@ -209,7 +199,7 @@ const projectsData = [
 		image: "",
 		title: "Runoff Voting System",
 		description:
-			"Ranked-choice voting program that simulates instant-runoff elections. Efficiently handles voter preferences, redistributing votes in multiple rounds until a candidate achieves a majority.",
+			"Ranked-choice voting program that simulates instant-runoff elections, redistributing votes across rounds until a candidate wins a majority.",
 		sourceCode: "https://github.com/Shahir-47/Runoff",
 		repo: "Runoff",
 		category: CATEGORIES.PERSONAL,
@@ -218,7 +208,7 @@ const projectsData = [
 		image: "",
 		title: "Credit Card Validator",
 		description:
-			"C program that validates credit card numbers using Luhn's Algorithm and identifies card types (Visa, MasterCard, or AMEX). Demonstrates data validation and structured logic for edge cases.",
+			"C program that validates credit card numbers using Luhn's Algorithm and identifies card types (Visa, MasterCard, AMEX).",
 		sourceCode: "https://github.com/Shahir-47/Credit",
 		repo: "Credit",
 		category: CATEGORIES.PERSONAL,

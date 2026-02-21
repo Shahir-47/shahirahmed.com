@@ -51,13 +51,12 @@ const About = () => {
 						<div className="paragraph">
 							<p className="about-me-text">
 								Hey, I&apos;m Shahir - a Computer Science & Mathematics graduate
-								from Dickinson College (May 2025) and Software Engineer. I
-								build scalable full-stack products with React, Next.js,
-								TypeScript, Spring Boot, Python, and PostgreSQL, and I love
-								turning ideas into reliable production systems.
+								from Dickinson College and Software Engineer. I build full-stack
+								products with React, Next.js, TypeScript, Spring Boot, Python,
+								and PostgreSQL.
 							</p>
 							<p className="about-me-text">
-								I&apos;m currently a Software Engineer at{" "}
+								Currently a Software Engineer at{" "}
 								<a
 									href="https://www.sarvabazaar.com"
 									target="_blank"
@@ -65,10 +64,9 @@ const About = () => {
 								>
 									<strong>Sarva</strong>
 								</a>
-								, building a vendor management platform and marketplace for
-								grocery supply chains. My work spans serverless workflows on
-								Firebase, AI-powered automation in Python, and real-time
-								logistics and payments with Stripe Connect and Google Maps.
+								, where I&apos;m building AI-powered tools for South Asian
+								grocery supply chains, from voice-based inventory with OpenAI
+								Whisper to RAG pipelines and payments with Stripe Connect.
 								Previously, I was a Software Engineer Intern on{" "}
 								<a
 									href="https://github.com/FarmData2"
@@ -76,18 +74,16 @@ const About = () => {
 									rel="noopener noreferrer"
 								>
 									<strong>FarmData2</strong>
-								</a>
-								, and I contribute to{" "}
+								</a>{" "}
+								and a top 25 contributor to{" "}
 								<a
 									href="https://github.com/mermaid-js/mermaid"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									<strong>Mermaid.js</strong>
-								</a>{" "}
-								(Top 25 contributor). I focus on high-impact feature
-								development, system optimization, and designing tools people
-								actually use. You can browse my open source work{" "}
+								</a>
+								. Browse my open source work{" "}
 								<a
 									href="https://github.com/Shahir-47/open-source-contributions"
 									target="_blank"
@@ -98,7 +94,7 @@ const About = () => {
 								.
 							</p>
 							<p className="about-me-text">
-								Recent personal projects include{" "}
+								Recent projects include{" "}
 								<a
 									href="https://queue-up.onrender.com"
 									target="_blank"
@@ -106,7 +102,7 @@ const About = () => {
 								>
 									<strong>Queue Up</strong>
 								</a>{" "}
-								(a music-based social platform with Spotify integration),{" "}
+								(music-based social platform with Spotify integration),{" "}
 								<a
 									href="https://cosign-nwwl.onrender.com"
 									target="_blank"
@@ -114,7 +110,7 @@ const About = () => {
 								>
 									<strong>CoSign</strong>
 								</a>{" "}
-								(an accountability platform with deadline enforcement), and{" "}
+								(accountability platform with deadline enforcement), and{" "}
 								<a
 									href="https://albatross-hack.netlify.app/map"
 									target="_blank"
@@ -125,9 +121,8 @@ const About = () => {
 								(AI-powered safe navigation).
 							</p>
 							<p className="about-me-text">
-								Outside of code, you&apos;ll find me helping new devs, playing
-								soccer, and following Real Madrid like my life depends on it. If
-								you want to connect, check out my{" "}
+								Outside of code, I enjoy helping new devs, playing soccer, and
+								following Real Madrid. Feel free to check out my{" "}
 								<a
 									href="https://github.com/Shahir-47"
 									target="_blank"
@@ -135,11 +130,7 @@ const About = () => {
 								>
 									<strong>GitHub</strong>
 								</a>{" "}
-								or socials below.
-							</p>
-							<p className="about-me-text">
-								Reach out if you want to collaborate or just talk tech. Always
-								up for new projects.
+								or reach out below.
 							</p>
 						</div>
 
@@ -237,6 +228,10 @@ const About = () => {
 							<img
 								src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
 								alt="Express.js"
+							/>
+							<img
+								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+								alt="Flask"
 							/>
 							<img
 								src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
@@ -389,26 +384,25 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Architected a scalable vendor management platform with Next.js
-								and TypeScript, deploying serverless microservices via Firebase
-								to maintain 99.9% uptime for secure authentication and catalog
-								workflows.
+								Cut p95 latency by 50% by replacing sequential scans with vector
+								similarity search in a Python RAG pipeline
 							</li>
 							<li>
-								Engineered a retrieval-backed AI pipeline in Python with vector
-								indexing to automate product metadata generation, cutting p95
-								query latency by 50% and reducing per-item setup time by 80%.
+								Reduced vendor inventory time by 60% by building a voice-based
+								system with OpenAI Whisper, supporting 90+ languages
 							</li>
 							<li>
-								Developed a voice-enabled batch inventory system integrating
-								OpenAI Whisper, allowing vendors to process updates in 90+
-								languages and cutting weekly manual labor by 60%.
+								Reduced chargeback fraud by implementing Stripe Connect with
+								identity verification in a Next.js/TypeScript platform
 							</li>
 							<li>
-								Delivered a real-time logistics and payment engine using Stripe
-								Connect and Google Maps with identity verification, reducing
-								chargeback fraud by 85% and enabling transparent delivery
-								tracking.
+								Built 4 AI assistants with GPT structured outputs for
+								natural-language order tracking, product search, and inventory
+								management
+							</li>
+							<li>
+								Added Firebase AppCheck and role-based authentication to secure
+								API routes across customer, vendor, and driver portals
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -461,19 +455,12 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Engineered a concurrent-safe crop tracking system using Node.js
-								and PostgreSQL, leveraging transactional consistency to ensure
-								accurate real-time logging aligned with USDA audit standards.
+								Reduced form latency by 60% on an NSF-funded farm platform by
+								refactoring 22+ Vue.js components to Vuex
 							</li>
 							<li>
-								Revamped the Vue.js frontend with centralized state management,
-								refactoring 22+ components to reduce form rendering latency by
-								60% and replace manual spreadsheet dependencies.
-							</li>
-							<li>
-								Integrated 18+ REST APIs and built Cypress end-to-end tests with
-								80%+ coverage, stabilizing the system and automating workflows
-								that saved farm staff 12+ hours per week.
+								Automated farm workflows by building 18+ Node.js REST APIs with
+								PostgreSQL transaction rollbacks and 30+ Cypress tests
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -540,15 +527,12 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Delivered 3 merged PRs implementing text wrapping algorithms,
-								auto-scaling data labels, and customizable styling for a library
-								serving 1.4M+ weekly downloads, achieving #25 contributor
-								ranking among 600+ contributors.
+								Ranked #25 among 600+ contributors by shipping 3 merged PRs for
+								a library serving 1.4M+ weekly downloads
 							</li>
 							<li>
-								Contributed to a 100K+ line codebase, clearing automated CI/CD
-								checks and multi-stage reviews to ship features now powering
-								diagrams across GitHub, VS Code, Notion, and Microsoft Word.
+								Delivered features and bug fixes across 20+ diagram types in an
+								86K-star codebase used by GitHub, VS Code, and Notion
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -591,10 +575,9 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Engineered a legacy code transpilation pipeline using ANTLR to
-								automate the migration of 10K+ lines of legacy CBASIC into
-								Python and Java, helping a $9B company modernize its legacy
-								systems and cut down manual rewrite work.
+								Built a legacy code transpilation pipeline using ANTLR to
+								migrate 10K+ lines of CBASIC into Python and Java for a $9B
+								company
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -632,14 +615,8 @@ const About = () => {
 						</h4>
 						<ul>
 							<li>
-								Facilitated weekly lab sessions for 40+ students, improving
-								assignment completion rates by 20% through personalized code
-								reviews in Python and Java.
-							</li>
-							<li>
-								Guided undergraduates in data structures and algorithms,
-								enhancing exam performance by 15% with targeted review sessions
-								and collaborative problem-solving exercises.
+								Mentored 25+ students across 6 semesters in Python and Java
+								through weekly labs, office hours, and code reviews
 							</li>
 						</ul>
 					</VerticalTimelineElement>
@@ -714,8 +691,8 @@ const About = () => {
 									marginTop: 12,
 								}}
 							>
-								• Delivered 3 merged PRs implementing text wrapping, auto-scaling
-								data labels, and customizable styling for a library serving{" "}
+								• Shipped 3 merged PRs for text wrapping, auto-scaling data
+								labels, and customizable styling in a library serving{" "}
 								<a
 									style={{ color: "#4fd1c5", textDecoration: "underline" }}
 									href="https://npmtrends.com/mermaid"
@@ -832,10 +809,9 @@ const About = () => {
 									marginTop: 12,
 								}}
 							>
-								• 25+ PRs, 14,000+ lines added. Built concurrent-safe crop
-								tracking, refactored 22+ Vue components, integrated 18+ APIs,
-								and added Cypress tests to streamline real-world farm
-								operations.
+								• 25+ PRs, 14,000+ lines added. Refactored 22+ Vue components,
+								built 18+ REST APIs, and added Cypress tests to automate
+								real-world farm operations.
 							</div>
 							<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
 								<a
@@ -876,7 +852,7 @@ const About = () => {
 								See My Full Open Source Portfolio
 							</div>
 							<div style={{ fontSize: 15, color: "#e9e9f3", marginBottom: 7 }}>
-								Get a detailed breakdown, merged PRs, and stats for every major
+								Detailed breakdown, merged PRs, and stats for every major
 								project.
 							</div>
 							<a
@@ -954,28 +930,15 @@ const About = () => {
 							}}
 						/>
 						<p>
-							Prospectus was my very first hackathon project, where I jumped
-							right into building an ambitious AI-powered college admissions
-							assistant. Our idea was to leverage React, Django, Azure OpenAI,
-							and custom vector embeddings for smart, query-based guidance about
-							universities.
+							My first hackathon, where we built an AI-powered college
+							admissions assistant using React, Django, Azure OpenAI, and vector
+							embeddings. We shipped a frontend demo and high-level
+							architecture. Didn&apos;t finish a working product, but it taught
+							me how to design systems under real constraints and set the stage
+							for shipping at later events.
 						</p>
 						<p>
-							While we didn&apos;t end up with a fully functional product, the
-							experience was incredibly valuable. I learned a ton about
-							designing architectures, working with unfamiliar tools, and
-							collaborating under real-world constraints. Even though we only
-							got a frontend demo and a high-level architecture, it gave me
-							first-hand insight into how complex building real applications can
-							be.
-						</p>
-						<p>
-							Prospectus motivated me to level up my technical and teamwork
-							skills for future hackathons. That first weekend set the stage for
-							actually shipping working projects at later events.
-						</p>
-						<p>
-							<strong>Tech Stack (planned and prototyped):</strong>
+							<strong>Tech Stack:</strong>
 						</p>
 						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
@@ -991,28 +954,8 @@ const About = () => {
 								alt="Azure OpenAI"
 							/>
 							<img
-								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
-								alt="Cloudflare"
-							/>
-							<img
-								src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"
-								alt="Kubernetes"
-							/>
-							<img
-								src="https://img.shields.io/badge/Llama%20Index-4CAF50?style=for-the-badge&logo=ai&logoColor=white"
-								alt="Llama Index"
-							/>
-							<img
 								src="https://img.shields.io/badge/MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
 								alt="MongoDB Atlas"
-							/>
-							<img
-								src="https://img.shields.io/badge/VoyageAI-FF5722?style=for-the-badge&logo=ai&logoColor=white"
-								alt="VoyageAI"
-							/>
-							<img
-								src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
-								alt="GitHub"
 							/>
 						</div>
 						<div
@@ -1087,24 +1030,12 @@ const About = () => {
 							}}
 						/>
 						<p>
-							SweetFriend is a full-stack diabetes management app that gives
-							users real-time glucose tracking, AI meal recognition, and instant
-							health insights. I led the frontend development using React,
-							building a responsive dashboard, custom chart components for live
-							blood sugar graphs, and an intuitive photo upload feature for meal
-							recognition powered by Tune Studio&apos;s vision model.
-						</p>
-						<p>
-							I implemented the integration with the Dexcom API, bringing
-							continuous glucose data into the app and linking it with event
-							logging. The Flask backend connects user events and meal
-							predictions, stores data in MongoDB, and uses Cerebras for
-							ultra-fast AI health advice. I also helped wire up Twilio for
-							notifications, alerting users about critical changes in their
-							glucose levels. Shipping a polished MVP with this level of
-							integration in just 36 hours took grit, and the project made me
-							much more confident with complex health tech stacks and real-time
-							API workflows.
+							A diabetes management app built in 36 hours with a team of 4. I
+							led the React frontend, building the dashboard, live glucose
+							charts, and meal photo upload powered by Tune Studio&apos;s vision
+							model. Integrated the Dexcom API for continuous glucose data,
+							wired up Twilio for critical alerts, and connected it all through
+							a Flask/MongoDB backend with Cerebras for AI health insights.
 						</p>
 						<p>
 							<strong>Tech Stack:</strong>
@@ -1125,14 +1056,6 @@ const About = () => {
 							<img
 								src="https://img.shields.io/badge/Dexcom-5CBB5B?style=for-the-badge&logo=ai&logoColor=white"
 								alt="Dexcom"
-							/>
-							<img
-								src="https://img.shields.io/badge/Tune%20AI-4A90E2?style=for-the-badge&logo=ai&logoColor=white"
-								alt="Tune AI"
-							/>
-							<img
-								src="https://img.shields.io/badge/Cerebras-F7B93E?style=for-the-badge&logo=ai&logoColor=white"
-								alt="Cerebras"
 							/>
 							<img
 								src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white"
@@ -1225,24 +1148,12 @@ const About = () => {
 							}}
 						/>
 						<p>
-							Albatross is an AI-powered navigation app that helps users avoid
-							high-risk areas in any city by finding the safest routes using
-							real-time crime data. My role was building the Vue.js frontend,
-							where I designed and implemented the interactive dashboard that
-							overlays crime polygons and safe routes on a dynamic map. I
-							connected the frontend with a backend pipeline using AWS and
-							Databricks for data processing, MLflow for clustering high-crime
-							zones, and Cloudflare Workers to serve the routing data to the
-							HERE Routing API.
-						</p>
-						<p>
-							I focused on getting geospatial data and route overlays working
-							smoothly so users could instantly see where to travel more safely.
-							We built and deployed a working demo for New York City during the
-							hackathon, and even in demo mode the system visualizes hot zones
-							and safer paths in real time. Building Albatross pushed me to the
-							next level with map rendering, geospatial data, and full-stack
-							cloud integration.
+							AI-powered navigation app that finds the safest routes using
+							real-time crime data. Built the Vue.js frontend with interactive
+							crime polygon overlays and safe route visualization. Processed
+							50K+ crime addresses into zone density scores using Databricks and
+							MLflow, served through Cloudflare Workers to the HERE Routing API.
+							Deployed a working NYC demo during the hackathon.
 						</p>
 						<p>
 							<strong>Tech Stack:</strong>
@@ -1257,32 +1168,12 @@ const About = () => {
 								alt="Cloudflare"
 							/>
 							<img
-								src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
-								alt="AWS"
-							/>
-							<img
 								src="https://img.shields.io/badge/Databricks-E87352?style=for-the-badge&logo=databricks&logoColor=white"
 								alt="Databricks"
 							/>
 							<img
-								src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=ai&logoColor=white"
-								alt="MLflow"
-							/>
-							<img
-								src="https://img.shields.io/badge/Here%20Routing-7D3F98?style=for-the-badge&logo=here&logoColor=white"
-								alt="Here Routing"
-							/>
-							<img
 								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
 								alt="Python"
-							/>
-							<img
-								src="https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white"
-								alt="Scala"
-							/>
-							<img
-								src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
-								alt="JavaScript"
 							/>
 						</div>
 						<div
@@ -1362,32 +1253,17 @@ const About = () => {
 						}
 					>
 						<h3 className="vertical-timeline-element-title">
-							Dickinson College - Graduate
+							Dickinson College
 						</h3>
 						<h4 className="vertical-timeline-element-subtitle">Carlisle, PA</h4>
 						<p>
-							<strong>Degree:</strong> Bachelor of Science in Computer Science &
-							Mathematics
+							<strong>Degree:</strong> B.S. in Computer Science & Mathematics
 							<br />
 							<strong>GPA:</strong> 3.52 / 4.00
 							<br />
-							<strong>Graduated:</strong> May 2025
-						</p>
-						<p>
 							<strong>Honors:</strong> Dean&apos;s List, Pi Mu Epsilon (Math
-							Honor Society), 1783 Scholarship Recipient
+							Honor Society), 1783 Scholarship
 						</p>
-						<div>
-							<strong>Relevant Coursework:</strong>
-							<ul
-								style={{ columnCount: 2, marginTop: "0.5rem", marginBottom: 0 }}
-							>
-								<li>Data Structures (Java)</li>
-								<li>Object-Oriented Programming (Java)</li>
-								<li>Computer Networks (Java)</li>
-								<li>Database Systems (SQL)</li>
-							</ul>
-						</div>
 					</VerticalTimelineElement>
 				</VerticalTimeline>
 			</div>
@@ -1441,16 +1317,11 @@ const About = () => {
 									marginBottom: 8,
 								}}
 							>
-								CS50&apos;s Introduction to Computer Science
+								CS50x: Introduction to Computer Science
 							</div>
 							<div style={{ fontSize: 15, color: "#c7e9f1", marginBottom: 10 }}>
-								<strong>HarvardX</strong> | Comprehensive introduction to
-								computer science and programming fundamentals
-							</div>
-							<div style={{ fontSize: 14, color: "#aaa", marginBottom: 12 }}>
-								Covered algorithms, data structures, web development, and
-								software engineering principles using C, Python, SQL,
-								JavaScript, HTML/CSS
+								<strong>HarvardX</strong> | Algorithms, data structures, web
+								development using C, Python, SQL, JavaScript
 							</div>
 							<a
 								href="https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
@@ -1510,12 +1381,8 @@ const About = () => {
 								MATLAB Onramp
 							</div>
 							<div style={{ fontSize: 15, color: "#c7e9f1", marginBottom: 10 }}>
-								<strong>MathWorks</strong> | Fundamentals of MATLAB programming
-								and computational mathematics
-							</div>
-							<div style={{ fontSize: 14, color: "#aaa", marginBottom: 12 }}>
-								Interactive introduction to MATLAB syntax, data analysis,
-								visualization, and programming concepts
+								<strong>MathWorks</strong> | MATLAB programming and
+								computational mathematics
 							</div>
 							<a
 								href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=1945277d-7a1c-4899-981f-d28b4a0e68a7&"
@@ -1563,27 +1430,20 @@ const About = () => {
 								alignItems: "center",
 							}}
 						>
-							🎓 Academic Honors & Recognition
+							🎓 Academic Honors
 						</div>
 						<div style={{ display: "grid", gap: "12px" }}>
 							<div style={{ fontSize: 15, color: "#e9e9f3" }}>
 								• <strong>The 1783 Scholarship</strong> - Merit-based
-								scholarship recipient at Dickinson College
+								scholarship at Dickinson College
 							</div>
 							<div style={{ fontSize: 15, color: "#e9e9f3" }}>
 								• <strong>Dean&apos;s List</strong> - Academic excellence
-								recognition for outstanding GPA
+								recognition
 							</div>
 							<div style={{ fontSize: 15, color: "#e9e9f3" }}>
-								•{" "}
-								<strong>
-									Pi Mu Epsilon National Mathematics Honor Society
-								</strong>{" "}
-								- Membership for excellence in mathematics
-							</div>
-							<div style={{ fontSize: 15, color: "#e9e9f3" }}>
-								• <strong>Bachelor of Science</strong> - Computer Science &
-								Mathematics, GPA: 3.52/4.00 (May 2025)
+								• <strong>Pi Mu Epsilon</strong> - National Mathematics Honor
+								Society
 							</div>
 						</div>
 					</div>
@@ -1608,9 +1468,7 @@ const About = () => {
 					Check Out My <span style={{ color: "#fff" }}>Projects</span> 🚀
 				</h2>
 				<Typography className="projects-link-p">
-					I&apos;ve worked on a variety of exciting projects showcasing my
-					skills in web development, software engineering, and more. Click the
-					button below to see them!
+					Browse my work in web development, systems programming, and more.
 				</Typography>
 				<Button
 					onClick={() => router.push("/projects")}
