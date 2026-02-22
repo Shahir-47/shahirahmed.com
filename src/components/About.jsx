@@ -166,30 +166,44 @@ const About = () => {
 						<h3>Programming Languages</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
 								alt="JavaScript"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
 								alt="TypeScript"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
 								alt="Java"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
 								alt="Python"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
 								alt="SQL"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
 								alt="HTML5"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
 								alt="CSS3"
 							/>
@@ -201,18 +215,26 @@ const About = () => {
 						<h3>Frontend Frameworks</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
 								alt="React"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
 								alt="Vue.js"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
 								alt="Next.js"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
 								alt="TailwindCSS"
 							/>
@@ -224,26 +246,38 @@ const About = () => {
 						<h3>Backend & Server</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
 								alt="Spring Boot"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
 								alt="Express.js"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
 								alt="Flask"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
 								alt="Firebase"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/RESTful%20APIs-02569B?style=for-the-badge&logo=api&logoColor=white"
 								alt="RESTful APIs"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
 								alt="WebSockets"
 							/>
@@ -255,14 +289,20 @@ const About = () => {
 						<h3>Databases & Storage</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
 								alt="PostgreSQL"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
 								alt="MongoDB"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
 								alt="Firestore"
 							/>
@@ -274,18 +314,26 @@ const About = () => {
 						<h3>Cloud & Infrastructure</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/AWS%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"
 								alt="AWS S3"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
 								alt="Docker"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
 								alt="Vercel"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
 								alt="Linux"
 							/>
@@ -297,6 +345,8 @@ const About = () => {
 						<h3>Testing & Quality</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white"
 								alt="Cypress"
 							/>
@@ -308,22 +358,32 @@ const About = () => {
 						<h3>Tooling</h3>
 						<div className="tools-icons">
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
 								alt="Git"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"
 								alt="Maven"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
 								alt="NPM"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white"
 								alt="PNPM"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"
 								alt="Vite"
 							/>
@@ -920,7 +980,9 @@ const About = () => {
 						<h4 className="vertical-timeline-element-subtitle">HoyaHacks</h4>
 						<img
 							src={Prospectus.src}
-							alt="Prospectus"
+							alt="Prospectus - AI college admissions assistant built at HoyaHacks 2024"
+							loading="lazy"
+							decoding="async"
 							style={{
 								width: "100%",
 								borderRadius: "8px",
@@ -944,18 +1006,26 @@ const About = () => {
 						</p>
 						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
 								alt="React"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"
 								alt="Django"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Azure%20OpenAI-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white"
 								alt="Azure OpenAI"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
 								alt="MongoDB Atlas"
 							/>
@@ -1020,7 +1090,9 @@ const About = () => {
 						<h4 className="vertical-timeline-element-subtitle">PennApps</h4>
 						<img
 							src={SweetFriend.src}
-							alt="SweetFriend"
+							alt="SweetFriend - Diabetes management app built at PennApps 2024"
+							loading="lazy"
+							decoding="async"
 							style={{
 								width: "100%",
 								borderRadius: "8px",
@@ -1044,26 +1116,38 @@ const About = () => {
 						</p>
 						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"
 								alt="React"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
 								alt="Flask"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"
 								alt="MongoDB"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Dexcom-5CBB5B?style=for-the-badge&logo=ai&logoColor=white"
 								alt="Dexcom"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Twilio-F22F46?style=for-the-badge&logo=twilio&logoColor=white"
 								alt="Twilio"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
 								alt="Vercel"
 							/>
@@ -1138,7 +1222,9 @@ const About = () => {
 						<h4 className="vertical-timeline-element-subtitle">HackHarvard</h4>
 						<img
 							src={Albatross.src}
-							alt="Albatross"
+							alt="Albatross - AI-powered safe navigation app built at HackHarvard 2024"
+							loading="lazy"
+							decoding="async"
 							style={{
 								width: "100%",
 								borderRadius: "8px",
@@ -1162,18 +1248,26 @@ const About = () => {
 						</p>
 						<div className="tech-stack" style={{ marginTop: "1rem" }}>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
 								alt="Vue.js"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
 								alt="Cloudflare"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Databricks-E87352?style=for-the-badge&logo=databricks&logoColor=white"
 								alt="Databricks"
 							/>
 							<img
+								loading="lazy"
+								decoding="async"
 								src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
 								alt="Python"
 							/>

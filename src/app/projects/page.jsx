@@ -159,6 +159,47 @@ const projectsPageJsonLd = {
 					"@id": `${siteUrl}/#person`,
 				},
 			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 8,
+				name: "Prospectus",
+				description:
+					"AI-powered college admissions assistant built at HoyaHacks 2024 with React, Django, Azure OpenAI, and vector embeddings for personalized guidance.",
+				codeRepository: "https://github.com/HoyaHacks2024-Team",
+				programmingLanguage: ["JavaScript", "Python"],
+				runtimePlatform: "React, Django, Azure OpenAI",
+				author: {
+					"@id": `${siteUrl}/#person`,
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 9,
+				name: "PandOS",
+				description:
+					"Complete OS kernel in C for the uMPS3 RISC emulator with time-sharing, multiprogramming, TLB-based virtual memory, system calls, and interrupt handling.",
+				codeRepository:
+					"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
+				programmingLanguage: ["C"],
+				runtimePlatform: "uMPS3",
+				author: {
+					"@id": `${siteUrl}/#person`,
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 10,
+				name: "BitTorrent Client JS",
+				description:
+					"Peer-to-peer file-sharing client in JavaScript with magnet link resolution, SHA-1 verification, concurrent downloads, and HTTP tracker communication.",
+				codeRepository:
+					"https://github.com/Shahir-47/bittorrent-client-js",
+				programmingLanguage: ["JavaScript"],
+				runtimePlatform: "Node.js",
+				author: {
+					"@id": `${siteUrl}/#person`,
+				},
+			},
 		],
 	},
 };

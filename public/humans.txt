@@ -1,12 +1,12 @@
 /* TEAM */
 Developer: Shahir Ahmed
-Contact: shahir@shahirahmed.com
+Contact: shahir.a@outlook.com
 GitHub: https://github.com/Shahir-47
 LinkedIn: https://www.linkedin.com/in/shahir47/
 Location: United States
 
 /* SITE */
-Last update: 2026/02/21
+Last update: 2026/02/22
 Language: English
 Standards: HTML5, CSS3, JavaScript ES6+
 Framework: Next.js 15, React 18

@@ -3,10 +3,13 @@
 	"short_name": "Shahir Ahmed",
 	"description": "Personal portfolio of Shahir Ahmed, a Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 	"start_url": "/",
+	"id": "/",
+	"scope": "/",
 	"display": "standalone",
 	"background_color": "#000000",
 	"theme_color": "#4fd1c5",
 	"orientation": "portrait-primary",
+	"prefer_related_applications": false,
 	"icons": [
 		{
 			"src": "/icon.svg",

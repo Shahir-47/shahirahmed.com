@@ -49,18 +49,37 @@ const nextConfig = {
 						key: "Referrer-Policy",
 						value: "origin-when-cross-origin",
 					},
+					{
+						key: "Strict-Transport-Security",
+						value: "max-age=63072000; includeSubDomains; preload",
+					},
+					{
+						key: "Permissions-Policy",
+						value: "camera=(), microphone=(), geolocation=()",
+					},
 				],
 			},
 		];
 	},
 
-	// Redirects for SEO (handle old routes)
+	// Redirects for SEO (handle old routes and common typos)
 	async redirects() {
 		return [
 			{
 				source: "/home",
 				destination: "/",
 				permanent: true,
+			},
+			{
+				source: "/project",
+				destination: "/projects",
+				permanent: true,
+			},
+			{
+				source: "/resume",
+				destination:
+					"https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view",
+				permanent: false,
 			},
 		];
 	},

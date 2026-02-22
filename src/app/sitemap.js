@@ -1,6 +1,6 @@
 export default function sitemap() {
 	const baseUrl = "https://www.shahirahmed.com";
-	const lastModified = new Date("2026-02-21");
+	const lastModified = new Date("2026-02-22");
 
 	// Static pages and AI discovery assets.
 	const routes = [

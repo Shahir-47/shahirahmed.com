@@ -23,12 +23,14 @@ export const metadata = {
 		"Shahir Ahmed",
 		"Software Engineer",
 		"Full Stack Engineer",
+		"Full Stack Developer",
 		"React Developer",
 		"Next.js Developer",
 		"TypeScript Developer",
 		"Java Developer",
-		"Spring Boot",
+		"Spring Boot Developer",
 		"Python Developer",
+		"Node.js Developer",
 		"Vue.js Developer",
 		"Web Developer",
 		"Frontend Developer",
@@ -42,11 +44,13 @@ export const metadata = {
 		"RAG",
 		"OpenAI Whisper",
 		"AI assistants",
+		"GPT",
 		"Stripe Connect",
 		"Cloudflare Workers",
 		"Databricks",
 		"HackHarvard",
 		"PennApps",
+		"HoyaHacks",
 		"Computer Science",
 		"Software Engineering",
 		"PostgreSQL",
@@ -56,6 +60,9 @@ export const metadata = {
 		"Cypress",
 		"Docker",
 		"Vercel",
+		"Dickinson College",
+		"software engineer portfolio",
+		"CS50",
 	],
 	authors: [{ name: "Shahir Ahmed", url: siteUrl }],
 	creator: "Shahir Ahmed",
@@ -108,10 +115,10 @@ export const metadata = {
 	},
 	...(googleSiteVerification
 		? {
-			verification: {
-				google: googleSiteVerification,
+				verification: {
+					google: googleSiteVerification,
+				},
 			}
-		}
 		: {}),
 	category: "technology",
 	icons: {
@@ -164,21 +171,61 @@ const jsonLd = {
 				name: "Sarva",
 				url: "https://www.sarvabazaar.com",
 			},
+			hasOccupation: {
+				"@type": "Occupation",
+				name: "Software Engineer",
+				occupationLocation: {
+					"@type": "Country",
+					name: "United States",
+				},
+				skills:
+					"React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, RAG, OpenAI Whisper, Firebase",
+			},
 			alumniOf: {
 				"@type": "EducationalOrganization",
 				name: "Dickinson College",
+				url: "https://www.dickinson.edu",
 			},
+			hasCredential: [
+				{
+					"@type": "EducationalOccupationalCredential",
+					name: "B.S. in Computer Science and Mathematics",
+					credentialCategory: "degree",
+					recognizedBy: {
+						"@type": "EducationalOrganization",
+						name: "Dickinson College",
+					},
+				},
+				{
+					"@type": "EducationalOccupationalCredential",
+					name: "CS50x: Introduction to Computer Science",
+					credentialCategory: "certificate",
+					recognizedBy: {
+						"@type": "Organization",
+						name: "HarvardX",
+					},
+					url: "https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3",
+				},
+			],
 			knowsAbout: [
 				"Java",
 				"JavaScript",
 				"TypeScript",
 				"Python",
+				"C",
+				"Lua",
 				"SQL",
+				"HTML5",
+				"CSS3",
 				"React",
 				"Next.js",
 				"Vue.js",
+				"Tailwind CSS",
 				"Spring Boot",
+				"Node.js",
 				"Express.js",
+				"Flask",
+				"Django",
 				"RAG",
 				"Vector search",
 				"OpenAI Whisper",
@@ -188,7 +235,10 @@ const jsonLd = {
 				"PostgreSQL",
 				"MongoDB",
 				"Firebase",
+				"Stripe Connect",
 				"AWS S3",
+				"Cloudflare Workers",
+				"Databricks",
 				"Cypress",
 				"Docker",
 				"Vercel",
@@ -204,7 +254,7 @@ const jsonLd = {
 				"https://devpost.com/Shahir-47",
 				"https://instagram.com/shahirahmed._",
 			],
-			email: "shahir@shahirahmed.com",
+			email: "shahir.a@outlook.com",
 		},
 		{
 			"@type": "ProfilePage",
@@ -236,8 +286,16 @@ export default function RootLayout({ children }) {
 					crossOrigin="anonymous"
 				/>
 
+				{/* DNS prefetch for third-party badge images */}
+				<link rel="dns-prefetch" href="https://img.shields.io" />
+
 				{/* Theme color for PWA */}
 				<meta name="theme-color" content="#4fd1c5" />
+				<meta
+					name="theme-color"
+					content="#0a0a0a"
+					media="(prefers-color-scheme: dark)"
+				/>
 
 				{/* OpenSearch for browser search integration */}
 				<link

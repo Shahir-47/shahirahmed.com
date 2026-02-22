@@ -1,6 +1,6 @@
 {
 	"schema_version": "1.0",
-	"last_updated": "2026-02-21",
+	"last_updated": "2026-02-22",
 	"canonical_url": "https://www.shahirahmed.com",
 	"profile": {
 		"name": "Shahir Ahmed",
@@ -8,7 +8,7 @@
 		"location": "United States",
 		"summary": "Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
 		"website": "https://www.shahirahmed.com",
-		"email": "shahir@shahirahmed.com",
+		"email": "shahir.a@outlook.com",
 		"social": {
 			"github": "https://github.com/Shahir-47",
 			"linkedin": "https://www.linkedin.com/in/shahir47/",
@@ -61,6 +61,24 @@
 				"Shipped merged PRs for text wrapping, auto-scaling labels, and style customization"
 			],
 			"skills": ["TypeScript", "Open Source"]
+		},
+		{
+			"role": "Software Engineer (Volunteer)",
+			"organization": "84 Lumber",
+			"period": "2023-09 to 2024-01",
+			"highlights": [
+				"Built ANTLR-based transpilation pipeline to migrate 10K+ lines of CBASIC to Python/Java for a $9B company"
+			],
+			"skills": ["ANTLR", "Python", "Java"]
+		},
+		{
+			"role": "Teaching Assistant",
+			"organization": "Dickinson College",
+			"period": "2022-08 to 2025-05",
+			"highlights": [
+				"Mentored 25+ students across 6 semesters in Python and Java through labs, office hours, and code reviews"
+			],
+			"skills": ["Python", "Java", "Teaching"]
 		}
 	],
 	"projects": [
@@ -91,11 +109,23 @@
 			"description": "Task accountability platform with verifier workflows, recurring tasks, encryption, and WebSockets."
 		},
 		{
+			"name": "PandOS",
+			"category": "Personal",
+			"github": "https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
+			"description": "Complete OS kernel in C for uMPS3 with time-sharing, TLB virtual memory, system calls, and interrupt handling."
+		},
+		{
+			"name": "BitTorrent Client JS",
+			"category": "Personal",
+			"github": "https://github.com/Shahir-47/bittorrent-client-js",
+			"description": "P2P file-sharing client in JavaScript with magnet link resolution and SHA-1 verification."
+		},
+		{
 			"name": "Albatross",
 			"category": "Hackathon",
 			"url": "https://albatross-hack.netlify.app/",
 			"devpost": "https://devpost.com/software/albatross",
-			"description": "AI-powered safe navigation app built at HackHarvard 2024."
+			"description": "AI-powered safe navigation app built at HackHarvard 2024 with Vue.js, Cloudflare Workers, and Databricks."
 		},
 		{
 			"name": "SweetFriend",
@@ -122,7 +152,12 @@
 		"institution": "Dickinson College",
 		"degree": "B.S. Computer Science and Mathematics",
 		"period": "2021-08 to 2025-05",
-		"gpa": "3.52/4.00"
+		"gpa": "3.52/4.00",
+		"honors": [
+			"The 1783 Scholarship",
+			"Dean's List",
+			"Pi Mu Epsilon (National Mathematics Honor Society)"
+		]
 	},
 	"certifications": [
 		{
@@ -137,19 +172,33 @@
 		}
 	],
 	"skills": {
-		"programming": ["Java", "TypeScript", "JavaScript", "Python", "SQL", "C"],
+		"programming": [
+			"Java",
+			"TypeScript",
+			"JavaScript",
+			"Python",
+			"SQL",
+			"C",
+			"Lua"
+		],
 		"frontend": ["React", "Next.js", "Vue.js", "Tailwind CSS"],
 		"backend_data": [
 			"Spring Boot",
 			"Node.js",
 			"Express",
+			"Flask",
 			"REST APIs",
 			"WebSockets",
 			"PostgreSQL",
 			"MongoDB",
 			"Firebase"
 		],
-		"ai_ml": ["RAG", "Vector Search", "OpenAI Whisper", "LLM Structured Outputs"],
+		"ai_ml": [
+			"RAG",
+			"Vector Search",
+			"OpenAI Whisper",
+			"LLM Structured Outputs"
+		],
 		"cloud_tooling": [
 			"Stripe Connect",
 			"Cloudflare Workers",
