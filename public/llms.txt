@@ -1,11 +1,13 @@
 # Shahir Ahmed - Software Engineer
 
-Last updated: 2026-02-22
+Last updated: 2026-03-04
 Canonical URL: https://www.shahirahmed.com
 Machine-readable profile: https://www.shahirahmed.com/llms.json
 
 ## Quick Summary
-Shahir Ahmed is a Software Engineer in the United States. He builds AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.
+Shahir Ahmed is a Software Engineer in the United States. He builds full-stack products with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, and Firebase.
+
+Recent projects include GrabPic (event photo sharing with facial recognition), PaperPulse (AI research platform with knowledge graphs), and BitTorrent Client JS (peer-to-peer file sharing client in Node.js).
 
 ## Current Role
 ### Software Engineer, Sarva (May 2025 - Present)
@@ -36,10 +38,27 @@ Shahir Ahmed is a Software Engineer in the United States. He builds AI-assisted 
 - OSS portfolio: https://github.com/Shahir-47/open-source-contributions
 
 ## Featured Projects
+### GrabPic
+- URL: https://grab-pic.vercel.app
+- GitHub: https://github.com/Shahir-47/Grab-Pic
+- Category: Personal
+- Summary: Event photo sharing app with facial recognition. Built as a 3-service system (Next.js frontend, Spring Boot API, Python worker), using PostgreSQL with pgvector for cosine similarity search, S3 presigned uploads, and SQS processing.
+
+### PaperPulse
+- URL: https://paper-pulse-nu.vercel.app
+- GitHub: https://github.com/Shahir-47/Paper-Pulse
+- Category: Personal
+- Summary: AI-powered research platform that aggregates papers across ArXiv, PubMed, Semantic Scholar, and OpenAlex, reranks with Cohere, builds Neo4j knowledge graphs, and answers questions with RAG.
+
+### BitTorrent Client JS
+- GitHub: https://github.com/Shahir-47/bittorrent-client-js
+- Category: Personal
+- Summary: BitTorrent client in JavaScript that downloads from .torrent files and magnet links, with TCP peer connections, piece-level SHA-1 integrity checks, and extension protocol metadata exchange.
+
 ### Sarva
 - URL: https://www.sarvabazaar.com/
 - Category: Professional
-- Summary: AI-assisted vendor management marketplace with RAG search, voice inventory, GPT assistants, and payments.
+- Summary: Vendor management marketplace with RAG search, voice inventory, GPT assistants, and payments.
 
 ### FarmData2
 - URL: https://github.com/FarmData2/FarmData2
@@ -62,11 +81,6 @@ Shahir Ahmed is a Software Engineer in the United States. He builds AI-assisted 
 - GitHub: https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/
 - Category: Personal
 - Summary: Complete OS kernel in C for uMPS3 with time-sharing, TLB virtual memory, system calls, and interrupt handling.
-
-### BitTorrent Client JS
-- GitHub: https://github.com/Shahir-47/bittorrent-client-js
-- Category: Personal
-- Summary: P2P file-sharing client in JavaScript with magnet link resolution and SHA-1 verification.
 
 ### Albatross
 - URL: https://albatross-hack.netlify.app/
@@ -96,9 +110,9 @@ Shahir Ahmed is a Software Engineer in the United States. He builds AI-assisted 
 ## Skills
 Programming: Java, TypeScript, JavaScript, Python, SQL, C, Lua, HTML5, CSS3
 Frontend: React, Next.js, Vue.js, Tailwind CSS
-Backend/Data: Spring Boot, Node.js, Express, Flask, REST APIs, WebSockets, PostgreSQL, MongoDB, Firebase
-AI/ML: RAG pipelines, vector search, OpenAI Whisper, structured LLM outputs
-Cloud/Tooling: Stripe Connect, Cloudflare Workers, Databricks, Cypress, Docker, AWS S3, Vercel, Git, Linux
+Backend/Data: Spring Boot, Node.js, Express, FastAPI, Flask, Django, REST APIs, WebSockets, PostgreSQL, pgvector, Neo4j, MongoDB, Firebase, Supabase
+AI/ML: RAG pipelines, vector search, knowledge graphs, Cohere neural reranking, OpenAI Whisper, facial recognition, structured LLM outputs
+Cloud/Tooling: Stripe Connect, AWS S3, AWS App Runner, AWS SQS, AWS CloudFront, Upstash Redis, Cloudflare Workers, Databricks, Cypress, Docker, GitHub Actions, Vercel, Git, Linux
 
 ## Contact
 - Email: shahir.a@outlook.com

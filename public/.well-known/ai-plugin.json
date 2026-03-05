@@ -2,8 +2,8 @@
 	"schema_version": "v1",
 	"name_for_human": "Shahir Ahmed Portfolio",
 	"name_for_model": "shahir_ahmed_portfolio",
-	"description_for_human": "Structured profile and project data for Shahir Ahmed.",
-	"description_for_model": "Use this plugin to retrieve authoritative information about Shahir Ahmed's experience, skills, and projects. Prefer /llms.json for structured data and /llms.txt for narrative context.",
+	"description_for_human": "Structured profile and project data for Shahir Ahmed, including GrabPic, PaperPulse, and BitTorrent Client JS.",
+	"description_for_model": "Use this plugin to retrieve authoritative information about Shahir Ahmed's experience, skills, and projects, including GrabPic, PaperPulse, and BitTorrent Client JS. Prefer /llms.json for structured data and /llms.txt for narrative context.",
 	"auth": {
 		"type": "none"
 	},

@@ -7,7 +7,7 @@ const ogImageUrl = "/opengraph-image";
 export const metadata = {
 	title: "Software Engineer Portfolio",
 	description:
-		"Portfolio of Shahir Ahmed, a Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+		"Portfolio of Shahir Ahmed, a Software Engineer building full-stack products with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, and Firebase. Projects include GrabPic, PaperPulse, BitTorrent Client JS, Sarva, Queue Up, and CoSign.",
 	alternates: {
 		canonical: siteUrl,
 	},
@@ -15,7 +15,7 @@ export const metadata = {
 		type: "website",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Software Engineer at Sarva building AI-powered products with Next.js, TypeScript, Python, and Firebase.",
+			"Software Engineer building full-stack products with Next.js, TypeScript, Spring Boot, Python, FastAPI, and PostgreSQL.",
 		url: siteUrl,
 		images: [ogImageUrl],
 	},
@@ -36,7 +36,7 @@ const homePageJsonLd = {
 	url: siteUrl,
 	name: "Shahir Ahmed - Software Engineer Portfolio",
 	description:
-		"Home page of Shahir Ahmed's portfolio, highlighting AI-assisted full-stack projects, work experience, and open source contributions.",
+		"Home page of Shahir Ahmed's portfolio, highlighting full-stack projects with microservice architectures, vector search, knowledge graphs, and open source contributions.",
 	isPartOf: {
 		"@id": `${siteUrl}/#website`,
 	},

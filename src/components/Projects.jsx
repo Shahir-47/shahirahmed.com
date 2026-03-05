@@ -10,6 +10,8 @@ import CoSignImg from "@/assets/CoSignImg.png";
 import SocialIcons from "./SocialIcons";
 import Sarva from "@/assets/sarva.png";
 import Open from "@/assets/open.png";
+import GrabPicImg from "@/assets/grabpic.png";
+import PaperPulseImg from "@/assets/paperpulse.png";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Box, Typography, Button, TextField, Chip } from "@mui/material";
 import { useState } from "react";
@@ -80,7 +82,29 @@ const projectsData = [
 		category: CATEGORIES.OPENSOURCE,
 	},
 
-	// === PERSONAL ===
+	// === PERSONAL (ordered by technical complexity) ===
+	{
+		image: GrabPicImg,
+		title: "GrabPic",
+		description:
+			"Event photo sharing app where hosts upload photos and share one link. Guests take a selfie to instantly find every photo they appear in using facial recognition. Three-service architecture with a Next.js frontend on Vercel, Spring Boot REST API on AWS App Runner, and a Python face detection worker on EC2. Photos upload directly to S3 via presigned URLs, face embeddings are stored in PostgreSQL with pgvector for cosine similarity search, and processing jobs flow through SQS. Secured with Supabase Auth, Upstash Redis rate limiting, and Cloudflare Turnstile bot protection.",
+		liveDemo: "https://grab-pic.vercel.app",
+		sourceCode: "https://github.com/Shahir-47/Grab-Pic",
+		devpost: null,
+		repo: "Grab-Pic",
+		category: CATEGORIES.PERSONAL,
+	},
+	{
+		image: PaperPulseImg,
+		title: "PaperPulse",
+		description:
+			"Research platform that aggregates papers from ArXiv, PubMed, Semantic Scholar, and OpenAlex, ranks them with Cohere neural reranking, and builds a Neo4j knowledge graph of research connections. Features a daily personalized feed, three-sentence AI summaries, hybrid vector search with chunk-level retrieval, multimodal Q&A with SSE streaming, and an autonomous agent that traverses the graph to generate literature reviews. Built with Next.js, FastAPI, PostgreSQL with pgvector, Neo4j, OpenAI GPT-4.1, and deployed on AWS App Runner.",
+		liveDemo: "https://paper-pulse-nu.vercel.app",
+		sourceCode: "https://github.com/Shahir-47/Paper-Pulse",
+		devpost: null,
+		repo: "Paper-Pulse",
+		category: CATEGORIES.PERSONAL,
+	},
 	{
 		image: QueueUp,
 		title: "Queue Up",
@@ -101,6 +125,17 @@ const projectsData = [
 		sourceCode: "https://github.com/Shahir-47/CoSign",
 		devpost: null,
 		repo: "CoSign",
+		category: CATEGORIES.PERSONAL,
+	},
+	{
+		image: "",
+		title: "BitTorrent Client JS",
+		description:
+			"BitTorrent client that downloads files from .torrent files and magnet links. Implements the BitTorrent wire protocol with TCP peer connections, piece-level SHA-1 integrity checking, and the extension protocol for metadata exchange. Built with Node.js.",
+		liveDemo: null,
+		sourceCode: "https://github.com/Shahir-47/bittorrent-client-js",
+		devpost: null,
+		repo: "bittorrent-client-js",
 		category: CATEGORIES.PERSONAL,
 	},
 
@@ -139,16 +174,6 @@ const projectsData = [
 			"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
 		devpost: null,
 		repo: "PandOS",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "BitTorrent Client JS",
-		description:
-			"File-sharing client in JavaScript that downloads via peer-to-peer swarms with magnet link resolution and SHA-1 verification. Handles both .torrent files and magnet links with concurrent downloads and HTTP tracker communication.",
-		liveDemo: null,
-		sourceCode: "https://github.com/Shahir-47/bittorrent-client-js",
-		repo: "bittorrent-client-js",
 		category: CATEGORIES.PERSONAL,
 	},
 	{
@@ -521,7 +546,7 @@ const Projects = () => {
 
 	const projectsToShow = showAllProjects
 		? filteredProjects
-		: filteredProjects.slice(0, 8);
+		: filteredProjects.slice(0, 7);
 
 	// Get counts for each category
 	const getCategoryCount = (category) => {
@@ -804,7 +829,7 @@ const Projects = () => {
 			</Box>
 
 			{/* Show More/Less Button */}
-			{filteredProjects.length > 8 && (
+			{filteredProjects.length > 7 && (
 				<Box
 					sx={{
 						textAlign: "center",
@@ -849,7 +874,7 @@ const Projects = () => {
 					>
 						{showAllProjects
 							? `Show Less Projects`
-							: `Show ${filteredProjects.length - 8} More Projects`}
+							: `Show ${filteredProjects.length - 7} More Projects`}
 					</Button>
 				</Box>
 			)}

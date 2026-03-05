@@ -1,10 +1,11 @@
 openapi: 3.0.3
 info:
   title: Shahir Ahmed Portfolio Data API
-  version: 1.0.0
+  version: 1.1.0
   description: >
     Read-only endpoints for structured portfolio and profile information
-    used by AI assistants and search tooling.
+    used by AI assistants and search tooling, including coverage for
+    projects such as GrabPic, PaperPulse, and BitTorrent Client JS.
 servers:
   - url: https://www.shahirahmed.com
 paths:

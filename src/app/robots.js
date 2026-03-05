@@ -1,5 +1,14 @@
 export default function robots() {
 	const baseUrl = "https://www.shahirahmed.com";
+	const aiDiscoveryPaths = [
+		"/llms.txt",
+		"/llms.json",
+		"/openapi.yaml",
+		"/.well-known/ai-plugin.json",
+		"/humans.txt",
+		"/manifest.json",
+		"/opensearch.xml",
+	];
 
 	return {
 		rules: [
@@ -23,7 +32,7 @@ export default function robots() {
 					"PerplexityBot",
 					"Bytespider",
 				],
-				allow: "/",
+				allow: ["/", ...aiDiscoveryPaths],
 			},
 		],
 		sitemap: `${baseUrl}/sitemap.xml`,

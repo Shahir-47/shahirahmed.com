@@ -1,6 +1,6 @@
 export default function sitemap() {
 	const baseUrl = "https://www.shahirahmed.com";
-	const lastModified = new Date("2026-02-22");
+	const lastModified = new Date("2026-03-04");
 
 	// Static pages and AI discovery assets.
 	const routes = [
@@ -39,6 +39,24 @@ export default function sitemap() {
 			lastModified,
 			changeFrequency: "monthly",
 			priority: 0.4,
+		},
+		{
+			url: `${baseUrl}/humans.txt`,
+			lastModified,
+			changeFrequency: "yearly",
+			priority: 0.2,
+		},
+		{
+			url: `${baseUrl}/manifest.json`,
+			lastModified,
+			changeFrequency: "yearly",
+			priority: 0.2,
+		},
+		{
+			url: `${baseUrl}/opensearch.xml`,
+			lastModified,
+			changeFrequency: "yearly",
+			priority: 0.2,
 		},
 		{
 			url: `${baseUrl}/.well-known/ai-plugin.json`,

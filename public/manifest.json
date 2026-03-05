@@ -1,7 +1,7 @@
 {
 	"name": "Shahir Ahmed - Software Engineer",
 	"short_name": "Shahir Ahmed",
-	"description": "Personal portfolio of Shahir Ahmed, a Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+	"description": "Personal portfolio of Shahir Ahmed, a Software Engineer building full-stack products with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, and Firebase. Featured projects include GrabPic, PaperPulse, and BitTorrent Client JS.",
 	"start_url": "/",
 	"id": "/",
 	"scope": "/",

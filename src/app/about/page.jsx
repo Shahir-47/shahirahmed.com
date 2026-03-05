@@ -7,7 +7,7 @@ const ogImageUrl = "/opengraph-image";
 export const metadata = {
 	title: "About Me",
 	description:
-		"Learn about Shahir Ahmed's experience at Sarva, FarmData2, Mermaid.js, and hackathons including HackHarvard and PennApps, plus tools and certifications.",
+		"Learn about Shahir Ahmed's experience at Sarva, FarmData2, Mermaid.js, and hackathons including HackHarvard and PennApps. Recent projects include GrabPic (facial recognition photo sharing), PaperPulse (AI research platform with knowledge graphs), and BitTorrent Client JS.",
 	alternates: {
 		canonical: `${siteUrl}/about`,
 	},
@@ -15,7 +15,7 @@ export const metadata = {
 		type: "profile",
 		title: "About Shahir Ahmed | Software Engineer",
 		description:
-			"Background, work experience, open source contributions, hackathons, education, and certifications for Shahir Ahmed.",
+			"Background, work experience, open source contributions, hackathons, education, and certifications for Shahir Ahmed. Builder of GrabPic, PaperPulse, BitTorrent Client JS, Sarva, and more.",
 		url: `${siteUrl}/about`,
 		images: [ogImageUrl],
 	},

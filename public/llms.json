@@ -1,12 +1,12 @@
 {
-	"schema_version": "1.0",
-	"last_updated": "2026-02-22",
+	"schema_version": "1.1",
+	"last_updated": "2026-03-04",
 	"canonical_url": "https://www.shahirahmed.com",
 	"profile": {
 		"name": "Shahir Ahmed",
 		"title": "Software Engineer",
 		"location": "United States",
-		"summary": "Software Engineer building AI-assisted full-stack products with React, Next.js, TypeScript, Spring Boot, Python, PostgreSQL, and Firebase.",
+		"summary": "Software Engineer building full-stack products with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, and Firebase. Recent projects include GrabPic, PaperPulse, and BitTorrent Client JS.",
 		"website": "https://www.shahirahmed.com",
 		"email": "shahir.a@outlook.com",
 		"social": {
@@ -95,6 +95,20 @@
 			"description": "NSF-funded farm platform with Vue.js, Node.js APIs, PostgreSQL, and Cypress testing."
 		},
 		{
+			"name": "GrabPic",
+			"category": "Personal",
+			"url": "https://grab-pic.vercel.app",
+			"github": "https://github.com/Shahir-47/Grab-Pic",
+			"description": "Event photo sharing app with facial recognition. Three-service architecture with Next.js, Spring Boot, and Python worker services, using PostgreSQL pgvector, S3 uploads, and SQS queues."
+		},
+		{
+			"name": "PaperPulse",
+			"category": "Personal",
+			"url": "https://paper-pulse-nu.vercel.app",
+			"github": "https://github.com/Shahir-47/Paper-Pulse",
+			"description": "AI research platform that aggregates papers from ArXiv, PubMed, Semantic Scholar, and OpenAlex, reranks with Cohere, builds Neo4j knowledge graphs, and supports RAG-powered answers."
+		},
+		{
 			"name": "Queue Up",
 			"category": "Personal",
 			"url": "https://queue-up.onrender.com",
@@ -109,16 +123,16 @@
 			"description": "Task accountability platform with verifier workflows, recurring tasks, encryption, and WebSockets."
 		},
 		{
+			"name": "BitTorrent Client JS",
+			"category": "Personal",
+			"github": "https://github.com/Shahir-47/bittorrent-client-js",
+			"description": "BitTorrent client in JavaScript for .torrent files and magnet links with TCP peer connections, SHA-1 integrity checks, and extension protocol metadata exchange."
+		},
+		{
 			"name": "PandOS",
 			"category": "Personal",
 			"github": "https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
 			"description": "Complete OS kernel in C for uMPS3 with time-sharing, TLB virtual memory, system calls, and interrupt handling."
-		},
-		{
-			"name": "BitTorrent Client JS",
-			"category": "Personal",
-			"github": "https://github.com/Shahir-47/bittorrent-client-js",
-			"description": "P2P file-sharing client in JavaScript with magnet link resolution and SHA-1 verification."
 		},
 		{
 			"name": "Albatross",
@@ -186,26 +200,39 @@
 			"Spring Boot",
 			"Node.js",
 			"Express",
+			"FastAPI",
 			"Flask",
+			"Django",
 			"REST APIs",
 			"WebSockets",
 			"PostgreSQL",
+			"pgvector",
+			"Neo4j",
 			"MongoDB",
-			"Firebase"
+			"Firebase",
+			"Supabase"
 		],
 		"ai_ml": [
 			"RAG",
 			"Vector Search",
+			"Knowledge Graphs",
+			"Cohere Neural Reranking",
 			"OpenAI Whisper",
+			"Facial Recognition",
 			"LLM Structured Outputs"
 		],
 		"cloud_tooling": [
 			"Stripe Connect",
+			"AWS S3",
+			"AWS App Runner",
+			"AWS SQS",
+			"AWS CloudFront",
+			"Upstash Redis",
 			"Cloudflare Workers",
 			"Databricks",
 			"Cypress",
 			"Docker",
-			"AWS S3",
+			"GitHub Actions",
 			"Vercel",
 			"Git",
 			"Linux"
