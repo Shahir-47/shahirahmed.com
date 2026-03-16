@@ -26,6 +26,6 @@ const Footer = () => {
 			</a>
 		</footer>
 	);
-}; // check commit verified tag
+};
 
 export default Footer;
