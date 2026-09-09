@@ -7,6 +7,7 @@ import Link from "next/link";
 import Desk from "@/assets/desk.svg";
 import SocialIcons from "./SocialIcons";
 import AboutArt from "./AboutArt";
+import ContactArt from "./ContactArt";
 import { projectsData } from "./Projects";
 
 const RESUME_URL =
@@ -205,20 +206,26 @@ const HomePage = () => {
 
 			{/* 4. Contact */}
 			<section className="home-section home-contact" id="contact-preview" aria-labelledby="contact-preview-title">
-				<h2 className="home-heading" id="contact-preview-title">
-					Got a project in <span className="accent">mind?</span>
-				</h2>
-				<p className="home-copy">
-					Always happy to talk about a role, a project, or something you are
-					stuck on. I read everything that comes in and I reply.
-				</p>
-				<div className="button-container">
-					<Link className="btn btn-primary" href="/contact">
-						Send a message
-					</Link>
-					<a className="btn btn-ghost" href="mailto:shahir.a@outlook.com">
-						shahir.a@outlook.com
-					</a>
+				<div className="home-about">
+					<div>
+						<h2 className="home-heading" id="contact-preview-title">
+							Got a project in <span className="accent">mind?</span>
+						</h2>
+						<p className="home-copy">
+							Always happy to talk about a role, a project, or something you are
+							stuck on. I read everything that comes in and I reply.
+						</p>
+						<div className="button-container">
+							<Link className="btn btn-primary" href="/contact">
+								Send a message
+							</Link>
+							<a className="btn btn-ghost" href="mailto:shahir.a@outlook.com">
+								shahir.a@outlook.com
+							</a>
+						</div>
+					</div>
+
+					<ContactArt className="home-portrait" />
 				</div>
 			</section>
 		</div>
