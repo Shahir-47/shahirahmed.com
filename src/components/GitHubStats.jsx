@@ -7,7 +7,7 @@ const GitHubStats = () => {
 	const [config, setConfig] = useState({
 		blockSize: 15,
 		blockMargin: 5,
-		fontSize: 12,
+		fontSize: 15,
 		trimDateRange: false,
 	});
 
@@ -22,21 +22,21 @@ const GitHubStats = () => {
 				setConfig({
 					blockSize: 20,
 					blockMargin: 8,
-					fontSize: 13,
+					fontSize: 16,
 					trimDateRange: false,
 				});
 			} else if (contentWidth >= 1200) {
 				setConfig({
 					blockSize: 16,
 					blockMargin: 5,
-					fontSize: 12,
+					fontSize: 15,
 					trimDateRange: false,
 				});
 			} else if (contentWidth >= 900) {
 				setConfig({
 					blockSize: 12,
 					blockMargin: 5,
-					fontSize: 13,
+					fontSize: 16,
 					trimDateRange: false,
 				});
 			} else if (width >= 768) {
@@ -57,14 +57,14 @@ const GitHubStats = () => {
 				setConfig({
 					blockSize: 8,
 					blockMargin: 2,
-					fontSize: 13,
+					fontSize: 16,
 					trimDateRange: true,
 				});
 			} else if (width >= 320) {
 				setConfig({
 					blockSize: 7,
 					blockMargin: 2,
-					fontSize: 12,
+					fontSize: 15,
 					trimDateRange: true,
 				});
 			}

@@ -1,218 +1,146 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
-import SocialIcons from "./SocialIcons";
 import { useState } from "react";
-import { TextField, Button, Box, Typography, Grid } from "@mui/material";
+import emailjs from "@emailjs/browser";
+import { TextField, Button } from "@mui/material";
 import { Send } from "@mui/icons-material";
+import SocialIcons from "./SocialIcons";
+import ContactArt from "./ContactArt";
+
+const SERVICE_ID = "service_iyuxx8p";
+const TEMPLATE_ID = "template_74oen19";
+const PUBLIC_KEY = "AiHK5cxHw1zrw4AYR";
+
+const EMPTY = { name: "", email: "", subject: "", message: "" };
 
 const ContactMe = () => {
-	const [formData, setFormData] = useState({
-		name: "",
-		email: "",
-		subject: "",
-		message: "",
-	});
-
+	const [formData, setFormData] = useState(EMPTY);
 	const [status, setStatus] = useState("");
+	const [sending, setSending] = useState(false);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setFormData({ ...formData, [name]: value });
+		setFormData((current) => ({ ...current, [name]: value }));
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setStatus("Sending...");
+		setSending(true);
+		setStatus("Sending your message.");
 
-		const serviceID = "service_iyuxx8p";
-		const templateID = "template_74oen19";
-		const userID = "AiHK5cxHw1zrw4AYR";
-
-		const submissionData = {
-			from_name: formData.name,
-			from_email: formData.email,
-			subject: formData.subject,
-			message: formData.message,
-		};
-
-		emailjs.send(serviceID, templateID, submissionData, userID).then(
-			(response) => {
-				setStatus("Message sent!");
-				setFormData({
-					name: "",
-					email: "",
-					subject: "",
-					message: "",
-				});
-				console.log("SUCCESS!", response.status, response.text);
-			},
-			(err) => {
-				setStatus("Failed to send message. Please try again.");
-				console.error("FAILED...", err);
-			}
-		);
-	};
-
-	const inputStyle = {
-		"& .MuiInputLabel-root": {
-			color: "#00adb5",
-			transition: "color 0.3s ease",
-		},
-		"& .MuiInputLabel-root.Mui-focused": {
-			color: "#00c8d1",
-		},
-		"& .MuiOutlinedInput-root": {
-			backgroundColor: "#454b55",
-			borderRadius: "5px",
-			"& fieldset": {
-				borderColor: "#00adb5",
-				transition: "border-color 0.3s ease",
-			},
-			"&:hover fieldset": {
-				borderColor: "#00adb5",
-			},
-			"&.Mui-focused fieldset": {
-				borderColor: "#00c8d1",
-			},
-		},
-		"& .MuiInputBase-input": {
-			color: "#eeeeee",
-		},
+		emailjs
+			.send(
+				SERVICE_ID,
+				TEMPLATE_ID,
+				{
+					from_name: formData.name,
+					from_email: formData.email,
+					subject: formData.subject,
+					message: formData.message,
+				},
+				PUBLIC_KEY
+			)
+			.then(
+				() => {
+					setFormData(EMPTY);
+					setSending(false);
+					setStatus("Message sent. I'll get back to you.");
+				},
+				() => {
+					setSending(false);
+					setStatus(
+						"Something went wrong. You can email me directly at shahir.a@outlook.com."
+					);
+				}
+			);
 	};
 
 	return (
 		<div className="contact-me-section">
-			<Box
-				className="contact-form"
-				sx={{
-					color: "#eeeeee",
-					backgroundColor: "#393e46",
-					padding: "2rem",
-					borderRadius: "10px",
-					border: "2px solid #00adb5",
-					width: "80%",
-					margin: "2rem auto",
-					boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)",
-				}}
-			>
-				<Typography
-					variant="h4"
-					sx={{
-						textAlign: "center",
-						color: "#00adb5",
-						fontWeight: "bold",
-						marginBottom: "1.5rem",
-					}}
-				>
-					Contact Me
-				</Typography>
+			<div className="contact-layout">
+				<div className="contact-intro">
+					<h1 className="home-heading">
+						Got a project in <span className="accent">mind?</span>
+					</h1>
+					<p className="home-copy">
+						Roles, freelance work, open source, or a question about anything on
+						this site. I read everything that comes in and I reply.
+					</p>
+					<ContactArt className="contact-art" />
+				</div>
 
-				<form onSubmit={handleSubmit}>
-					<Grid container spacing={3}>
-						<Grid item xs={12} sm={6}>
-							<TextField
-								fullWidth
-								required
-								label="Name"
-								name="name"
-								value={formData.name}
-								onChange={handleChange}
-								sx={inputStyle}
-							/>
-						</Grid>
-						<Grid item xs={12} sm={6}>
-							<TextField
-								fullWidth
-								required
-								label="Email"
-								name="email"
-								type="email"
-								value={formData.email}
-								onChange={handleChange}
-								sx={inputStyle}
-							/>
-						</Grid>
-						<Grid item xs={12}>
-							<TextField
-								fullWidth
-								required
-								label="Subject"
-								name="subject"
-								value={formData.subject}
-								onChange={handleChange}
-								sx={inputStyle}
-							/>
-						</Grid>
-						<Grid item xs={12}>
-							<TextField
-								fullWidth
-								required
-								multiline
-								rows={4}
-								label="Message"
-								name="message"
-								value={formData.message}
-								onChange={handleChange}
-								sx={inputStyle}
-							/>
-						</Grid>
-						<Grid
-							item
-							xs={12}
-							sx={{ display: "flex", justifyContent: "center", width: "100%" }}
+				<form className="contact-form" onSubmit={handleSubmit} noValidate={false}>
+					<div className="contact-row">
+						<TextField
+							fullWidth
+							required
+							label="Your name"
+							name="name"
+							value={formData.name}
+							onChange={handleChange}
+							autoComplete="name"
+						/>
+						<TextField
+							fullWidth
+							required
+							type="email"
+							label="Your email"
+							name="email"
+							value={formData.email}
+							onChange={handleChange}
+							autoComplete="email"
+						/>
+					</div>
+
+					<TextField
+						fullWidth
+						required
+						label="Subject"
+						name="subject"
+						value={formData.subject}
+						onChange={handleChange}
+					/>
+
+					<TextField
+						fullWidth
+						required
+						multiline
+						minRows={6}
+						label="Your message"
+						name="message"
+						value={formData.message}
+						onChange={handleChange}
+					/>
+
+					<div className="contact-actions">
+						<Button
+							type="submit"
+							variant="contained"
+							disabled={sending}
+							endIcon={<Send />}
+							sx={{
+								backgroundColor: "#00adb5",
+								color: "#eeeeee",
+								px: 4,
+								py: 1.25,
+								"&:hover": { backgroundColor: "#00c8d1" },
+							}}
 						>
-							<Button
-								type="submit"
-								variant="contained"
-								sx={{
-									backgroundColor: "#00adb5",
-									color: "#393e46",
-									fontWeight: "bold",
-									width: "70%",
-									transition: "all 0.3s ease",
-									boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-									"&:hover": {
-										backgroundColor: "#00adb5",
-										color: "#fff",
-										boxShadow: "0 6px 20px rgba(0, 173, 181, 0.35)",
-									},
-								}}
-								startIcon={<Send />}
-							>
-								Send Message
-							</Button>
-						</Grid>
-					</Grid>
+							{sending ? "Sending" : "Send message"}
+						</Button>
+						<p className="contact-status" role="status">
+							{status}
+						</p>
+					</div>
 				</form>
-				{status && (
-					<Typography
-						sx={{
-							marginTop: "1rem",
-							textAlign: "center",
-							color: status === "Message sent!" ? "#00adb5" : "#eeeeee",
-						}}
-					>
-						{status}
-					</Typography>
-				)}
-			</Box>
+			</div>
 
-			{/* Social Section */}
-			<Box
-				sx={{
-					textAlign: "center",
-					color: "#eeeeee",
-				}}
-			>
-				<Typography
-					variant="h5"
-					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
-				>
-					Feel free to <span style={{ color: "#00adb5" }}>connect</span> with me
-				</Typography>
+			<div className="contact-connect">
+				<h2 className="contact-connect-title">
+					Feel free to <span className="accent">connect</span> with me
+				</h2>
 				<SocialIcons />
-			</Box>
+			</div>
 		</div>
 	);
 };

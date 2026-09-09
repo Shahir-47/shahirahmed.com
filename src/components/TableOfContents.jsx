@@ -69,8 +69,9 @@ const TableOfContents = () => {
 		clickTarget.current = id;
 		setActiveId(id);
 
-		const top = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET + 40;
-		window.scrollTo({ top, behavior: "smooth" });
+		// Let the browser scroll, so each section's scroll-margin-top is honoured
+		// rather than hand-computing an offset that drifts from the CSS.
+		el.scrollIntoView({ behavior: "smooth", block: "start" });
 
 		// Release the lock after scrolling settles
 		const checkScrollEnd = () => {
