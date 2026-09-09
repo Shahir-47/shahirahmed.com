@@ -1940,6 +1940,10 @@ p {
 		gap: 1.25rem;
 	}
 
+	.oss-section .oss-item + .oss-item {
+		margin-top: 1.25rem;
+	}
+
 	.contact-layout {
 		gap: 2.5rem;
 	}
