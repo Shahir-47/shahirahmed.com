@@ -718,7 +718,7 @@ const About = () => {
 						className="section-title"
 
 					>
-						Open Source <span>Contributions</span>
+						Open Source Contributions
 					</h2>
 
 					<div
@@ -1401,7 +1401,7 @@ const About = () => {
 						className="section-title"
 
 					>
-						Certifications &amp; <span>Achievements</span>
+						Certifications &amp; Achievements
 					</h2>
 
 					<div

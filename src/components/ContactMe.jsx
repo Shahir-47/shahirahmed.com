@@ -132,14 +132,15 @@ const ContactMe = () => {
 							{status}
 						</p>
 					</div>
-				</form>
-			</div>
 
-			<div className="contact-connect">
-				<h2 className="contact-connect-title">
-					Feel free to <span className="accent">connect</span> with me
-				</h2>
-				<SocialIcons />
+
+					<div className="contact-connect">
+						<h2 className="contact-connect-title">
+							Feel free to <span className="accent">connect</span> with me
+						</h2>
+						<SocialIcons />
+					</div>
+				</form>
 			</div>
 		</div>
 	);

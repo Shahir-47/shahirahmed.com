@@ -577,7 +577,7 @@ svg {
 }
 
 .contact-me-section {
-	padding-bottom: 0;
+	padding-bottom: clamp(2rem, 5vw, 3.5rem);
 }
 
 /* Content column beside the sticky contents rail */
@@ -803,10 +803,34 @@ svg {
 .oss-item,
 .cert-section,
 .academic {
-	padding: 1.25rem 1.4rem;
+	padding: 1.5rem 1.6rem;
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+/* Cards sit in a row, so their contents spread to a common height and the
+   action lands on the same baseline in each. */
+.cert-section {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.25rem;
+	height: 100%;
+}
+
+.cert-section > div:last-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1.25rem;
+	height: 100%;
+	flex: 1;
+}
+
+.cert-section img,
+.cert-section > div:first-child {
+	flex: none;
+	margin-bottom: 0.75rem;
 }
 
 .certifications-container {
@@ -848,6 +872,7 @@ svg {
 .github-activity-calendar {
 	display: flex;
 	justify-content: center;
+	min-height: 180px;
 	width: 100%;
 	max-width: 100%;
 	overflow-x: auto;
@@ -881,6 +906,14 @@ svg {
 	width: 100%;
 	height: auto;
 	max-width: 760px;
+	aspect-ratio: 495 / 195;
+	object-fit: contain;
+}
+
+/* The streak card carries more internal padding than its siblings, so it is
+   pulled in slightly to match their visual weight. */
+.github-stats-grid > .github-stat:last-child img {
+	max-width: 660px;
 }
 
 /* =========================================================
@@ -1051,8 +1084,7 @@ svg {
 }
 
 .contact-connect {
-	margin-top: clamp(2rem, 4vw, 3rem);
-	padding-bottom: clamp(2rem, 4vw, 3rem);
+	margin-top: clamp(1.5rem, 3vw, 2.5rem);
 	text-align: left;
 }
 
@@ -1525,13 +1557,12 @@ svg {
 /* Projects page: the social row is centred and clear of the list above it */
 .projects .social-icons {
 	justify-content: center;
-	margin-top: clamp(2.5rem, 6vw, 4rem);
 }
 
 /* The last section needs room beneath it so the contents links can bring it
    to the top of the viewport. */
 .about-page > section:last-of-type {
-	padding-bottom: 18vh;
+	padding-bottom: 0;
 }
 
 /* The closing "projects" and "connect" blocks read as one group */

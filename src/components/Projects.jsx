@@ -865,7 +865,7 @@ const Projects = () => {
 				sx={{
 					textAlign: "center",
 					color: "#eeeeee",
-					marginTop: { xs: "2rem", sm: "2.5rem", md: "3rem", xl: "3.5rem" },
+					marginTop: { xs: "2rem", sm: "2.5rem", md: "3rem", xl: "4rem" },
 					"@media (min-width: 2560px)": {
 						marginTop: "4rem",
 					},
