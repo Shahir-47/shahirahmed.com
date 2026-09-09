@@ -895,7 +895,7 @@ svg {
 .certifications-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1.25rem;
+	gap: 1.5rem;
 	align-items: stretch;
 }
 
@@ -1583,9 +1583,8 @@ svg {
 }
 
 /* The closing "projects" and "connect" blocks read as one group */
-#projects-link,
 #connect {
-	margin-top: calc(var(--block-gap) * -0.55);
+	margin-top: calc(var(--block-gap) * -0.275);
 }
 
 #connect .social-icons {
@@ -1717,7 +1716,6 @@ svg {
 	.tools-header h2,
 	.timeline-section h2,
 	.hack-h2,
-	.projects-link-h2,
 	.github-stats-section > h2,
 	.oss-section > h2,
 	.certifications-section > h2 {
@@ -1866,7 +1864,6 @@ p {
 	.tools-header h2,
 	.timeline-section h2,
 	.hack-h2,
-	.projects-link-h2,
 	.github-stats-section > h2,
 	.oss-section > h2,
 	.certifications-section > h2,
@@ -2016,8 +2013,7 @@ p {
 	.hack-h2,
 	.oss-section .section-title,
 	.certifications-section > h2,
-	.github-stats-section > h2,
-	.projects-link-h2 {
+	.github-stats-section > h2 {
 		margin-bottom: clamp(2.25rem, 7vw, 3.25rem);
 	}
 
@@ -2038,4 +2034,15 @@ p {
    selector so bundle order cannot matter. */
 .timeline-section .vertical-timeline {
 	padding: 0;
+}
+
+
+/* Introduces a short centred block rather than a section of content */
+.projects-link-h2 {
+	margin-bottom: 0.85rem;
+}
+
+/* Academic honours runs full width beneath the two certificate cards */
+.certifications-container > .academic {
+	grid-column: 1 / -1;
 }
