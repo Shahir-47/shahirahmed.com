@@ -5,8 +5,8 @@ import Typed from "typed.js";
 import Image from "next/image";
 import Link from "next/link";
 import Desk from "@/assets/desk.svg";
-import Portrait from "@/assets/shahir.jpeg";
 import SocialIcons from "./SocialIcons";
+import AboutArt from "./AboutArt";
 import { projectsData } from "./Projects";
 
 const RESUME_URL =
@@ -46,6 +46,35 @@ const HomePage = () => {
 
 		return () => {
 			typed.destroy();
+		};
+	}, []);
+
+	useEffect(() => {
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+
+		const sections = document.querySelectorAll(".home-section");
+		if (!sections.length) return undefined;
+
+		// The hidden state only applies once this runs, so a blocked or failed
+		// script leaves every section visible rather than blank.
+		document.documentElement.classList.add("reveal-on");
+
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+					entry.target.classList.add("is-in");
+					observer.unobserve(entry.target);
+				});
+			},
+			{ threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+		);
+
+		sections.forEach((section) => observer.observe(section));
+
+		return () => {
+			observer.disconnect();
+			document.documentElement.classList.remove("reveal-on");
 		};
 	}, []);
 
@@ -133,14 +162,7 @@ const HomePage = () => {
 						</Link>
 					</div>
 
-					<Image
-						className="home-portrait"
-						src={Portrait}
-						alt="Shahir Ahmed"
-						width={320}
-						height={320}
-						sizes="(max-width: 860px) 60vw, 320px"
-					/>
+					<AboutArt className="home-portrait" />
 				</div>
 			</section>
 

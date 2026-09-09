@@ -1185,7 +1185,6 @@ svg {
 .home-portrait {
 	width: 100%;
 	height: auto;
-	border-radius: var(--radius);
 	justify-self: center;
 }
 
@@ -1253,6 +1252,22 @@ svg {
 		grid-template-columns: 1fr;
 	}
 	.home-portrait {
-		max-width: 220px;
+		max-width: 280px;
+	}
+}
+
+
+/* Sections settle in as they arrive. The hidden state is applied by script, so
+   without JavaScript everything simply renders in place. */
+@media (prefers-reduced-motion: no-preference) {
+	html.reveal-on .home-section {
+		opacity: 0;
+		transform: translateY(18px);
+		transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+	}
+
+	html.reveal-on .home-section.is-in {
+		opacity: 1;
+		transform: none;
 	}
 }
