@@ -614,7 +614,7 @@ svg {
 	font-weight: 700;
 	letter-spacing: -0.03em;
 	color: var(--text);
-	margin: 0 0 clamp(1.25rem, 2.5vw, 2rem);
+	margin: 0 0 clamp(2rem, 3.5vw, 3rem);
 }
 
 .about-me span,
@@ -1929,16 +1929,6 @@ p {
 		padding-top: clamp(2rem, 8vw, 3.5rem);
 	}
 
-	/* Headings that introduce plain content get more room beneath them.
-	   Timeline sections are excluded: the library supplies its own leading. */
-	.about-me,
-	.tools-header h2,
-	.oss-section .section-title,
-	.certifications-section > h2,
-	.github-stats-section > h2,
-	.projects-link-h2 {
-		margin-bottom: clamp(1.75rem, 5vw, 2.5rem);
-	}
 }
 
 /* Home and about close on their own contact and connect sections, so the
@@ -1956,9 +1946,11 @@ p {
 		margin-bottom: clamp(1.5rem, 5vw, 2.25rem);
 	}
 
-	/* Non-timeline about headings, and the space between sections */
+	/* One margin for every section heading */
 	.about-me,
 	.tools-header h2,
+	.timeline-section h2,
+	.hack-h2,
 	.oss-section .section-title,
 	.certifications-section > h2,
 	.github-stats-section > h2,
@@ -1974,4 +1966,13 @@ p {
 	.contact-art {
 		margin-bottom: clamp(2rem, 7vw, 3rem);
 	}
+}
+
+
+/* The timeline library adds 2em of vertical padding of its own, which made its
+   headings sit further from their content than every other section. Removing
+   it lets one heading margin apply everywhere. Scoped past the library's own
+   selector so bundle order cannot matter. */
+.timeline-section .vertical-timeline {
+	padding: 0;
 }
