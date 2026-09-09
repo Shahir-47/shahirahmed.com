@@ -316,7 +316,7 @@ svg {
 .hamburger {
 	display: none;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	width: 42px;
 	height: 42px;
 	border-radius: var(--radius-sm);
