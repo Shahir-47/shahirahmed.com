@@ -393,15 +393,16 @@ svg {
 
 .first-block-home {
 	display: grid;
-	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
 	align-items: center;
-	gap: clamp(2rem, 5vw, 4rem);
+	gap: clamp(2.5rem, 8vw, 7rem);
 	width: 100%;
 	max-width: var(--page-max);
 	margin-inline: auto;
-	padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad) clamp(3rem, 6vw, 4.5rem);
+	padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad) clamp(4.5rem, 8vw, 6rem);
 	min-height: calc(100svh - 5rem);
 	align-content: center;
+	position: relative;
 }
 
 .text-container {
@@ -503,7 +504,7 @@ svg {
 
 .computer {
 	width: 100%;
-	max-width: 360px;
+	max-width: 520px;
 	height: auto;
 	margin-inline: auto;
 }
@@ -1186,10 +1187,18 @@ svg {
 	gap: 1.25rem;
 }
 
-.home-portrait {
+.home-art {
 	width: 100%;
 	height: auto;
 	justify-self: center;
+}
+
+/* The climbing figure is tall and narrow, so it is capped by height rather
+   than width to stop it dominating the section. */
+.home-art-contact {
+	max-height: 340px;
+	width: auto;
+	max-width: 100%;
 }
 
 .home-work-grid {
@@ -1255,8 +1264,12 @@ svg {
 	.home-about {
 		grid-template-columns: 1fr;
 	}
-	.home-portrait {
+	.home-art {
 		max-width: 280px;
+	}
+
+	.home-art-contact {
+		max-height: 260px;
 	}
 }
 
@@ -1273,5 +1286,56 @@ svg {
 	html.reveal-on .home-section.is-in {
 		opacity: 1;
 		transform: none;
+	}
+}
+
+
+/* =========================================================
+   Scroll cue and section snapping
+   ========================================================= */
+
+.scroll-cue {
+	position: absolute;
+	left: 50%;
+	bottom: clamp(1.25rem, 3vw, 2rem);
+	translate: -50% 0;
+	display: grid;
+	place-items: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: var(--surface-75);
+	backdrop-filter: blur(4px);
+	animation: scroll-cue 2.4s ease-in-out infinite;
+}
+
+.scroll-cue img {
+	width: 22px;
+	height: 22px;
+}
+
+@keyframes scroll-cue {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scroll-cue {
+		animation: none;
+	}
+}
+
+/* Proximity rather than mandatory: it settles onto a section when you stop
+   near one, but never traps you inside a section taller than the viewport. */
+@media (min-width: 861px) and (prefers-reduced-motion: no-preference) {
+	html:has(.home-section) {
+		scroll-snap-type: y proximity;
+		scroll-padding-top: 5rem;
+	}
+
+	.first-block-home,
+	.home-section {
+		scroll-snap-align: start;
+		scroll-snap-stop: normal;
 	}
 }

@@ -37,26 +37,29 @@ export default function AboutArt({ className }) {
 			role="img"
 			aria-label="Illustration of a developer asleep at a desk"
 		>
-			<image href={`${A}/about-shadow.svg`} x="29.63" y="354" width="348" height="24" />
-			<image href={`${A}/about-zzz.svg`} x="70.91" y="0" width="37.413" height="46.453" />
-			<image href={`${A}/about-figure-01.svg`} x="52.94" y="155.38" width="211.566" height="205.491" />
+			{/* Squeezed horizontally so the figure reads slimmer than the source */}
+			<g transform="translate(182.5 0) scale(0.84 1) translate(-182.5 0)">
+				<image href={`${A}/about-shadow.svg`} x="29.63" y="354" width="348" height="24" />
+				<image href={`${A}/about-zzz.svg`} x="70.91" y="0" width="37.413" height="46.453" />
+				<image href={`${A}/about-figure-01.svg`} x="52.94" y="155.38" width="211.566" height="205.491" />
 
-			{piece(`${A}/about-figure-02.svg`, 69.41, 106.72, -56.89, 79.964, 95.771)}
-			{piece(`${A}/about-figure-03.svg`, 115.8, 181.4, -38.3, 98.514, 126.614)}
-			{piece(`${A}/about-figure-04.svg`, 131.66, 184.83, -8.14, 116.472, 117.124)}
-			{piece(`${A}/about-figure-05.svg`, 188.55, 171.26, -45.31, 25.25, 31.785)}
+				{piece(`${A}/about-figure-02.svg`, 69.41, 106.72, -56.89, 79.964, 95.771)}
+				{piece(`${A}/about-figure-03.svg`, 115.8, 181.4, -38.3, 98.514, 126.614)}
+				{piece(`${A}/about-figure-04.svg`, 131.66, 184.83, -8.14, 116.472, 117.124)}
+				{piece(`${A}/about-figure-05.svg`, 188.55, 171.26, -45.31, 25.25, 31.785)}
 
-			<image href={`${A}/about-figure-06.svg`} x="50.32" y="258.19" width="52.911" height="104.256" />
+				<image href={`${A}/about-figure-06.svg`} x="50.32" y="258.19" width="52.911" height="104.256" />
 
-			{piece(`${A}/about-figure-07.svg`, 65.57, 209.43, -22.76, 67.444, 90.39)}
+				{piece(`${A}/about-figure-07.svg`, 65.57, 209.43, -22.76, 67.444, 90.39)}
 
-			{/* desk and chair, drawn shapes rather than exported images */}
-			{bar("chair-back", 35.32, 155.1, -22.76, 32.507, 105.129, 15.819, "#00adb5")}
-			<rect x="293.82" y="220.31" width="15.562" height="142.132" rx="0.502" fill="#00adb5" stroke="#000" strokeWidth="1.399" />
-			{bar("seat", 121.81, 246.94, 88.75, 52.107, 112.515, 24.562, "#00adb5")}
-			{bar("desk-leg", 301.56, 211.23, 88.75, 32.507, 176.822, 15.819, "#00adb5")}
-			{bar("desk-edge", 345.8, 145.98, 105, 82.997, 15.562, 2.009, "#00adb5")}
-			<rect x="262.87" y="179.96" width="82.997" height="15.562" rx="2.009" fill="#eeeeee" stroke="#000" strokeWidth="1.399" />
+				{/* desk and chair, drawn shapes rather than exported images */}
+				{bar("chair-back", 35.32, 155.1, -22.76, 32.507, 105.129, 15.819, "#00adb5")}
+				<rect x="293.82" y="220.31" width="15.562" height="142.132" rx="0.502" fill="#00adb5" stroke="#000" strokeWidth="1.399" />
+				{bar("seat", 121.81, 246.94, 88.75, 52.107, 112.515, 24.562, "#00adb5")}
+				{bar("desk-leg", 301.56, 211.23, 88.75, 32.507, 176.822, 15.819, "#00adb5")}
+				{bar("desk-edge", 345.8, 145.98, 105, 82.997, 15.562, 2.009, "#00adb5")}
+				<rect x="262.87" y="179.96" width="82.997" height="15.562" rx="2.009" fill="#eeeeee" stroke="#000" strokeWidth="1.399" />
+			</g>
 		</svg>
 	);
 }

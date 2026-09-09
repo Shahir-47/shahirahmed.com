@@ -130,6 +130,10 @@ const HomePage = () => {
 					<SocialIcons />
 				</div>
 
+				<a className="scroll-cue" href="#about-preview" aria-label="Scroll to about">
+					<img src="/figma/icon-arrow-down.svg" alt="" width="24" height="24" />
+				</a>
+
 				<div className="image-container">
 					<Image
 						className="computer"
@@ -163,7 +167,7 @@ const HomePage = () => {
 						</Link>
 					</div>
 
-					<AboutArt className="home-portrait" />
+					<AboutArt className="home-art" />
 				</div>
 			</section>
 
@@ -225,7 +229,7 @@ const HomePage = () => {
 						</div>
 					</div>
 
-					<ContactArt className="home-portrait" />
+					<ContactArt className="home-art home-art-contact" />
 				</div>
 			</section>
 		</div>
