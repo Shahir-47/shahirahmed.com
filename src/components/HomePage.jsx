@@ -8,6 +8,7 @@ import Desk from "@/assets/desk.svg";
 import SocialIcons from "./SocialIcons";
 import AboutArt from "./AboutArt";
 import ContactArt from "./ContactArt";
+import ScrollCue from "./ScrollCue";
 import { projectsData } from "./Projects";
 
 const RESUME_URL =
@@ -47,18 +48,6 @@ const HomePage = () => {
 
 		return () => {
 			typed.destroy();
-		};
-	}, []);
-
-	useEffect(() => {
-		const onScroll = () => {
-			document.documentElement.dataset.scrolled = window.scrollY > 120 ? "true" : "false";
-		};
-		onScroll();
-		window.addEventListener("scroll", onScroll, { passive: true });
-		return () => {
-			window.removeEventListener("scroll", onScroll);
-			delete document.documentElement.dataset.scrolled;
 		};
 	}, []);
 
@@ -142,9 +131,8 @@ const HomePage = () => {
 					<SocialIcons />
 				</div>
 
-				<a className="scroll-cue" href="#about-preview" aria-label="Scroll to about">
-					<img src="/figma/icon-arrow-down.svg" alt="" width="24" height="24" />
-				</a>
+
+				<ScrollCue href="#about-preview" />
 
 				<div className="image-container">
 					<Image
@@ -181,6 +169,8 @@ const HomePage = () => {
 
 					<AboutArt className="home-art" />
 				</div>
+
+				<ScrollCue href="#work-preview" />
 			</section>
 
 			{/* 3. Selected work */}
@@ -218,6 +208,8 @@ const HomePage = () => {
 				<Link className="btn btn-ghost" href="/projects">
 					See all projects
 				</Link>
+
+				<ScrollCue href="#contact-preview" />
 			</section>
 
 			{/* 4. Contact */}

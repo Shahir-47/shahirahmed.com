@@ -716,14 +716,7 @@ const About = () => {
 				<section id="open-source" className="oss-section">
 					<h2
 						className="section-title"
-						style={{
-							textAlign: "center",
-							fontWeight: 700,
-							margin: "0 0 3rem 0",
-							letterSpacing: "0.02em",
-							color: "#00adb5",
-							textShadow: "0 2px 16px #0009",
-						}}
+
 					>
 						Open Source <span>Contributions</span>
 					</h2>
@@ -1406,26 +1399,14 @@ const About = () => {
 				<section id="certifications" className="certifications-section">
 					<h2
 						className="section-title"
-						style={{
-							textAlign: "center",
-							fontSize: "2.3rem",
-							fontWeight: 700,
-							margin: "4rem 0 3rem 0",
-							letterSpacing: "0.02em",
-							color: "#00adb5",
-							textShadow: "0 2px 16px #0009",
-						}}
+
 					>
 						Certifications &amp; <span>Achievements</span>
 					</h2>
 
 					<div
 						className="certifications-container"
-						style={{
-							maxWidth: 900,
-							margin: "0 auto",
-							padding: "0 1.2rem",
-						}}
+
 					>
 						{/* CS50 Certification */}
 						<div className="cert-section">
