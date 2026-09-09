@@ -45,7 +45,7 @@ const contactPageJsonLd = {
 		"@id": `${siteUrl}/#person`,
 		contactPoint: {
 			"@type": "ContactPoint",
-			email: "shahir.a@outlook.com",
+			email: "shahir.a@nyu.edu",
 			contactType: "professional inquiries",
 			availableLanguage: "English",
 		},

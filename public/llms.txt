@@ -115,7 +115,7 @@ AI/ML: RAG pipelines, vector search, knowledge graphs, Cohere neural reranking, 
 Cloud/Tooling: Stripe Connect, AWS S3, AWS App Runner, AWS SQS, AWS CloudFront, Upstash Redis, Cloudflare Workers, Databricks, Cypress, Docker, GitHub Actions, Vercel, Git, Linux
 
 ## Contact
-- Email: shahir.a@outlook.com
+- Email: shahir.a@nyu.edu
 - LinkedIn: https://www.linkedin.com/in/shahir47/
 - GitHub: https://github.com/Shahir-47
 - Devpost: https://devpost.com/Shahir-47

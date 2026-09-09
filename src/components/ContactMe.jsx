@@ -49,7 +49,7 @@ const ContactMe = () => {
 				() => {
 					setSending(false);
 					setStatus(
-						"Something went wrong. You can email me directly at shahir.a@outlook.com."
+						"Something went wrong. You can email me directly at shahir.a@nyu.edu."
 					);
 				}
 			);

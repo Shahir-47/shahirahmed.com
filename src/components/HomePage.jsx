@@ -227,8 +227,8 @@ const HomePage = () => {
 							<Link className="btn btn-primary" href="/contact">
 								Send a message
 							</Link>
-							<a className="btn btn-ghost" href="mailto:shahir.a@outlook.com">
-								shahir.a@outlook.com
+							<a className="btn btn-ghost" href="mailto:shahir.a@nyu.edu">
+								shahir.a@nyu.edu
 							</a>
 						</div>
 					</div>

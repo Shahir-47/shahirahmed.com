@@ -5,7 +5,7 @@ const SocialIcons = () => {
 	return (
 		<div className="social-icons">
 			<a
-				href="mailto:shahir.a@outlook.com"
+				href="mailto:shahir.a@nyu.edu"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="icon-container"
