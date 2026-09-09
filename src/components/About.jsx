@@ -1410,127 +1410,54 @@ const About = () => {
 					>
 						{/* CS50 Certification */}
 						<div className="cert-section">
-							<img
-								src={HarvardX.src}
-								alt="HarvardX"
-								style={{
-									width: 60,
-									height: 60,
-									borderRadius: 12,
-									objectFit: "contain",
-									background: "#fff",
-									padding: "8px",
-									boxShadow: "0 0 10px 1px #0005",
-								}}
-							/>
-							<div style={{ flex: 1 }}>
-								<div
-									style={{
-										fontWeight: 600,
-										fontSize: "1.25rem",
-										color: "#00adb5",
-										marginBottom: 8,
-									}}
-								>
+							<div className="cert-logo">
+								<img src={HarvardX.src} alt="HarvardX" />
+							</div>
+
+							<div className="cert-body">
+								<h3 className="cert-title">
 									CS50x: Introduction to Computer Science
-								</div>
-								<div
-									style={{ fontSize: 15, color: "#eeeeee", marginBottom: 10 }}
-								>
+								</h3>
+								<p className="cert-note">
 									<strong>HarvardX</strong> | Algorithms, data structures, web
 									development using C, Python, SQL, JavaScript
-								</div>
-								<a
-									href="https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										display: "inline-flex",
-										alignItems: "center",
-										background: "#00adb5",
-										color: "#000",
-										borderRadius: 8,
-										padding: "6px 14px",
-										fontWeight: 500,
-										fontSize: 14,
-										textDecoration: "none",
-										boxShadow: "0 1px 3px 0 rgba(0, 173, 181, 0.28)",
-										transition: "background 0.3s ease",
-									}}
-								>
-									<FaCertificate
-										style={{ marginRight: "6px", fontSize: "14px" }}
-									/>
-									View Certificate
-								</a>
+								</p>
 							</div>
+
+							<a
+								className="cert-link"
+								href="https://courses.edx.org/certificates/679d72781ed04aaba91ad9ec4ead0de3"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<FaCertificate />
+								View Certificate
+							</a>
 						</div>
 
 						{/* MATLAB Certification */}
 						<div className="cert-section">
-							<div
-								style={{
-									width: 60,
-									height: 60,
-									borderRadius: 12,
-									background: "#0076A8",
-									display: "flex",
-									alignItems: "center",
-									justifyContent: "center",
-									boxShadow: "0 0 10px 1px #0005",
-								}}
-							>
-								<span
-									style={{
-										color: "#fff",
-										fontWeight: "bold",
-										fontSize: "12px",
-									}}
-								>
-									MATLAB
-								</span>
+							<div className="cert-logo cert-logo-matlab">
+								<span>MATLAB</span>
 							</div>
-							<div style={{ flex: 1 }}>
-								<div
-									style={{
-										fontWeight: 600,
-										fontSize: "1.25rem",
-										color: "#00adb5",
-										marginBottom: 8,
-									}}
-								>
-									MATLAB Onramp
-								</div>
-								<div
-									style={{ fontSize: 15, color: "#eeeeee", marginBottom: 10 }}
-								>
+
+							<div className="cert-body">
+								<h3 className="cert-title">MATLAB Onramp</h3>
+								<p className="cert-note">
 									<strong>MathWorks</strong> | MATLAB programming and
 									computational mathematics
-								</div>
-								<a
-									href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=1945277d-7a1c-4899-981f-d28b4a0e68a7&"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										display: "inline-flex",
-										alignItems: "center",
-										background: "#00adb5",
-										color: "#fff",
-										borderRadius: 8,
-										padding: "6px 14px",
-										fontWeight: 500,
-										fontSize: 14,
-										textDecoration: "none",
-										boxShadow: "0 1px 3px 0 rgba(0, 173, 181, 0.28)",
-										transition: "background 0.3s ease",
-									}}
-								>
-									<FaCertificate
-										style={{ marginRight: "6px", fontSize: "14px" }}
-									/>
-									View Certificate
-								</a>
+								</p>
 							</div>
+
+							<a
+								className="cert-link"
+								href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=1945277d-7a1c-4899-981f-d28b4a0e68a7&"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<FaCertificate />
+								View Certificate
+							</a>
 						</div>
 
 						{/* Academic Honors */}

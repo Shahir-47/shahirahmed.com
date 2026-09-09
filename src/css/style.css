@@ -806,28 +806,90 @@ svg {
 	background: color-mix(in srgb, var(--surface) 70%, transparent);
 }
 
-/* Cards sit in a row, so their contents spread to a common height and the
-   action lands on the same baseline in each. */
+/* Three stacked parts: logo, text, action. Cards sit side by side, so they
+   share a height and space-between keeps every button on the same baseline
+   however long the text above it runs. */
 .cert-section {
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: flex-start;
 	gap: 1.25rem;
 	height: 100%;
 }
 
-.cert-section > div:last-child {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 1.25rem;
-	height: 100%;
-	flex: 1;
+.cert-logo {
+	flex: none;
+	display: grid;
+	place-items: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 12px;
+	background: #fff;
+	padding: 8px;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.33);
 }
 
-.cert-section img,
-.cert-section > div:first-child {
-	flex: none;
-	margin-bottom: 0.75rem;
+.cert-logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.cert-logo-matlab {
+	background: #0076a8;
+	padding: 0;
+}
+
+.cert-logo-matlab span {
+	color: #fff;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 0.02em;
+}
+
+.cert-body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.cert-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--accent);
+	margin: 0;
+	letter-spacing: -0.01em;
+}
+
+.cert-note {
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: var(--color-3);
+	margin: 0;
+}
+
+.cert-note strong {
+	font-weight: 600;
+}
+
+.cert-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 8px 16px;
+	border-radius: var(--radius-pill);
+	background: var(--accent);
+	color: #eeeeee;
+	font-family: var(--font-head);
+	font-size: 0.9rem;
+	font-weight: 600;
+	transition: background 0.22s var(--ease);
+}
+
+.cert-link:hover {
+	background: var(--teal-bright);
+	color: #eeeeee;
 }
 
 .certifications-container {
@@ -1498,12 +1560,6 @@ svg {
 
 .MuiInputLabel-root.Mui-focused {
 	color: var(--accent) !important;
-}
-
-
-/* Certification logo needs to clear its title */
-.cert-section > div:first-child {
-	margin-bottom: 0.9rem;
 }
 
 /* Projects page: the social row is centred and clear of the list above it */
