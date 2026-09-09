@@ -630,9 +630,7 @@ svg {
 	position: sticky;
 	top: 6rem;
 	padding: 1.1rem 1.25rem;
-	border: 1px solid var(--line);
 	border-radius: var(--radius);
-	background: color-mix(in srgb, var(--surface) 70%, transparent);
 }
 
 .toc-title {
