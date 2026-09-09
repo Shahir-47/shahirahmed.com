@@ -281,7 +281,9 @@ const ProjectItem = ({
 			},
 			borderRadius: { xs: "8px", sm: "10px", md: "12px" },
 			boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
-			marginBottom: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+			// Cards stack on small screens, so they need a clearer gap between
+			// them than they do side by side.
+			marginBottom: { xs: "2.25rem", sm: "1.75rem", md: "1.5rem" },
 			transition: "transform 0.3s ease, box-shadow 0.3s ease",
 			"&:hover": {
 				transform: "translateY(-3px)",
