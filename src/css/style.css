@@ -319,7 +319,6 @@ svg {
 	justify-content: center;
 	width: 42px;
 	height: 42px;
-	border: 1px solid var(--line);
 	border-radius: var(--radius-sm);
 	background: transparent;
 	cursor: pointer;
@@ -1896,5 +1895,48 @@ p {
 	/* Contact page only: the footer sits flush under the connect block */
 	body:has(.contact-me-section) .footer {
 		padding: 0 var(--page-pad) 2.25rem;
+	}
+}
+
+/* =========================================================
+   Mobile refinements
+   ========================================================= */
+
+@media (max-width: 900px) {
+	/* Artwork centres properly: images are inline by default, so the auto
+	   margins had nothing to act on. */
+	.image-container,
+	.hero-art {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.computer,
+	.home-art,
+	.contact-art,
+	.about-me-picture {
+		display: block;
+		margin-inline: auto;
+	}
+
+	/* The closing artwork needs clearance from the copy above it */
+	.home-art-contact {
+		margin-top: 2.5rem;
+	}
+
+	#projects-link {
+		padding-top: clamp(2rem, 8vw, 3.5rem);
+	}
+
+	/* Headings that introduce plain content get more room beneath them.
+	   Timeline sections are excluded: the library supplies its own leading. */
+	.about-me,
+	.tools-header h2,
+	.oss-section .section-title,
+	.certifications-section > h2,
+	.github-stats-section > h2,
+	.projects-link-h2 {
+		margin-bottom: clamp(1.75rem, 5vw, 2.5rem);
 	}
 }

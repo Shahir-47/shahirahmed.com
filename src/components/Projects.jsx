@@ -344,9 +344,10 @@ const ProjectItem = ({
 			<Box
 				sx={{
 					display: "flex",
-					flexDirection: { xs: "column", sm: "row" },
-					alignItems: { xs: "flex-start", sm: "center" },
-					gap: { xs: "0.5rem", sm: "1rem" },
+					flexDirection: "row",
+					flexWrap: "wrap",
+					alignItems: "center",
+					gap: { xs: "0.6rem", sm: "1rem" },
 					marginBottom: { xs: "0.5rem", sm: "0.625rem", md: "0.75rem" },
 				}}
 			>
