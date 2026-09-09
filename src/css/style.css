@@ -1147,51 +1147,6 @@ svg {
 	}
 }
 
-@media (max-width: 860px) {
-	.hamburger {
-		display: inline-flex;
-	}
-
-	.nav-links {
-		position: fixed;
-		inset: 4.5rem 0 auto;
-		flex-direction: column;
-		align-items: stretch;
-		gap: 0;
-		padding: 0.5rem var(--page-pad) 1.5rem;
-		background: var(--bg);
-		border-bottom: 1px solid var(--line);
-		clip-path: inset(0 0 100% 0);
-		transition: clip-path 0.35s var(--ease);
-	}
-
-	.nav-links.active {
-		clip-path: inset(0 0 0 0);
-	}
-
-	.nav-links.inactive {
-		clip-path: inset(0 0 100% 0);
-	}
-
-	.nav-box {
-		flex-direction: row;
-		justify-content: flex-start;
-		padding: 0.85rem 0.5rem;
-		border-radius: 0;
-		border-bottom: 1px solid var(--line);
-		font-size: 1rem;
-	}
-}
-
-/* The timeline library ships every entry as visibility:hidden and only reveals
-   it from its own scroll listener, so the whole work history vanishes if that
-   script does not run. Keep entries visible; the bounce-in still plays when it
-   does run. */
-.vertical-timeline-element .is-hidden,
-.vertical-timeline-element-content.is-hidden,
-.vertical-timeline-element-icon.is-hidden {
-	visibility: visible !important;
-}
 
 
 /* =========================================================
@@ -1573,4 +1528,237 @@ svg {
 
 #connect .social-icons {
 	margin-top: 0.85rem;
+}
+
+/* =========================================================
+   Responsive
+   The hamburger sits inside .nav-links, so the desktop links are
+   hidden individually rather than hiding their container.
+   ========================================================= */
+
+.hamburger-menu {
+	position: absolute;
+	top: calc(100% + 0.75rem);
+	right: 0;
+	z-index: 70;
+	min-width: 190px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	padding: 0.5rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--color-2);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-8px);
+	transition: opacity 0.22s var(--ease), transform 0.22s var(--ease),
+		visibility 0.22s;
+}
+
+.hamburger-menu.active {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.hamburger-menu a {
+	padding: 0.7rem 0.9rem;
+	border-radius: 10px;
+	color: var(--text-75);
+	font-size: 0.98rem;
+	font-weight: 500;
+}
+
+.hamburger-menu a:hover {
+	background: var(--surface-75);
+	color: var(--color-3);
+}
+
+@media (max-width: 900px) {
+	.nav-links > .nav-box {
+		display: none;
+	}
+
+	.hamburger {
+		display: inline-flex;
+		position: relative;
+	}
+
+	/* Home */
+	.first-block-home {
+		min-height: auto;
+		padding-block: 2rem 3.5rem;
+		gap: 2rem;
+	}
+
+	.computer {
+		max-width: 300px;
+	}
+
+	.home-section {
+		min-height: auto;
+		padding-block: 3rem;
+	}
+
+	.home-about {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.home-art {
+		max-width: 260px;
+		justify-self: start;
+	}
+
+	.home-art-contact {
+		max-height: 220px;
+	}
+
+	.scroll-cue {
+		display: none;
+	}
+
+	.home-work-grid {
+		grid-template-columns: 1fr;
+	}
+
+	/* Shared */
+	.social-icons {
+		gap: 0.5rem;
+	}
+
+	.icon-container {
+		width: 42px;
+		height: 42px;
+		font-size: 1rem;
+	}
+
+	.btn,
+	.MuiButton-root {
+		font-size: 0.95rem !important;
+	}
+}
+
+@media (max-width: 700px) {
+	.second-text-container h5 {
+		font-size: clamp(1.75rem, 9vw, 2.4rem);
+	}
+
+	.home-heading {
+		font-size: clamp(1.6rem, 8vw, 2.2rem);
+	}
+
+	.section-title,
+	.about-me,
+	.tools-header h2,
+	.timeline-section h2,
+	.hack-h2,
+	.projects-link-h2,
+	.github-stats-section > h2,
+	.oss-section > h2,
+	.certifications-section > h2 {
+		font-size: clamp(1.4rem, 7vw, 1.9rem);
+	}
+
+	body {
+		font-size: 1rem;
+	}
+
+	/* About */
+	.about-me-div {
+		grid-template-columns: 1fr;
+	}
+
+	.about-me-picture {
+		max-width: 180px;
+		order: -1;
+	}
+
+	.tools-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.certifications-container {
+		grid-template-columns: 1fr;
+	}
+
+	.cert-section {
+		flex-direction: column;
+	}
+
+	.cert-section > div:last-child {
+		height: auto;
+	}
+
+	/* GitHub panel: let the calendar scroll rather than squash */
+	.github-card {
+		padding: 1rem 0.75rem;
+	}
+
+	.github-activity-calendar {
+		justify-content: flex-start;
+		min-height: 0;
+	}
+
+	.github-stat img,
+	.github-stats-grid > .github-stat:last-child img {
+		aspect-ratio: auto;
+	}
+
+	/* Contact */
+	.contact-art {
+		max-width: 180px;
+	}
+
+	/* Footer */
+	.footer {
+		padding-inline: var(--page-pad);
+	}
+}
+
+@media (max-width: 520px) {
+	.button-container,
+	.actions,
+	.contact-actions {
+		width: 100%;
+	}
+
+	.button-container .btn {
+		flex: 1 1 auto;
+		justify-content: center;
+	}
+
+	.tools-icons img,
+	.tech-stack img {
+		height: 22px;
+	}
+
+	.live-preview,
+	.github,
+	.devpost {
+		padding: 7px 14px;
+		font-size: 0.85rem;
+	}
+}
+
+/* Headings inside centred flex columns size to max-content, which makes long
+   ones overflow instead of wrapping. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	max-width: 100%;
+}
+
+.projects-link-h2,
+.projects-link-p,
+#social-connect,
+.contact-connect-title {
+	max-width: 100%;
+	text-wrap: pretty;
 }
