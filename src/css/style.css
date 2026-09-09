@@ -1762,3 +1762,92 @@ p {
 	max-width: 100%;
 	text-wrap: pretty;
 }
+
+/* =========================================================
+   Mobile alignment
+   Short blocks centre so the narrow column reads as composed.
+   Long body copy stays left aligned, where centring hurts
+   readability, and card contents keep their own alignment.
+   ========================================================= */
+
+@media (max-width: 900px) {
+	.text-container,
+	.home-section,
+	.contact-intro {
+		align-items: center;
+		text-align: center;
+	}
+
+	.home-about > div {
+		align-items: center;
+		text-align: center;
+	}
+
+	.home-art,
+	.image-container,
+	.contact-art {
+		justify-self: center;
+		margin-inline: auto;
+	}
+
+	.sub-text,
+	.home-copy,
+	.hero-lede {
+		margin-inline: auto;
+	}
+
+	.button-container,
+	.actions,
+	.contact-actions,
+	.social-icons {
+		justify-content: center;
+	}
+
+	.first-text-container {
+		justify-content: center;
+	}
+
+	.second-text-container h5 {
+		justify-content: center;
+	}
+
+	.typed-text-container {
+		justify-content: center;
+	}
+
+	/* Cards and form fields keep their own left alignment */
+	.home-work-card,
+	.home-work-links,
+	.contact-form,
+	.MuiFormControl-root {
+		text-align: left;
+	}
+
+	.home-work-links {
+		justify-content: flex-start;
+	}
+
+	.contact-connect {
+		text-align: center;
+	}
+
+	.contact-me-section .contact-connect .social-icons {
+		justify-content: center;
+	}
+
+	/* About: long prose stays left, the portrait and socials centre */
+	.about-me-picture {
+		margin-inline: auto;
+	}
+
+	.about-me-text-div .social-icons {
+		justify-content: center;
+	}
+
+	.tools-category,
+	.cert-section,
+	.oss-item,
+	.academic {
+		text-align: left;
+	}
+}

@@ -23,22 +23,41 @@ export default function ScrollCue({ href, delay = 2000 }) {
 		}
 
 		let timer;
+		let inView = false;
+
+		const arm = () => {
+			clearTimeout(timer);
+			if (inView) timer = setTimeout(() => setShown(true), delay);
+		};
+
+		// Once you scroll, the hint has done its job, so it goes away and only
+		// re-arms if you settle on this section again.
+		const onScroll = () => {
+			setShown(false);
+			arm();
+		};
+
 		const observer = new IntersectionObserver(
 			([entry]) => {
-				clearTimeout(timer);
-				if (entry.isIntersecting) {
-					timer = setTimeout(() => setShown(true), delay);
-				} else {
+				inView = entry.isIntersecting;
+				if (!inView) {
+					clearTimeout(timer);
 					setShown(false);
+				} else {
+					arm();
 				}
 			},
 			{ threshold: 0.55 }
 		);
 
+		window.addEventListener("scroll", onScroll, { passive: true });
+
 		observer.observe(el);
+
 		return () => {
 			clearTimeout(timer);
 			observer.disconnect();
+			window.removeEventListener("scroll", onScroll);
 		};
 	}, [delay]);
 
