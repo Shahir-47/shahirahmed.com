@@ -1940,3 +1940,38 @@ p {
 		margin-bottom: clamp(1.75rem, 5vw, 2.5rem);
 	}
 }
+
+/* Home and about close on their own contact and connect sections, so the
+   footer is redundant there on desktop. Mobile keeps it on every page. */
+@media (min-width: 901px) {
+	body:has(.first-block-home) .footer,
+	body:has(.about-page) .footer {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	/* Home headings need more room beneath them */
+	.home-heading {
+		margin-bottom: clamp(1.5rem, 5vw, 2.25rem);
+	}
+
+	/* Non-timeline about headings, and the space between sections */
+	.about-me,
+	.tools-header h2,
+	.oss-section .section-title,
+	.certifications-section > h2,
+	.github-stats-section > h2,
+	.projects-link-h2 {
+		margin-bottom: clamp(2.25rem, 7vw, 3.25rem);
+	}
+
+	.about-page {
+		gap: clamp(4.5rem, 14vw, 6.5rem);
+	}
+
+	/* Contact artwork needs clearance from the fields below it */
+	.contact-art {
+		margin-bottom: clamp(2rem, 7vw, 3rem);
+	}
+}
