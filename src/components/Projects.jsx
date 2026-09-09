@@ -27,6 +27,25 @@ const CATEGORIES = {
 	PERSONAL: "Personal",
 };
 
+const CATEGORY_COLORS = {
+	[CATEGORIES.PROFESSIONAL]: "#00adb5",
+	[CATEGORIES.OPENSOURCE]: "#4fc98a",
+	[CATEGORIES.HACKATHON]: "#e5a54a",
+	[CATEGORIES.PERSONAL]: "#6c9ee0",
+	[CATEGORIES.ALL]: "#00adb5",
+};
+
+const categoryColor = (category) => CATEGORY_COLORS[category] || "#00adb5";
+
+// Same hue at low alpha for chip and hover fills.
+const categoryTint = (category, alpha) => {
+	const hex = categoryColor(category).slice(1);
+	const r = parseInt(hex.slice(0, 2), 16);
+	const g = parseInt(hex.slice(2, 4), 16);
+	const b = parseInt(hex.slice(4, 6), 16);
+	return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
 const projectsData = [
 	// === PROFESSIONAL ===
 	{
@@ -60,17 +79,17 @@ const projectsData = [
 			<b>Mermaid.js:</b> Shipped 3 merged PRs for text wrapping, auto-scaling data labels, and customizable styling in a library serving 1.4M+ weekly downloads. Features now power diagrams across GitHub, VS Code, Notion, and Microsoft Word.<br/><br/>
 			<ul style="margin: 0 0 0 1.5em; padding: 0;">
 				<li>
-					<a href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
+					<a href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #00adb5; text-decoration: underline;">
 						Mermaid.js PRs
 					</a>
 				</li>
 				<li>
-					<a href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
+					<a href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed" target="_blank" style="color: #00adb5; text-decoration: underline;">
 						FarmData2 PRs
 					</a>
 				</li>
 				<li>
-					<a href="https://github.com/Shahir-47/open-source-contributions" target="_blank" style="color: #4fd1c5; text-decoration: underline;">
+					<a href="https://github.com/Shahir-47/open-source-contributions" target="_blank" style="color: #00adb5; text-decoration: underline;">
 						Full OSS Portfolio & Stats
 					</a>
 				</li>
@@ -252,7 +271,7 @@ const ProjectItem = ({
 }) => (
 	<Box
 		sx={{
-			backgroundColor: "#222",
+			backgroundColor: "#393e46",
 			padding: {
 				xs: "1rem",
 				sm: "1.25rem",
@@ -266,7 +285,7 @@ const ProjectItem = ({
 			transition: "transform 0.3s ease, box-shadow 0.3s ease",
 			"&:hover": {
 				transform: "translateY(-3px)",
-				boxShadow: "0 6px 25px rgba(79, 209, 197, 0.2)",
+				boxShadow: "0 6px 25px rgba(0, 173, 181, 0.20)",
 			},
 			display: "flex",
 			flexDirection: { xs: "column", md: "row" },
@@ -313,7 +332,7 @@ const ProjectItem = ({
 						height: "100%",
 						objectFit: "cover",
 						borderRadius: "8px",
-						border: "2px solid #4fd1c5",
+						border: "2px solid #00adb5",
 					}}
 				/>
 			</Box>
@@ -334,7 +353,7 @@ const ProjectItem = ({
 				<Typography
 					variant="h4"
 					sx={{
-						color: "#4fd1c5",
+						color: "#00adb5",
 						fontWeight: "bold",
 						fontSize: {
 							xs: "1.1rem",
@@ -354,15 +373,9 @@ const ProjectItem = ({
 					label={category}
 					size="small"
 					sx={{
-						backgroundColor:
-							category === CATEGORIES.PROFESSIONAL
-								? "#7952B3"
-								: category === CATEGORIES.OPENSOURCE
-									? "#28a745"
-									: category === CATEGORIES.HACKATHON
-										? "#fd7e14"
-										: "#6c757d",
-						color: "#fff",
+						backgroundColor: categoryTint(category, 0.16),
+						border: `1px solid ${categoryTint(category, 0.4)}`,
+						color: categoryColor(category),
 						fontWeight: 600,
 						fontSize: { xs: "0.7rem", sm: "0.75rem", md: "0.8rem" },
 						height: { xs: "22px", sm: "24px" },
@@ -377,7 +390,7 @@ const ProjectItem = ({
 			<Typography
 				component="div"
 				sx={{
-					color: "#e0e0e0",
+					color: "#eeeeee",
 					marginBottom: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
 					fontSize: {
 						xs: "0.85rem",
@@ -416,14 +429,16 @@ const ProjectItem = ({
 						rel="noopener noreferrer"
 						startIcon={<Launch />}
 						sx={{
-							backgroundColor: "#4fd1c5",
-							color: "#222",
-							fontWeight: "bold",
+							backgroundColor: "#00adb5",
+							color: "#eeeeee",
+							fontWeight: 600,
+							borderRadius: "980px",
+							textTransform: "none",
 							px: { xs: 1.5, sm: 2 },
 							py: { xs: 0.5, sm: 0.625, md: 0.75 },
 							"&:hover": {
-								backgroundColor: "#a569bd",
-								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+								backgroundColor: "#00c8d1",
+								boxShadow: "none",
 								color: "#fff",
 							},
 							fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
@@ -451,15 +466,17 @@ const ProjectItem = ({
 						rel="noopener noreferrer"
 						startIcon={<FaGithub />}
 						sx={{
-							borderColor: "#4fd1c5",
-							color: "#4fd1c5",
-							fontWeight: "bold",
+							borderColor: "#525863",
+							color: "#ffffff",
+							fontWeight: 600,
+							borderRadius: "980px",
+							textTransform: "none",
 							px: { xs: 1.5, sm: 2 },
 							py: { xs: 0.5, sm: 0.625, md: 0.75 },
 							"&:hover": {
-								borderColor: "#a569bd",
-								color: "#a569bd",
-								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+								borderColor: "#00c8d1",
+								color: "#00c8d1",
+								boxShadow: "none",
 							},
 							fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
 							minWidth: { xs: "100px", sm: "110px", md: "120px" },
@@ -471,9 +488,9 @@ const ProjectItem = ({
 								borderWidth: "2px",
 								"&:hover": {
 									borderWidth: "2px",
-									borderColor: "#a569bd",
-									color: "#a569bd",
-									boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+									borderColor: "#00c8d1",
+									color: "#00c8d1",
+									boxShadow: "none",
 								},
 							},
 						}}
@@ -490,15 +507,17 @@ const ProjectItem = ({
 						rel="noopener noreferrer"
 						startIcon={<SiDevpost />}
 						sx={{
-							backgroundColor: "#0066ff",
-							color: "#fff",
-							fontWeight: "bold",
+							backgroundColor: "#525863",
+							color: "#ffffff",
+							fontWeight: 600,
+							borderRadius: "980px",
+							textTransform: "none",
 							px: { xs: 1.5, sm: 2 },
 							py: { xs: 0.5, sm: 0.625, md: 0.75 },
 							"&:hover": {
-								backgroundColor: "#0044bb",
+								backgroundColor: "#525863",
 								color: "#fff",
-								boxShadow: "0 4px 15px rgba(0, 102, 255, 0.25)",
+								boxShadow: "none",
 							},
 							fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
 							minWidth: { xs: "100px", sm: "110px", md: "120px" },
@@ -531,7 +550,7 @@ const Projects = () => {
 		const regex = new RegExp(`(${searchTerm})`, "gi");
 		return text.replace(
 			regex,
-			"<mark style='background-color: #4fd1c5; color: #222; padding: 2px 4px; border-radius: 3px;'>$1</mark>",
+			"<mark style='background-color: #00adb5; color: #393e46; padding: 2px 4px; border-radius: 3px;'>$1</mark>",
 		);
 	};
 
@@ -558,7 +577,7 @@ const Projects = () => {
 		<Box
 			className="projects"
 			sx={{
-				color: "#e0e0e0",
+				color: "#eeeeee",
 				maxWidth: {
 					xs: "100%",
 					sm: "900px",
@@ -579,7 +598,7 @@ const Projects = () => {
 				variant="h2"
 				sx={{
 					textAlign: "center",
-					color: "#4fd1c5",
+					color: "#00adb5",
 					fontWeight: "bold",
 					marginBottom: {
 						xs: "1.5rem",
@@ -600,7 +619,7 @@ const Projects = () => {
 					},
 				}}
 			>
-				📂 Projects
+				Projects
 			</Typography>
 
 			{/* Filter Buttons */}
@@ -628,67 +647,29 @@ const Projects = () => {
 						sx={{
 							backgroundColor:
 								activeFilter === category
-									? category === CATEGORIES.PROFESSIONAL
-										? "#7952B3"
-										: category === CATEGORIES.OPENSOURCE
-											? "#28a745"
-											: category === CATEGORIES.HACKATHON
-												? "#fd7e14"
-												: category === CATEGORIES.PERSONAL
-													? "#6c757d"
-													: "#4fd1c5"
+									? categoryColor(category)
 									: "transparent",
 							borderColor:
-								category === CATEGORIES.PROFESSIONAL
-									? "#7952B3"
-									: category === CATEGORIES.OPENSOURCE
-										? "#28a745"
-										: category === CATEGORIES.HACKATHON
-											? "#fd7e14"
-											: category === CATEGORIES.PERSONAL
-												? "#6c757d"
-												: "#4fd1c5",
-							color:
 								activeFilter === category
-									? "#fff"
-									: category === CATEGORIES.PROFESSIONAL
-										? "#7952B3"
-										: category === CATEGORIES.OPENSOURCE
-											? "#28a745"
-											: category === CATEGORIES.HACKATHON
-												? "#fd7e14"
-												: category === CATEGORIES.PERSONAL
-													? "#6c757d"
-													: "#4fd1c5",
+									? categoryColor(category)
+									: categoryTint(category, 0.45),
+							color:
+								activeFilter === category ? "#eeeeee" : categoryColor(category),
 							fontWeight: 600,
 							fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.9rem" },
 							px: { xs: 1.5, sm: 2, md: 2.5 },
 							py: { xs: 0.5, sm: 0.75 },
-							borderRadius: "20px",
+							borderRadius: "980px",
 							textTransform: "none",
-							transition: "all 0.3s ease",
+							transition: "all 0.25s ease",
 							"&:hover": {
 								backgroundColor:
-									category === CATEGORIES.PROFESSIONAL
-										? "#7952B3"
-										: category === CATEGORIES.OPENSOURCE
-											? "#28a745"
-											: category === CATEGORIES.HACKATHON
-												? "#fd7e14"
-												: category === CATEGORIES.PERSONAL
-													? "#6c757d"
-													: "#4fd1c5",
-								color: "#fff",
-								borderColor:
-									category === CATEGORIES.PROFESSIONAL
-										? "#7952B3"
-										: category === CATEGORIES.OPENSOURCE
-											? "#28a745"
-											: category === CATEGORIES.HACKATHON
-												? "#fd7e14"
-												: category === CATEGORIES.PERSONAL
-													? "#6c757d"
-													: "#4fd1c5",
+									activeFilter === category
+										? categoryColor(category)
+										: categoryTint(category, 0.14),
+								borderColor: categoryColor(category),
+								color:
+									activeFilter === category ? "#eeeeee" : categoryColor(category),
 							},
 							"@media (min-width: 2560px)": {
 								fontSize: "1.2rem",
@@ -725,10 +706,10 @@ const Projects = () => {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 					sx={{
-						backgroundColor: "#333",
+						backgroundColor: "#454b55",
 						borderRadius: "8px",
 						"& .MuiInputLabel-root": {
-							color: "#4fd1c5",
+							color: "#00adb5",
 							transition: "color 0.3s ease",
 							fontSize: { xs: "0.9rem", sm: "1rem", xl: "1.1rem" },
 							"@media (min-width: 2560px)": {
@@ -736,25 +717,25 @@ const Projects = () => {
 							},
 						},
 						"& .MuiInputLabel-root.Mui-focused": {
-							color: "#a569bd",
+							color: "#00c8d1",
 						},
 						"& .MuiOutlinedInput-root": {
 							"& fieldset": {
-								borderColor: "#4fd1c5",
+								borderColor: "#00adb5",
 								transition: "border-color 0.3s ease",
 								"@media (min-width: 2560px)": {
 									borderWidth: "2px",
 								},
 							},
 							"&:hover fieldset": {
-								borderColor: "#4fd1c5",
+								borderColor: "#00adb5",
 							},
 							"&.Mui-focused fieldset": {
-								borderColor: "#a569bd",
+								borderColor: "#00c8d1",
 							},
 						},
 						"& .MuiInputBase-input": {
-							color: "#e0e0e0",
+							color: "#eeeeee",
 							fontSize: { xs: "0.9rem", sm: "1rem", xl: "1.1rem" },
 							"@media (min-width: 2560px)": {
 								fontSize: "1.4rem",
@@ -814,11 +795,11 @@ const Projects = () => {
 								setActiveFilter(CATEGORIES.ALL);
 							}}
 							sx={{
-								borderColor: "#4fd1c5",
-								color: "#4fd1c5",
+								borderColor: "#00adb5",
+								color: "#00adb5",
 								"&:hover": {
-									borderColor: "#a569bd",
-									color: "#a569bd",
+									borderColor: "#00c8d1",
+									color: "#00c8d1",
 								},
 							}}
 						>
@@ -846,9 +827,11 @@ const Projects = () => {
 							showAllProjects ? <KeyboardArrowUp /> : <KeyboardArrowDown />
 						}
 						sx={{
-							backgroundColor: "#4fd1c5",
-							color: "#222",
-							fontWeight: "bold",
+							backgroundColor: "#00adb5",
+							color: "#eeeeee",
+							fontWeight: 600,
+							borderRadius: "980px",
+							textTransform: "none",
 							px: { xs: 2, sm: 2.5, md: 3, xl: 3.5 },
 							py: { xs: 0.75, sm: 0.875, md: 1, xl: 1.125 },
 							fontSize: {
@@ -858,8 +841,8 @@ const Projects = () => {
 								xl: "1rem",
 							},
 							"&:hover": {
-								backgroundColor: "#a569bd",
-								boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+								backgroundColor: "#00c8d1",
+								boxShadow: "none",
 								color: "#fff",
 							},
 							"@media (min-width: 2560px)": {
@@ -883,7 +866,7 @@ const Projects = () => {
 			<Box
 				sx={{
 					textAlign: "center",
-					color: "#e0e0e0",
+					color: "#eeeeee",
 					marginTop: { xs: "2rem", sm: "2.5rem", md: "3rem", xl: "3.5rem" },
 					"@media (min-width: 2560px)": {
 						marginTop: "4rem",
@@ -913,7 +896,7 @@ const Projects = () => {
 						},
 					}}
 				>
-					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
+					Feel free to <span style={{ color: "#00adb5" }}>connect</span> with me
 				</Typography>
 				<SocialIcons />
 			</Box>

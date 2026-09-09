@@ -45,7 +45,7 @@ const About = () => {
 				<section id="about-me" className="about-container">
 					<div className="about-text-container">
 						<h1 className="about-me">
-							🧑‍💻 About <span>Me</span>
+							About <span>Me</span>
 						</h1>
 					</div>
 					<div className="about-me-div">
@@ -163,7 +163,7 @@ const About = () => {
 				<section id="tools-technologies" className="tools-section">
 					<div className="tools-header">
 						<h2>
-							🛠️ <span className="highlight">Tools</span> and{" "}
+							<span className="highlight">Tools</span> and{" "}
 							<span className="highlight">Technologies</span> I&apos;ve worked
 							with
 						</h2>
@@ -420,9 +420,9 @@ const About = () => {
 
 				{/* Work Experience Timeline */}
 				<section id="work-experience" className="timeline-section">
-					<h2>💼 Work Experience</h2>
+					<h2>Work <span>Experience</span></h2>
 					<VerticalTimeline
-						lineColor="#4fd1c5"
+						lineColor="#00adb5"
 						layout="1-column-left"
 						className="timeline"
 					>
@@ -430,15 +430,15 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
-								border: "2px solid #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
+								border: "2px solid #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="May 2025 - Present"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={Sarva.src}
@@ -454,7 +454,7 @@ const About = () => {
 						>
 							<h3 className="vertical-timeline-element-title">
 								Software Engineer -{" "}
-								<span style={{ color: "#4fd1c5" }}>Current Role</span>
+								<span style={{ color: "#00adb5" }}>Current Role</span>
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
 								Sarva - Vendor Management Platform & Marketplace for Grocery
@@ -464,7 +464,7 @@ const About = () => {
 										href="https://www.sarvabazaar.com"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#4fd1c5", textDecoration: "underline" }}
+										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
 										[sarvabazaar.com]
 									</a>
@@ -499,11 +499,11 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="May 2024 - May 2025"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "rgb(82 91 58)", color: "#fff" }}
@@ -526,7 +526,7 @@ const About = () => {
 										href="https://github.com/FarmData2/FarmData2"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#4fd1c5", textDecoration: "underline" }}
+										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
 										[GitHub Repository]
 									</a>
@@ -536,7 +536,7 @@ const About = () => {
 										href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#4fd1c5", textDecoration: "underline" }}
+										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
 										[Contributions]
 									</a>
@@ -558,14 +558,14 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="Jan 2025 - April 2025"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#009688", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={MermaidJS.src}
@@ -584,7 +584,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 									style={{
-										color: "#4fd1c5",
+										color: "#00adb5",
 										textDecoration: "underline",
 										marginLeft: "8px",
 									}}
@@ -596,7 +596,7 @@ const About = () => {
 									target="_blank"
 									rel="noopener noreferrer"
 									style={{
-										color: "#4fd1c5",
+										color: "#00adb5",
 										textDecoration: "underline",
 										marginLeft: "8px",
 									}}
@@ -608,7 +608,7 @@ const About = () => {
 										href="https://github.com/mermaid-js/mermaid"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#4fd1c5", textDecoration: "underline" }}
+										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
 										[GitHub Repository]
 									</a>
@@ -630,14 +630,14 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="Sept 2023 - Jan 2024"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={Lumber84.src}
@@ -656,7 +656,7 @@ const About = () => {
 										href="https://www.dickinson.edu/news/article/5821/dickinson_students_work_with_alum_to_breathe_new_life_into_84_lumbers_legacy_systems"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#4fd1c5", textDecoration: "underline" }}
+										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
 										[Featured in Dickinson News]
 									</a>
@@ -675,14 +675,14 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="Aug 2022 - May 2025"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={Dickinson.src}
@@ -721,11 +721,11 @@ const About = () => {
 							fontWeight: 700,
 							margin: "0 0 3rem 0",
 							letterSpacing: "0.02em",
-							color: "#4fd1c5",
+							color: "#00adb5",
 							textShadow: "0 2px 16px #0009",
 						}}
 					>
-						🌟 Open Source Contributions
+						Open Source <span>Contributions</span>
 					</h2>
 
 					<div
@@ -756,7 +756,7 @@ const About = () => {
 									style={{
 										fontWeight: 600,
 										fontSize: "1.33rem",
-										color: "#69f9e6",
+										color: "#00adb5",
 										marginBottom: 3,
 									}}
 								>
@@ -764,12 +764,12 @@ const About = () => {
 										href="https://github.com/mermaid-js/mermaid"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#f992cf" }}
+										style={{ color: "#00adb5" }}
 									>
 										Mermaid.js
 									</a>
 									<span
-										style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}
+										style={{ marginLeft: 8, color: "#eeeeee", fontSize: 16 }}
 									>
 										(Top 25 contributor out of 600+ contributors)
 									</span>
@@ -777,7 +777,7 @@ const About = () => {
 								<div
 									style={{
 										fontSize: 16,
-										color: "#f3f6fa",
+										color: "#ffffff",
 										marginBottom: 12,
 										marginTop: 12,
 									}}
@@ -785,7 +785,7 @@ const About = () => {
 									• Shipped 3 merged PRs for text wrapping, auto-scaling data
 									labels, and customizable styling in a library serving{" "}
 									<a
-										style={{ color: "#4fd1c5", textDecoration: "underline" }}
+										style={{ color: "#00adb5", textDecoration: "underline" }}
 										href="https://npmtrends.com/mermaid"
 									>
 										1.4M+ weekly downloads
@@ -795,7 +795,7 @@ const About = () => {
 								<ul
 									style={{
 										fontSize: 15,
-										color: "#c7e9f1",
+										color: "#eeeeee",
 										margin: 0,
 										marginBottom: 9,
 										paddingLeft: 18,
@@ -806,7 +806,7 @@ const About = () => {
 											href="https://github.com/mermaid-js/mermaid/pull/6475"
 											target="_blank"
 											rel="noopener noreferrer"
-											style={{ color: "#43e8d8", textDecoration: "underline" }}
+											style={{ color: "#00adb5", textDecoration: "underline" }}
 										>
 											Added dynamic, auto-scaling data labels for bar charts
 										</a>
@@ -816,7 +816,7 @@ const About = () => {
 											href="https://github.com/mermaid-js/mermaid/pull/6274"
 											target="_blank"
 											rel="noopener noreferrer"
-											style={{ color: "#43e8d8", textDecoration: "underline" }}
+											style={{ color: "#00adb5", textDecoration: "underline" }}
 										>
 											Engineered smart word wrapping using Knuth-Plass algorithm
 										</a>
@@ -826,19 +826,19 @@ const About = () => {
 											href="https://github.com/mermaid-js/mermaid/pull/6225"
 											target="_blank"
 											rel="noopener noreferrer"
-											style={{ color: "#43e8d8", textDecoration: "underline" }}
+											style={{ color: "#00adb5", textDecoration: "underline" }}
 										>
 											Enabled full theme customization for Journey diagrams
 										</a>
 									</li>
 								</ul>
-								<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 15 }}>
+								<div style={{ fontSize: 14, color: "rgba(238,238,238,0.5)", marginTop: 15 }}>
 									<a
 										href="https://github.com/mermaid-js/mermaid/graphs/contributors"
 										target="_blank"
 										rel="noopener noreferrer"
 										style={{
-											color: "#61ffe7",
+											color: "#00adb5",
 											marginRight: 18,
 										}}
 									>
@@ -848,7 +848,7 @@ const About = () => {
 										href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#61ffe7" }}
+										style={{ color: "#00adb5" }}
 									>
 										All PRs
 									</a>
@@ -876,7 +876,7 @@ const About = () => {
 									style={{
 										fontWeight: 600,
 										fontSize: "1.33rem",
-										color: "#69f9e6",
+										color: "#00adb5",
 										marginBottom: 3,
 									}}
 								>
@@ -884,12 +884,12 @@ const About = () => {
 										href="https://github.com/FarmData2/FarmData2"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#a3ffad" }}
+										style={{ color: "#00adb5" }}
 									>
 										FarmData2
 									</a>
 									<span
-										style={{ marginLeft: 8, color: "#e2e2e2", fontSize: 16 }}
+										style={{ marginLeft: 8, color: "#eeeeee", fontSize: 16 }}
 									>
 										(Open-source contributor)
 									</span>
@@ -897,7 +897,7 @@ const About = () => {
 								<div
 									style={{
 										fontSize: 16,
-										color: "#f3f6fa",
+										color: "#ffffff",
 										marginBottom: 12,
 										marginTop: 12,
 									}}
@@ -906,13 +906,13 @@ const About = () => {
 									built 18+ REST APIs, and added Cypress tests to automate
 									real-world farm operations.
 								</div>
-								<div style={{ fontSize: 14, color: "#aaaaaa", marginTop: 2 }}>
+								<div style={{ fontSize: 14, color: "rgba(238,238,238,0.5)", marginTop: 2 }}>
 									<a
 										href="https://github.com/FarmData2/FarmData2/graphs/contributors"
 										target="_blank"
 										rel="noopener noreferrer"
 										style={{
-											color: "#61ffe7",
+											color: "#00adb5",
 											marginRight: 18,
 										}}
 									>
@@ -922,7 +922,7 @@ const About = () => {
 										href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#61ffe7" }}
+										style={{ color: "#00adb5" }}
 									>
 										All PRs
 									</a>
@@ -932,20 +932,20 @@ const About = () => {
 
 						{/* Full Portfolio */}
 						<div className="oss-item">
-							<span style={{ fontSize: 32, marginRight: 18 }}>🗂️</span>
+							
 							<div style={{ flex: 1 }}>
 								<div
 									style={{
 										fontWeight: 600,
 										fontSize: "1.17rem",
-										color: "#b8fffb",
+										color: "#00adb5",
 										marginBottom: 5,
 									}}
 								>
 									See My Full Open Source Portfolio
 								</div>
 								<div
-									style={{ fontSize: 15, color: "#e9e9f3", marginBottom: 7 }}
+									style={{ fontSize: 15, color: "#eeeeee", marginBottom: 7 }}
 								>
 									Detailed breakdown, merged PRs, and stats for every major
 									project.
@@ -957,7 +957,7 @@ const About = () => {
 									id="open-source-button"
 									style={{
 										display: "inline-block",
-										background: "#7952B3",
+										background: "#00adb5",
 										color: "#fff",
 										borderRadius: 8,
 										padding: "5px 17px",
@@ -965,7 +965,7 @@ const About = () => {
 										fontSize: 15,
 										marginTop: 2,
 										textDecoration: "none",
-										boxShadow: "0 1px 3px 0 rgba(121,82,179,0.1)",
+										boxShadow: "0 1px 3px 0 rgba(0, 173, 181, 0.10)",
 										transition: "background 0.3s ease",
 									}}
 								>
@@ -978,9 +978,9 @@ const About = () => {
 
 				{/* Hackathon Experience Timeline */}
 				<section id="hackathons" className="timeline-section">
-					<h2 className="hack-h2">💡 Hackathon Experience</h2>
+					<h2 className="hack-h2">Hackathon <span>Experience</span></h2>
 					<VerticalTimeline
-						lineColor="#4fd1c5"
+						lineColor="#00adb5"
 						layout="1-column-left"
 						className="timeline"
 					>
@@ -988,14 +988,14 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--hackathon"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="HoyaHacks 2024"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={Hoya.src}
@@ -1020,9 +1020,9 @@ const About = () => {
 									width: "100%",
 									borderRadius: "8px",
 									marginTop: "1rem",
-									border: "2px solid #4fd1c5",
+									border: "2px solid #00adb5",
 									padding: "5px",
-									backgroundColor: "#333",
+									backgroundColor: "#454b55",
 									boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
 								}}
 							/>
@@ -1098,14 +1098,14 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--hackathon"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
 							contentArrowStyle={{ borderRight: "7px solid rgb(45, 45, 45)" }}
 							date="PennApps 2024"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={PennApps.src}
@@ -1130,9 +1130,9 @@ const About = () => {
 									width: "100%",
 									borderRadius: "8px",
 									marginTop: "1rem",
-									border: "2px solid #4fd1c5",
+									border: "2px solid #00adb5",
 									padding: "5px",
-									backgroundColor: "#333",
+									backgroundColor: "#454b55",
 									boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
 								}}
 							/>
@@ -1231,11 +1231,11 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--hackathon"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
 							date="HackHarvard 2024"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "#fff", color: "#fff" }}
@@ -1265,9 +1265,9 @@ const About = () => {
 									width: "100%",
 									borderRadius: "8px",
 									marginTop: "1rem",
-									border: "2px solid #4fd1c5",
+									border: "2px solid #00adb5",
 									padding: "5px",
-									backgroundColor: "#333",
+									backgroundColor: "#454b55",
 									boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
 								}}
 							/>
@@ -1353,9 +1353,9 @@ const About = () => {
 
 				{/* Education Timeline */}
 				<section id="education" className="timeline-section">
-					<h2>🎓 Education</h2>
+					<h2>Education</h2>
 					<VerticalTimeline
-						lineColor="#4fd1c5"
+						lineColor="#00adb5"
 						layout="1-column-left"
 						className="timeline"
 					>
@@ -1363,14 +1363,14 @@ const About = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--education"
 							contentStyle={{
-								background: "rgb(33, 33, 33)",
+								background: "#393e46",
 								color: "#fff",
-								boxShadow: "0 3px 0 #4fd1c5",
+								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid  rgb(33, 33, 33)" }}
+							contentArrowStyle={{ borderRight: "7px solid  #393e46" }}
 							date="August 2021 - May 2025"
 							dateClassName={"custom-date"}
-							iconStyle={{ background: "#4fd1c5", color: "#fff" }}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
 									src={Dickinson.src}
@@ -1412,11 +1412,11 @@ const About = () => {
 							fontWeight: 700,
 							margin: "4rem 0 3rem 0",
 							letterSpacing: "0.02em",
-							color: "#4fd1c5",
+							color: "#00adb5",
 							textShadow: "0 2px 16px #0009",
 						}}
 					>
-						🏆 Certifications & Achievements
+						Certifications &amp; <span>Achievements</span>
 					</h2>
 
 					<div
@@ -1447,14 +1447,14 @@ const About = () => {
 									style={{
 										fontWeight: 600,
 										fontSize: "1.25rem",
-										color: "#69f9e6",
+										color: "#00adb5",
 										marginBottom: 8,
 									}}
 								>
 									CS50x: Introduction to Computer Science
 								</div>
 								<div
-									style={{ fontSize: 15, color: "#c7e9f1", marginBottom: 10 }}
+									style={{ fontSize: 15, color: "#eeeeee", marginBottom: 10 }}
 								>
 									<strong>HarvardX</strong> | Algorithms, data structures, web
 									development using C, Python, SQL, JavaScript
@@ -1466,14 +1466,14 @@ const About = () => {
 									style={{
 										display: "inline-flex",
 										alignItems: "center",
-										background: "#4fd1c5",
+										background: "#00adb5",
 										color: "#000",
 										borderRadius: 8,
 										padding: "6px 14px",
 										fontWeight: 500,
 										fontSize: 14,
 										textDecoration: "none",
-										boxShadow: "0 1px 3px 0 rgba(79,209,197,0.3)",
+										boxShadow: "0 1px 3px 0 rgba(0, 173, 181, 0.28)",
 										transition: "background 0.3s ease",
 									}}
 								>
@@ -1492,7 +1492,7 @@ const About = () => {
 									width: 60,
 									height: 60,
 									borderRadius: 12,
-									background: "#0076A8",
+									background: "#525863",
 									display: "flex",
 									alignItems: "center",
 									justifyContent: "center",
@@ -1514,14 +1514,14 @@ const About = () => {
 									style={{
 										fontWeight: 600,
 										fontSize: "1.25rem",
-										color: "#69f9e6",
+										color: "#00adb5",
 										marginBottom: 8,
 									}}
 								>
 									MATLAB Onramp
 								</div>
 								<div
-									style={{ fontSize: 15, color: "#c7e9f1", marginBottom: 10 }}
+									style={{ fontSize: 15, color: "#eeeeee", marginBottom: 10 }}
 								>
 									<strong>MathWorks</strong> | MATLAB programming and
 									computational mathematics
@@ -1533,14 +1533,14 @@ const About = () => {
 									style={{
 										display: "inline-flex",
 										alignItems: "center",
-										background: "#0076A8",
+										background: "#525863",
 										color: "#fff",
 										borderRadius: 8,
 										padding: "6px 14px",
 										fontWeight: 500,
 										fontSize: 14,
 										textDecoration: "none",
-										boxShadow: "0 1px 3px 0 rgba(0,118,168,0.3)",
+										boxShadow: "0 1px 3px 0 rgba(0, 173, 181, 0.28)",
 										transition: "background 0.3s ease",
 									}}
 								>
@@ -1556,9 +1556,9 @@ const About = () => {
 						<div
 							className="academic"
 							style={{
-								background: "rgba(52, 21, 65, 0.75)",
+								background: "rgba(57, 62, 70, 0.75)",
 								borderRadius: 16,
-								boxShadow: "0 1px 8px 0 rgba(121,82,179,0.08)",
+								boxShadow: "0 1px 8px 0 rgba(0, 0, 0, 0.25)",
 								padding: "1.5rem 2rem",
 							}}
 						>
@@ -1566,24 +1566,24 @@ const About = () => {
 								style={{
 									fontWeight: 600,
 									fontSize: "1.25rem",
-									color: "#b8fffb",
+									color: "#00adb5",
 									marginBottom: 15,
 									display: "flex",
 									alignItems: "center",
 								}}
 							>
-								🎓 Academic Honors
+								Academic Honors
 							</div>
 							<div style={{ display: "grid", gap: "12px" }}>
-								<div style={{ fontSize: 15, color: "#e9e9f3" }}>
+								<div style={{ fontSize: 15, color: "#eeeeee" }}>
 									• <strong>The 1783 Scholarship</strong> - Merit-based
 									scholarship at Dickinson College
 								</div>
-								<div style={{ fontSize: 15, color: "#e9e9f3" }}>
+								<div style={{ fontSize: 15, color: "#eeeeee" }}>
 									• <strong>Dean&apos;s List</strong> - Academic excellence
 									recognition
 								</div>
-								<div style={{ fontSize: 15, color: "#e9e9f3" }}>
+								<div style={{ fontSize: 15, color: "#eeeeee" }}>
 									• <strong>Pi Mu Epsilon</strong> - National Mathematics Honor
 									Society
 								</div>
@@ -1602,7 +1602,7 @@ const About = () => {
 					<Box
 						sx={{
 							textAlign: "center",
-							color: "#e0e0e0",
+							color: "#eeeeee",
 							padding: "1rem",
 							display: "flex",
 							flexDirection: "column",
@@ -1610,7 +1610,7 @@ const About = () => {
 						}}
 					>
 						<h2 className="projects-link-h2">
-							Check Out My <span style={{ color: "#fff" }}>Projects</span> 🚀
+							Check Out My <span style={{ color: "#00adb5" }}>Projects</span>
 						</h2>
 						<Typography className="projects-link-p">
 							Browse my work in web development, systems programming, and more.
@@ -1620,6 +1620,11 @@ const About = () => {
 							variant="contained"
 							id="projects-link-btn"
 							startIcon={<CodeIcon />}
+							sx={{
+								backgroundColor: "#00adb5",
+								color: "#eeeeee",
+								"&:hover": { backgroundColor: "#00c8d1" },
+							}}
 						>
 							View Projects
 						</Button>
@@ -1631,11 +1636,11 @@ const About = () => {
 					<Box
 						sx={{
 							textAlign: "center",
-							color: "#e0e0e0",
+							color: "#eeeeee",
 						}}
 					>
 						<Typography variant="h5" id="social-connect">
-							Feel free to <span style={{ color: "#4fd1c5" }}>connect</span>{" "}
+							Feel free to <span style={{ color: "#00adb5" }}>connect</span>{" "}
 							with me
 						</Typography>
 						<SocialIcons />

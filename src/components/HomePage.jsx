@@ -2,38 +2,29 @@
 
 import { useEffect } from "react";
 import Typed from "typed.js";
-import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import Computer from "@/assets/computer.png";
-import Hand from "@/assets/hand.svg";
-import Hacker from "@/assets/hacker.svg";
+import HeroArt from "./HeroArt";
 import SocialIcons from "./SocialIcons";
-import { Box, Button } from "@mui/material";
-import PersonIcon from "@mui/icons-material/Person";
-import CodeIcon from "@mui/icons-material/Code";
-import DescriptionIcon from "@mui/icons-material/Description";
+
+const RESUME_URL =
+	"https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view?usp=sharing";
 
 const HomePage = () => {
-	const router = useRouter();
-
 	useEffect(() => {
 		const typed = new Typed("#typed-text", {
 			strings: [
 				"Software Engineer",
 				"Full Stack Engineer",
 				"Backend Systems Builder",
-				"Frontend Performance Optimizer",
 				"Open Source Contributor",
 				"Next.js & TypeScript Developer",
 				"Spring Boot Developer",
 				"Python & Data Engineer",
 				"API & WebSocket Builder",
-				"Product-Minded Engineer",
 			],
 			typeSpeed: 50,
 			backSpeed: 25,
-			startDelay: 1000,
+			startDelay: 800,
 			backDelay: 2000,
 			loop: true,
 			showCursor: true,
@@ -47,19 +38,11 @@ const HomePage = () => {
 
 	return (
 		<div className="main-container">
-			{/* First Block */}
 			<section className="first-block-home" aria-label="Introduction">
 				<div className="text-container">
 					<div className="sub-text-container">
 						<div className="first-text-container">
 							<h3>Hi, There!</h3>
-							<Image
-								className="wave"
-								src={Hand}
-								alt="Waving hand"
-								width={40}
-								height={40}
-							/>
 						</div>
 						<div className="second-text-container">
 							<h5>
@@ -67,6 +50,7 @@ const HomePage = () => {
 							</h5>
 						</div>
 					</div>
+
 					<div className="typed-text-container">
 						<p
 							id="typed-text"
@@ -74,108 +58,35 @@ const HomePage = () => {
 							aria-label="Software Engineer"
 						></p>
 					</div>
-				</div>
-				<div className="image-container">
-					<Image
-						className="computer"
-						src={Computer}
-						alt="Computer illustration representing software development"
-						width={500}
-						height={400}
-						priority
-					/>
-				</div>
-			</section>
 
-			{/* Second Block */}
-			<section className="second-block-home" aria-label="Quick navigation">
-				<div className="second-block-text-container">
-					<div className="text-div">
-						<div className="sub-div">
-							<p className="sub-text">
-								Learn more about my background and skills by visiting the{" "}
-								<strong>About</strong> page, exploring my{" "}
-								<strong>Projects</strong>, or reviewing my{" "}
-								<strong>Resume</strong>.
-							</p>
-							<Box
-								sx={{
-									display: "flex",
-									gap: "2rem",
-									justifyContent: "center",
-									flexWrap: "wrap",
-								}}
-								className="button-container"
-							>
-								<Button
-									variant="contained"
-									onClick={() => router.push("/about")}
-									startIcon={<PersonIcon />}
-									sx={{
-										backgroundColor: "#4fd1c5",
-										color: "#222",
-										fontWeight: "bold",
-										"&:hover": {
-											backgroundColor: "#a569bd",
-											boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
-											color: "#fff",
-										},
-									}}
-								>
-									About Me
-								</Button>
-								<Button
-									variant="contained"
-									onClick={() => router.push("/projects")}
-									startIcon={<CodeIcon />}
-									sx={{
-										backgroundColor: "#4fd1c5",
-										color: "#222",
-										fontWeight: "bold",
-										"&:hover": {
-											backgroundColor: "#a569bd",
-											boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
-											color: "#fff",
-										},
-									}}
-								>
-									My Projects
-								</Button>
-								<Button
-									variant="contained"
-									href="https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view?usp=sharing"
-									target="_blank"
-									rel="noopener noreferrer"
-									startIcon={<DescriptionIcon />}
-									sx={{
-										backgroundColor: "#4fd1c5",
-										color: "#222",
-										fontWeight: "bold",
-										"&:hover": {
-											backgroundColor: "#a569bd",
-											boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
-											color: "#fff",
-										},
-									}}
-								>
-									My Resume
-								</Button>
-							</Box>
-							<p className="sub-text">
-								You can also <strong>Contact Me</strong> via the{" "}
-								<Link href="/contact">Contact Me page</Link> or through my
-								social links below.
-							</p>
-						</div>
-						<SocialIcons />
+					<p className="sub-text">
+						I build full-stack products, mostly the parts you never think
+						about. Currently at <strong>Sarva</strong>, and a maintainer on{" "}
+						<strong>Mermaid.js</strong>.
+					</p>
+
+					<div className="button-container">
+						<Link className="btn btn-primary" href="/projects">
+							My Projects
+						</Link>
+						<Link className="btn btn-ghost" href="/about">
+							About Me
+						</Link>
+						<a
+							className="btn btn-ghost"
+							href={RESUME_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							My Resume
+						</a>
 					</div>
-					<Image
-						className="hacker"
-						src={Hacker}
-						alt="Developer illustration"
-						width={400}
-						height={400}
-					/>
+
+					<SocialIcons />
+				</div>
+
+				<div className="image-container">
+					<HeroArt className="computer" />
 				</div>
 			</section>
 		</div>

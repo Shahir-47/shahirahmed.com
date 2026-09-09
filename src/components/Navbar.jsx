@@ -5,11 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Icon from "@/assets/icon.svg";
-import Home from "@/assets/home.svg";
-import AboutIcon from "@/assets/about.svg";
-import Code from "@/assets/code.svg";
-import phone from "@/assets/phone.svg";
-import Doc from "@/assets/doc.svg";
 import hamburgerImg from "@/assets/hamburger.svg";
 
 const Navbar = () => {
@@ -67,7 +62,6 @@ const Navbar = () => {
 					aria-label="Home page"
 				>
 					<span>Home</span>
-					<Image src={Home} alt="" width={24} height={24} aria-hidden="true" />
 				</Link>
 				<Link
 					href="/about"
@@ -75,13 +69,6 @@ const Navbar = () => {
 					aria-label="About page"
 				>
 					<span>About</span>
-					<Image
-						src={AboutIcon}
-						alt=""
-						width={24}
-						height={24}
-						aria-hidden="true"
-					/>
 				</Link>
 				<Link
 					href="/projects"
@@ -89,7 +76,6 @@ const Navbar = () => {
 					aria-label="Projects page"
 				>
 					<span>Projects</span>
-					<Image src={Code} alt="" width={24} height={24} aria-hidden="true" />
 				</Link>
 				<Link
 					href="/contact"
@@ -97,7 +83,6 @@ const Navbar = () => {
 					aria-label="Contact page"
 				>
 					<span>Contact</span>
-					<Image src={phone} alt="" width={24} height={24} aria-hidden="true" />
 				</Link>
 
 				<a
@@ -108,7 +93,6 @@ const Navbar = () => {
 					aria-label="View Resume (opens in new tab)"
 				>
 					<span>Resume</span>
-					<Image src={Doc} alt="" width={24} height={24} aria-hidden="true" />
 				</a>
 				<div
 					className="hamburger"

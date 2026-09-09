@@ -1,3 +1,4 @@
+import { Poppins, Oswald } from "next/font/google";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -5,6 +6,20 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "@/css/normalize.css";
 import "@/css/style.css";
+
+const poppins = Poppins({
+	subsets: ["latin"],
+	display: "swap",
+	weight: ["500", "600", "700"],
+	variable: "--font-poppins",
+});
+
+const oswald = Oswald({
+	subsets: ["latin"],
+	display: "swap",
+	weight: ["700"],
+	variable: "--font-oswald",
+});
 
 const siteUrl = "https://www.shahirahmed.com";
 const ogImageUrl = "/opengraph-image";
@@ -305,7 +320,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={`${poppins.variable} ${oswald.variable}`}>
 			<head>
 				{/* Preconnect to external domains for performance */}
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -319,10 +334,10 @@ export default function RootLayout({ children }) {
 				<link rel="dns-prefetch" href="https://img.shields.io" />
 
 				{/* Theme color for PWA */}
-				<meta name="theme-color" content="#4fd1c5" />
+				<meta name="theme-color" content="#00adb5" />
 				<meta
 					name="theme-color"
-					content="#0a0a0a"
+					content="#222831"
 					media="(prefers-color-scheme: dark)"
 				/>
 

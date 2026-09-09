@@ -95,49 +95,68 @@ const GitHubStats = () => {
 
 	return (
 		<div className="github-stats-section">
-			<h2>📊 My GitHub Stats</h2>
+			<h2>
+				My GitHub <span>Stats</span>
+			</h2>
 
-			{/* GitHub Activity Calendar */}
-			<div className="github-activity-calendar">
-				<GitHubCalendar
-					username="Shahir-47"
-					blockSize={config.blockSize}
-					blockMargin={config.blockMargin}
-					fontSize={config.fontSize}
-					transformData={config.trimDateRange ? transformData : undefined}
-					labels={{
-						totalCount: config.trimDateRange
-							? "{{count}} contributions in the last 6 months"
-							: "{{count}} contributions in the last year",
-					}}
-				/>
-			</div>
+			{/* Calendar and the three stat cards share one panel */}
+			<div className="github-card">
+				<div className="github-activity-calendar">
+					<GitHubCalendar
+						username="Shahir-47"
+						theme={{
+							dark: [
+								"#393e46",
+								"#0a4046",
+								"#007680",
+								"#00949d",
+								"#00adb5",
+							],
+						}}
+						colorScheme="dark"
+						blockSize={config.blockSize}
+						blockMargin={config.blockMargin}
+						fontSize={config.fontSize}
+						transformData={config.trimDateRange ? transformData : undefined}
+						labels={{
+							totalCount: config.trimDateRange
+								? "{{count}} contributions in the last 6 months"
+								: "{{count}} contributions in the last year",
+						}}
+					/>
+				</div>
 
-			{/* GitHub Stats */}
-			<div className="github-stats-container">
-			  <img
-			    align="center"
-			    src="https://github-stats-alpha-tawny.vercel.app/api?username=Shahir-47&include_all_commits=true&count_private=true&show_icons=true&hide_border=true&line_height=20&title_color=4fd1c5&icon_color=4fd1c5&text_color=e0e0e0&bg_color=00000000"
-			    alt="Shahir's GitHub Stats"
-			  />
-			
-			  <img
-			    align="center"
-			    src="https://github-stats-alpha-tawny.vercel.app/api/top-langs/?username=Shahir-47&layout=compact&hide_border=true&card_width=495&title_color=4fd1c5&text_color=e0e0e0&bg_color=00000000"
-			    alt="Shahir's Top Languages"
-			  />
-			
-			  <a
-			    href="https://github-readme-streak-stats-steel-eight-67.vercel.app/?user=Shahir-47&background=00000000&title_color=4fd1c5&ring=4fd1c5&fire=4fd1c5&currStreakLabel=4fd1c5&hide_border=true&sideNums=e0e0e0&sideLabels=e0e0e0&dates=e0e0e0&currStreakNum=e0e0e0"
-			    target="_blank"
-			    rel="noopener noreferrer"
-			  >
-			    <img
-			      align="center"
-			      src="https://github-readme-streak-stats-steel-eight-67.vercel.app/?user=Shahir-47&background=00000000&title_color=4fd1c5&ring=4fd1c5&fire=4fd1c5&currStreakLabel=4fd1c5&hide_border=true&sideNums=e0e0e0&sideLabels=e0e0e0&dates=e0e0e0&currStreakNum=e0e0e0"
-			      alt="Shahir's GitHub Streak"
-			    />
-			  </a>
+				<div className="github-stats-grid">
+					<div className="github-stat">
+						<img
+							src="https://github-stats-alpha-tawny.vercel.app/api?username=Shahir-47&include_all_commits=true&count_private=true&show_icons=true&hide_border=true&disable_animations=true&card_width=495&line_height=20&title_color=00adb5&icon_color=00adb5&text_color=eeeeee&bg_color=00000000"
+							alt="Shahir's GitHub statistics"
+							loading="lazy"
+						/>
+					</div>
+
+					<div className="github-stat">
+						<img
+							src="https://github-stats-alpha-tawny.vercel.app/api/top-langs/?username=Shahir-47&layout=compact&hide_border=true&disable_animations=true&card_width=495&title_color=00adb5&text_color=eeeeee&bg_color=00000000"
+							alt="Shahir's most used languages"
+							loading="lazy"
+						/>
+					</div>
+
+					<div className="github-stat">
+						<a
+							href="https://github-readme-streak-stats-steel-eight-67.vercel.app/?user=Shahir-47&background=00000000&title_color=00adb5&ring=00adb5&fire=00adb5&currStreakLabel=00adb5&hide_border=true&disable_animations=true&sideNums=eeeeee&sideLabels=eeeeee&dates=eeeeee&currStreakNum=eeeeee"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="https://github-readme-streak-stats-steel-eight-67.vercel.app/?user=Shahir-47&background=00000000&title_color=00adb5&ring=00adb5&fire=00adb5&currStreakLabel=00adb5&hide_border=true&disable_animations=true&sideNums=eeeeee&sideLabels=eeeeee&dates=eeeeee&currStreakNum=eeeeee"
+								alt="Shahir's GitHub contribution streak"
+								loading="lazy"
+							/>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

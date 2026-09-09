@@ -19,7 +19,7 @@ const ErrorPage = () => {
 			sx={{
 				textAlign: "center",
 				padding: "2rem",
-				color: "#e0e0e0",
+				color: "#eeeeee",
 				flex: 1,
 				display: "flex",
 				flexDirection: "column",
@@ -38,7 +38,7 @@ const ErrorPage = () => {
 			<Typography
 				variant="h2"
 				sx={{
-					color: "#4fd1c5",
+					color: "#00adb5",
 					marginBottom: "1rem",
 					fontSize: "2.5rem", // Default
 					// Font size breakpoints
@@ -93,13 +93,13 @@ const ErrorPage = () => {
 					startIcon={<HomeIcon />}
 					onClick={() => router.push("/")}
 					sx={{
-						backgroundColor: "#4fd1c5",
-						color: "#222",
+						backgroundColor: "#00adb5",
+						color: "#393e46",
 						fontWeight: "bold",
 						fontSize: "1rem",
 						"&:hover": {
-							backgroundColor: "#a569bd",
-							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+							backgroundColor: "#00c8d1",
+							boxShadow: "0 4px 15px rgba(0, 173, 181, 0.28)",
 							color: "#fff",
 						},
 						// Font size breakpoints for buttons
@@ -124,13 +124,13 @@ const ErrorPage = () => {
 					startIcon={<InfoIcon />}
 					onClick={() => router.push("/about")}
 					sx={{
-						backgroundColor: "#4fd1c5",
-						color: "#222",
+						backgroundColor: "#00adb5",
+						color: "#393e46",
 						fontWeight: "bold",
 						fontSize: "1rem",
 						"&:hover": {
-							backgroundColor: "#a569bd",
-							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+							backgroundColor: "#00c8d1",
+							boxShadow: "0 4px 15px rgba(0, 173, 181, 0.28)",
 							color: "#fff",
 						},
 						// Font size breakpoints for buttons
@@ -155,13 +155,13 @@ const ErrorPage = () => {
 					startIcon={<CodeIcon />}
 					onClick={() => router.push("/projects")}
 					sx={{
-						backgroundColor: "#4fd1c5",
-						color: "#222",
+						backgroundColor: "#00adb5",
+						color: "#393e46",
 						fontWeight: "bold",
 						fontSize: "1rem",
 						"&:hover": {
-							backgroundColor: "#a569bd",
-							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+							backgroundColor: "#00c8d1",
+							boxShadow: "0 4px 15px rgba(0, 173, 181, 0.28)",
 							color: "#fff",
 						},
 						// Font size breakpoints for buttons
@@ -186,13 +186,13 @@ const ErrorPage = () => {
 					startIcon={<ContactMailIcon />}
 					onClick={() => router.push("/contact")}
 					sx={{
-						backgroundColor: "#4fd1c5",
-						color: "#222",
+						backgroundColor: "#00adb5",
+						color: "#393e46",
 						fontWeight: "bold",
 						fontSize: "1rem",
 						"&:hover": {
-							backgroundColor: "#a569bd",
-							boxShadow: "0 4px 15px rgba(165, 105, 189, 0.5)",
+							backgroundColor: "#00c8d1",
+							boxShadow: "0 4px 15px rgba(0, 173, 181, 0.28)",
 							color: "#fff",
 						},
 						// Font size breakpoints for buttons

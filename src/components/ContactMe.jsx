@@ -56,28 +56,28 @@ const ContactMe = () => {
 
 	const inputStyle = {
 		"& .MuiInputLabel-root": {
-			color: "#4fd1c5",
+			color: "#00adb5",
 			transition: "color 0.3s ease",
 		},
 		"& .MuiInputLabel-root.Mui-focused": {
-			color: "#a569bd",
+			color: "#00c8d1",
 		},
 		"& .MuiOutlinedInput-root": {
-			backgroundColor: "#333",
+			backgroundColor: "#454b55",
 			borderRadius: "5px",
 			"& fieldset": {
-				borderColor: "#4fd1c5",
+				borderColor: "#00adb5",
 				transition: "border-color 0.3s ease",
 			},
 			"&:hover fieldset": {
-				borderColor: "#4fd1c5",
+				borderColor: "#00adb5",
 			},
 			"&.Mui-focused fieldset": {
-				borderColor: "#a569bd",
+				borderColor: "#00c8d1",
 			},
 		},
 		"& .MuiInputBase-input": {
-			color: "#e0e0e0",
+			color: "#eeeeee",
 		},
 	};
 
@@ -86,11 +86,11 @@ const ContactMe = () => {
 			<Box
 				className="contact-form"
 				sx={{
-					color: "#e0e0e0",
-					backgroundColor: "#222",
+					color: "#eeeeee",
+					backgroundColor: "#393e46",
 					padding: "2rem",
 					borderRadius: "10px",
-					border: "2px solid #4fd1c5",
+					border: "2px solid #00adb5",
 					width: "80%",
 					margin: "2rem auto",
 					boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)",
@@ -100,7 +100,7 @@ const ContactMe = () => {
 					variant="h4"
 					sx={{
 						textAlign: "center",
-						color: "#4fd1c5",
+						color: "#00adb5",
 						fontWeight: "bold",
 						marginBottom: "1.5rem",
 					}}
@@ -166,16 +166,16 @@ const ContactMe = () => {
 								type="submit"
 								variant="contained"
 								sx={{
-									backgroundColor: "#4fd1c5",
-									color: "#222",
+									backgroundColor: "#00adb5",
+									color: "#393e46",
 									fontWeight: "bold",
 									width: "70%",
 									transition: "all 0.3s ease",
 									boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
 									"&:hover": {
-										backgroundColor: "#8a2be2",
+										backgroundColor: "#00adb5",
 										color: "#fff",
-										boxShadow: "0 6px 20px rgba(138, 43, 226, 0.5)",
+										boxShadow: "0 6px 20px rgba(0, 173, 181, 0.35)",
 									},
 								}}
 								startIcon={<Send />}
@@ -190,7 +190,7 @@ const ContactMe = () => {
 						sx={{
 							marginTop: "1rem",
 							textAlign: "center",
-							color: status === "Message sent!" ? "#4fd1c5" : "#e0e0e0",
+							color: status === "Message sent!" ? "#00adb5" : "#eeeeee",
 						}}
 					>
 						{status}
@@ -202,14 +202,14 @@ const ContactMe = () => {
 			<Box
 				sx={{
 					textAlign: "center",
-					color: "#e0e0e0",
+					color: "#eeeeee",
 				}}
 			>
 				<Typography
 					variant="h5"
 					sx={{ fontWeight: "bold", marginBottom: "1rem", fontSize: "1.2rem" }}
 				>
-					Feel free to <span style={{ color: "#4fd1c5" }}>connect</span> with me
+					Feel free to <span style={{ color: "#00adb5" }}>connect</span> with me
 				</Typography>
 				<SocialIcons />
 			</Box>
