@@ -105,7 +105,7 @@ const ContactMe = () => {
 						fullWidth
 						required
 						multiline
-						minRows={6}
+						rows={6}
 						label="Your message"
 						name="message"
 						value={formData.message}

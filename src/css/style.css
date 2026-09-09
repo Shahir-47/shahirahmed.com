@@ -1765,61 +1765,83 @@ p {
 
 /* =========================================================
    Mobile alignment
-   Short blocks centre so the narrow column reads as composed.
-   Long body copy stays left aligned, where centring hurts
-   readability, and card contents keep their own alignment.
+   Headings, images and the blocks themselves centre. The text
+   inside a paragraph stays left aligned, because centred prose
+   gives every line a different starting edge and is harder to
+   read at narrow widths.
    ========================================================= */
 
 @media (max-width: 900px) {
+	/* Centre the containers, not their prose */
 	.text-container,
 	.home-section,
-	.contact-intro {
-		align-items: center;
-		text-align: center;
-	}
-
+	.contact-intro,
 	.home-about > div {
 		align-items: center;
-		text-align: center;
-	}
-
-	.home-art,
-	.image-container,
-	.contact-art {
-		justify-self: center;
-		margin-inline: auto;
+		text-align: left;
 	}
 
 	.sub-text,
 	.home-copy,
-	.hero-lede {
+	.hero-lede,
+	.about-me-text,
+	.projects-link-p {
+		margin-inline: auto;
+		text-align: left;
+	}
+
+	/* Headings centre */
+	.first-text-container,
+	.second-text-container h5,
+	.typed-text-container {
+		justify-content: center;
+		text-align: center;
+	}
+
+	.home-heading,
+	.section-title,
+	.about-me,
+	.tools-header h2,
+	.timeline-section h2,
+	.hack-h2,
+	.projects-link-h2,
+	.github-stats-section > h2,
+	.oss-section > h2,
+	.certifications-section > h2,
+	.contact-connect-title,
+	#social-connect {
+		text-align: center;
+		width: 100%;
+	}
+
+	/* Images and artwork centre */
+	.home-art,
+	.image-container,
+	.contact-art,
+	.computer,
+	.about-me-picture {
+		justify-self: center;
 		margin-inline: auto;
 	}
 
+	/* Actions and social rows centre */
 	.button-container,
 	.actions,
 	.contact-actions,
-	.social-icons {
+	.social-icons,
+	.contact-me-section .contact-connect .social-icons {
 		justify-content: center;
 	}
 
-	.first-text-container {
-		justify-content: center;
-	}
-
-	.second-text-container h5 {
-		justify-content: center;
-	}
-
-	.typed-text-container {
-		justify-content: center;
-	}
-
-	/* Cards and form fields keep their own left alignment */
+	/* Cards and fields keep their own alignment */
 	.home-work-card,
 	.home-work-links,
 	.contact-form,
-	.MuiFormControl-root {
+	.MuiFormControl-root,
+	.tools-category,
+	.cert-section,
+	.oss-item,
+	.academic {
 		text-align: left;
 	}
 
@@ -1827,27 +1849,52 @@ p {
 		justify-content: flex-start;
 	}
 
-	.contact-connect {
-		text-align: center;
+	/* More air between headings, blocks and artwork */
+	.home-section {
+		gap: 1.75rem;
+		padding-block: 3.5rem;
 	}
 
-	.contact-me-section .contact-connect .social-icons {
-		justify-content: center;
+	.home-about {
+		gap: 2.5rem;
 	}
 
-	/* About: long prose stays left, the portrait and socials centre */
-	.about-me-picture {
-		margin-inline: auto;
+	.text-container {
+		gap: 1.75rem;
 	}
 
-	.about-me-text-div .social-icons {
-		justify-content: center;
+	.first-block-home {
+		gap: 2.5rem;
+		padding-block: 2.5rem 4rem;
 	}
 
-	.tools-category,
-	.cert-section,
-	.oss-item,
-	.academic {
-		text-align: left;
+	.about-page {
+		gap: clamp(3rem, 10vw, 4.5rem);
+	}
+
+	.about-me-div {
+		gap: 2rem;
+	}
+
+	.tools-grid,
+	.certifications-container {
+		gap: 1.25rem;
+	}
+
+	.contact-layout {
+		gap: 2.5rem;
+	}
+
+	.contact-art {
+		margin-top: 2rem;
+	}
+
+	.github-card {
+		gap: 1.75rem;
+	}
+
+	/* Contact page only: the footer sits flush under the connect block */
+	body:has(.contact-me-section) .footer {
+		padding: 0 var(--page-pad) 2.25rem;
 	}
 }
