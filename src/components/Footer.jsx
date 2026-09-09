@@ -5,8 +5,9 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
 	const pathname = usePathname();
 
-	// The about page ends on its own connect section, so it carries no footer.
-	if (pathname === "/about") return null;
+	// Home closes on its own contact section and about closes on connect, so
+	// neither carries a footer.
+	if (pathname === "/" || pathname === "/about") return null;
 
 	return (
 		<footer className="footer" role="contentinfo">
