@@ -46,7 +46,7 @@ const categoryTint = (category, alpha) => {
 	return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
-const projectsData = [
+export const projectsData = [
 	// === PROFESSIONAL ===
 	{
 		image: Sarva,

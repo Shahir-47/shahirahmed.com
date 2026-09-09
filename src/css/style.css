@@ -400,7 +400,6 @@ svg {
 	max-width: var(--page-max);
 	margin-inline: auto;
 	padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad) clamp(3rem, 6vw, 4.5rem);
-	min-height: calc(100svh - 5.5rem);
 }
 
 .text-container {
@@ -807,7 +806,12 @@ svg {
 .certifications-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1rem;
+	gap: 1.25rem;
+	align-items: stretch;
+}
+
+.certifications-container > * {
+	height: 100%;
 }
 
 .projects-link-p {
@@ -846,8 +850,8 @@ svg {
 
 .github-stats-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: 1.25rem;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
 	width: 100%;
 	justify-items: center;
 	align-items: center;
@@ -858,7 +862,7 @@ svg {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	max-width: 420px;
+	max-width: 495px;
 }
 
 .github-stat a {
@@ -870,7 +874,7 @@ svg {
 .github-stat img {
 	width: 100%;
 	height: auto;
-	max-width: 420px;
+	max-width: 495px;
 }
 
 /* =========================================================
@@ -1126,7 +1130,129 @@ svg {
 /* Stats and languages sit side by side; the streak card is wider by nature,
    so it takes the full row rather than being squeezed into a column. */
 .github-stats-grid > .github-stat:last-child {
-	grid-column: 1 / -1;
-	max-width: 420px;
+	max-width: 495px;
+}
+
+
+/* =========================================================
+   Home sections
+   Introduction, about, work and contact, in that order.
+   ========================================================= */
+
+.home-section {
+	width: 100%;
+	max-width: var(--page-max);
 	margin-inline: auto;
+	padding: clamp(2.5rem, 6vw, 4.5rem) var(--page-pad);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.home-heading {
+	font-family: var(--font-head);
+	font-size: clamp(1.9rem, 4.4vw, 3rem);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	color: var(--color-3);
+	margin: 0;
+}
+
+.home-copy {
+	max-width: 62ch;
+	color: var(--text-75);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.home-about {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	gap: clamp(1.75rem, 5vw, 4rem);
+	align-items: center;
+	width: 100%;
+}
+
+.home-about > div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+}
+
+.home-portrait {
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius);
+	justify-self: center;
+}
+
+.home-work-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.home-work-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 1.25rem;
+	border-radius: var(--radius);
+	background: var(--surface-50);
+	backdrop-filter: blur(2px);
+}
+
+.home-work-media {
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+	background: var(--color-2);
+	aspect-ratio: 16 / 10;
+}
+
+.home-work-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	display: block;
+}
+
+.home-work-card h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--accent);
+	margin: 0;
+}
+
+.home-work-card p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.55;
+	color: var(--text-75);
+}
+
+.home-work-links {
+	display: flex;
+	gap: 1.25rem;
+	margin-top: auto;
+	padding-top: 0.5rem;
+	font-weight: 700;
+	font-size: 0.95rem;
+}
+
+.home-contact {
+	padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+@media (max-width: 860px) {
+	.home-about {
+		grid-template-columns: 1fr;
+	}
+	.home-portrait {
+		max-width: 220px;
+	}
 }

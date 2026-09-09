@@ -1492,7 +1492,7 @@ const About = () => {
 									width: 60,
 									height: 60,
 									borderRadius: 12,
-									background: "#525863",
+									background: "#0076A8",
 									display: "flex",
 									alignItems: "center",
 									justifyContent: "center",
@@ -1533,7 +1533,7 @@ const About = () => {
 									style={{
 										display: "inline-flex",
 										alignItems: "center",
-										background: "#525863",
+										background: "#0076A8",
 										color: "#fff",
 										borderRadius: 8,
 										padding: "6px 14px",
