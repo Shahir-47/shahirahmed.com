@@ -51,6 +51,18 @@ const HomePage = () => {
 	}, []);
 
 	useEffect(() => {
+		const onScroll = () => {
+			document.documentElement.dataset.scrolled = window.scrollY > 120 ? "true" : "false";
+		};
+		onScroll();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		return () => {
+			window.removeEventListener("scroll", onScroll);
+			delete document.documentElement.dataset.scrolled;
+		};
+	}, []);
+
+	useEffect(() => {
 		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
 
 		const sections = document.querySelectorAll(".home-section");

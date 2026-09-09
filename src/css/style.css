@@ -255,7 +255,6 @@ svg {
 .nav-bar-scrolled {
 	background: color-mix(in srgb, var(--bg) 88%, transparent);
 	backdrop-filter: saturate(1.5) blur(14px);
-	border-bottom-color: var(--line);
 }
 
 .log-container {
@@ -337,7 +336,6 @@ svg {
 	gap: 1.25rem;
 	margin-top: 0;
 	padding: 2rem var(--page-pad) 2.25rem;
-	border-top: 1px solid var(--line);
 	text-align: center;
 }
 
@@ -578,6 +576,10 @@ svg {
 	padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad) clamp(3rem, 6vw, 4.5rem);
 }
 
+.contact-me-section {
+	padding-bottom: 0;
+}
+
 /* Content column beside the sticky contents rail */
 .about-page-wrapper {
 	display: grid;
@@ -599,6 +601,1366 @@ svg {
 
 /* Section headings, two-tone like the rest of the site */
 .section-title,
+.oss-section .section-title,
+.about-me,
+.tools-header h2,
+.timeline-section h2,
+.hack-h2,
+.projects-link-h2,
+.github-stats-section > h2,
+.oss-section > h2,
+.certifications-section > h2 {
+	font-family: var(--font-head);
+	font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	color: var(--color-3);
+	text-align: left;
+	margin: 0 0 clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.about-me span,
+.section-title span {
+	color: var(--teal);
+}
+
+/* =========================================================
+   Table of contents
+   ========================================================= */
+
+.toc-sidebar {
+	position: sticky;
+	top: 6rem;
+	padding: 1.1rem 1.25rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.toc-title {
+	font-family: var(--font-head);
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--text-3);
+	margin-bottom: 0.75rem;
+}
+
+.toc-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.1rem;
+}
+
+.toc-link {
+	display: block;
+	padding: 0.4rem 0.6rem;
+	border-left: 2px solid transparent;
+	border-radius: 0 6px 6px 0;
+	color: var(--text-2);
+	font-size: 0.88rem;
+	transition: color 0.2s var(--ease), border-color 0.2s var(--ease),
+		background 0.2s var(--ease);
+}
+
+.toc-link:hover {
+	color: var(--text);
+	background: var(--surface);
+}
+
+.toc-link.toc-active {
+	color: var(--teal);
+	border-left-color: var(--teal);
+	background: var(--teal-soft);
+}
+
+@media (max-width: 1100px) {
+	.about-page-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.toc-sidebar {
+		display: none;
+	}
+}
+
+/* =========================================================
+   About: intro
+   ========================================================= */
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.about-me-div {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 260px;
+	gap: clamp(1.5rem, 4vw, 3rem);
+	align-items: start;
+}
+
+.about-me-text-div {
+	display: flex;
+	flex-direction: column;
+	gap: 1.75rem;
+	min-width: 0;
+}
+
+.paragraph {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.about-me-text {
+	font-size: 1.02rem;
+	line-height: 1.78;
+	color: var(--text-2);
+	max-width: 68ch;
+}
+
+.about-me-text strong {
+	color: var(--text);
+	font-weight: 600;
+}
+
+.about-me-text a {
+	border-bottom: 1px solid var(--teal-line);
+}
+
+.about-me-text a:hover {
+	border-bottom-color: var(--teal);
+}
+
+.about-me-picture {
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius);
+	border: 1px solid var(--line);
+	object-fit: cover;
+}
+
+@media (max-width: 760px) {
+	.about-me-div {
+		grid-template-columns: 1fr;
+	}
+	.about-me-picture {
+		max-width: 200px;
+		order: -1;
+	}
+}
+
+/* =========================================================
+   About: tools and technologies
+   ========================================================= */
+
+.tools-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1rem;
+}
+
+.tools-category {
+	padding: 1.25rem 1.35rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: color-mix(in srgb, var(--surface) 70%, transparent);
+	transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.tools-category:hover {
+	border-color: var(--teal-line);
+	transform: translateY(-2px);
+}
+
+.tools-category h3 {
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: var(--teal);
+	margin: 0 0 0.9rem;
+	letter-spacing: -0.01em;
+}
+
+.tools-icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.tools-icons img {
+	height: 26px;
+	width: auto;
+	border-radius: 4px;
+}
+
+/* =========================================================
+   About: open source, certifications, academic
+   ========================================================= */
+
+.oss-item,
+.cert-section,
+.academic {
+	padding: 1.25rem 1.4rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.certifications-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.25rem;
+	align-items: stretch;
+}
+
+.certifications-container > * {
+	height: 100%;
+}
+
+.projects-link-p {
+	font-size: 1.02rem;
+	line-height: 1.75;
+	color: var(--text-2);
+	max-width: 62ch;
+}
+
+/* =========================================================
+   About: GitHub stats
+   Calendar and the three stat cards share one panel, and the
+   cards are constrained to a common width so the remote
+   services do not render at wildly different scales.
+   ========================================================= */
+
+.github-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	padding: clamp(1rem, 3vw, 1.75rem);
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.github-activity-calendar {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	padding-bottom: 0.25rem;
+}
+
+.github-stats-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	width: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+.github-stat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 760px;
+}
+
+.github-stat a {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.github-stat img {
+	width: 100%;
+	height: auto;
+	max-width: 760px;
+}
+
+/* =========================================================
+   Vertical timeline overrides
+   ========================================================= */
+
+.vertical-timeline::before {
+	background: var(--line) !important;
+}
+
+.vertical-timeline-element-content {
+	border-radius: var(--radius) !important;
+	box-shadow: none !important;
+	border: 1px solid var(--line) !important;
+	background: color-mix(in srgb, var(--surface) 82%, transparent) !important;
+}
+
+.vertical-timeline-element-content-arrow {
+	border-right-color: var(--line) !important;
+}
+
+.vertical-timeline-element-title {
+	font-family: var(--font-head);
+	font-size: 1.1rem !important;
+	font-weight: 600 !important;
+	color: var(--text) !important;
+	letter-spacing: -0.015em;
+}
+
+.vertical-timeline-element-subtitle {
+	font-size: 0.92rem !important;
+	font-weight: 500 !important;
+	color: var(--text-2) !important;
+	margin-top: 0.35rem !important;
+	line-height: 1.6;
+}
+
+.vertical-timeline-element-content ul {
+	margin: 0.9rem 0 0;
+	padding-left: 1.1rem;
+	display: grid;
+	gap: 0.45rem;
+}
+
+.vertical-timeline-element-content li {
+	color: var(--text-2);
+	font-size: 0.95rem;
+	line-height: 1.65;
+}
+
+.vertical-timeline-element-content li::marker {
+	color: var(--teal);
+}
+
+.vertical-timeline-element-date,
+.custom-date {
+	color: var(--text-3) !important;
+	font-size: 0.85rem !important;
+	font-weight: 500 !important;
+}
+
+.vertical-timeline-element-icon {
+	box-shadow: 0 0 0 3px var(--bg), inset 0 1px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+/* =========================================================
+   Projects
+   ========================================================= */
+
+.highlight {
+	color: var(--teal);
+}
+
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	align-items: center;
+}
+
+.tech-stack img {
+	height: 24px;
+	width: auto;
+	border-radius: 4px;
+}
+
+/* These were unstyled <button> elements, so they fell back to the browser's
+   default grey rectangle. */
+.live-preview,
+.github,
+.devpost {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 8px 18px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius-pill);
+	background: var(--surface-75);
+	color: var(--color-3);
+	font-family: var(--font-head);
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.22s var(--ease), border-color 0.22s var(--ease),
+		color 0.22s var(--ease);
+}
+
+.live-preview:hover,
+.github:hover,
+.devpost:hover {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--color-3);
+}
+
+/* =========================================================
+   Contact
+   ========================================================= */
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.1rem;
+	max-width: 640px;
+}
+
+/* =========================================================
+   Error page
+   ========================================================= */
+
+.error-img {
+	width: 100%;
+	max-width: 380px;
+	height: auto;
+	margin-inline: auto;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 900px) {
+	.first-block-home,
+	.second-block-text-container {
+		grid-template-columns: 1fr;
+	}
+
+	.image-container {
+		order: -1;
+	}
+
+	.computer {
+		max-width: 280px;
+	}
+
+	.hacker {
+		max-width: 210px;
+	}
+}
+
+@media (max-width: 860px) {
+	.hamburger {
+		display: inline-flex;
+	}
+
+	.nav-links {
+		position: fixed;
+		inset: 4.5rem 0 auto;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		padding: 0.5rem var(--page-pad) 1.5rem;
+		background: var(--bg);
+		border-bottom: 1px solid var(--line);
+		clip-path: inset(0 0 100% 0);
+		transition: clip-path 0.35s var(--ease);
+	}
+
+	.nav-links.active {
+		clip-path: inset(0 0 0 0);
+	}
+
+	.nav-links.inactive {
+		clip-path: inset(0 0 100% 0);
+	}
+
+	.nav-box {
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: 0.85rem 0.5rem;
+		border-radius: 0;
+		border-bottom: 1px solid var(--line);
+		font-size: 1rem;
+	}
+}
+
+/* The timeline library ships every entry as visibility:hidden and only reveals
+   it from its own scroll listener, so the whole work history vanishes if that
+   script does not run. Keep entries visible; the bounce-in still plays when it
+   does run. */
+.vertical-timeline-element .is-hidden,
+.vertical-timeline-element-content.is-hidden,
+.vertical-timeline-element-icon.is-hidden {
+	visibility: visible !important;
+}
+
+
+/* =========================================================
+   Uniform buttons
+   Every MUI button on the site takes the same pill shape and
+   sentence case as the plain .btn class.
+   ========================================================= */
+
+.MuiButton-root {
+	border-radius: 980px !important;
+	text-transform: none !important;
+	font-family: var(--font-head) !important;
+	font-weight: 600 !important;
+	letter-spacing: -0.01em !important;
+	box-shadow: none !important;
+}
+
+.MuiChip-root {
+	border-radius: 980px !important;
+	font-family: var(--font-head) !important;
+}
+
+/* Social rows sit centred on the contact page and left aligned elsewhere */
+.contact-me-section .social-icons,
+.github-stats-section {
+	justify-content: center;
+}
+
+.contact-me-section .social-icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.contact-me-section .icon-container-last {
+	margin-top: 0 !important;
+}
+
+/* Cards needed breathing room between the image and the copy */
+.tools-grid,
+.certifications-container {
+	margin-top: 0.5rem;
+}
+
+.oss-section .oss-item + .oss-item {
+	margin-top: 1rem;
+}
+
+
+/* react-icons render inline by default, which leaves a text baseline gap
+   inside the circular buttons. */
+.icon-container svg {
+	display: block;
+}
+
+.social-icons {
+	align-items: center;
+}
+
+/* Social rows centre themselves wherever the surrounding block is centred */
+#connect .social-icons,
+.contact-me-section .social-icons,
+.footer-socials {
+	justify-content: center;
+}
+
+/* Stats and languages sit side by side; the streak card is wider by nature,
+   so it takes the full row rather than being squeezed into a column. */
+.github-stats-grid > .github-stat:last-child {
+	max-width: 760px;
+}
+
+
+/* =========================================================
+   Home sections
+   Introduction, about, work and contact, in that order.
+   ========================================================= */
+
+.home-section {
+	width: 100%;
+	max-width: var(--page-max);
+	margin-inline: auto;
+	padding: clamp(2.5rem, 6vw, 4.5rem) var(--page-pad);
+	min-height: calc(100svh - 5rem);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.home-heading {
+	font-family: var(--font-head);
+	font-size: clamp(1.9rem, 4.4vw, 3rem);
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.02em;
+	color: var(--color-3);
+	margin: 0;
+}
+
+.home-copy {
+	max-width: 62ch;
+	color: var(--text-75);
+	line-height: 1.6;
+	margin: 0;
+}
+
+.home-about {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 300px;
+	gap: clamp(1.75rem, 5vw, 4rem);
+	align-items: center;
+	width: 100%;
+}
+
+.home-about > div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+}
+
+.home-art {
+	width: 100%;
+	height: auto;
+	justify-self: center;
+}
+
+/* The climbing figure is tall and narrow, so it is capped by height rather
+   than width to stop it dominating the section. */
+.home-art-contact {
+	max-height: 340px;
+	width: auto;
+	max-width: 100%;
+}
+
+.home-work-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.home-work-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 1.25rem;
+	border-radius: var(--radius);
+	background: var(--surface-50);
+	backdrop-filter: blur(2px);
+}
+
+.home-work-media {
+	border-radius: var(--radius-sm);
+	overflow: hidden;
+	background: var(--color-2);
+	aspect-ratio: 16 / 10;
+}
+
+.home-work-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	display: block;
+}
+
+.home-work-card h3 {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--accent);
+	margin: 0;
+}
+
+.home-work-card p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.55;
+	color: var(--text-75);
+}
+
+.home-work-links {
+	display: flex;
+	gap: 1.25rem;
+	margin-top: auto;
+	padding-top: 0.5rem;
+	font-weight: 700;
+	font-size: 0.95rem;
+}
+
+.home-contact {
+	padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+@media (max-width: 860px) {
+	.home-about {
+		grid-template-columns: 1fr;
+	}
+	.home-art {
+		max-width: 280px;
+	}
+
+	.home-art-contact {
+		max-height: 260px;
+	}
+}
+
+
+/* Sections settle in as they arrive. The hidden state is applied by script, so
+   without JavaScript everything simply renders in place. */
+@media (prefers-reduced-motion: no-preference) {
+	html.reveal-on .home-section {
+		opacity: 0;
+		transform: translateY(18px);
+		transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+	}
+
+	html.reveal-on .home-section.is-in {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+
+/* =========================================================
+   Scroll cue and section snapping
+   ========================================================= */
+
+.scroll-cue {
+	opacity: 1;
+	transition: opacity 0.35s var(--ease), visibility 0.35s;
+	position: absolute;
+	left: 50%;
+	bottom: clamp(1.25rem, 3vw, 2rem);
+	translate: -50% 0;
+	display: grid;
+	place-items: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background: var(--surface-75);
+	backdrop-filter: blur(4px);
+	animation: scroll-cue 2.4s ease-in-out infinite;
+}
+
+html[data-scrolled="true"] .scroll-cue {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.scroll-cue img {
+	width: 22px;
+	height: 22px;
+}
+
+@keyframes scroll-cue {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scroll-cue {
+		animation: none;
+	}
+}
+
+/* =========================================================
+   Design tokens
+   Dark charcoal ground, teal accent, doodle pattern behind.
+   ========================================================= */
+
+:root {
+	/* Exact values from the Figma file (I0vIYGwbNl7vt0wLSso8jU) */
+	--color-1: #222831; /* page background */
+	--color-2: #393e46; /* surfaces, social buttons */
+	--color-3: #eeeeee; /* text */
+	--accent: #00adb5;
+
+	--surface-75: rgba(57, 62, 70, 0.75);
+	--surface-50: rgba(57, 62, 70, 0.5);
+	--text-75: rgba(238, 238, 238, 0.75);
+	--text-50: rgba(238, 238, 238, 0.5);
+
+	/* Aliases used throughout the stylesheet */
+	--bg: var(--color-1);
+	--surface: var(--color-2);
+	--surface-2: #454b55;
+	--surface-3: #525863;
+	--teal: var(--accent);
+	--teal-bright: #00c8d1;
+	--teal-soft: rgba(0, 173, 181, 0.14);
+	--teal-line: rgba(0, 173, 181, 0.32);
+	--text: var(--color-3);
+	--text-2: var(--text-75);
+	--text-3: var(--text-50);
+	--line: rgba(238, 238, 238, 0.12);
+
+	--page-max: 1240px;
+	--page-pad: clamp(1.25rem, 5vw, 4rem);
+	--block-gap: clamp(3.5rem, 8vw, 7rem);
+	--radius: 16px;
+	--radius-sm: 12px;
+	--radius-pill: 24px;
+	--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+	--font-head: var(--font-poppins), system-ui, sans-serif;
+	--font-body: var(--font-poppins), system-ui, sans-serif;
+	--font-display: var(--font-oswald), system-ui, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	overscroll-behavior: none;
+	scroll-behavior: smooth;
+	scroll-padding-top: 6rem;
+	-webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+body {
+	margin: 0;
+	background-color: var(--bg);
+	color: var(--text-2);
+	font-family: var(--font-body);
+	font-size: 1.125rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	overscroll-behavior: none;
+}
+
+/* Doodle pattern, fixed behind everything at low opacity */
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background-image: url("/figma/doodle-tile.svg");
+	background-repeat: repeat;
+	background-size: 515px 386px;
+	opacity: 0.32;
+	pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-head);
+	color: var(--text);
+	font-weight: 700;
+	line-height: 1.18;
+	letter-spacing: -0.02em;
+	margin: 0;
+	text-wrap: balance;
+}
+
+p {
+	margin: 0;
+	text-wrap: pretty;
+}
+
+a {
+	color: var(--teal);
+	text-decoration: none;
+	transition: color 0.2s var(--ease);
+}
+
+a:hover {
+	color: var(--teal-bright);
+}
+
+img,
+svg {
+	max-width: 100%;
+}
+
+:focus-visible {
+	outline: 2px solid var(--teal);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+::selection {
+	background: var(--teal-soft);
+	color: var(--text);
+}
+
+/* Scrollbar, matched to the palette */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--surface-3) transparent;
+}
+
+*::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: var(--surface-3);
+	border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: var(--teal);
+}
+
+/* =========================================================
+   Layout
+   ========================================================= */
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main-container > main {
+	flex: 1;
+}
+
+.section-shell {
+	width: 100%;
+	max-width: var(--page-max);
+	margin-inline: auto;
+	padding-inline: var(--page-pad);
+}
+
+/* Two-tone heading: white word plus teal word */
+.accent {
+	color: var(--teal);
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 10px 32px;
+	border-radius: var(--radius-pill);
+	font-family: var(--font-head);
+	font-size: 1.125rem;
+	line-height: 1.5;
+	font-weight: 700;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: background 0.22s var(--ease), border-color 0.22s var(--ease),
+		color 0.22s var(--ease), transform 0.22s var(--ease);
+}
+
+.btn-primary {
+	background: var(--accent);
+	color: var(--color-3);
+}
+
+.btn-primary:hover {
+	background: var(--teal-bright);
+	color: var(--color-3);
+	transform: translateY(-2px);
+}
+
+.btn-ghost {
+	background: var(--surface-75);
+	backdrop-filter: blur(2px);
+	border-color: transparent;
+	color: var(--color-3);
+}
+
+.btn-ghost:hover {
+	border-color: var(--teal);
+	color: var(--teal);
+	transform: translateY(-2px);
+}
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+
+/* Geometry is identical in both states so nothing shifts on scroll; only the
+   background and border change. */
+.nav-bar {
+	position: sticky;
+	top: 0;
+	z-index: 60;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	width: 100%;
+	padding-block: 1rem;
+	padding-inline: max(
+		var(--page-pad),
+		calc((100% - var(--page-max)) / 2 + var(--page-pad))
+	);
+	background: transparent;
+	border-bottom: 1px solid transparent;
+	transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.nav-bar-scrolled {
+	background: color-mix(in srgb, var(--bg) 88%, transparent);
+	backdrop-filter: saturate(1.5) blur(14px);
+}
+
+.log-container {
+	display: flex;
+	align-items: center;
+}
+
+.logo-box {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	color: var(--text);
+	line-height: 1;
+}
+
+.logo-box h1 {
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+	letter-spacing: 0;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	margin: 0;
+}
+
+.logo-box:hover h1 {
+	color: var(--teal);
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.nav-box {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 0.95rem;
+	border-radius: 980px;
+	color: var(--text-2);
+	font-size: 0.93rem;
+	font-weight: 500;
+	line-height: 1;
+	transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+
+.nav-box:hover {
+	color: var(--text);
+	background: var(--surface);
+}
+
+.nav-box.active {
+	color: var(--teal);
+	background: var(--teal-soft);
+}
+
+.hamburger {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius-sm);
+	background: transparent;
+	cursor: pointer;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.25rem;
+	margin-top: 0;
+	padding: 2rem var(--page-pad) 2.25rem;
+	text-align: center;
+}
+
+.footer-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.35rem 1.5rem;
+}
+
+.footer-nav a {
+	color: var(--text-2);
+	font-size: 0.92rem;
+	font-weight: 500;
+}
+
+.footer-nav a:hover {
+	color: var(--teal);
+}
+
+.footer-socials {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.65rem;
+}
+
+.footer-socials .icon-container {
+	width: 38px;
+	height: 38px;
+	font-size: 0.95rem;
+}
+
+.footer-legal {
+	margin: 0;
+	font-size: 0.83rem;
+	color: var(--text-3);
+}
+
+.footer-legal a {
+	color: var(--text-3);
+	border-bottom: 1px solid var(--line);
+}
+
+.footer-legal a:hover {
+	color: var(--teal);
+	border-bottom-color: var(--teal);
+}
+
+/* =========================================================
+   Home
+   ========================================================= */
+
+.first-block-home {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+	align-items: center;
+	gap: clamp(2.5rem, 8vw, 7rem);
+	width: 100%;
+	max-width: var(--page-max);
+	margin-inline: auto;
+	padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad) clamp(4.5rem, 8vw, 6rem);
+	min-height: calc(100svh - 5rem);
+	align-content: center;
+	position: relative;
+}
+
+.text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.6rem;
+	width: 100%;
+	min-width: 0;
+}
+
+.sub-text-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.first-text-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.first-text-container h3 {
+	font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+	font-weight: 500;
+	color: var(--text-2);
+	letter-spacing: 0;
+	margin: 0;
+}
+
+.wave {
+	width: 28px;
+	height: 28px;
+	animation: wave-hand 2.4s ease-in-out infinite;
+	transform-origin: 70% 70%;
+}
+
+@keyframes wave-hand {
+	0%, 60%, 100% { transform: rotate(0deg); }
+	10% { transform: rotate(14deg); }
+	20% { transform: rotate(-8deg); }
+	30% { transform: rotate(14deg); }
+	40% { transform: rotate(-4deg); }
+	50% { transform: rotate(10deg); }
+}
+
+.second-text-container h5 {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin: 0.35rem 0 0;
+	font-size: clamp(2rem, 5.2vw, 3.4rem);
+	font-weight: 700;
+	line-height: 1.06;
+	letter-spacing: -0.035em;
+	color: var(--text);
+}
+
+.name {
+	color: var(--teal);
+	font-weight: 700;
+}
+
+.typed-text-container {
+	display: flex;
+	align-items: center;
+	min-height: 2.4rem;
+	margin: 0;
+	font-family: var(--font-head);
+	font-size: clamp(1.1rem, 2.1vw, 1.5rem);
+}
+
+#typed-text,
+.typed-text {
+	font-size: inherit;
+	font-weight: 600;
+	color: var(--text-2);
+	margin: 0;
+}
+
+.typed-cursor {
+	font-weight: 400;
+	color: var(--teal);
+	animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+	to { visibility: hidden; }
+}
+
+.image-container {
+	width: 100%;
+	min-width: 0;
+	justify-self: center;
+}
+
+.computer {
+	width: 100%;
+	max-width: 520px;
+	height: auto;
+	margin-inline: auto;
+}
+
+.sub-text {
+	max-width: 52ch;
+	font-size: 1.02rem;
+	line-height: 1.78;
+	color: var(--text-2);
+	margin: 0;
+}
+
+.sub-text strong {
+	color: var(--teal);
+	font-weight: 600;
+}
+
+.button-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+/* Social icons */
+
+.social-icons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.icon-container {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+	width: 48px;
+	height: 48px;
+	border-radius: 50px;
+	border: 1px solid transparent;
+	background: var(--color-2);
+	color: var(--color-3);
+	font-size: 1.1rem;
+	transition: color 0.22s var(--ease), border-color 0.22s var(--ease),
+		background 0.22s var(--ease), transform 0.22s var(--ease);
+}
+
+.icon-container:hover {
+	color: var(--teal);
+	border-color: var(--teal);
+	background: var(--teal-soft);
+	transform: translateY(-2px);
+}
+
+.icon-container-last {
+	display: inline-flex;
+	margin-top: 0 !important;
+}
+
+/* =========================================================
+   Page shells
+   ========================================================= */
+
+.about-page-wrapper,
+.projects,
+.contact-me-section {
+	width: 100%;
+	max-width: var(--page-max);
+	margin-inline: auto;
+	padding: clamp(2rem, 5vw, 3.5rem) var(--page-pad) clamp(3rem, 6vw, 4.5rem);
+}
+
+.contact-me-section {
+	padding-bottom: 0;
+}
+
+/* Content column beside the sticky contents rail */
+.about-page-wrapper {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 220px;
+	gap: clamp(1.5rem, 4vw, 3.5rem);
+	align-items: start;
+}
+
+.about-page {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--block-gap);
+}
+
+.about-page > section {
+	scroll-margin-top: 6rem;
+}
+
+/* Section headings, two-tone like the rest of the site */
+.section-title,
+.oss-section .section-title,
 .about-me,
 .tools-header h2,
 .timeline-section h2,
@@ -865,7 +2227,7 @@ svg {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	max-width: 495px;
+	max-width: 760px;
 }
 
 .github-stat a {
@@ -877,7 +2239,7 @@ svg {
 .github-stat img {
 	width: 100%;
 	height: auto;
-	max-width: 495px;
+	max-width: 760px;
 }
 
 /* =========================================================
@@ -964,12 +2326,33 @@ svg {
 	border-radius: 4px;
 }
 
+/* These were unstyled <button> elements, so they fell back to the browser's
+   default grey rectangle. */
 .live-preview,
 .github,
 .devpost {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.4rem;
+	gap: 0.45rem;
+	padding: 8px 18px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius-pill);
+	background: var(--surface-75);
+	color: var(--color-3);
+	font-family: var(--font-head);
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.22s var(--ease), border-color 0.22s var(--ease),
+		color 0.22s var(--ease);
+}
+
+.live-preview:hover,
+.github:hover,
+.devpost:hover {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--color-3);
 }
 
 /* =========================================================
@@ -1133,7 +2516,7 @@ svg {
 /* Stats and languages sit side by side; the streak card is wider by nature,
    so it takes the full row rather than being squeezed into a column. */
 .github-stats-grid > .github-stat:last-child {
-	max-width: 495px;
+	max-width: 760px;
 }
 
 
@@ -1295,6 +2678,8 @@ svg {
    ========================================================= */
 
 .scroll-cue {
+	opacity: 1;
+	transition: opacity 0.35s var(--ease), visibility 0.35s;
 	position: absolute;
 	left: 50%;
 	bottom: clamp(1.25rem, 3vw, 2rem);
@@ -1307,6 +2692,11 @@ svg {
 	background: var(--surface-75);
 	backdrop-filter: blur(4px);
 	animation: scroll-cue 2.4s ease-in-out infinite;
+}
+
+html[data-scrolled="true"] .scroll-cue {
+	opacity: 0;
+	visibility: hidden;
 }
 
 .scroll-cue img {
@@ -1325,17 +2715,73 @@ svg {
 	}
 }
 
-/* Proximity rather than mandatory: it settles onto a section when you stop
-   near one, but never traps you inside a section taller than the viewport. */
-@media (min-width: 861px) and (prefers-reduced-motion: no-preference) {
-	html:has(.home-section) {
-		scroll-snap-type: y proximity;
-		scroll-padding-top: 5rem;
-	}
 
-	.first-block-home,
-	.home-section {
-		scroll-snap-align: start;
-		scroll-snap-stop: normal;
-	}
+
+/* Breathing room under standalone copy that is followed by an action */
+#connect .social-icons,
+.projects-link-p + * ,
+.projects-link-p {
+	margin-top: 0;
+}
+
+#social-connect {
+	margin-bottom: 1.25rem;
+}
+
+#connect .social-icons {
+	margin-top: 1.25rem;
+	justify-content: center;
+}
+
+#projects-link-btn {
+	margin-top: 1.5rem;
+}
+
+.projects-link-p {
+	margin-bottom: 0.5rem;
+}
+
+
+/* =========================================================
+   Inputs
+   One treatment for the search field and the contact form, so the
+   label lift on focus reads the same in both.
+   ========================================================= */
+
+.MuiOutlinedInput-root {
+	border-radius: var(--radius) !important;
+	background: var(--surface-50);
+	transition: background 0.25s var(--ease);
+}
+
+.MuiOutlinedInput-root:hover {
+	background: var(--surface-75);
+}
+
+.MuiOutlinedInput-notchedOutline {
+	border-color: var(--line) !important;
+	transition: border-color 0.25s var(--ease);
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+	border-color: rgba(238, 238, 238, 0.28) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+	border-color: var(--accent) !important;
+	border-width: 1px !important;
+}
+
+.MuiOutlinedInput-input {
+	color: var(--color-3) !important;
+}
+
+.MuiInputLabel-root {
+	color: var(--text-50) !important;
+	transition: color 0.25s var(--ease), transform 0.2s var(--ease),
+		font-size 0.2s var(--ease) !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+	color: var(--accent) !important;
 }

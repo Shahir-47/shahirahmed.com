@@ -367,7 +367,10 @@ export default function RootLayout({ children }) {
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 				/>
 			</head>
-			<body>
+			{/* Browser extensions such as Grammarly add attributes to <body> before
+			    React hydrates, which React reports as a mismatch. Nothing here
+			    renders those attributes, so the diff is suppressed at this node. */}
+			<body suppressHydrationWarning>
 				<AppRouterCacheProvider options={{ key: "css" }}>
 					<div className="main-container">
 						<Navbar />

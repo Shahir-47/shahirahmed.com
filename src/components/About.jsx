@@ -1533,7 +1533,7 @@ const About = () => {
 									style={{
 										display: "inline-flex",
 										alignItems: "center",
-										background: "#0076A8",
+										background: "#00adb5",
 										color: "#fff",
 										borderRadius: 8,
 										padding: "6px 14px",

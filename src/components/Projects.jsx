@@ -706,8 +706,6 @@ const Projects = () => {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 					sx={{
-						backgroundColor: "#454b55",
-						borderRadius: "8px",
 						"& .MuiInputLabel-root": {
 							color: "#00adb5",
 							transition: "color 0.3s ease",
