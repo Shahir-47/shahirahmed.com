@@ -1093,7 +1093,7 @@ svg {
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: var(--color-3);
-	margin: 0 0 0.85rem;
+	margin: 0 0 1.25rem;
 }
 
 .contact-connect .social-icons {
@@ -1478,7 +1478,7 @@ svg {
 }
 
 #social-connect {
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.25rem;
 }
 
 #connect .social-icons {
