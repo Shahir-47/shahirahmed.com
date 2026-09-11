@@ -131,7 +131,8 @@ const GitHubStats = () => {
 						<img
 							src="https://github-stats-alpha-tawny.vercel.app/api?username=Shahir-47&include_all_commits=true&count_private=true&show_icons=true&hide_border=true&disable_animations=true&card_width=495&line_height=20&title_color=00adb5&icon_color=00adb5&text_color=eeeeee&bg_color=00000000"
 							alt="Shahir's GitHub statistics"
-							loading="lazy"
+							loading="eager"
+							fetchPriority="low"
 						/>
 					</div>
 
@@ -139,7 +140,8 @@ const GitHubStats = () => {
 						<img
 							src="https://github-stats-alpha-tawny.vercel.app/api/top-langs/?username=Shahir-47&layout=compact&hide_border=true&disable_animations=true&card_width=495&title_color=00adb5&text_color=eeeeee&bg_color=00000000"
 							alt="Shahir's most used languages"
-							loading="lazy"
+							loading="eager"
+							fetchPriority="low"
 						/>
 					</div>
 
@@ -152,7 +154,8 @@ const GitHubStats = () => {
 							<img
 								src="https://github-readme-streak-stats-steel-eight-67.vercel.app/?user=Shahir-47&background=00000000&title_color=00adb5&ring=00adb5&fire=00adb5&currStreakLabel=00adb5&hide_border=true&disable_animations=true&sideNums=eeeeee&sideLabels=eeeeee&dates=eeeeee&currStreakNum=eeeeee"
 								alt="Shahir's GitHub contribution streak"
-								loading="lazy"
+								loading="eager"
+							fetchPriority="low"
 							/>
 						</a>
 					</div>

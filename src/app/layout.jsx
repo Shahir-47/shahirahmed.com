@@ -333,6 +333,13 @@ export default function RootLayout({ children }) {
 				{/* DNS prefetch for third-party badge images */}
 				<link rel="dns-prefetch" href="https://img.shields.io" />
 
+				{/* The GitHub stat cards and contribution calendar are each on a
+				    separate third-party origin, so warm the DNS and TLS handshake
+				    before the About page asks for them. */}
+				<link rel="preconnect" href="https://github-stats-alpha-tawny.vercel.app" crossOrigin="anonymous" />
+				<link rel="preconnect" href="https://github-readme-streak-stats-steel-eight-67.vercel.app" crossOrigin="anonymous" />
+				<link rel="preconnect" href="https://github-contributions-api.jogruber.de" crossOrigin="anonymous" />
+
 				{/* Theme color for PWA */}
 				<meta name="theme-color" content="#00adb5" />
 				<meta

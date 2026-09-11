@@ -12,7 +12,7 @@ import ScrollCue from "./ScrollCue";
 import { projectsData } from "./Projects";
 
 const RESUME_URL =
-	"https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view?usp=sharing";
+	"https://drive.google.com/file/d/1APlXopNkSxXLLTHnxH-MBNT3GJKWq9Rp/view?usp=sharing";
 
 const FEATURED = ["Sarva", "GrabPic", "PaperPulse"];
 

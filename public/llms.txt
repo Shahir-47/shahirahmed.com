@@ -119,4 +119,4 @@ Cloud/Tooling: Stripe Connect, AWS S3, AWS App Runner, AWS SQS, AWS CloudFront, 
 - LinkedIn: https://www.linkedin.com/in/shahir47/
 - GitHub: https://github.com/Shahir-47
 - Devpost: https://devpost.com/Shahir-47
-- Resume: https://drive.google.com/file/d/1KXPdYbmQQVwjGAx_jBstJnJ54bNlm4Wf/view
+- Resume: https://drive.google.com/file/d/1APlXopNkSxXLLTHnxH-MBNT3GJKWq9Rp/view
