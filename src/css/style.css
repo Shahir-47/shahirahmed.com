@@ -2041,6 +2041,38 @@ p {
 	padding: 0;
 }
 
+/* Below 1170px the timeline library slides each card in from 100px to the
+   right. On a phone that pushes the card past the edge of the screen for a
+   moment, the page becomes wider than the viewport, and mobile browsers zoom
+   out and back in. Fade the cards up into place instead, and clip anything
+   that still pokes out sideways. */
+@media only screen and (max-width: 1169px) {
+	.timeline-section .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+		animation: timeline-card-in 0.6s var(--ease);
+	}
+}
+
+@keyframes timeline-card-in {
+	from {
+		opacity: 0;
+		transform: translateY(16px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.timeline-section {
+	overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+	.timeline-section {
+		overflow-x: clip;
+	}
+}
+
 
 /* Introduces a short centred block rather than a section of content */
 .projects-link-h2 {
