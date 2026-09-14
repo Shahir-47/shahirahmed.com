@@ -1,118 +1,98 @@
-# Shahir Ahmed - Software Engineer
+# Shahir Ahmed
 
-Last updated: 2026-03-04
+Software engineer and Master's student in Computer Science at New York University.
+
+Last updated: 2026-09-14
 Canonical URL: https://www.shahirahmed.com
 Machine-readable profile: https://www.shahirahmed.com/llms.json
+Location: New York, NY
 
-## Quick Summary
-Shahir Ahmed is a Software Engineer in the United States. He builds full-stack products with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, and Firebase.
+## Summary
+Shahir Ahmed is a software engineer and M.S. Computer Science student at NYU (Sep 2026 to May 2028, expected). He was previously a software engineer at Sarva and a software engineer intern on FarmData2, and is ranked 25th of 600+ contributors to Mermaid.js. He works mostly in TypeScript, Java, and Python, with React, Next.js, Spring Boot, FastAPI, PostgreSQL, and AWS.
 
-Recent projects include GrabPic (event photo sharing with facial recognition), PaperPulse (AI research platform with knowledge graphs), and BitTorrent Client JS (peer-to-peer file sharing client in Node.js).
+## Experience
+### Software Engineer, Sarva (May 2025 - Sep 2026), Carlisle, PA
+Sarva is a startup that helps neighborhood grocery shops manage inventory by voice: owners track stock, get low-stock alerts, and see what sold by speaking in 90+ languages. It also offers online ordering with pickup and delivery.
+- Replaced pen and paper inventory at independent grocery stores with a voice assistant that updates stock in 90+ languages.
+- Integrated Stripe so every payment splits between the store and the driver, and no card is charged until pickup.
+- Improved product and inventory search by 7% by adding semantic search with OpenAI embeddings alongside keyword matching.
+- Built 3 CI/CD pipelines in GitHub Actions running 2,604 unit tests across 173 REST API endpoints.
+- Sarva was chosen for the gener8tor and Meta gBETA accelerator and named a finalist at the Ship Tank and launchU pitch competitions.
 
-## Current Role
-### Software Engineer, Sarva (May 2025 - Present)
-- Builds a vendor management and marketplace platform for South Asian grocery supply chains.
-- Cut p95 latency by 50% by replacing sequential scans with vector similarity search in a Python RAG pipeline.
-- Reduced vendor inventory time by 60% via voice-based inventory using OpenAI Whisper (90+ languages).
-- Built 4 GPT-based assistants for order tracking, product search, and inventory workflows.
-- Implemented Stripe Connect with identity verification and added Firebase AppCheck plus role-based auth.
+### Open Source Contributor, Mermaid.js (Jan 2025 - Apr 2026), Remote
+- Ranked 25th of 600+ contributors by merging 3 pull requests into a diagramming library with 10M+ weekly downloads.
+- Added data labels to bar charts, Knuth-Plass word wrapping for journey diagram legends, and journey diagram title styling in a 100,000 line TypeScript codebase used by GitHub and Microsoft.
+- Wrote Cypress end-to-end tests for each feature.
 
-## Previous Experience
-### Software Engineer Intern, FarmData2 (May 2024 - May 2025)
-- Refactored 22+ Vue.js components to Vuex and reduced form latency by 60%.
-- Built 18+ Node.js APIs with PostgreSQL transaction rollbacks and 30+ Cypress tests.
+### Software Engineer Intern, FarmData2 at Dickinson College (May 2024 - May 2025), Carlisle, PA
+Paid internship on FarmData2, open source farm record-keeping software funded by the National Science Foundation.
+- Cut page load time by 60% on a National Science Foundation funded farm platform by moving 22+ Vue.js components to Vuex.
+- Automated crop logging with 18+ Node.js REST APIs and 30+ Cypress tests, saving farmers 12+ hours a week.
 
-### Open Source Contributor, Mermaid.js (Jan 2025 - Apr 2025)
-- Ranked top 25 among 600+ contributors.
-- Shipped 3 merged PRs (text wrapping, auto-scaling labels, customizable styling).
+### Teaching Assistant, Dickinson College Computer Science Department (Sep 2022 - May 2025)
+- Raised average assignment scores by 15% for 25+ students across 6 semesters through weekly Python and Java code reviews.
 
-### Software Engineer Volunteer, 84 Lumber (Sep 2023 - Jan 2024)
-- Built ANTLR-based transpilation pipelines to migrate 10K+ lines of CBASIC to Python/Java for a $9B company.
+### Software Developer (Volunteer), 84 Lumber (Sep 2023 - Jan 2024), Remote
+- Converted 10,000+ lines of legacy CBASIC into Python and Java for a $9B retailer by building a translator with ANTLR.
 
-### Teaching Assistant, Dickinson College (Aug 2022 - May 2025)
-- Mentored 25+ students across 6 semesters in Python and Java through labs, office hours, and code reviews.
+## Education
+- New York University: M.S. Computer Science (Sep 2026 - May 2028, expected). Coursework: Design and Analysis of Algorithms, Big Data, Virtual and Augmented Reality.
+- Dickinson College: B.S. Computer Science and Mathematics (Aug 2021 - May 2025), GPA 3.52. Coursework: Data Structures, Analysis of Algorithms, Operating Systems, Object-Oriented Programming, Database Systems. Honors: Dean's List, Pi Mu Epsilon, The 1783 Scholarship.
+- Certifications: CS50x: Introduction to Computer Science (HarvardX), MATLAB Onramp (MathWorks).
 
-## Open Source
-- Mermaid.js PRs: https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed
-- FarmData2 PRs: https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed
-- OSS portfolio: https://github.com/Shahir-47/open-source-contributions
-
-## Featured Projects
+## Projects
 ### GrabPic
 - URL: https://grab-pic.vercel.app
 - GitHub: https://github.com/Shahir-47/Grab-Pic
-- Category: Personal
-- Summary: Event photo sharing app with facial recognition. Built as a 3-service system (Next.js frontend, Spring Boot API, Python worker), using PostgreSQL with pgvector for cosine similarity search, S3 presigned uploads, and SQS processing.
+- Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Built as 3 services (Next.js, Spring Boot, and a Python DeepFace/TensorFlow worker producing 512-dimension face embeddings), connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, CloudFront signed URLs, Redis rate limiting, and Cloudflare Turnstile. Compute later moved to self-hosted containers behind a Cloudflare Tunnel, cutting hosting from about $85 to about $1 a month.
 
 ### PaperPulse
 - URL: https://paper-pulse-nu.vercel.app
 - GitHub: https://github.com/Shahir-47/Paper-Pulse
-- Category: Personal
-- Summary: AI-powered research platform that aggregates papers across ArXiv, PubMed, Semantic Scholar, and OpenAlex, reranks with Cohere, builds Neo4j knowledge graphs, and answers questions with RAG.
-
-### BitTorrent Client JS
-- GitHub: https://github.com/Shahir-47/bittorrent-client-js
-- Category: Personal
-- Summary: BitTorrent client in JavaScript that downloads from .torrent files and magnet links, with TCP peer connections, piece-level SHA-1 integrity checks, and extension protocol metadata exchange.
-
-### Sarva
-- URL: https://www.sarvabazaar.com/
-- Category: Professional
-- Summary: Vendor management marketplace with RAG search, voice inventory, GPT assistants, and payments.
-
-### FarmData2
-- URL: https://github.com/FarmData2/FarmData2
-- Category: Professional / Open Source
-- Summary: NSF-funded farm management platform with Vue.js, Node.js, PostgreSQL, and Cypress.
+- Research assistant that answers questions from the full text of 100+ papers using retrieval augmented generation. Ranks papers from arXiv, PubMed, Semantic Scholar, and OpenAlex every night and delivers the 25 most relevant to each user's feed. FastAPI, Next.js, Neo4j, pgvector, and Docker, deployed to AWS App Runner through GitHub Actions and Amazon ECR.
 
 ### Queue Up
 - URL: https://queue-up.onrender.com
 - GitHub: https://github.com/Shahir-47/Queue-Up
-- Category: Personal
-- Summary: Spotify-based social matching app with Spring Boot, React, JWT auth, and WebSockets.
+- Social app that matches people by Spotify listening history, with real-time WebSocket chat. Java, Spring Boot, React, PostgreSQL with Spring Data JPA, and Docker.
+
+### Albatross (HackHarvard 2024)
+- URL: https://albatross-hack.netlify.app/
+- Devpost: https://devpost.com/software/albatross
+- Built after two teammates had felt unsafe walking through parts of Boston. A navigation app that routes walkers around high crime areas, built by a team of 4 in 36 hours, with a working demo for Boston. Clustered 50K+ crime records into risk zones with MLflow and stored them in a Databricks Delta Lakehouse. Vue.js, Cloudflare Workers, and the Google Maps API.
 
 ### CoSign
 - URL: https://cosign-nwwl.onrender.com
 - GitHub: https://github.com/Shahir-47/CoSign
-- Category: Personal
-- Summary: Task accountability platform with verifier workflows, recurring tasks, encryption, and WebSockets.
+- Task accountability app where users can't complete their own tasks. A verifier approves submitted proof through a task state machine, and if a deadline is missed the AES-encrypted hidden penalty is automatically emailed to the verifier. Spring Boot, React, TypeScript, WebSockets, Docker.
+
+### BitTorrent Client JS
+- GitHub: https://github.com/Shahir-47/bittorrent-client-js
+- BitTorrent client in Node.js for .torrent files and magnet links, with TCP peer connections, SHA-1 piece verification, and extension protocol metadata exchange.
 
 ### PandOS
 - GitHub: https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/
-- Category: Personal
-- Summary: Complete OS kernel in C for uMPS3 with time-sharing, TLB virtual memory, system calls, and interrupt handling.
+- Operating system kernel in C for the uMPS3 emulator with time sharing, TLB-based virtual memory, system calls, and interrupt handling.
 
-### Albatross
-- URL: https://albatross-hack.netlify.app/
-- Devpost: https://devpost.com/software/albatross
-- Category: Hackathon
-- Summary: AI-powered safe navigation app built at HackHarvard using Vue.js, Cloudflare Workers, and Databricks.
-
-### SweetFriend
+### SweetFriend (PennApps 2024)
 - URL: https://sweet-friend.vercel.app/app/dashboard
 - GitHub: https://github.com/dmicz/SweetFriend
 - Devpost: https://devpost.com/software/sweetfriend
-- Category: Hackathon
-- Summary: Diabetes management app with Dexcom integration, meal recognition, Twilio alerts, and Flask/MongoDB backend.
+- Built with a teammate who lives with type 1 diabetes, to make carb counting and insulin dosing easier. Shahir built the React frontend and Chart.js glucose timeline. Diabetes management app with Dexcom glucose data, meal photo recognition, Twilio alerts, and a Flask and MongoDB backend.
 
-### Prospectus
+### Prospectus (HoyaHacks 2024)
 - Devpost: https://devpost.com/software/prospectus
 - GitHub: https://github.com/HoyaHacks2024-Team
-- Category: Hackathon
-- Summary: AI-powered college admissions assistant (React, Django, Azure OpenAI, vector embeddings).
+- Shahir's first hackathon. The team designed an AI college admissions assistant with React, Django, and Azure OpenAI, but did not finish a working product in time.
 
-## Education & Certifications
-- Dickinson College, B.S. Computer Science and Mathematics (Aug 2021 - May 2025), GPA 3.52.
-- Honors: The 1783 Scholarship, Dean's List, Pi Mu Epsilon (National Mathematics Honor Society).
-- CS50x: Introduction to Computer Science (HarvardX).
-- MATLAB Onramp (MathWorks).
+## Open Source
+- Mermaid.js pull requests (3 merged): https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed
+- Portfolio: https://github.com/Shahir-47/open-source-contributions
 
 ## Skills
-Programming: Java, TypeScript, JavaScript, Python, SQL, C, Lua, HTML5, CSS3
-Frontend: React, Next.js, Vue.js, Tailwind CSS
-Backend/Data: Spring Boot, Node.js, Express, FastAPI, Flask, Django, REST APIs, WebSockets, PostgreSQL, pgvector, Neo4j, MongoDB, Firebase, Supabase
-AI/ML: RAG pipelines, vector search, knowledge graphs, Cohere neural reranking, OpenAI Whisper, facial recognition, structured LLM outputs
-Cloud/Tooling: Stripe Connect, AWS S3, AWS App Runner, AWS SQS, AWS CloudFront, Upstash Redis, Cloudflare Workers, Databricks, Cypress, Docker, GitHub Actions, Vercel, Git, Linux
+Languages: TypeScript, JavaScript, Java, Python, SQL, C, HTML/CSS
+Frameworks: React, Next.js, Node.js, Express, Spring Boot, Vue.js, FastAPI, Tailwind CSS
+Tools: AWS, Docker, PostgreSQL, Redis, Firebase, Stripe, Algolia, OpenAI API, Git, GitHub Actions, Vitest, Cypress, Linux
 
 ## Contact
 - Email: shahir.a@nyu.edu

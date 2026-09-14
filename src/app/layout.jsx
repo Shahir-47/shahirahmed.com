@@ -33,7 +33,7 @@ export const metadata = {
 		template: "%s | Shahir Ahmed",
 	},
 	description:
-		"Shahir Ahmed is a Software Engineer building full-stack products with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, and PostgreSQL. Projects include GrabPic (facial recognition photo sharing), PaperPulse (AI research platform), BitTorrent Client JS, Sarva (grocery supply chain), and open source contributions to Mermaid.js.",
+		"Shahir Ahmed is a software engineer and Master's student in Computer Science at NYU. He was a software engineer at Sarva, interned on FarmData2, and is ranked 25th of 600+ contributors to Mermaid.js. Projects include GrabPic, PaperPulse, and Queue Up.",
 	keywords: [
 		"Shahir Ahmed",
 		"Software Engineer",
@@ -91,6 +91,8 @@ export const metadata = {
 		"GitHub Actions",
 		"Vercel",
 		"Dickinson College",
+		"New York University",
+		"NYU",
 		"software engineer portfolio",
 		"CS50",
 	],
@@ -112,7 +114,7 @@ export const metadata = {
 		siteName: "Shahir Ahmed - Portfolio",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Software Engineer building full-stack products with Next.js, TypeScript, Spring Boot, Python, FastAPI, and PostgreSQL. Projects include GrabPic, PaperPulse, BitTorrent Client JS, Sarva, and Mermaid.js contributions.",
+			"Software engineer and Master's student in Computer Science at NYU. Previously at Sarva. Projects include GrabPic, PaperPulse, and Queue Up.",
 		images: [
 			{
 				url: ogImageUrl,
@@ -126,7 +128,7 @@ export const metadata = {
 		card: "summary_large_image",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Software Engineer building full-stack products with Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, and Firebase.",
+			"Software engineer and Master's student in Computer Science at NYU.",
 		creator: "@shahirahmed",
 		images: [ogImageUrl],
 	},
@@ -168,7 +170,7 @@ const jsonLd = {
 			url: siteUrl,
 			name: "Shahir Ahmed - Software Engineer Portfolio",
 			description:
-				"Personal portfolio website of Shahir Ahmed, a Software Engineer building full-stack products with microservice architectures, vector search, and knowledge graphs.",
+				"Portfolio of Shahir Ahmed, a software engineer and Master's student in Computer Science at NYU.",
 			publisher: {
 				"@id": `${siteUrl}/#person`,
 			},
@@ -194,12 +196,12 @@ const jsonLd = {
 				height: 400,
 			},
 			description:
-				"Software Engineer specializing in full-stack development with React, Next.js, TypeScript, Spring Boot, Python, FastAPI, and PostgreSQL. Built GrabPic (facial recognition photo sharing), PaperPulse (AI research platform with knowledge graphs), BitTorrent Client JS, and Sarva (grocery supply chain platform). Top 25 Mermaid.js contributor and former FarmData2 engineer.",
+				"Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 25th of 600+ contributors to Mermaid.js. Built GrabPic, PaperPulse, and Queue Up.",
 			jobTitle: "Software Engineer",
-			worksFor: {
-				"@type": "Organization",
-				name: "Sarva",
-				url: "https://www.sarvabazaar.com",
+			affiliation: {
+				"@type": "CollegeOrUniversity",
+				name: "New York University",
+				url: "https://www.nyu.edu",
 			},
 			hasOccupation: {
 				"@type": "Occupation",
@@ -209,7 +211,7 @@ const jsonLd = {
 					name: "United States",
 				},
 				skills:
-					"React, Next.js, TypeScript, Spring Boot, Python, FastAPI, PostgreSQL, pgvector, Neo4j, RAG, OpenAI Whisper, Firebase, AWS",
+					"TypeScript, JavaScript, Java, Python, SQL, C, React, Next.js, Node.js, Spring Boot, FastAPI, PostgreSQL, Redis, AWS, Docker",
 			},
 			alumniOf: {
 				"@type": "EducationalOrganization",

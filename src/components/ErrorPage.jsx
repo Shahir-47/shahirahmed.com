@@ -56,7 +56,7 @@ const ErrorPage = () => {
 					},
 				}}
 			>
-				404 - Page Not Found
+				Page not found
 			</Typography>
 			<Typography
 				variant="h6"
@@ -78,7 +78,7 @@ const ErrorPage = () => {
 					},
 				}}
 			>
-				The page you are looking for does not exist.
+				This page doesn&apos;t exist. Try one of these instead.
 			</Typography>
 			<Box
 				sx={{
@@ -117,7 +117,7 @@ const ErrorPage = () => {
 						},
 					}}
 				>
-					Go to Home
+					Home
 				</Button>
 				<Button
 					variant="contained"
@@ -148,7 +148,7 @@ const ErrorPage = () => {
 						},
 					}}
 				>
-					About Me
+					About
 				</Button>
 				<Button
 					variant="contained"
@@ -179,7 +179,7 @@ const ErrorPage = () => {
 						},
 					}}
 				>
-					My Projects
+					Projects
 				</Button>
 				<Button
 					variant="contained"
@@ -210,7 +210,7 @@ const ErrorPage = () => {
 						},
 					}}
 				>
-					Contact Me
+					Contact
 				</Button>
 			</Box>
 		</Box>

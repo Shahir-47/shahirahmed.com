@@ -14,15 +14,7 @@ import { projectsData } from "./Projects";
 const RESUME_URL =
 	"https://drive.google.com/file/d/1APlXopNkSxXLLTHnxH-MBNT3GJKWq9Rp/view?usp=sharing";
 
-const FEATURED = ["Sarva", "GrabPic", "PaperPulse"];
-
-// Card summaries need a predictable length or the grid rows go ragged.
-const summarise = (text, limit = 165) => {
-	const plain = text.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-	if (plain.length <= limit) return plain;
-	const cut = plain.slice(0, limit);
-	return `${cut.slice(0, cut.lastIndexOf(" "))}...`;
-};
+const FEATURED = ["GrabPic", "PaperPulse", "Queue Up"];
 
 const HomePage = () => {
 	useEffect(() => {
@@ -30,12 +22,8 @@ const HomePage = () => {
 			strings: [
 				"Software Engineer",
 				"Full Stack Engineer",
-				"Backend Systems Builder",
+				"CS Master's Student at NYU",
 				"Open Source Contributor",
-				"Next.js & TypeScript Developer",
-				"Spring Boot Developer",
-				"Python & Data Engineer",
-				"API & WebSocket Builder",
 			],
 			typeSpeed: 50,
 			backSpeed: 25,
@@ -91,7 +79,7 @@ const HomePage = () => {
 				<div className="text-container">
 					<div className="sub-text-container">
 						<div className="first-text-container">
-							<h3>Hi, There!</h3>
+							<h3>Hi there!</h3>
 						</div>
 						<div className="second-text-container">
 							<h5>
@@ -109,9 +97,8 @@ const HomePage = () => {
 					</div>
 
 					<p className="sub-text">
-						I build full-stack products, mostly the parts you never think
-						about. Currently at <strong>Sarva</strong>, and a maintainer on{" "}
-						<strong>Mermaid.js</strong>.
+						I&apos;m a software engineer in New York, working on my Master&apos;s in
+						Computer Science at <strong>NYU</strong>.
 					</p>
 
 					<div className="button-container">
@@ -152,15 +139,26 @@ const HomePage = () => {
 							About <span className="accent">me</span>
 						</h2>
 						<p className="home-copy">
-							I&apos;m a Computer Science and Mathematics graduate from
-							Dickinson College. At Sarva I work on vector search, a voice
-							pipeline for vendor inventory, and payments. Before that I spent a
-							year on FarmData2, an NSF-funded platform that working farms use
-							every day, and I still contribute to Mermaid.js.
+							I studied computer science and math at Dickinson College, and now
+							I&apos;m doing my Master&apos;s at NYU.
 						</p>
 						<p className="home-copy">
-							Outside of code I help new developers, play soccer, and follow
-							Real Madrid.
+							Most recently I worked at Sarva, a startup that helps neighborhood
+							grocery shops manage their inventory. I built the voice assistant that
+							lets shop owners update their stock just by talking to it in their own
+							language.
+						</p>
+						<p className="home-copy">
+							Before that, I was a software engineer intern on FarmData2, a research
+							project at Dickinson College backed by the National Science Foundation
+							and PASA Sustainable Agriculture. We built open source software that
+							vegetable farms use to log their daily work and keep records for organic
+							certification.
+						</p>
+						<p className="home-copy">
+							I also contribute to Mermaid.js, an open source tool GitHub and
+							Microsoft use to turn text into flowcharts and diagrams, and I&apos;m
+							ranked 25th out of more than 600 contributors.
 						</p>
 						<Link className="btn btn-primary" href="/about">
 							Read more
@@ -176,7 +174,7 @@ const HomePage = () => {
 			{/* 3. Selected work */}
 			<section className="home-section" id="work-preview" aria-labelledby="work-preview-title">
 				<h2 className="home-heading" id="work-preview-title">
-					My recent <span className="accent">works</span>
+					My recent <span className="accent">projects</span>
 				</h2>
 
 				<div className="home-work-grid">
@@ -188,7 +186,7 @@ const HomePage = () => {
 								</div>
 							) : null}
 							<h3>{project.title}</h3>
-							<p>{summarise(project.description)}</p>
+							<p>{project.summary}</p>
 							<div className="home-work-links">
 								{project.liveDemo ? (
 									<a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
@@ -220,8 +218,8 @@ const HomePage = () => {
 							Got a project in <span className="accent">mind?</span>
 						</h2>
 						<p className="home-copy">
-							Always happy to talk about a role, a project, or something you are
-							stuck on. I read everything that comes in and I reply.
+							Always happy to talk about a role, a project, or something you&apos;re stuck
+							on.
 						</p>
 						<div className="button-container">
 							<Link className="btn btn-primary" href="/contact">

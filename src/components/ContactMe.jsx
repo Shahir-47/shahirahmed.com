@@ -63,8 +63,8 @@ const ContactMe = () => {
 						Got a project in <span className="accent">mind?</span>
 					</h1>
 					<p className="home-copy">
-						Roles, freelance work, open source, or a question about anything on
-						this site. I read everything that comes in and I reply.
+						Roles, freelance work, open source, or a question about anything on this
+						site.
 					</p>
 					<ContactArt className="contact-art" />
 				</div>

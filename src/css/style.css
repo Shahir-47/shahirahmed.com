@@ -724,6 +724,7 @@ svg {
 }
 
 .about-me-text a {
+	color: var(--teal);
 	border-bottom: 1px solid var(--teal-line);
 }
 

@@ -3,17 +3,17 @@ Developer: Shahir Ahmed
 Contact: shahir.a@nyu.edu
 GitHub: https://github.com/Shahir-47
 LinkedIn: https://www.linkedin.com/in/shahir47/
-Location: United States
+Location: New York, NY
 
 /* SITE */
-Last update: 2026/03/04
+Last update: 2026/09/14
 Language: English
 Standards: HTML5, CSS3, JavaScript ES6+
 Framework: Next.js 15, React 18
 Components: Material-UI, React Icons
 Deployment: Vercel
 Software: Visual Studio Code
-Recent projects: GrabPic, PaperPulse, BitTorrent Client JS
+Recent projects: GrabPic, PaperPulse, Queue Up
 AI discovery: /llms.txt, /llms.json, /openapi.yaml, /.well-known/ai-plugin.json
 
 /* THANKS */

@@ -15,6 +15,7 @@ import Prospectus from "@/assets/prospectus.jpg";
 import SweetFriend from "@/assets/sweetFriend.jpg";
 import Albatross from "@/assets/albatross.png";
 import HarvardX from "@/assets/Harvard_x_logo.png";
+import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
 import { SiDevpost } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
@@ -52,95 +53,79 @@ const About = () => {
 						<div className="about-me-text-div">
 							<div className="paragraph">
 								<p className="about-me-text">
-									Hey, I&apos;m Shahir - a Computer Science & Mathematics
-									graduate from Dickinson College and Software Engineer. I build
-									full-stack products with React, Next.js, TypeScript, Spring
-									Boot, Python, and PostgreSQL.
+									Hey, I&apos;m Shahir! I&apos;m a software engineer starting my
+									Master&apos;s in Computer Science at NYU, and before that I studied
+									computer science and math at Dickinson College.
 								</p>
 								<p className="about-me-text">
-									Currently a Software Engineer at{" "}
+									Most recently I worked at{" "}
 									<a
 										href="https://www.sarvabazaar.com"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<strong>Sarva</strong>
+										Sarva
 									</a>
-									, where I&apos;m building AI-powered tools for South Asian
-									grocery supply chains, from voice-based inventory with OpenAI
-									Whisper to RAG pipelines and payments with Stripe Connect.
-									Previously, I was a Software Engineer Intern on{" "}
+									, a startup that helps neighborhood grocery shops run their store by
+									voice. A lot of the shop owners were still tracking inventory on
+									paper, so I built the voice assistant that lets them add stock or
+									check what sold just by talking to it in their own language. While I
+									was there, Sarva was picked for the gener8tor and Meta gBETA
+									accelerator and made the finals at two pitch competitions.
+								</p>
+								<p className="about-me-text">
+									Before Sarva, I was a software engineer intern on{" "}
 									<a
 										href="https://github.com/FarmData2"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<strong>FarmData2</strong>
-									</a>{" "}
-									and a top 25 contributor to{" "}
+										FarmData2
+									</a>
+									, a research project at Dickinson College backed by the National
+									Science Foundation and PASA Sustainable Agriculture. We built open
+									source software that vegetable farms use to log their daily work, from
+									seeding to harvest, and keep the records they need for organic
+									certification.
+								</p>
+								<p className="about-me-text">
+									I also contribute to{" "}
 									<a
 										href="https://github.com/mermaid-js/mermaid"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<strong>Mermaid.js</strong>
+										Mermaid.js
 									</a>
-									. Browse my open source work{" "}
-									<a
-										href="https://github.com/Shahir-47/open-source-contributions"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										here
-									</a>
-									.
+									, the open source tool that turns a few lines of text into flowcharts
+									and diagrams, used by GitHub and Microsoft. It gets over 10 million
+									downloads a week, and I&apos;m ranked 25th out of more than 600
+									contributors.
 								</p>
 								<p className="about-me-text">
-									Recent projects include{" "}
+									In my free time I build my own apps, like{" "}
 									<a
 										href="https://grab-pic.vercel.app"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<strong>GrabPic</strong>
-									</a>{" "}
-									(event photo sharing with facial recognition),{" "}
-									<a
-										href="https://paper-pulse-nu.vercel.app"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<strong>PaperPulse</strong>
-									</a>{" "}
-									(research platform with knowledge graphs and RAG),{" "}
-									<a
-										href="https://queue-up.onrender.com"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<strong>Queue Up</strong>
-									</a>{" "}
-									(music-based social platform with Spotify integration), and{" "}
-									<a
-										href="https://cosign-nwwl.onrender.com"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										<strong>CoSign</strong>
-									</a>{" "}
-									(accountability platform with deadline enforcement).
+										GrabPic
+									</a>
+									. After weddings and events, I&apos;d end up searching the album for
+									each person&apos;s face and sending them their photos one at a time,
+									over and over. With GrabPic, the host shares one link and every guest
+									takes a selfie to get only the photos they&apos;re in.
 								</p>
 								<p className="about-me-text">
-									Outside of code, I enjoy helping new devs, playing soccer, and
-									following Real Madrid. Feel free to check out my{" "}
+									Feel free to check out my{" "}
 									<a
 										href="https://github.com/Shahir-47"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<strong>GitHub</strong>
+										GitHub
 									</a>{" "}
-									or reach out below.
+									or reach out through the links below.
 								</p>
 							</div>
 
@@ -164,21 +149,13 @@ const About = () => {
 					<div className="tools-header">
 						<h2>
 							<span className="highlight">Tools</span> and{" "}
-							<span className="highlight">Technologies</span> I&apos;ve worked
-							with
+							<span className="highlight">Technologies</span> I&apos;ve worked with
 						</h2>
 					</div>
 					<div className="tools-grid">
-						{/* Programming Languages */}
 						<div className="tools-category">
-							<h3>Programming Languages</h3>
+							<h3>Languages</h3>
 							<div className="tools-icons">
-								<img
-									loading="lazy"
-									decoding="async"
-									src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
-									alt="JavaScript"
-								/>
 								<img
 									loading="lazy"
 									decoding="async"
@@ -188,7 +165,13 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"
+									src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+									alt="JavaScript"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"
 									alt="Java"
 								/>
 								<img
@@ -200,8 +183,20 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
+									src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black"
+									alt="C"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
 									src="https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white"
 									alt="SQL"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"
+									alt="Lua"
 								/>
 								<img
 									loading="lazy"
@@ -218,9 +213,8 @@ const About = () => {
 							</div>
 						</div>
 
-						{/* Frontend Frameworks */}
 						<div className="tools-category">
-							<h3>Frontend Frameworks</h3>
+							<h3>Frontend</h3>
 							<div className="tools-icons">
 								<img
 									loading="lazy"
@@ -231,14 +225,20 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
+									src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
+									alt="Next.js"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
 									src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"
 									alt="Vue.js"
 								/>
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white"
-									alt="Next.js"
+									src="https://img.shields.io/badge/Vuex-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white"
+									alt="Vuex"
 								/>
 								<img
 									loading="lazy"
@@ -249,21 +249,26 @@ const About = () => {
 							</div>
 						</div>
 
-						{/* Backend & Server */}
 						<div className="tools-category">
-							<h3>Backend & Server</h3>
+							<h3>Backend</h3>
 							<div className="tools-icons">
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
-									alt="Spring Boot"
+									src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+									alt="Node.js"
 								/>
 								<img
 									loading="lazy"
 									decoding="async"
 									src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
 									alt="Express.js"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
+									alt="Spring Boot"
 								/>
 								<img
 									loading="lazy"
@@ -280,27 +285,32 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
-									alt="Firebase"
+									src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"
+									alt="Django"
 								/>
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/RESTful%20APIs-02569B?style=for-the-badge&logo=api&logoColor=white"
-									alt="RESTful APIs"
+									src="https://img.shields.io/badge/REST%20APIs-02569B?style=for-the-badge"
+									alt="REST APIs"
 								/>
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Socket.IO-010101?style=for-the-badge&logo=socket.io&logoColor=white"
+									src="https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white"
 									alt="WebSockets"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white"
+									alt="JWT"
 								/>
 							</div>
 						</div>
 
-						{/* Databases & Storage */}
 						<div className="tools-category">
-							<h3>Databases & Storage</h3>
+							<h3>Databases</h3>
 							<div className="tools-icons">
 								<img
 									loading="lazy"
@@ -311,8 +321,14 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white"
-									alt="Neo4j"
+									src="https://img.shields.io/badge/pgvector-336791?style=for-the-badge"
+									alt="pgvector"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"
+									alt="Redis"
 								/>
 								<img
 									loading="lazy"
@@ -323,21 +339,38 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
+									src="https://img.shields.io/badge/Neo4j-4581C3?style=for-the-badge&logo=neo4j&logoColor=white"
+									alt="Neo4j"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+									alt="Firebase"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
 									src="https://img.shields.io/badge/Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
 									alt="Firestore"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white"
+									alt="Supabase"
 								/>
 							</div>
 						</div>
 
-						{/* Cloud & Infrastructure */}
 						<div className="tools-category">
-							<h3>Cloud & Infrastructure</h3>
+							<h3>Cloud & DevOps</h3>
 							<div className="tools-icons">
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/AWS%20S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"
-									alt="AWS S3"
+									src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge"
+									alt="AWS"
 								/>
 								<img
 									loading="lazy"
@@ -360,16 +393,93 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
-									alt="Linux"
+									src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"
+									alt="Cloudflare"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black"
+									alt="Render"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"
+									alt="Netlify"
 								/>
 							</div>
 						</div>
 
-						{/* Testing & Quality */}
 						<div className="tools-category">
-							<h3>Testing & Quality</h3>
+							<h3>AI & Data</h3>
 							<div className="tools-icons">
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openaigym&logoColor=white"
+									alt="OpenAI"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
+									alt="TensorFlow"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white"
+									alt="Databricks"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white"
+									alt="MLflow"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Algolia-003DFF?style=for-the-badge&logo=algolia&logoColor=white"
+									alt="Algolia"
+								/>
+							</div>
+						</div>
+
+						<div className="tools-category">
+							<h3>APIs & Services</h3>
+							<div className="tools-icons">
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white"
+									alt="Stripe"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Spotify%20API-1DB954?style=for-the-badge&logo=spotify&logoColor=white"
+									alt="Spotify API"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white"
+									alt="Cloudinary"
+								/>
+							</div>
+						</div>
+
+						<div className="tools-category">
+							<h3>Testing</h3>
+							<div className="tools-icons">
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white"
+									alt="Vitest"
+								/>
 								<img
 									loading="lazy"
 									decoding="async"
@@ -379,7 +489,6 @@ const About = () => {
 							</div>
 						</div>
 
-						{/* Development Tools */}
 						<div className="tools-category">
 							<h3>Tooling</h3>
 							<div className="tools-icons">
@@ -392,20 +501,26 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
+									src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+									alt="Linux"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
 									src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"
-									alt="Maven"
+									alt="Apache Maven"
 								/>
 								<img
 									loading="lazy"
 									decoding="async"
 									src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
-									alt="NPM"
+									alt="npm"
 								/>
 								<img
 									loading="lazy"
 									decoding="async"
 									src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white"
-									alt="PNPM"
+									alt="pnpm"
 								/>
 								<img
 									loading="lazy"
@@ -426,17 +541,16 @@ const About = () => {
 						layout="1-column-left"
 						className="timeline"
 					>
-						{/* Current Role - Sarva */}
+						{/* Sarva */}
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
 								background: "#393e46",
 								color: "#fff",
 								boxShadow: "0 3px 0 #00adb5",
-								border: "2px solid #00adb5",
 							}}
 							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
-							date="May 2025 - Present"
+							date="May 2025 - Sep 2026"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
@@ -453,49 +567,120 @@ const About = () => {
 							}
 						>
 							<h3 className="vertical-timeline-element-title">
-								Software Engineer -{" "}
-								<span style={{ color: "#00adb5" }}>Current Role</span>
+								Software Engineer
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
-								Sarva - Vendor Management Platform & Marketplace for Grocery
-								Supply Chains
-								<span style={{ marginLeft: "8px" }}>
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>Sarva</span>
+									<span>Carlisle, PA</span>
+								</span>
+								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
 									<a
 										href="https://www.sarvabazaar.com"
 										target="_blank"
 										rel="noopener noreferrer"
 										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
-										[sarvabazaar.com]
+										sarvabazaar.com
 									</a>
 								</span>
 							</h4>
 							<ul>
 								<li>
-									Cut p95 latency by 50% by replacing sequential scans with
-									vector similarity search in a Python RAG pipeline
+									Replaced pen and paper inventory at independent grocery stores with a
+									voice assistant that updates stock in 90+ languages
 								</li>
 								<li>
-									Reduced vendor inventory time by 60% by building a voice-based
-									system with OpenAI Whisper, supporting 90+ languages
+									Integrated Stripe so every payment splits between the store and the
+									driver and no card is charged until pickup
 								</li>
 								<li>
-									Reduced chargeback fraud by implementing Stripe Connect with
-									identity verification in a Next.js/TypeScript platform
+									Improved product and inventory search 7% by adding semantic search
+									with OpenAI embeddings alongside keyword matching
 								</li>
 								<li>
-									Built 4 AI assistants with GPT structured outputs for
-									natural-language order tracking, product search, and inventory
-									management
+									Built 3 CI/CD pipelines in GitHub Actions running 2,604 unit tests
+									across 173 REST API endpoints to catch bugs before merge
 								</li>
 								<li>
-									Added Firebase AppCheck and role-based authentication to
-									secure API routes across customer, vendor, and driver portals
+									Chosen for the gener8tor and Meta gBETA accelerator and named a
+									finalist at Ship Tank and launchU pitch competitions
 								</li>
 							</ul>
 						</VerticalTimelineElement>
 
-						{/* FarmData2 (Software Engineer) */}
+						{/* Mermaid.js */}
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{
+								background: "#393e46",
+								color: "#fff",
+								boxShadow: "0 3px 0 #00adb5",
+							}}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
+							date="Jan 2025 - Apr 2026"
+							dateClassName={"custom-date"}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
+							icon={
+								<img
+									src={MermaidJS.src}
+									alt="Mermaid.js"
+									style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+								/>
+							}
+						>
+							<h3 className="vertical-timeline-element-title">
+								Open Source Contributor
+							</h3>
+							<h4 className="vertical-timeline-element-subtitle">
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>Mermaid.js</span>
+									<span>Remote</span>
+								</span>
+								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										Pull requests
+									</a>
+									<a
+										href="https://github.com/mermaid-js/mermaid/graphs/contributors"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										Contributor ranking
+									</a>
+									<a
+										href="https://github.com/mermaid-js/mermaid"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										GitHub repository
+									</a>
+								</span>
+							</h4>
+							<ul>
+								<li>
+									Ranked 25th among 600+ contributors by merging 3 pull requests into a
+									diagramming library with 10M+ weekly downloads
+								</li>
+								<li>
+									Shipped chart and journey diagram features into a 100,000 line
+									TypeScript codebase used by GitHub and Microsoft
+								</li>
+								<li>
+									Wrote Cypress end-to-end tests for each feature and cleared every
+									automated check before a maintainer approved it
+								</li>
+							</ul>
+						</VerticalTimelineElement>
+
+						{/* FarmData2 */}
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
@@ -519,154 +704,37 @@ const About = () => {
 								Software Engineer Intern
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
-								FarmData2 - Organic Farm Management Software at Dickinson
-								College
-								<span style={{ marginLeft: "8px" }}>
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>FarmData2, Dickinson College</span>
+									<span>Carlisle, PA</span>
+								</span>
+								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
 									<a
 										href="https://github.com/FarmData2/FarmData2"
 										target="_blank"
 										rel="noopener noreferrer"
 										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
-										[GitHub Repository]
+										GitHub repository
 									</a>
-								</span>
-								<span style={{ marginLeft: "8px" }}>
 									<a
 										href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
 										target="_blank"
 										rel="noopener noreferrer"
 										style={{ color: "#00adb5", textDecoration: "underline" }}
 									>
-										[Contributions]
+										Pull requests
 									</a>
 								</span>
 							</h4>
 							<ul>
 								<li>
-									Reduced form latency by 60% on an NSF-funded farm platform by
-									refactoring 22+ Vue.js components to Vuex
+									Cut page load time by 60% on a National Science Foundation funded farm
+									platform by moving 22+ Vue.js components to Vuex
 								</li>
 								<li>
-									Automated farm workflows by building 18+ Node.js REST APIs
-									with PostgreSQL transaction rollbacks and 30+ Cypress tests
-								</li>
-							</ul>
-						</VerticalTimelineElement>
-
-						{/* Mermaid.js (Open Source) */}
-						<VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{
-								background: "#393e46",
-								color: "#fff",
-								boxShadow: "0 3px 0 #00adb5",
-							}}
-							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
-							date="Jan 2025 - April 2025"
-							dateClassName={"custom-date"}
-							iconStyle={{ background: "#00adb5", color: "#fff" }}
-							icon={
-								<img
-									src={MermaidJS.src}
-									alt="Mermaid.js"
-									style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-								/>
-							}
-						>
-							<h3 className="vertical-timeline-element-title">
-								Open Source Contributor
-							</h3>
-							<h4 className="vertical-timeline-element-subtitle">
-								Mermaid.js - Open-Source Data Visualization Library
-								<a
-									href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										color: "#00adb5",
-										textDecoration: "underline",
-										marginLeft: "8px",
-									}}
-								>
-									[Contributions]
-								</a>
-								<a
-									href="https://github.com/mermaid-js/mermaid/graphs/contributors"
-									target="_blank"
-									rel="noopener noreferrer"
-									style={{
-										color: "#00adb5",
-										textDecoration: "underline",
-										marginLeft: "8px",
-									}}
-								>
-									[Ranked #25 of 600+ Contributors]
-								</a>
-								<span style={{ marginLeft: "8px" }}>
-									<a
-										href="https://github.com/mermaid-js/mermaid"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5", textDecoration: "underline" }}
-									>
-										[GitHub Repository]
-									</a>
-								</span>
-							</h4>
-							<ul>
-								<li>
-									Ranked #25 among 600+ contributors by shipping 3 merged PRs
-									for a library serving 1.4M+ weekly downloads
-								</li>
-								<li>
-									Delivered features and bug fixes across 20+ diagram types in
-									an 86K-star codebase used by GitHub, VS Code, and Notion
-								</li>
-							</ul>
-						</VerticalTimelineElement>
-
-						{/* 84 Lumber (Volunteer) */}
-						<VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{
-								background: "#393e46",
-								color: "#fff",
-								boxShadow: "0 3px 0 #00adb5",
-							}}
-							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
-							date="Sept 2023 - Jan 2024"
-							dateClassName={"custom-date"}
-							iconStyle={{ background: "#00adb5", color: "#fff" }}
-							icon={
-								<img
-									src={Lumber84.src}
-									alt="84 Lumber"
-									style={{ width: "100%", height: "100%", borderRadius: "50%" }}
-								/>
-							}
-						>
-							<h3 className="vertical-timeline-element-title">
-								Software Engineer (Volunteer)
-							</h3>
-							<h4 className="vertical-timeline-element-subtitle">
-								84 Lumber - Building Materials Distribution & Retail Company
-								<span style={{ marginLeft: "8px" }}>
-									<a
-										href="https://www.dickinson.edu/news/article/5821/dickinson_students_work_with_alum_to_breathe_new_life_into_84_lumbers_legacy_systems"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5", textDecoration: "underline" }}
-									>
-										[Featured in Dickinson News]
-									</a>
-								</span>
-							</h4>
-							<ul>
-								<li>
-									Built a legacy code transpilation pipeline using ANTLR to
-									migrate 10K+ lines of CBASIC into Python and Java for a $9B
-									company
+									Automated crop logging to save farmers 12+ hours a week by building
+									18+ Node.js REST APIs and 30+ Cypress tests
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -680,7 +748,7 @@ const About = () => {
 								boxShadow: "0 3px 0 #00adb5",
 							}}
 							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
-							date="Aug 2022 - May 2025"
+							date="Sep 2022 - May 2025"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
@@ -700,12 +768,62 @@ const About = () => {
 								Teaching Assistant
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
-								Dickinson College Math and CS Department
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>Computer Science Department, Dickinson College</span>
+									<span>Carlisle, PA</span>
+								</span>
 							</h4>
 							<ul>
 								<li>
-									Mentored 25+ students across 6 semesters in Python and Java
-									through weekly labs, office hours, and code reviews
+									Raised average assignment scores by 15% for 25+ students across 6
+									semesters through weekly Python and Java code reviews
+								</li>
+							</ul>
+						</VerticalTimelineElement>
+
+						{/* 84 Lumber (Volunteer) */}
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{
+								background: "#393e46",
+								color: "#fff",
+								boxShadow: "0 3px 0 #00adb5",
+							}}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
+							date="Sep 2023 - Jan 2024"
+							dateClassName={"custom-date"}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
+							icon={
+								<img
+									src={Lumber84.src}
+									alt="84 Lumber"
+									style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+								/>
+							}
+						>
+							<h3 className="vertical-timeline-element-title">
+								Software Developer, Volunteer
+							</h3>
+							<h4 className="vertical-timeline-element-subtitle">
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>84 Lumber</span>
+									<span>Remote</span>
+								</span>
+								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
+									<a
+										href="https://www.dickinson.edu/news/article/5821/dickinson_students_work_with_alum_to_breathe_new_life_into_84_lumbers_legacy_systems"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										Featured in Dickinson News
+									</a>
+								</span>
+							</h4>
+							<ul>
+								<li>
+									Converted 10,000+ lines of legacy CBASIC into Python and Java for a
+									$9B retailer by building a translator with ANTLR
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -714,12 +832,7 @@ const About = () => {
 
 				{/* OSS Contributions */}
 				<section id="open-source" className="oss-section">
-					<h2
-						className="section-title"
-
-					>
-						Open Source Contributions
-					</h2>
+					<h2 className="section-title">Open Source Contributions</h2>
 
 					<div
 						className="open-source-section"
@@ -747,93 +860,124 @@ const About = () => {
 							<div style={{ flex: 1 }}>
 								<div
 									style={{
-										fontWeight: 600,
-										fontSize: "1.33rem",
-										color: "#00adb5",
-										marginBottom: 3,
+										display: "flex",
+										flexWrap: "wrap",
+										alignItems: "baseline",
+										gap: "4px 12px",
 									}}
 								>
 									<a
 										href="https://github.com/mermaid-js/mermaid"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#00adb5" }}
+										style={{
+											color: "var(--teal)",
+											fontWeight: 600,
+											fontSize: "1.33rem",
+										}}
 									>
 										Mermaid.js
 									</a>
-									<span
-										style={{ marginLeft: 8, color: "#eeeeee", fontSize: 16 }}
-									>
-										(Top 25 contributor out of 600+ contributors)
+									<span style={{ color: "var(--text-2)", fontSize: 15 }}>
+										Ranked 25th out of 600+ contributors
 									</span>
 								</div>
 								<div
 									style={{
-										fontSize: 16,
-										color: "#ffffff",
-										marginBottom: 12,
-										marginTop: 12,
+										marginTop: 8,
+										fontSize: 14,
+										fontWeight: 600,
+										color: "var(--teal)",
 									}}
 								>
-									• Shipped 3 merged PRs for text wrapping, auto-scaling data
-									labels, and customizable styling in a library serving{" "}
 									<a
-										style={{ color: "#00adb5", textDecoration: "underline" }}
 										href="https://npmtrends.com/mermaid"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "var(--teal)" }}
 									>
-										1.4M+ weekly downloads
-									</a>
-									.
+										10M+ weekly downloads
+									</a>{" "}
+									· Used by GitHub and Microsoft
 								</div>
+								<p
+									style={{
+										margin: "14px 0 0",
+										fontSize: 15,
+										lineHeight: 1.6,
+										color: "var(--text-2)",
+									}}
+								>
+									An open source tool that turns plain text into flowcharts and diagrams.
+								</p>
+								<p
+									style={{
+										margin: "14px 0 0",
+										fontSize: 16,
+										lineHeight: 1.65,
+										color: "var(--text)",
+									}}
+								>
+									I&apos;ve merged 3 pull requests into Mermaid, and every change I made shipped
+									with Cypress end-to-end tests and passed all of its automated checks before
+									a maintainer approved it. Here&apos;s what I added:
+								</p>
 								<ul
 									style={{
 										fontSize: 15,
-										color: "#eeeeee",
-										margin: 0,
-										marginBottom: 9,
+										lineHeight: 1.55,
+										color: "var(--text-2)",
+										margin: "8px 0 0",
 										paddingLeft: 18,
 									}}
 								>
-									<li>
+									<li style={{ marginTop: 6 }}>
 										<a
 											href="https://github.com/mermaid-js/mermaid/pull/6475"
 											target="_blank"
 											rel="noopener noreferrer"
-											style={{ color: "#00adb5", textDecoration: "underline" }}
+											style={{ color: "var(--teal)", textDecoration: "underline" }}
 										>
-											Added dynamic, auto-scaling data labels for bar charts
+											A showDataLabel option that draws values inside bar charts and sizes
+											them to fit every bar
 										</a>
 									</li>
-									<li>
+									<li style={{ marginTop: 6 }}>
 										<a
 											href="https://github.com/mermaid-js/mermaid/pull/6274"
 											target="_blank"
 											rel="noopener noreferrer"
-											style={{ color: "#00adb5", textDecoration: "underline" }}
+											style={{ color: "var(--teal)", textDecoration: "underline" }}
 										>
-											Engineered smart word wrapping using Knuth-Plass algorithm
+											Knuth-Plass word wrapping for journey diagram legends, so long labels
+											stop overlapping the diagram
 										</a>
 									</li>
-									<li>
+									<li style={{ marginTop: 6 }}>
 										<a
 											href="https://github.com/mermaid-js/mermaid/pull/6225"
 											target="_blank"
 											rel="noopener noreferrer"
-											style={{ color: "#00adb5", textDecoration: "underline" }}
+											style={{ color: "var(--teal)", textDecoration: "underline" }}
 										>
-											Enabled full theme customization for Journey diagrams
+											Title color, font, and size options for journey diagrams
 										</a>
 									</li>
 								</ul>
-								<div style={{ fontSize: 14, color: "rgba(238,238,238,0.5)", marginTop: 15 }}>
+								<div
+									style={{
+										display: "flex",
+										flexWrap: "wrap",
+										gap: "6px 22px",
+										marginTop: 18,
+										fontSize: 14,
+									}}
+								>
 									<a
 										href="https://github.com/mermaid-js/mermaid/graphs/contributors"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{
-											color: "#00adb5",
-											marginRight: 18,
-										}}
+										style={{ color: "var(--teal)" }}
 									>
 										Contributor graph
 									</a>
@@ -841,83 +985,9 @@ const About = () => {
 										href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "#00adb5" }}
+										style={{ color: "var(--teal)" }}
 									>
-										All PRs
-									</a>
-								</div>
-							</div>
-						</div>
-
-						{/* FarmData2 */}
-						<div className="oss-item">
-							<img
-								src={FarmData2.src}
-								alt="FarmData2"
-								style={{
-									width: 65,
-									height: 65,
-									borderRadius: 14,
-									objectFit: "cover",
-									background: "#fff",
-									marginRight: 0,
-									boxShadow: "0 0 10px 1px #0005",
-								}}
-							/>
-							<div style={{ flex: 1 }}>
-								<div
-									style={{
-										fontWeight: 600,
-										fontSize: "1.33rem",
-										color: "#00adb5",
-										marginBottom: 3,
-									}}
-								>
-									<a
-										href="https://github.com/FarmData2/FarmData2"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5" }}
-									>
-										FarmData2
-									</a>
-									<span
-										style={{ marginLeft: 8, color: "#eeeeee", fontSize: 16 }}
-									>
-										(Open-source contributor)
-									</span>
-								</div>
-								<div
-									style={{
-										fontSize: 16,
-										color: "#ffffff",
-										marginBottom: 12,
-										marginTop: 12,
-									}}
-								>
-									• 25+ PRs, 14,000+ lines added. Refactored 22+ Vue components,
-									built 18+ REST APIs, and added Cypress tests to automate
-									real-world farm operations.
-								</div>
-								<div style={{ fontSize: 14, color: "rgba(238,238,238,0.5)", marginTop: 2 }}>
-									<a
-										href="https://github.com/FarmData2/FarmData2/graphs/contributors"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{
-											color: "#00adb5",
-											marginRight: 18,
-										}}
-									>
-										Contributor graph
-									</a>
-									<a
-										href="https://github.com/FarmData2/FarmData2/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5" }}
-									>
-										All PRs
+										All pull requests
 									</a>
 								</div>
 							</div>
@@ -925,24 +995,27 @@ const About = () => {
 
 						{/* Full Portfolio */}
 						<div className="oss-item">
-							
 							<div style={{ flex: 1 }}>
 								<div
 									style={{
 										fontWeight: 600,
 										fontSize: "1.17rem",
-										color: "#00adb5",
-										marginBottom: 5,
+										color: "var(--teal)",
 									}}
 								>
 									See My Full Open Source Portfolio
 								</div>
-								<div
-									style={{ fontSize: 15, color: "#eeeeee", marginBottom: 7 }}
+								<p
+									style={{
+										margin: "8px 0 0",
+										fontSize: 15,
+										lineHeight: 1.6,
+										color: "var(--text-2)",
+									}}
 								>
-									Detailed breakdown, merged PRs, and stats for every major
-									project.
-								</div>
+									The projects I&apos;ve contributed to, with a link to each merged pull
+									request.
+								</p>
 								<a
 									href="https://github.com/Shahir-47/open-source-contributions"
 									target="_blank"
@@ -953,10 +1026,10 @@ const About = () => {
 										background: "#00adb5",
 										color: "#fff",
 										borderRadius: 8,
-										padding: "5px 17px",
+										padding: "7px 18px",
 										fontWeight: 500,
 										fontSize: 15,
-										marginTop: 2,
+										marginTop: 16,
 										textDecoration: "none",
 										boxShadow: "0 1px 3px 0 rgba(0, 173, 181, 0.10)",
 										transition: "background 0.3s ease",
@@ -1020,12 +1093,16 @@ const About = () => {
 								}}
 							/>
 							<p>
-								My first hackathon, where we built an AI-powered college
-								admissions assistant using React, Django, Azure OpenAI, and
-								vector embeddings. We shipped a frontend demo and high-level
-								architecture. Didn&apos;t finish a working product, but it
-								taught me how to design systems under real constraints and set
-								the stage for shipping at later events.
+								HoyaHacks was my first hackathon. Our team wanted to build an AI
+								assistant that could answer students&apos; questions about any college,
+								and we planned a full retrieval-augmented generation setup on Azure to
+								power it.
+							</p>
+							<p>
+								We didn&apos;t get it working in time. We had the website and the
+								architecture mapped out, but the pieces never came together into
+								something we could demo, so later that year I went into PennApps focused
+								on getting everything connected early.
 							</p>
 							<p>
 								<strong>Tech Stack:</strong>
@@ -1071,7 +1148,7 @@ const About = () => {
 									style={{ textDecoration: "none" }}
 								>
 									<button className="devpost">
-										<SiDevpost style={iconSize} /> View on DevPost
+										<SiDevpost style={iconSize} /> View on Devpost
 									</button>
 								</a>
 								<a
@@ -1130,13 +1207,15 @@ const About = () => {
 								}}
 							/>
 							<p>
-								A diabetes management app built in 36 hours with a team of 4. I
-								led the React frontend, building the dashboard, live glucose
-								charts, and meal photo upload powered by Tune Studio&apos;s
-								vision model. Integrated the Dexcom API for continuous glucose
-								data, wired up Twilio for critical alerts, and connected it all
-								through a Flask/MongoDB backend with Cerebras for AI health
-								insights.
+								One of my teammates at PennApps lives with type 1 diabetes, and carb
+								counting and insulin dosing were a daily guessing game for them. So we
+								built SweetFriend, which shows live readings from a Dexcom glucose
+								monitor and estimates the carbs in a meal from a single photo.
+							</p>
+							<p>
+								I built the React frontend, including the glucose chart where meals and
+								workouts show up on the timeline. This time everything came together,
+								and every major feature was working by the end of the weekend.
 							</p>
 							<p>
 								<strong>Tech Stack:</strong>
@@ -1194,7 +1273,7 @@ const About = () => {
 									style={{ textDecoration: "none" }}
 								>
 									<button className="devpost">
-										<SiDevpost style={iconSize} /> View on DevPost
+										<SiDevpost style={iconSize} /> View on Devpost
 									</button>
 								</a>
 								<a
@@ -1265,12 +1344,14 @@ const About = () => {
 								}}
 							/>
 							<p>
-								AI-powered navigation app that finds the safest routes using
-								real-time crime data. Built the Vue.js frontend with interactive
-								crime polygon overlays and safe route visualization. Processed
-								50K+ crime addresses into zone density scores using Databricks
-								and MLflow, served through Cloudflare Workers to the HERE
-								Routing API. Deployed a working NYC demo during the hackathon.
+								At HackHarvard, two of my teammates had felt unsafe walking through
+								parts of Boston, so we built Albatross, a navigation app that finds a
+								fast walking route that stays out of crime hot zones.
+							</p>
+							<p>
+								We turned 50K+ crime records into hot zones, and I built the Vue.js
+								frontend that shows them on the map along with the safer route. By the
+								end of the 36 hours, we had it routing live through Boston.
 							</p>
 							<p>
 								<strong>Tech Stack:</strong>
@@ -1316,7 +1397,7 @@ const About = () => {
 									style={{ textDecoration: "none" }}
 								>
 									<button className="devpost">
-										<SiDevpost style={iconSize} /> View on DevPost
+										<SiDevpost style={iconSize} /> View on Devpost
 									</button>
 								</a>
 								<a
@@ -1352,6 +1433,35 @@ const About = () => {
 						layout="1-column-left"
 						className="timeline"
 					>
+						{/* New York University */}
+						<VerticalTimelineElement
+							className="vertical-timeline-element--education"
+							contentStyle={{
+								background: "#393e46",
+								color: "#fff",
+								boxShadow: "0 3px 0 #00adb5",
+							}}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
+							date="Sep 2026 - May 2028 (expected)"
+							dateClassName={"custom-date"}
+							iconStyle={{ background: "#57068c", color: "#fff" }}
+							icon={<SchoolIcon />}
+						>
+							<h3 className="vertical-timeline-element-title">
+								New York University
+							</h3>
+							<h4 className="vertical-timeline-element-subtitle">
+								New York, NY
+							</h4>
+							<p>
+								<strong>Degree:</strong> M.S. in Computer Science
+							</p>
+							<p>
+								<strong>Coursework:</strong> Design and Analysis of Algorithms, Big
+								Data, Virtual and Augmented Reality
+							</p>
+						</VerticalTimelineElement>
+
 						{/* Dickinson College */}
 						<VerticalTimelineElement
 							className="vertical-timeline-element--education"
@@ -1360,8 +1470,8 @@ const About = () => {
 								color: "#fff",
 								boxShadow: "0 3px 0 #00adb5",
 							}}
-							contentArrowStyle={{ borderRight: "7px solid  #393e46" }}
-							date="August 2021 - May 2025"
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
+							date="Aug 2021 - May 2025"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
@@ -1384,12 +1494,18 @@ const About = () => {
 								Carlisle, PA
 							</h4>
 							<p>
-								<strong>Degree:</strong> B.S. in Computer Science & Mathematics
-								<br />
+								<strong>Degree:</strong> B.S. in Computer Science and Mathematics
+							</p>
+							<p>
 								<strong>GPA:</strong> 3.52 / 4.00
-								<br />
-								<strong>Honors:</strong> Dean&apos;s List, Pi Mu Epsilon (Math
-								Honor Society), 1783 Scholarship
+							</p>
+							<p>
+								<strong>Coursework:</strong> Data Structures, Analysis of Algorithms,
+								Operating Systems, Object-Oriented Programming, Database Systems
+							</p>
+							<p>
+								<strong>Honors:</strong> Dean&apos;s List, Pi Mu Epsilon (math honor
+								society), The 1783 Scholarship
 							</p>
 						</VerticalTimelineElement>
 					</VerticalTimeline>
@@ -1397,17 +1513,9 @@ const About = () => {
 
 				{/* Certifications Section */}
 				<section id="certifications" className="certifications-section">
-					<h2
-						className="section-title"
+					<h2 className="section-title">Certifications</h2>
 
-					>
-						Certifications &amp; Achievements
-					</h2>
-
-					<div
-						className="certifications-container"
-
-					>
+					<div className="certifications-container">
 						{/* CS50 Certification */}
 						<div className="cert-section">
 							<div className="cert-logo">
@@ -1419,8 +1527,7 @@ const About = () => {
 									CS50x: Introduction to Computer Science
 								</h3>
 								<p className="cert-note">
-									<strong>HarvardX</strong> | Algorithms, data structures, web
-									development using C, Python, SQL, JavaScript
+									Harvard&apos;s intro course on <strong>HarvardX</strong>, where I learned C and memory management before moving on to Python, SQL, and Flask.
 								</p>
 							</div>
 
@@ -1431,7 +1538,7 @@ const About = () => {
 								rel="noopener noreferrer"
 							>
 								<FaCertificate />
-								View Certificate
+								View certificate
 							</a>
 						</div>
 
@@ -1444,8 +1551,7 @@ const About = () => {
 							<div className="cert-body">
 								<h3 className="cert-title">MATLAB Onramp</h3>
 								<p className="cert-note">
-									<strong>MathWorks</strong> | MATLAB programming and
-									computational mathematics
+									An intro course from <strong>MathWorks</strong> on working with matrices, plotting data, and writing MATLAB scripts.
 								</p>
 							</div>
 
@@ -1456,46 +1562,8 @@ const About = () => {
 								rel="noopener noreferrer"
 							>
 								<FaCertificate />
-								View Certificate
+								View certificate
 							</a>
-						</div>
-
-						{/* Academic Honors */}
-						<div
-							className="academic"
-							style={{
-								background: "rgba(57, 62, 70, 0.75)",
-								borderRadius: 16,
-								boxShadow: "0 1px 8px 0 rgba(0, 0, 0, 0.25)",
-								padding: "1.5rem 2rem",
-							}}
-						>
-							<div
-								style={{
-									fontWeight: 600,
-									fontSize: "1.25rem",
-									color: "#00adb5",
-									marginBottom: 15,
-									display: "flex",
-									alignItems: "center",
-								}}
-							>
-								Academic Honors
-							</div>
-							<div style={{ display: "grid", gap: "12px" }}>
-								<div style={{ fontSize: 15, color: "#eeeeee" }}>
-									• <strong>The 1783 Scholarship</strong> - Merit-based
-									scholarship at Dickinson College
-								</div>
-								<div style={{ fontSize: 15, color: "#eeeeee" }}>
-									• <strong>Dean&apos;s List</strong> - Academic excellence
-									recognition
-								</div>
-								<div style={{ fontSize: 15, color: "#eeeeee" }}>
-									• <strong>Pi Mu Epsilon</strong> - National Mathematics Honor
-									Society
-								</div>
-							</div>
 						</div>
 					</div>
 				</section>
@@ -1521,7 +1589,8 @@ const About = () => {
 							Check Out My <span style={{ color: "#00adb5" }}>Projects</span>
 						</h2>
 						<Typography className="projects-link-p">
-							Browse my work in web development, systems programming, and more.
+							Everything I&apos;ve built outside of work, including my hackathon
+							projects.
 						</Typography>
 						<Button
 							onClick={() => router.push("/projects")}
