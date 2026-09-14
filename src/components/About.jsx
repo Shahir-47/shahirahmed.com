@@ -6,7 +6,7 @@ import Shahir from "@/assets/shahir.jpeg";
 import Dickinson from "@/assets/dickinson.png";
 import NYU from "@/assets/nyu.jpg";
 import FarmData2 from "@/assets/farmData2.png";
-import MermaidJS from "@/assets/mermaid.webp";
+import MermaidJS from "@/assets/mermaid.png";
 import Lumber84 from "@/assets/84.png";
 import Sarva from "@/assets/sarva_logo.jpeg";
 import Hoya from "@/assets/hoya.png";
@@ -625,7 +625,7 @@ const About = () => {
 								<img
 									src={MermaidJS.src}
 									alt="Mermaid.js"
-									style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+									style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "contain" }}
 								/>
 							}
 						>
