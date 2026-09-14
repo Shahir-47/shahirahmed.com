@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Shahir from "@/assets/shahir.jpeg";
 import Dickinson from "@/assets/dickinson.png";
+import NYU from "@/assets/nyu.jpg";
 import FarmData2 from "@/assets/farmData2.png";
 import MermaidJS from "@/assets/mermaid.webp";
 import Lumber84 from "@/assets/84.png";
@@ -15,7 +16,6 @@ import Prospectus from "@/assets/prospectus.jpg";
 import SweetFriend from "@/assets/sweetFriend.jpg";
 import Albatross from "@/assets/albatross.png";
 import HarvardX from "@/assets/Harvard_x_logo.png";
-import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
 import { SiDevpost } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
@@ -1445,7 +1445,18 @@ const About = () => {
 							date="Sep 2026 - May 2028 (expected)"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "#57068c", color: "#fff" }}
-							icon={<SchoolIcon />}
+							icon={
+								<img
+									src={NYU.src}
+									alt="New York University"
+									style={{
+										width: "100%",
+										height: "100%",
+										objectFit: "contain",
+										borderRadius: "50%",
+									}}
+								/>
+							}
 						>
 							<h3 className="vertical-timeline-element-title">
 								New York University
