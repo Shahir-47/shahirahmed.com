@@ -20,6 +20,8 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 
 ### Desktop
 
+<br />
+
 <table>
   <tbody>
     <tr>
@@ -50,6 +52,8 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 <br />
 
 ### Mobile
+
+<br />
 
 <table>
   <tbody>
