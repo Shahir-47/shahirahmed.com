@@ -1,30 +1,18 @@
-# **🌐 shahirahmed.com**
+# shahirahmed.com
+
+The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal website. I'm a software engineer starting my Master's in Computer Science at NYU, and I built this site to share my projects and experience in one place.
 
 ![Home page of shahirahmed.com](docs/screenshots/home.webp)
 
-Welcome to **shahirahmed.com**, my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a Software Engineer. Whether you're here to explore my work, learn more about me, or get in touch, this is the place to do it. 🌟
+## What's on the site
 
----
+- **Home:** a short introduction, a preview of my background, and three featured projects.
+- **About:** my work experience, open source contributions, hackathons, education, and GitHub activity. A sticky table of contents makes the long page easy to navigate.
+- **Projects:** my personal and hackathon projects, with search, category filters, and links to each live demo and repository.
+- **Contact:** a message form that sends straight to my inbox through EmailJS.
+- **404:** a page not found screen with buttons back to the main pages.
 
-## **🌍 Live Preview**
-
-Visit the live site: [shahirahmed.com](https://shahirahmed.com)
-
----
-
-## **📖 About the Website**
-
-This portfolio is designed to provide visitors with an intuitive and engaging experience while exploring who I am and what I do. It includes:
-
-- **Home Page**: A short introduction with a typing animation, a preview of my background, my three featured projects, and a way to get in touch.
-- **About Page**: My background, the tools I've worked with, work experience (Sarva, Mermaid.js, FarmData2, teaching, 84 Lumber), open source contributions, hackathons, education, certifications, and GitHub stats, with a sticky table of contents.
-- **Projects Page**: All 16 of my personal and hackathon projects, with filters, search, live demos, and source code links.
-- **Contact Page**: A contact form powered by EmailJS, plus links to all my socials.
-- **404 Page**: A helpful (and fun) guide for lost visitors.
-
----
-
-## **📸 Screenshots**
+## Screenshots
 
 | About | Projects |
 | ----- | -------- |
@@ -32,7 +20,7 @@ This portfolio is designed to provide visitors with an intuitive and engaging ex
 | **Featured projects on the home page** | **Contact** |
 | ![Featured projects on the home page](docs/screenshots/home-projects.webp) | ![Contact page](docs/screenshots/contact.webp) |
 
-### On mobile
+The layout adapts to phones as well:
 
 <p align="center">
   <img src="docs/screenshots/mobile-home.webp" alt="Home page on mobile" width="250" />
@@ -40,230 +28,100 @@ This portfolio is designed to provide visitors with an intuitive and engaging ex
   <img src="docs/screenshots/mobile-projects.webp" alt="Projects page on mobile" width="250" />
 </p>
 
----
+## Built with
 
-## **🎨 Features**
+| Area | Tools |
+| ---- | ----- |
+| Framework | Next.js 15 (App Router), React 18 |
+| UI | Material UI 6, custom CSS, React Icons |
+| Fonts | Poppins and Oswald through `next/font` |
+| Illustrations | SVG artwork exported from Figma |
+| Animation | Typed.js, React Vertical Timeline |
+| GitHub activity | React GitHub Calendar |
+| Contact form | EmailJS |
+| Analytics | Vercel Analytics and Speed Insights |
+| Hosting | Vercel |
 
-- **Responsive Design**: Looks great on any device, from widescreens to smartphones.
-- **Scroll Animations**: Home page sections fade in as you scroll, and the animation is skipped for visitors who prefer reduced motion.
-- **Custom Domain**: Hosted at [shahirahmed.com](https://shahirahmed.com).
-- **404 Error Page**: User-friendly error handling with quick navigation options.
-- **SEO Optimized**: Server-side rendering, structured data (Person, WebSite, Occupation, Credential schemas), Open Graph, Twitter Cards, and comprehensive meta tags for maximum discoverability.
-- **AI-Friendly**: Content optimized for AI chatbots and search engines with dedicated discovery files.
-- **Performance Optimized**: Lazy-loaded images, DNS prefetch, HSTS, compressed responses, and long-lived cache headers for high Core Web Vitals scores.
-- **PWA Ready**: Installable as a progressive web app with manifest and theme colors.
+## Under the hood
 
----
+### Search engines and AI assistants
 
-## **🔧 Tech Stack**
+- Every page is statically generated with its own title, description, canonical URL, and social preview tags.
+- JSON-LD structured data describes me as a `Person` with my occupation, credentials, and skills. It also lists each page and marks every project as `SoftwareSourceCode`.
+- Social preview images are generated at the edge with `next/og`.
+- `sitemap.xml` and `robots.txt` are generated from code, and `robots.txt` explicitly allows crawlers such as GPTBot, ClaudeBot, and PerplexityBot.
+- [`/llms.txt`](https://www.shahirahmed.com/llms.txt) and [`/llms.json`](https://www.shahirahmed.com/llms.json) give AI assistants a readable summary and a structured copy of my profile, experience, and projects.
+- A web app manifest and an OpenSearch description are included too.
 
-This project is built using modern web development tools:
+### Security and performance
 
-| Category          | Technologies                               |
-| ----------------- | ------------------------------------------ |
-| **Framework**     | Next.js 15 (App Router)                    |
-| **Frontend**      | React 18                                   |
-| **Styling**       | Material UI 6 & Custom CSS                 |
-| **Animations**    | Typed.js, React Vertical Timeline          |
-| **Form Handling** | EmailJS                                    |
-| **Analytics**     | Vercel Analytics & Speed Insights          |
-| **Hosting**       | Vercel                                     |
-| **Domain**        | [shahirahmed.com](https://shahirahmed.com) |
+- Every response carries security headers, including HSTS with preload, `X-Frame-Options: DENY`, and a `Permissions-Policy` that blocks camera, microphone, and location access.
+- Static assets are cached for a year, responses are compressed, and the `X-Powered-By` header is turned off.
+- Images below the fold load lazily. The home page animations are skipped for visitors who have reduced motion turned on.
+- The bare domain redirects to `www`, and `/resume` redirects to my latest resume.
 
-### **🔍 SEO & Discoverability**
-
-- **Static Site Generation (SSG)** for optimal SEO performance and fast page loads
-- **JSON-LD Structured Data** with rich schemas:
-  - `Person` with `hasOccupation`, `hasCredential`, `knowsAbout`, and `sameAs`
-  - `WebSite`, `ProfilePage`, `AboutPage`, `ContactPage`, `CollectionPage`
-  - `BreadcrumbList` on every page
-  - `ItemList` with `SoftwareSourceCode` entries for all projects
-- **Dynamic sitemap.xml** (`/sitemap.xml`) for search engine crawling
-- **Optimized robots.txt** (`/robots.txt`) with allowances for Googlebot, Bingbot, Applebot, and AI crawlers (GPTBot, ClaudeBot, PerplexityBot)
-- **Open Graph & Twitter Cards** for rich social media previews
-- **Dynamic OG Images** generated at the edge via `opengraph-image.jsx` and `twitter-image.jsx`
-- **AI-Friendly Content**:
-  - `/llms.txt` - Narrative profile for AI chatbots
-  - `/llms.json` - Machine-readable profile, experience, projects, skills, and education data
-  - `/.well-known/ai-plugin.json` + `/openapi.yaml` - AI plugin-style discovery manifest
-- **PWA Manifest** (`/manifest.json`) for app-like installability
-- **OpenSearch** (`/opensearch.xml`) for browser search integration
-- **Optimized Images** with Next.js Image component and lazy loading
-
-### **🔒 Security & Performance**
-
-- **Strict-Transport-Security (HSTS)** with 2-year max-age and preload
-- **Permissions-Policy** restricting camera, microphone, and geolocation
-- **X-Frame-Options**, **X-Content-Type-Options**, **Referrer-Policy** headers
-- **DNS prefetch** for third-party domains (fonts, badge images)
-- **Lazy loading** with `loading="lazy"` and `decoding="async"` on below-fold images
-- **Long-lived cache headers** (1 year, immutable) on static assets
-- **Gzip compression** enabled
-- **Powered-by header** removed
-
----
-
-## **📂 Project Structure**
+## Project structure
 
 ```plaintext
-├── README.md
-├── docs/
-│   └── screenshots/                # Images used in this README
-├── jsconfig.json
-├── next.config.js
-├── package.json
-├── vercel.json
+├── docs/screenshots/         # Images used in this README
 ├── public/
-│   ├── .well-known/
-│   │   └── ai-plugin.json
-│   ├── background.jpg
-│   ├── figma/                      # Illustrations and doodle background
-│   ├── humans.txt
-│   ├── icon.svg
-│   ├── llms.txt
-│   ├── llms.json
-│   ├── manifest.json
-│   ├── openapi.yaml
-│   ├── opensearch.xml
-│   └── shahir.jpeg
-└── src/
-    ├── app/
-    │   ├── layout.jsx              # Root layout with SEO metadata & JSON-LD
-    │   ├── page.jsx                # Home page
-    │   ├── not-found.jsx           # 404 page
-    │   ├── robots.js               # Dynamic robots.txt
-    │   ├── sitemap.js              # Dynamic sitemap.xml
-    │   ├── opengraph-image.jsx     # Dynamic OG image (edge runtime)
-    │   ├── twitter-image.jsx       # Dynamic Twitter image (edge runtime)
-    │   ├── about/
-    │   │   └── page.jsx
-    │   ├── contact/
-    │   │   └── page.jsx
-    │   └── projects/
-    │       └── page.jsx
-    ├── assets/                     # Images and static assets
-    ├── components/
-    │   ├── About.jsx
-    │   ├── AboutArt.jsx
-    │   ├── ContactArt.jsx
-    │   ├── ContactMe.jsx
-    │   ├── ErrorPage.jsx
-    │   ├── Footer.jsx
-    │   ├── GitHubStats.jsx
-    │   ├── HomePage.jsx
-    │   ├── Navbar.jsx
-    │   ├── Projects.jsx
-    │   ├── Resume.jsx
-    │   ├── ScrollCue.jsx
-    │   ├── SocialIcons.jsx
-    │   └── TableOfContents.jsx
-    └── css/
-        ├── normalize.css
-        └── style.css
+│   ├── .well-known/          # AI plugin manifest
+│   ├── figma/                # Illustrations and the doodle background
+│   ├── llms.txt, llms.json   # Profile for AI assistants
+│   └── manifest.json, opensearch.xml, openapi.yaml, humans.txt
+├── src/
+│   ├── app/
+│   │   ├── layout.jsx        # Site-wide metadata and JSON-LD
+│   │   ├── page.jsx          # Home
+│   │   ├── about/            # About page and its metadata
+│   │   ├── projects/         # Projects page and its metadata
+│   │   ├── contact/          # Contact page and its metadata
+│   │   ├── not-found.jsx     # 404
+│   │   ├── robots.js, sitemap.js
+│   │   └── opengraph-image.jsx, twitter-image.jsx
+│   ├── assets/               # Logos and project images
+│   ├── components/           # Page sections, artwork, navbar, footer
+│   └── css/                  # Global styles
+├── next.config.js            # Headers and redirects
+└── vercel.json               # Domain redirect, headers, and caching
 ```
 
----
+## Running it locally
 
-## **🚀 Get Started**
+You'll need Node.js 18.18 or newer.
 
-Here's how you can run the website locally:
+```bash
+git clone https://github.com/Shahir-47/shahirahmed.com.git
+cd shahirahmed.com
+npm install
+npm run dev
+```
 
-1. **Clone the Repository**
+Then open [http://localhost:3000](http://localhost:3000).
 
-   ```bash
-   git clone https://github.com/Shahir-47/shahirahmed.com.git
-   cd shahirahmed.com
-   ```
+To test a production build, run `npm run build` followed by `npm run start`.
 
-2. **Install Dependencies**
+## Configuration
 
-   ```bash
-   npm install
-   ```
+The contact form uses EmailJS. To receive messages in your own inbox, replace `SERVICE_ID`, `TEMPLATE_ID`, and `PUBLIC_KEY` at the top of `src/components/ContactMe.jsx` with the values from your EmailJS account.
 
-3. **Run the Development Server**
+To verify the site in Google Search Console, set the `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` environment variable to your verification code.
 
-   ```bash
-   npm run dev
-   ```
+## Deployment
 
-4. **Build for Production**
+The site is hosted on Vercel, which builds and deploys every push to `main`. To host your own copy, import the repository into Vercel. It detects Next.js on its own, so no extra build settings are needed.
 
-   ```bash
-   npm run build
-   ```
+## Feedback
 
-5. **Start Production Server**
+If you find a bug, a typo, or something that looks off on your device, please [open an issue](https://github.com/Shahir-47/shahirahmed.com/issues). I'd appreciate it.
 
-   ```bash
-   npm run start
-   ```
+## License
 
-Now you're all set! 🎉
+This project is released under the MIT License. If you use it as a starting point for your own site, please swap in your own content and give credit.
 
----
+## Contact
 
-## **🌐 Deployment**
-
-This project is deployed on **Vercel** with automatic deployments on push to `main`.
-
-### Deploy Your Own
-
-1. Fork this repository
-2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-3. Click "Add New Project" and import your forked repo
-4. Vercel will auto-detect Next.js settings
-5. Click "Deploy"
-
-### Environment Variables (Optional)
-
-If you want to use the contact form, add these to Vercel:
-
-- `NEXT_PUBLIC_EMAILJS_SERVICE_ID`
-- `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID`
-- `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY`
-
-For Google Search Console verification:
-
-- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
-
----
-
-## **🤝 Contributing**
-
-Suggestions or contributions are always welcome! Here's how you can contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b your-feature-branch
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m "Your message"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin your-feature-branch
-   ```
-5. Open a pull request. 🚀
-
----
-
-## **📬 Get in Touch**
-
-Feel free to reach out through:
-
-- **[Contact Page](https://shahirahmed.com/contact)**: Use the built-in form to send me a message.
-- **[LinkedIn](https://www.linkedin.com/in/shahir47/)**: Let's connect!
-- **[GitHub](https://github.com/Shahir-47)**: Check out my work.
-
----
-
-## **📜 License**
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use and adapt it for your own purposes. Just give credit where it's due!
-
----
-
-Thank you for checking out my portfolio! 🎉
+- Website: [shahirahmed.com/contact](https://www.shahirahmed.com/contact)
+- LinkedIn: [linkedin.com/in/shahir47](https://www.linkedin.com/in/shahir47/)
+- GitHub: [@Shahir-47](https://github.com/Shahir-47)
+- Email: [shahir.a@nyu.edu](mailto:shahir.a@nyu.edu)
