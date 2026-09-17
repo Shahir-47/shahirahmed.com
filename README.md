@@ -6,6 +6,26 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 
 <br />
 
+## Contents
+
+- [What's on the site](#whats-on-the-site)
+- [Screenshots](#screenshots)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile)
+- [Built with](#built-with)
+- [Under the hood](#under-the-hood)
+  - [Search engines and AI assistants](#search-engines-and-ai-assistants)
+  - [Security and performance](#security-and-performance)
+- [Project structure](#project-structure)
+- [Running it locally](#running-it-locally)
+- [Configuration](#configuration)
+- [Deployment](#deployment)
+- [Feedback](#feedback)
+- [License](#license)
+- [Contact](#contact)
+
+<br />
+
 ## What's on the site
 
 - **Home:** a short introduction, a preview of my background, and three featured projects.
