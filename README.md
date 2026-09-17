@@ -4,6 +4,8 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 
 ![Home page of shahirahmed.com](docs/screenshots/home.webp)
 
+<br />
+
 ## What's on the site
 
 - **Home:** a short introduction, a preview of my background, and three featured projects.
@@ -12,27 +14,37 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 - **Contact:** a message form that sends straight to my inbox through EmailJS.
 - **404:** a page not found screen with buttons back to the main pages.
 
+<br />
+
 ## Screenshots
 
 ### Desktop
 
 <table>
-  <tr>
-    <th width="50%" align="center">About</th>
-    <th width="50%" align="center">Projects</th>
-  </tr>
-  <tr>
-    <td align="center"><br /><img src="docs/screenshots/about.webp" alt="About page" width="350" hspace="14" /><br /><br /></td>
-    <td align="center"><br /><img src="docs/screenshots/projects.webp" alt="Projects page" width="350" hspace="14" /><br /><br /></td>
-  </tr>
-  <tr>
-    <th width="50%" align="center">Featured projects</th>
-    <th width="50%" align="center">Contact</th>
-  </tr>
-  <tr>
-    <td align="center"><br /><img src="docs/screenshots/home-projects.webp" alt="Featured projects on the home page" width="350" hspace="14" /><br /><br /></td>
-    <td align="center"><br /><img src="docs/screenshots/contact.webp" alt="Contact page" width="350" hspace="14" /><br /><br /></td>
-  </tr>
+  <tbody>
+    <tr>
+      <th width="50%" align="center"><br />About<br /><br /></th>
+      <th width="50%" align="center"><br />Projects<br /><br /></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center"><br /><img src="docs/screenshots/about.webp" alt="About page" width="350" hspace="14" /><br /><br /></td>
+      <td align="center"><br /><img src="docs/screenshots/projects.webp" alt="Projects page" width="350" hspace="14" /><br /><br /></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th width="50%" align="center"><br />Featured projects<br /><br /></th>
+      <th width="50%" align="center"><br />Contact<br /><br /></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center"><br /><img src="docs/screenshots/home-projects.webp" alt="Featured projects on the home page" width="350" hspace="14" /><br /><br /></td>
+      <td align="center"><br /><img src="docs/screenshots/contact.webp" alt="Contact page" width="350" hspace="14" /><br /><br /></td>
+    </tr>
+  </tbody>
 </table>
 
 <br />
@@ -40,33 +52,90 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 ### Mobile
 
 <table>
-  <tr>
-    <th width="33%" align="center">Home</th>
-    <th width="33%" align="center">About</th>
-    <th width="33%" align="center">Projects</th>
-  </tr>
-  <tr>
-    <td align="center"><br /><img src="docs/screenshots/mobile-home.webp" alt="Home page on mobile" width="210" hspace="15" /><br /><br /></td>
-    <td align="center"><br /><img src="docs/screenshots/mobile-about.webp" alt="About page on mobile" width="210" hspace="15" /><br /><br /></td>
-    <td align="center"><br /><img src="docs/screenshots/mobile-projects.webp" alt="Projects page on mobile" width="210" hspace="15" /><br /><br /></td>
-  </tr>
+  <tbody>
+    <tr>
+      <th width="33%" align="center"><br />Home<br /><br /></th>
+      <th width="33%" align="center"><br />About<br /><br /></th>
+      <th width="33%" align="center"><br />Projects<br /><br /></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td align="center"><br /><img src="docs/screenshots/mobile-home.webp" alt="Home page on mobile" width="210" hspace="15" /><br /><br /></td>
+      <td align="center"><br /><img src="docs/screenshots/mobile-about.webp" alt="About page on mobile" width="210" hspace="15" /><br /><br /></td>
+      <td align="center"><br /><img src="docs/screenshots/mobile-projects.webp" alt="Projects page on mobile" width="210" hspace="15" /><br /><br /></td>
+    </tr>
+  </tbody>
 </table>
 
 <br />
 
 ## Built with
 
-| Area | Tools |
-| :--- | :---- |
-| Framework | Next.js 15 (App Router), React 18 |
-| UI | Material UI 6, custom CSS, React Icons |
-| Fonts | Poppins and Oswald through `next/font` |
-| Illustrations | SVG artwork exported from Figma |
-| Animation | Typed.js, React Vertical Timeline |
-| GitHub activity | React GitHub Calendar |
-| Contact form | EmailJS |
-| Analytics | Vercel Analytics and Speed Insights |
-| Hosting | Vercel |
+<table>
+  <tbody>
+    <tr>
+      <th align="left">Area</th>
+      <th align="left">Tools</th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Framework</td>
+      <td>Next.js 15 (App Router), React 18</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>UI</td>
+      <td>Material UI 6, custom CSS, React Icons</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Fonts</td>
+      <td>Poppins and Oswald through <code>next/font</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Illustrations</td>
+      <td>SVG artwork exported from Figma</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Animation</td>
+      <td>Typed.js, React Vertical Timeline</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>GitHub activity</td>
+      <td>React GitHub Calendar</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Contact form</td>
+      <td>EmailJS</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Analytics</td>
+      <td>Vercel Analytics and Speed Insights</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Hosting</td>
+      <td>Vercel</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
 
 ## Under the hood
 
@@ -85,6 +154,8 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 - Static assets are cached for a year, responses are compressed, and the `X-Powered-By` header is turned off.
 - Images below the fold load lazily. The home page animations are skipped for visitors who have reduced motion turned on.
 - The bare domain redirects to `www`, and `/resume` redirects to my latest resume.
+
+<br />
 
 ## Project structure
 
@@ -112,6 +183,8 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 └── vercel.json               # Domain redirect, headers, and caching
 ```
 
+<br />
+
 ## Running it locally
 
 You'll need Node.js 18.18 or newer.
@@ -127,23 +200,33 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 To test a production build, run `npm run build` followed by `npm run start`.
 
+<br />
+
 ## Configuration
 
 The contact form uses EmailJS. To receive messages in your own inbox, replace `SERVICE_ID`, `TEMPLATE_ID`, and `PUBLIC_KEY` at the top of `src/components/ContactMe.jsx` with the values from your EmailJS account.
 
 To verify the site in Google Search Console, set the `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` environment variable to your verification code.
 
+<br />
+
 ## Deployment
 
 The site is hosted on Vercel, which builds and deploys every push to `main`. To host your own copy, import the repository into Vercel. It detects Next.js on its own, so no extra build settings are needed.
+
+<br />
 
 ## Feedback
 
 If you find a bug, a typo, or something that looks off on your device, please [open an issue](https://github.com/Shahir-47/shahirahmed.com/issues). I'd appreciate it.
 
+<br />
+
 ## License
 
 This project is released under the MIT License. If you use it as a starting point for your own site, please swap in your own content and give credit.
+
+<br />
 
 ## Contact
 
