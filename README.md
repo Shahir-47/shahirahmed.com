@@ -1,6 +1,6 @@
 # **🌐 shahirahmed.com**
 
-![image](https://github.com/user-attachments/assets/49e456e2-cbed-4db5-97f4-8cb5561c389a)
+![Home page of shahirahmed.com](docs/screenshots/home.webp)
 
 Welcome to **shahirahmed.com**, my personal portfolio website! This is where I showcase my skills, projects, and professional journey as a Software Engineer. Whether you're here to explore my work, learn more about me, or get in touch, this is the place to do it. 🌟
 
@@ -16,18 +16,36 @@ Visit the live site: [shahirahmed.com](https://shahirahmed.com)
 
 This portfolio is designed to provide visitors with an intuitive and engaging experience while exploring who I am and what I do. It includes:
 
-- **Home Page**: A friendly introduction with a typing animation showcasing my roles and quick navigation to all sections.
-- **About Page**: My background, work experience (Sarva, FarmData2, Mermaid.js, 84 Lumber), open source contributions, hackathon projects, education, certifications, and GitHub stats, with a sticky table of contents.
-- **Projects Page**: A filterable and searchable gallery of 16 projects across professional, open source, hackathon, and personal categories with live demos and source code links.
-- **Contact Page**: A fully functional contact form powered by EmailJS, plus links to all my socials.
+- **Home Page**: A short introduction with a typing animation, a preview of my background, my three featured projects, and a way to get in touch.
+- **About Page**: My background, the tools I've worked with, work experience (Sarva, Mermaid.js, FarmData2, teaching, 84 Lumber), open source contributions, hackathons, education, certifications, and GitHub stats, with a sticky table of contents.
+- **Projects Page**: All 16 of my personal and hackathon projects, with filters, search, live demos, and source code links.
+- **Contact Page**: A contact form powered by EmailJS, plus links to all my socials.
 - **404 Page**: A helpful (and fun) guide for lost visitors.
+
+---
+
+## **📸 Screenshots**
+
+| About | Projects |
+| ----- | -------- |
+| ![About page](docs/screenshots/about.webp) | ![Projects page](docs/screenshots/projects.webp) |
+| **Featured projects on the home page** | **Contact** |
+| ![Featured projects on the home page](docs/screenshots/home-projects.webp) | ![Contact page](docs/screenshots/contact.webp) |
+
+### On mobile
+
+<p align="center">
+  <img src="docs/screenshots/mobile-home.webp" alt="Home page on mobile" width="250" />
+  <img src="docs/screenshots/mobile-about.webp" alt="About page on mobile" width="250" />
+  <img src="docs/screenshots/mobile-projects.webp" alt="Projects page on mobile" width="250" />
+</p>
 
 ---
 
 ## **🎨 Features**
 
 - **Responsive Design**: Looks great on any device, from widescreens to smartphones.
-- **Smooth Page Transitions**: Seamless animations enhance the browsing experience.
+- **Scroll Animations**: Home page sections fade in as you scroll, and the animation is skipped for visitors who prefer reduced motion.
 - **Custom Domain**: Hosted at [shahirahmed.com](https://shahirahmed.com).
 - **404 Error Page**: User-friendly error handling with quick navigation options.
 - **SEO Optimized**: Server-side rendering, structured data (Person, WebSite, Occupation, Credential schemas), Open Graph, Twitter Cards, and comprehensive meta tags for maximum discoverability.
@@ -89,6 +107,8 @@ This project is built using modern web development tools:
 
 ```plaintext
 ├── README.md
+├── docs/
+│   └── screenshots/                # Images used in this README
 ├── jsconfig.json
 ├── next.config.js
 ├── package.json
@@ -97,6 +117,7 @@ This project is built using modern web development tools:
 │   ├── .well-known/
 │   │   └── ai-plugin.json
 │   ├── background.jpg
+│   ├── figma/                      # Illustrations and doodle background
 │   ├── humans.txt
 │   ├── icon.svg
 │   ├── llms.txt
@@ -123,6 +144,8 @@ This project is built using modern web development tools:
     ├── assets/                     # Images and static assets
     ├── components/
     │   ├── About.jsx
+    │   ├── AboutArt.jsx
+    │   ├── ContactArt.jsx
     │   ├── ContactMe.jsx
     │   ├── ErrorPage.jsx
     │   ├── Footer.jsx
@@ -131,6 +154,7 @@ This project is built using modern web development tools:
     │   ├── Navbar.jsx
     │   ├── Projects.jsx
     │   ├── Resume.jsx
+    │   ├── ScrollCue.jsx
     │   ├── SocialIcons.jsx
     │   └── TableOfContents.jsx
     └── css/
@@ -243,4 +267,3 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 ---
 
 Thank you for checking out my portfolio! 🎉
-Let me know if you need anything else! 😊
