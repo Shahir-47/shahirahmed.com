@@ -1,6 +1,6 @@
 {
 	"schema_version": "1.2",
-	"last_updated": "2026-09-14",
+	"last_updated": "2026-09-17",
 	"canonical_url": "https://www.shahirahmed.com",
 	"profile": {
 		"name": "Shahir Ahmed",
@@ -25,18 +25,21 @@
 			"period": "2025-05 to 2026-09",
 			"website": "https://www.sarvabazaar.com/",
 			"highlights": [
-				"Replaced pen and paper inventory at independent grocery stores with a voice assistant that updates stock in 90+ languages",
-				"Integrated Stripe so every payment splits between the store and the driver, and no card is charged until pickup",
-				"Improved product and inventory search by 7% by adding semantic search with OpenAI embeddings alongside keyword matching",
-				"Built 3 CI/CD pipelines in GitHub Actions running 2,604 unit tests across 173 REST API endpoints",
-				"Sarva was chosen for the gener8tor and Meta gBETA accelerator and named a finalist at the Ship Tank and launchU pitch competitions"
+				"Cut inventory time by 60% by building a voice assistant that lets store owners manage inventory in their own languages",
+				"Created 3 GitHub Actions CI/CD pipelines that run 2,604 Vitest tests on 173 TypeScript APIs to catch bugs before production",
+				"Deployed 12 serverless Firebase Cloud Functions on Google Cloud Platform that retry failed payouts and restock abandoned carts",
+				"Lowered zero-result searches 7% by adding semantic search with OpenAI embeddings to keyword search for natural language queries",
+				"Reduced AI costs by adding Redis rate limiting and a token allowance per user to the Next.js API routes that call OpenAI",
+				"Built the product that put Sarva in the gener8tor and Meta gBETA accelerator and the Ship Tank and launchU finals"
 			],
 			"skills": [
 				"Next.js",
 				"TypeScript",
 				"Firebase",
-				"Stripe",
+				"Google Cloud Platform",
+				"Redis",
 				"OpenAI API",
+				"Vitest",
 				"GitHub Actions"
 			],
 			"summary": "Startup that helps neighborhood grocery shops manage inventory by voice, with online ordering, pickup, and delivery."
@@ -48,14 +51,15 @@
 			"period": "2025-01 to 2026-04",
 			"website": "https://github.com/mermaid-js/mermaid",
 			"highlights": [
-				"Ranked 25th of 600+ contributors by merging 3 pull requests into a diagramming library with 10M+ weekly downloads",
-				"Added data labels to bar charts, Knuth-Plass word wrapping for journey diagram legends, and journey diagram title styling in a 100,000 line TypeScript codebase used by GitHub and Microsoft",
-				"Wrote Cypress end-to-end tests for each feature"
+				"Added 3 D3.js features with Cypress tests to a TypeScript library with 12M+ weekly downloads used by GitHub and Microsoft: data labels inside bar charts, Knuth-Plass word wrapping for journey diagram legends, and journey diagram title styling",
+				"Passed CI/CD checks and maintainer review on all 3 pull requests in the 200,000 line codebase to rank 25th of 600+ contributors"
 			],
 			"skills": [
 				"TypeScript",
+				"D3.js",
 				"Cypress"
-			]
+			],
+			"summary": "Open source tool that turns text into flowcharts and diagrams, used by GitHub and Microsoft."
 		},
 		{
 			"role": "Software Engineer Intern",
@@ -64,8 +68,9 @@
 			"period": "2024-05 to 2025-05",
 			"website": "https://github.com/FarmData2/FarmData2",
 			"highlights": [
+				"Saved farmers 12+ hours a week by automating crop logging with 18+ transactional Node.js REST APIs on PostgreSQL",
 				"Cut page load time by 60% on a National Science Foundation funded farm platform by moving 22+ Vue.js components to Vuex",
-				"Automated crop logging with 18+ Node.js REST APIs and 30+ Cypress tests, saving farmers 12+ hours a week"
+				"Authored 25 merged pull requests with 30+ Cypress integration tests in Agile sprints to become the project's 2nd top contributor"
 			],
 			"skills": [
 				"Vue.js",
@@ -81,7 +86,7 @@
 			"location": "Carlisle, PA",
 			"period": "2022-09 to 2025-05",
 			"highlights": [
-				"Raised average assignment scores by 15% for 25+ students across 6 semesters through weekly Python and Java code reviews"
+				"Raised assignment scores 15% for 25+ students over 6 semesters of weekly Python and Java code reviews and office hours"
 			],
 			"skills": [
 				"Python",
@@ -90,15 +95,16 @@
 			]
 		},
 		{
-			"role": "Software Developer (Volunteer)",
+			"role": "Software Engineer (Volunteer)",
 			"organization": "84 Lumber",
 			"location": "Remote",
 			"period": "2023-09 to 2024-01",
 			"highlights": [
-				"Converted 10,000+ lines of legacy CBASIC into Python and Java for a $9B retailer by building a translator with ANTLR"
+				"Converted legacy CBASIC to Python and Java with an ANTLR4 translator that walks abstract syntax trees",
+				"Co-designed a plan with 11 teammates to modernize 50,000+ lines of CBASIC that shaped the $9B retailer's roadmap"
 			],
 			"skills": [
-				"ANTLR",
+				"ANTLR4",
 				"Python",
 				"Java"
 			]
@@ -110,21 +116,28 @@
 			"category": "Personal",
 			"url": "https://grab-pic.vercel.app",
 			"github": "https://github.com/Shahir-47/Grab-Pic",
-			"description": "Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Three services (Next.js, Spring Boot, Python DeepFace/TensorFlow worker) connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, Redis rate limiting, and Cloudflare Turnstile."
+			"description": "Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Three services (Next.js, Spring Boot, Python DeepFace/TensorFlow worker) connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, Redis rate limiting, and Cloudflare Turnstile. The backend is self-hosted on Shahir's home server, cutting hosting from about $85 to about $1 a month."
 		},
 		{
 			"name": "PaperPulse",
 			"category": "Personal",
 			"url": "https://paper-pulse-nu.vercel.app",
 			"github": "https://github.com/Shahir-47/Paper-Pulse",
-			"description": "Research assistant that answers questions from the full text of 100+ papers. Ranks papers from arXiv, PubMed, Semantic Scholar, and OpenAlex nightly and delivers the 25 most relevant to each user's feed. FastAPI, Next.js, Neo4j, pgvector, AWS App Runner."
+			"description": "Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph. FastAPI and Next.js, with the backend self-hosted in Docker."
+		},
+		{
+			"name": "Home Server",
+			"category": "Personal",
+			"url": "https://lab.shahirahmed.com",
+			"github": "https://github.com/Shahir-47/nitro-lab",
+			"description": "Self-hosted cloud on an Acer Nitro 5 laptop running Ubuntu Server. Runs the GrabPic, PaperPulse, and Queue Up backends in Docker behind Cloudflare Tunnel for about $1 a month instead of about $100 on AWS, with no inbound ports open. Coolify deploys from GitHub and configures Traefik routes, private apps are reachable only over Tailscale, Uptime Kuma monitors every app, and a live Next.js page streams host and container status with Server-Sent Events."
 		},
 		{
 			"name": "Queue Up",
 			"category": "Personal",
-			"url": "https://queue-up.onrender.com",
+			"url": "https://queue-up.shahirahmed.com",
 			"github": "https://github.com/Shahir-47/Queue-Up",
-			"description": "Social app that matches people by Spotify listening history, with real-time WebSocket chat. Spring Boot, React, PostgreSQL, Docker."
+			"description": "Social app that matches people by Spotify listening history, with real-time WebSocket chat. Spring Boot, React, PostgreSQL, Docker, self-hosted on Shahir's home server."
 		},
 		{
 			"name": "CoSign",
@@ -134,16 +147,16 @@
 			"description": "Task accountability app where users can't complete their own tasks. A verifier approves submitted proof through a task state machine, and missed deadlines automatically email the AES-encrypted hidden penalty to the verifier. Spring Boot, React, TypeScript, WebSockets, Docker."
 		},
 		{
+			"name": "PandOS",
+			"category": "Personal",
+			"github": "https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
+			"description": "Operating system kernel in C for the uMPS3 emulator that runs up to 20 processes on 5 ms round-robin time slices, with semaphores, TLB-based virtual memory, system calls, and interrupt handling."
+		},
+		{
 			"name": "BitTorrent Client JS",
 			"category": "Personal",
 			"github": "https://github.com/Shahir-47/bittorrent-client-js",
 			"description": "BitTorrent client in Node.js for .torrent files and magnet links, with TCP peer connections, SHA-1 piece verification, and extension protocol metadata exchange."
-		},
-		{
-			"name": "PandOS",
-			"category": "Personal",
-			"github": "https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
-			"description": "Operating system kernel in C for the uMPS3 emulator with time sharing, TLB-based virtual memory, system calls, and interrupt handling."
 		},
 		{
 			"name": "Albatross",
@@ -193,12 +206,14 @@
 			"gpa": "3.52/4.00",
 			"coursework": [
 				"Data Structures",
-				"Analysis of Algorithms",
+				"Algorithms",
 				"Operating Systems",
+				"Computer Networks",
 				"Object-Oriented Programming",
-				"Database Systems"
+				"Databases"
 			],
 			"honors": [
+				"Cum Laude",
 				"Dean's List",
 				"Pi Mu Epsilon (National Mathematics Honor Society)",
 				"The 1783 Scholarship"
@@ -221,10 +236,10 @@
 		"languages": [
 			"TypeScript",
 			"JavaScript",
-			"Java",
 			"Python",
-			"SQL",
+			"Java",
 			"C",
+			"SQL",
 			"HTML/CSS"
 		],
 		"frameworks": [
@@ -233,24 +248,33 @@
 			"Node.js",
 			"Express",
 			"Spring Boot",
-			"Vue.js",
 			"FastAPI",
-			"Tailwind CSS"
+			"Vue.js",
+			"TailwindCSS",
+			"TensorFlow",
+			"D3.js"
 		],
-		"tools": [
-			"AWS",
+		"cloud_and_devops": [
+			"AWS (S3, SQS, EC2, ECR, App Runner)",
+			"Google Cloud Platform",
+			"Vercel",
 			"Docker",
+			"GitHub Actions",
+			"Linux"
+		],
+		"databases_and_tools": [
 			"PostgreSQL",
+			"pgvector",
+			"Supabase",
 			"Redis",
 			"Firebase",
+			"Neo4j",
 			"Stripe",
 			"Algolia",
 			"OpenAI API",
 			"Git",
-			"GitHub Actions",
 			"Vitest",
-			"Cypress",
-			"Linux"
+			"Cypress"
 		]
 	}
 }

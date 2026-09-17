@@ -9,6 +9,7 @@ import CoSignImg from "@/assets/CoSignImg.png";
 import SocialIcons from "./SocialIcons";
 import GrabPicImg from "@/assets/grabpic.png";
 import PaperPulseImg from "@/assets/paperpulse.png";
+import HomeServerImg from "@/assets/homeserver.png";
 import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import { Box, Typography, Button, TextField, Chip } from "@mui/material";
 import { useState } from "react";
@@ -39,13 +40,13 @@ const categoryTint = (category, alpha) => {
 	return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
+// Ordered best to worst. The projects page shows the first 7 before "Show more".
 export const projectsData = [
-	// === PERSONAL (ordered by technical complexity) ===
 	{
 		image: GrabPicImg,
 		title: "GrabPic",
 		description:
-			"After weddings and events, I kept doing the same thing: searching the album for one person's face, sending them their photos, and then starting over for the next person. GrabPic replaces that with a single link. The host uploads everything to one album, and each guest takes a selfie to get only the photos they appear in.<p style=\"margin: 0.9em 0 0;\">Here's how it works behind that link:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It runs as three services that deploy on their own: a Next.js frontend, a Spring Boot API, and a Python worker that uses DeepFace to turn every face into an embedding. New photos reach the worker through an Amazon SQS queue, so uploads never wait on face processing.</li><li style=\"margin-top: 0.35em;\">A selfie search is a nearest-neighbor lookup in pgvector over an HNSW index, which brings back matches from albums of 500+ photos in under 200 milliseconds.</li><li style=\"margin-top: 0.35em;\">Photos upload straight from the browser to S3 through presigned URLs. Redis rate limiting and Cloudflare Turnstile keep bots out, and protected photos only show up for people whose face is in them.</li><li style=\"margin-top: 0.35em;\">I later moved the servers off AWS App Runner and EC2 onto self-hosted containers behind a Cloudflare Tunnel, which cut hosting from about $85 a month to about $1.</li></ul>",
+			"After weddings and events, I kept doing the same thing: searching the album for one person's face, sending them their photos, and then starting over for the next person. GrabPic replaces that with a single link. The host uploads everything to one album, and each guest takes a selfie to get only the photos they appear in.<p style=\"margin: 0.9em 0 0;\">Here's how it works behind that link:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It runs as three services that deploy on their own: a Next.js frontend, a Spring Boot API, and a Python worker that uses DeepFace to turn every face into an embedding. New photos reach the worker through an Amazon SQS queue, so uploads never wait on face processing.</li><li style=\"margin-top: 0.35em;\">A selfie search is a nearest-neighbor lookup in pgvector over an HNSW index, which brings back matches from albums of 500+ photos in under 200 milliseconds.</li><li style=\"margin-top: 0.35em;\">Photos upload straight from the browser to S3 through presigned URLs. Redis rate limiting and Cloudflare Turnstile keep bots out, and protected photos only show up for people whose face is in them.</li></ul>",
 		summary: "After a wedding or conference, share one link and every guest takes a selfie to see only the photos they're in.",
 		liveDemo: "https://grab-pic.vercel.app",
 		sourceCode: "https://github.com/Shahir-47/Grab-Pic",
@@ -57,7 +58,7 @@ export const projectsData = [
 		image: PaperPulseImg,
 		title: "PaperPulse",
 		description:
-			"Keeping up with research means checking arXiv, PubMed, and a few other databases every day and sorting through a lot of papers that don't matter to you. PaperPulse does that search overnight, ranks everything against your interests, and has the 25 most relevant papers waiting in your feed the next morning. You can also ask it questions and get answers pulled from the papers themselves, with citations.<p style=\"margin: 0.9em 0 0;\">Here's what happens each night and when you ask a question:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">The nightly pipeline pulls from arXiv, Semantic Scholar, PubMed, and OpenAlex, extracts the text from each PDF, and embeds it for search, then Cohere reranks the results for each user.</li><li style=\"margin-top: 0.35em;\">Answers come from a three-stage hybrid retrieval pipeline over pgvector, plus context from a Neo4j knowledge graph that links papers to their authors, concepts, and citations.</li><li style=\"margin-top: 0.35em;\">For literature reviews, an AI agent explores that graph on its own, following citations and shared concepts to find themes and gaps before it writes the review.</li><li style=\"margin-top: 0.35em;\">Built with FastAPI and Next.js, with the backend deployed as a Docker image on AWS App Runner.</li></ul>",
+			"Keeping up with research means checking arXiv, PubMed, and a few other databases every day and sorting through a lot of papers that don't matter to you. PaperPulse does that search overnight, ranks everything against your interests, and has the 25 most relevant papers waiting in your feed the next morning. You can also ask it questions and get answers pulled from the papers themselves, with citations.<p style=\"margin: 0.9em 0 0;\">Here's what happens each night and when you ask a question:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">The nightly pipeline pulls from arXiv, Semantic Scholar, PubMed, and OpenAlex, extracts the text from each PDF, and embeds it for search, then Cohere reranks the results for each user.</li><li style=\"margin-top: 0.35em;\">Answers come from a three-stage hybrid retrieval pipeline over pgvector, plus context from a Neo4j knowledge graph that links papers to their authors, concepts, and citations.</li><li style=\"margin-top: 0.35em;\">For literature reviews, an AI agent explores that graph on its own, following citations and shared concepts to find themes and gaps before it writes the review.</li><li style=\"margin-top: 0.35em;\">Built with FastAPI and Next.js. The backend and its Neo4j graph run as Docker containers on my home server.</li></ul>",
 		summary: "Start each morning with the new research papers that matter to your work, and ask questions about any of them.",
 		liveDemo: "https://paper-pulse-nu.vercel.app",
 		sourceCode: "https://github.com/Shahir-47/Paper-Pulse",
@@ -66,12 +67,24 @@ export const projectsData = [
 		category: CATEGORIES.PERSONAL,
 	},
 	{
+		image: HomeServerImg,
+		title: "Home Server",
+		description:
+			"Two of my personal projects, GrabPic and PaperPulse, used to run on AWS for about $100 a month. I moved them onto an Acer Nitro 5 gaming laptop at home, along with Queue Up and a few apps I use myself. Now everything runs for about $1 a month. The live page shows every container on the server and the laptop's CPU, memory, and GPU readings as they change.<p style=\"margin: 0.9em 0 0;\">Here's what runs on it and how traffic gets in:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Visitors never connect to my home network directly. A cloudflared container keeps an outbound tunnel open to Cloudflare, which handles DNS and HTTPS, so my router has no open ports and my home IP address stays hidden.</li><li style=\"margin-top: 0.35em;\">When I push to GitHub, Coolify builds the app into a container and sets up its route in Traefik, which passes each request to the right app. None of the databases publish a port, so only containers on the same Docker network can reach them.</li><li style=\"margin-top: 0.35em;\">Apps for my own use, like Immich for photo backup and Paperless-ngx for scanned documents, are reachable only from my phone and laptop over Tailscale. Uptime Kuma checks every app and alerts me when one goes down.</li><li style=\"margin-top: 0.35em;\">The live page is a small Next.js app that reads the host, Docker, and Uptime Kuma only while someone has it open, and streams the readings to the browser with Server-Sent Events.</li></ul>",
+		summary: "A gaming laptop at home that hosts my apps for about $1 a month instead of $100 on AWS, with a live page showing what's running on it.",
+		liveDemo: "https://lab.shahirahmed.com",
+		sourceCode: "https://github.com/Shahir-47/nitro-lab",
+		devpost: null,
+		repo: "nitro-lab",
+		category: CATEGORIES.PERSONAL,
+	},
+	{
 		image: QueueUp,
 		title: "Queue Up",
 		description:
-			"Queue Up is for meeting people through music. It reads your Spotify history, from top artists to saved songs, shows you the people whose taste overlaps with yours the most, and lets you start chatting once you both swipe right.<p style=\"margin: 0.9em 0 0;\">The matching and chat are built like this:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Matches are ranked with a weighted score, where a shared favorite artist counts for more than a shared saved song, and each profile shows exactly what you have in common.</li><li style=\"margin-top: 0.35em;\">Chat runs over WebSockets with typing indicators, online status, and live match notifications, and file attachments go straight to S3 through presigned URLs.</li><li style=\"margin-top: 0.35em;\">The React frontend is compiled into the Spring Boot app, so everything ships as a single Docker image backed by PostgreSQL, with JWT auth in HTTP-only cookies.</li></ul>",
+			"Queue Up is for meeting people through music. It reads your Spotify history, from top artists to saved songs, shows you the people whose taste overlaps with yours the most, and lets you start chatting once you both swipe right.<p style=\"margin: 0.9em 0 0;\">The matching and chat are built like this:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Matches are ranked with a weighted score, where a shared favorite artist counts for more than a shared saved song, and each profile shows exactly what you have in common.</li><li style=\"margin-top: 0.35em;\">Chat runs over WebSockets with typing indicators, online status, and live match notifications, and file attachments go straight to S3 through presigned URLs.</li><li style=\"margin-top: 0.35em;\">The React frontend is compiled into the Spring Boot app, so the whole thing ships as one Docker image. It runs on my home server alongside its PostgreSQL database, and logins use JWTs stored in HTTP-only cookies.</li></ul>",
 		summary: "Meet people who listen to the same music you do, matched from your Spotify history, and start chatting right away.",
-		liveDemo: "https://queue-up.onrender.com",
+		liveDemo: "https://queue-up.shahirahmed.com",
 		sourceCode: "https://github.com/Shahir-47/Queue-Up",
 		devpost: null,
 		repo: "Queue-Up",
@@ -91,6 +104,18 @@ export const projectsData = [
 	},
 	{
 		image: "",
+		title: "PandOS",
+		description:
+			"An operating system kernel I wrote in C for uMPS3, an emulator of a MIPS computer. It runs up to 20 processes at once and switches between them every 5 milliseconds, so each one gets a fair turn on the CPU.<p style=\"margin: 0.9em 0 0;\">The kernel handles the rest of the low-level work too:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Processes wait on semaphores for devices and for each other, and the kernel handles their system calls and device interrupts.</li><li style=\"margin-top: 0.35em;\">Each process runs in its own virtual address space, mapped to physical memory through the TLB.</li></ul>",
+		liveDemo: null,
+		sourceCode:
+			"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
+		devpost: null,
+		repo: "PandOS",
+		category: CATEGORIES.PERSONAL,
+	},
+	{
+		image: "",
 		title: "BitTorrent Client JS",
 		description:
 			"A BitTorrent client I wrote in Node.js. Give it a .torrent file or a magnet link and it finds peers, connects to them directly, and downloads the file piece by piece.<p style=\"margin: 0.9em 0 0;\">I built each part of the protocol from scratch:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It includes its own bencode encoder and decoder, finds peers through HTTP trackers, and speaks the BitTorrent wire protocol over TCP.</li><li style=\"margin-top: 0.35em;\">Every piece is checked against its SHA-1 hash before the file is put back together.</li><li style=\"margin-top: 0.35em;\">For magnet links, which don't include the file's metadata, it uses the extension protocol to get that metadata from peers first.</li></ul>",
@@ -101,8 +126,6 @@ export const projectsData = [
 		repo: "bittorrent-client-js",
 		category: CATEGORIES.PERSONAL,
 	},
-
-	// === HACKATHON ===
 	{
 		image: Albatross,
 		title: "Albatross",
@@ -126,20 +149,6 @@ export const projectsData = [
 		devpost: "https://devpost.com/software/sweetfriend",
 		repo: "SweetFriend",
 		category: CATEGORIES.HACKATHON,
-	},
-
-	// === MORE PERSONAL PROJECTS ===
-	{
-		image: "",
-		title: "PandOS",
-		description:
-			"An operating system kernel written in C for the uMPS3 emulator, with time sharing between processes, TLB-based virtual memory, system calls, and interrupt handling.",
-		liveDemo: null,
-		sourceCode:
-			"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
-		devpost: null,
-		repo: "PandOS",
-		category: CATEGORIES.PERSONAL,
 	},
 	{
 		image: SpaceAccuracy,
@@ -179,19 +188,19 @@ export const projectsData = [
 	},
 	{
 		image: "",
-		title: "DNA Profiling",
-		description:
-			"A program that identifies who a DNA sample belongs to by counting repeated short sequences in it and comparing those counts against a database of people.",
-		sourceCode: "https://github.com/Shahir-47/DNA",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
 		title: "Runoff Voting System",
 		description:
 			"A ranked-choice election simulator that eliminates the last-place candidate each round and moves their votes to each voter's next choice until someone wins a majority.",
 		sourceCode: "https://github.com/Shahir-47/Runoff",
 		repo: "Runoff",
+		category: CATEGORIES.PERSONAL,
+	},
+	{
+		image: "",
+		title: "DNA Profiling",
+		description:
+			"A program that identifies who a DNA sample belongs to by counting repeated short sequences in it and comparing those counts against a database of people.",
+		sourceCode: "https://github.com/Shahir-47/DNA",
 		category: CATEGORIES.PERSONAL,
 	},
 	{

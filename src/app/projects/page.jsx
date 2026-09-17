@@ -7,7 +7,7 @@ const ogImageUrl = "/opengraph-image";
 export const metadata = {
 	title: "Projects",
 	description:
-		"Things Shahir Ahmed has built, including GrabPic, PaperPulse, Queue Up, CoSign, a BitTorrent client, and hackathon projects like Albatross and SweetFriend.",
+		"Things Shahir Ahmed has built, including GrabPic, PaperPulse, a self-hosted home server, Queue Up, CoSign, and hackathon projects like Albatross and SweetFriend.",
 	alternates: {
 		canonical: `${siteUrl}/projects`,
 	},
@@ -23,7 +23,7 @@ export const metadata = {
 		card: "summary_large_image",
 		title: "Projects | Shahir Ahmed",
 		description:
-			"GrabPic, PaperPulse, Queue Up, CoSign, Albatross, and more.",
+			"GrabPic, PaperPulse, Home Server, Queue Up, CoSign, and more.",
 		images: [ogImageUrl],
 	},
 };
@@ -83,12 +83,12 @@ const projectsPageJsonLd = {
 				position: 2,
 				name: "PaperPulse",
 				description:
-					"Research assistant that answers questions from the full text of 100+ papers and ranks papers from 4 sources nightly into a personal feed. Built with FastAPI, Next.js, Neo4j, and pgvector on AWS App Runner.",
+					"Research assistant that picks the 25 most relevant new papers for each user every night and answers questions about them with retrieval augmented generation over Neo4j. Built with FastAPI, Next.js, Neo4j, and pgvector, with the backend self-hosted in Docker.",
 				url: "https://paper-pulse-nu.vercel.app",
 				codeRepository: "https://github.com/Shahir-47/Paper-Pulse",
 				programmingLanguage: ["TypeScript", "Python"],
 				runtimePlatform:
-					"Next.js, FastAPI, PostgreSQL, Neo4j, OpenAI, Cohere, AWS",
+					"Next.js, FastAPI, PostgreSQL, Neo4j, OpenAI, Cohere, Docker",
 				author: {
 					"@id": `${siteUrl}/#person`,
 				},
@@ -96,10 +96,25 @@ const projectsPageJsonLd = {
 			{
 				"@type": "SoftwareSourceCode",
 				position: 3,
+				name: "Home Server",
+				description:
+					"Self-hosted cloud on a Linux laptop that runs the GrabPic, PaperPulse, and Queue Up backends in Docker behind Cloudflare Tunnel for about $1 a month instead of $100 on AWS. Coolify deploys from GitHub, Traefik routes requests, Tailscale keeps private apps off the internet, and a live Next.js page streams server and container status.",
+				url: "https://lab.shahirahmed.com",
+				codeRepository: "https://github.com/Shahir-47/nitro-lab",
+				programmingLanguage: ["JavaScript"],
+				runtimePlatform:
+					"Ubuntu Server, Docker, Coolify, Traefik, Cloudflare Tunnel, Tailscale, Uptime Kuma",
+				author: {
+					"@id": `${siteUrl}/#person`,
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 4,
 				name: "Queue Up",
 				description:
 					"Social app that matches people by Spotify listening history, with real-time WebSocket chat. Built with Spring Boot, React, and PostgreSQL.",
-				url: "https://queue-up.onrender.com",
+				url: "https://queue-up.shahirahmed.com",
 				codeRepository: "https://github.com/Shahir-47/Queue-Up",
 				programmingLanguage: ["Java", "JavaScript"],
 				runtimePlatform: "Spring Boot, React, WebSockets",
@@ -109,7 +124,7 @@ const projectsPageJsonLd = {
 			},
 			{
 				"@type": "SoftwareSourceCode",
-				position: 4,
+				position: 5,
 				name: "CoSign",
 				description:
 					"Task accountability platform with verification workflows, recurring tasks, encrypted stakes, and WebSocket updates.",
@@ -123,7 +138,21 @@ const projectsPageJsonLd = {
 			},
 			{
 				"@type": "SoftwareSourceCode",
-				position: 5,
+				position: 6,
+				name: "PandOS",
+				description:
+					"Operating system kernel in C for the uMPS3 emulator that runs up to 20 processes on 5 ms round-robin time slices, with semaphores, TLB-based virtual memory, system calls, and interrupt handling.",
+				codeRepository:
+					"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
+				programmingLanguage: ["C"],
+				runtimePlatform: "uMPS3",
+				author: {
+					"@id": `${siteUrl}/#person`,
+				},
+			},
+			{
+				"@type": "SoftwareSourceCode",
+				position: 7,
 				name: "BitTorrent Client JS",
 				description:
 					"BitTorrent client in JavaScript that downloads files from .torrent files and magnet links with TCP peer connections, SHA-1 integrity checking, and the extension protocol for metadata exchange.",
@@ -136,7 +165,7 @@ const projectsPageJsonLd = {
 			},
 			{
 				"@type": "SoftwareSourceCode",
-				position: 6,
+				position: 8,
 				name: "Albatross",
 				description:
 					"Navigation app built at HackHarvard 2024 that routes walkers around high crime areas in Boston, using 50K+ crime records grouped into risk zones with MLflow and Databricks.",
@@ -151,7 +180,7 @@ const projectsPageJsonLd = {
 			},
 			{
 				"@type": "SoftwareSourceCode",
-				position: 7,
+				position: 9,
 				name: "SweetFriend",
 				description:
 					"Diabetes management app built at PennApps 2024 with Dexcom integration, meal recognition, Twilio alerts, and Flask/MongoDB backend services.",
@@ -165,21 +194,7 @@ const projectsPageJsonLd = {
 			},
 			{
 				"@type": "SoftwareSourceCode",
-				position: 8,
-				name: "PandOS",
-				description:
-					"Complete OS kernel in C for the uMPS3 RISC emulator with time-sharing, multiprogramming, TLB-based virtual memory, system calls, and interrupt handling.",
-				codeRepository:
-					"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
-				programmingLanguage: ["C"],
-				runtimePlatform: "uMPS3",
-				author: {
-					"@id": `${siteUrl}/#person`,
-				},
-			},
-			{
-				"@type": "SoftwareSourceCode",
-				position: 9,
+				position: 10,
 				name: "Prospectus",
 				description:
 					"AI-powered college admissions assistant built at HoyaHacks 2024 with React, Django, Azure OpenAI, and vector embeddings for personalized guidance.",

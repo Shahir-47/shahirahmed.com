@@ -622,6 +622,11 @@ svg {
 	color: var(--teal);
 }
 
+/* The intro text follows its heading directly, so it sits closer than other sections */
+.about-me {
+	margin-bottom: 2rem;
+}
+
 /* =========================================================
    Table of contents
    ========================================================= */
@@ -701,7 +706,8 @@ svg {
 .about-me-text-div {
 	display: flex;
 	flex-direction: column;
-	gap: 1.75rem;
+	/* The last paragraph points to the icons below, so keep them close */
+	gap: 1rem;
 	min-width: 0;
 }
 
@@ -2011,8 +2017,7 @@ p {
 		margin-bottom: clamp(1.5rem, 5vw, 2.25rem);
 	}
 
-	/* One margin for every section heading */
-	.about-me,
+	/* One margin for every section heading except About Me */
 	.tools-header h2,
 	.timeline-section h2,
 	.hack-h2,

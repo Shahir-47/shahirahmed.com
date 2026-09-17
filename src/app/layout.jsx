@@ -33,7 +33,7 @@ export const metadata = {
 		template: "%s | Shahir Ahmed",
 	},
 	description:
-		"Shahir Ahmed is a software engineer and Master's student in Computer Science at NYU. He was a software engineer at Sarva, interned on FarmData2, and is ranked 25th of 600+ contributors to Mermaid.js. Projects include GrabPic, PaperPulse, and Queue Up.",
+		"Shahir Ahmed is a software engineer and Master's student in Computer Science at NYU. He was a software engineer at Sarva, interned on FarmData2, and is ranked 25th of 600+ contributors to Mermaid.js. Projects include GrabPic, PaperPulse, and a self-hosted home server.",
 	keywords: [
 		"Shahir Ahmed",
 		"Software Engineer",
@@ -59,6 +59,11 @@ export const metadata = {
 		"Sarva",
 		"GrabPic",
 		"PaperPulse",
+		"Home Server",
+		"self-hosting",
+		"Coolify",
+		"Tailscale",
+		"Cloudflare Tunnel",
 		"BitTorrent Client JS",
 		"Queue Up",
 		"CoSign",
@@ -87,6 +92,8 @@ export const metadata = {
 		"AWS App Runner",
 		"Supabase",
 		"Cypress",
+		"D3.js",
+		"Google Cloud Platform",
 		"Docker",
 		"GitHub Actions",
 		"Vercel",
@@ -114,7 +121,7 @@ export const metadata = {
 		siteName: "Shahir Ahmed - Portfolio",
 		title: "Shahir Ahmed | Software Engineer",
 		description:
-			"Software engineer and Master's student in Computer Science at NYU. Previously at Sarva. Projects include GrabPic, PaperPulse, and Queue Up.",
+			"Software engineer and Master's student in Computer Science at NYU. Previously at Sarva. Projects include GrabPic, PaperPulse, and a self-hosted home server.",
 		images: [
 			{
 				url: ogImageUrl,
@@ -196,7 +203,7 @@ const jsonLd = {
 				height: 400,
 			},
 			description:
-				"Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 25th of 600+ contributors to Mermaid.js. Built GrabPic, PaperPulse, and Queue Up.",
+				"Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 25th of 600+ contributors to Mermaid.js. Built GrabPic, PaperPulse, and the home server that hosts them.",
 			jobTitle: "Software Engineer",
 			affiliation: {
 				"@type": "CollegeOrUniversity",
@@ -253,6 +260,7 @@ const jsonLd = {
 				"Next.js",
 				"Vue.js",
 				"Tailwind CSS",
+				"D3.js",
 				"Spring Boot",
 				"Node.js",
 				"Express.js",
@@ -282,6 +290,14 @@ const jsonLd = {
 				"AWS SQS",
 				"AWS CloudFront",
 				"Cloudflare Workers",
+				"Cloudflare Tunnel",
+				"Google Cloud Platform",
+				"Firebase Cloud Functions",
+				"Redis",
+				"Self-hosting",
+				"Coolify",
+				"Traefik",
+				"Tailscale",
 				"Databricks",
 				"Cypress",
 				"Docker",

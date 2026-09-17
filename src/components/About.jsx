@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Shahir from "@/assets/shahir.jpeg";
 import Dickinson from "@/assets/dickinson.png";
@@ -54,11 +55,11 @@ const About = () => {
 							<div className="paragraph">
 								<p className="about-me-text">
 									Hey, I&apos;m Shahir! I&apos;m a software engineer starting my
-									Master&apos;s in Computer Science at NYU, and before that I studied
-									computer science and math at Dickinson College.
+									Master&apos;s in Computer Science at NYU, after completing my
+									Bachelor&apos;s in Computer Science and Mathematics at Dickinson College.
 								</p>
 								<p className="about-me-text">
-									Most recently I worked at{" "}
+									Most recently, I worked at{" "}
 									<a
 										href="https://www.sarvabazaar.com"
 										target="_blank"
@@ -66,12 +67,9 @@ const About = () => {
 									>
 										Sarva
 									</a>
-									, a startup that helps neighborhood grocery shops run their store by
-									voice. A lot of the shop owners were still tracking inventory on
-									paper, so I built the voice assistant that lets them add stock or
-									check what sold just by talking to it in their own language. While I
-									was there, Sarva was picked for the gener8tor and Meta gBETA
-									accelerator and made the finals at two pitch competitions.
+									, a startup for neighborhood grocery shops still keeping inventory on
+									paper. I built a voice assistant that lets owners update stock in their
+									own language.
 								</p>
 								<p className="about-me-text">
 									Before Sarva, I was a software engineer intern on{" "}
@@ -82,11 +80,9 @@ const About = () => {
 									>
 										FarmData2
 									</a>
-									, a research project at Dickinson College backed by the National
-									Science Foundation and PASA Sustainable Agriculture. We built open
-									source software that vegetable farms use to log their daily work, from
-									seeding to harvest, and keep the records they need for organic
-									certification.
+									, a National Science Foundation funded project at Dickinson College. We
+									built open source software that helps vegetable farms keep records for
+									organic certification.
 								</p>
 								<p className="about-me-text">
 									I also contribute to{" "}
@@ -97,35 +93,25 @@ const About = () => {
 									>
 										Mermaid.js
 									</a>
-									, the open source tool that turns a few lines of text into flowcharts
-									and diagrams, used by GitHub and Microsoft. It gets over 10 million
-									downloads a week, and I&apos;m ranked 25th out of more than 600
+									, an open source diagramming tool used by GitHub and Microsoft. The
+									features I&apos;ve added put me in the top 25 of its more than 600
 									contributors.
 								</p>
 								<p className="about-me-text">
-									In my free time I build my own apps, like{" "}
+									In my free time, I build a lot of personal projects. The latest ones
+									run on a{" "}
 									<a
-										href="https://grab-pic.vercel.app"
+										href="https://lab.shahirahmed.com"
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										GrabPic
-									</a>
-									. After weddings and events, I&apos;d end up searching the album for
-									each person&apos;s face and sending them their photos one at a time,
-									over and over. With GrabPic, the host shares one link and every guest
-									takes a selfie to get only the photos they&apos;re in.
+										home server
+									</a>{" "}
+									I set up myself. You can find all of my projects{" "}
+									<Link href="/projects">here</Link>.
 								</p>
 								<p className="about-me-text">
-									Feel free to check out my{" "}
-									<a
-										href="https://github.com/Shahir-47"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										GitHub
-									</a>{" "}
-									or reach out through the links below.
+									I&apos;d love to hear from you, so say hi through the links below!
 								</p>
 							</div>
 
@@ -245,6 +231,12 @@ const About = () => {
 									decoding="async"
 									src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
 									alt="TailwindCSS"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/D3.js-F9A03C?style=for-the-badge&logo=d3&logoColor=white"
+									alt="D3.js"
 								/>
 							</div>
 						</div>
@@ -375,8 +367,26 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
+									src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white"
+									alt="Google Cloud"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
 									src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
 									alt="Docker"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Coolify-6B16ED?style=for-the-badge&logo=coolify&logoColor=white"
+									alt="Coolify"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/Tailscale-242424?style=for-the-badge&logo=tailscale&logoColor=white"
+									alt="Tailscale"
 								/>
 								<img
 									loading="lazy"
@@ -587,24 +597,28 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Replaced pen and paper inventory at independent grocery stores with a
-									voice assistant that updates stock in 90+ languages
+									Cut inventory time by 60% by building a voice assistant that lets
+									store owners manage inventory in their own languages
 								</li>
 								<li>
-									Integrated Stripe so every payment splits between the store and the
-									driver and no card is charged until pickup
+									Created 3 GitHub Actions CI/CD pipelines that run 2,604 Vitest tests
+									on 173 TypeScript APIs to catch bugs before production
 								</li>
 								<li>
-									Improved product and inventory search 7% by adding semantic search
-									with OpenAI embeddings alongside keyword matching
+									Deployed 12 serverless Firebase Cloud Functions on Google Cloud
+									Platform that retry failed payouts and restock abandoned carts
 								</li>
 								<li>
-									Built 3 CI/CD pipelines in GitHub Actions running 2,604 unit tests
-									across 173 REST API endpoints to catch bugs before merge
+									Lowered zero-result searches 7% by adding semantic search with OpenAI
+									embeddings to keyword search for natural language queries
 								</li>
 								<li>
-									Chosen for the gener8tor and Meta gBETA accelerator and named a
-									finalist at Ship Tank and launchU pitch competitions
+									Reduced AI costs by adding Redis rate limiting and a token allowance
+									per user to the Next.js API routes that call OpenAI
+								</li>
+								<li>
+									Built the product that put Sarva in the gener8tor and Meta gBETA
+									accelerator and the Ship Tank and launchU finals
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -666,16 +680,12 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Ranked 25th among 600+ contributors by merging 3 pull requests into a
-									diagramming library with 10M+ weekly downloads
+									Added 3 D3.js features with Cypress tests to a TypeScript library with
+									12M+ weekly downloads used by GitHub and Microsoft
 								</li>
 								<li>
-									Shipped chart and journey diagram features into a 100,000 line
-									TypeScript codebase used by GitHub and Microsoft
-								</li>
-								<li>
-									Wrote Cypress end-to-end tests for each feature and cleared every
-									automated check before a maintainer approved it
+									Passed CI/CD checks and maintainer review on all 3 pull requests in the
+									200,000 line codebase to rank 25th of 600+ contributors
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -729,12 +739,16 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
+									Saved farmers 12+ hours a week by automating crop logging with 18+
+									transactional Node.js REST APIs on PostgreSQL
+								</li>
+								<li>
 									Cut page load time by 60% on a National Science Foundation funded farm
 									platform by moving 22+ Vue.js components to Vuex
 								</li>
 								<li>
-									Automated crop logging to save farmers 12+ hours a week by building
-									18+ Node.js REST APIs and 30+ Cypress tests
+									Authored 25 merged pull requests with 30+ Cypress integration tests in
+									Agile sprints to become the project&apos;s 2nd top contributor
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -775,8 +789,8 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Raised average assignment scores by 15% for 25+ students across 6
-									semesters through weekly Python and Java code reviews
+									Raised assignment scores 15% for 25+ students over 6 semesters of
+									weekly Python and Java code reviews and office hours
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -802,7 +816,7 @@ const About = () => {
 							}
 						>
 							<h3 className="vertical-timeline-element-title">
-								Software Developer, Volunteer
+								Software Engineer, Volunteer
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
 								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
@@ -822,8 +836,12 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Converted 10,000+ lines of legacy CBASIC into Python and Java for a
-									$9B retailer by building a translator with ANTLR
+									Converted legacy CBASIC to Python and Java with an ANTLR4 translator
+									that walks abstract syntax trees
+								</li>
+								<li>
+									Co-designed a plan with 11 teammates to modernize 50,000+ lines of
+									CBASIC that shaped the $9B retailer&apos;s roadmap
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -858,57 +876,39 @@ const About = () => {
 								}}
 							/>
 							<div style={{ flex: 1 }}>
-								<div
+								<a
+									href="https://github.com/mermaid-js/mermaid"
+									target="_blank"
+									rel="noopener noreferrer"
 									style={{
-										display: "flex",
-										flexWrap: "wrap",
-										alignItems: "baseline",
-										gap: "4px 12px",
-									}}
-								>
-									<a
-										href="https://github.com/mermaid-js/mermaid"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{
-											color: "var(--teal)",
-											fontWeight: 600,
-											fontSize: "1.33rem",
-										}}
-									>
-										Mermaid.js
-									</a>
-									<span style={{ color: "var(--text-2)", fontSize: 15 }}>
-										Ranked 25th out of 600+ contributors
-									</span>
-								</div>
-								<div
-									style={{
-										marginTop: 8,
-										fontSize: 14,
-										fontWeight: 600,
 										color: "var(--teal)",
+										fontWeight: 600,
+										fontSize: "1.33rem",
 									}}
 								>
+									Mermaid.js
+								</a>
+								<p
+									style={{
+										margin: "10px 0 0",
+										fontSize: 16,
+										lineHeight: 1.65,
+										color: "var(--text)",
+									}}
+								>
+									Mermaid is an open source tool that turns a few lines of text into
+									flowcharts and diagrams. It&apos;s used by GitHub and Microsoft and
+									downloaded{" "}
 									<a
 										href="https://npmtrends.com/mermaid"
 										target="_blank"
 										rel="noopener noreferrer"
-										style={{ color: "var(--teal)" }}
+										style={{ color: "var(--teal)", textDecoration: "underline" }}
 									>
-										10M+ weekly downloads
-									</a>{" "}
-									· Used by GitHub and Microsoft
-								</div>
-								<p
-									style={{
-										margin: "14px 0 0",
-										fontSize: 15,
-										lineHeight: 1.6,
-										color: "var(--text-2)",
-									}}
-								>
-									An open source tool that turns plain text into flowcharts and diagrams.
+										over 12 million times a week
+									</a>
+									, so every change has to pass its CI checks and a maintainer&apos;s
+									review before it&apos;s merged.
 								</p>
 								<p
 									style={{
@@ -918,16 +918,26 @@ const About = () => {
 										color: "var(--text)",
 									}}
 								>
-									I&apos;ve merged 3 pull requests into Mermaid, and every change I made shipped
-									with Cypress end-to-end tests and passed all of its automated checks before
-									a maintainer approved it. Here&apos;s what I added:
+									I&apos;ve had 3 pull requests merged into its 200,000 line TypeScript
+									codebase, each one with Cypress end-to-end tests. Those three put me
+									25th out of more than 600 contributors.
+								</p>
+								<p
+									style={{
+										margin: "22px 0 0",
+										fontSize: 16,
+										lineHeight: 1.65,
+										color: "var(--text)",
+									}}
+								>
+									Here&apos;s what I added:
 								</p>
 								<ul
 									style={{
 										fontSize: 15,
 										lineHeight: 1.55,
 										color: "var(--text-2)",
-										margin: "8px 0 0",
+										margin: "10px 0 0",
 										paddingLeft: 18,
 									}}
 								>
@@ -1511,12 +1521,12 @@ const About = () => {
 								<strong>GPA:</strong> 3.52 / 4.00
 							</p>
 							<p>
-								<strong>Coursework:</strong> Data Structures, Analysis of Algorithms,
-								Operating Systems, Object-Oriented Programming, Database Systems
+								<strong>Coursework:</strong> Data Structures, Algorithms, Operating
+								Systems, Computer Networks, Object-Oriented Programming, Databases
 							</p>
 							<p>
-								<strong>Honors:</strong> Dean&apos;s List, Pi Mu Epsilon (math honor
-								society), The 1783 Scholarship
+								<strong>Honors:</strong> Cum Laude, Dean&apos;s List, Pi Mu Epsilon
+								(math honor society), The 1783 Scholarship
 							</p>
 						</VerticalTimelineElement>
 					</VerticalTimeline>

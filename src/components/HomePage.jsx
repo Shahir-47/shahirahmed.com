@@ -14,7 +14,7 @@ import { projectsData } from "./Projects";
 const RESUME_URL =
 	"https://drive.google.com/file/d/1APlXopNkSxXLLTHnxH-MBNT3GJKWq9Rp/view?usp=sharing";
 
-const FEATURED = ["GrabPic", "PaperPulse", "Queue Up"];
+const FEATURED = ["GrabPic", "PaperPulse", "Home Server"];
 
 const HomePage = () => {
 	useEffect(() => {

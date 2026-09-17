@@ -13,7 +13,7 @@ Framework: Next.js 15, React 18
 Components: Material-UI, React Icons
 Deployment: Vercel
 Software: Visual Studio Code
-Recent projects: GrabPic, PaperPulse, Queue Up
+Recent projects: GrabPic, PaperPulse, Home Server
 AI discovery: /llms.txt, /llms.json, /openapi.yaml, /.well-known/ai-plugin.json
 
 /* THANKS */
