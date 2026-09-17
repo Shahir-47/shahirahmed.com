@@ -14,24 +14,50 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 
 ## Screenshots
 
-| About | Projects |
-| ----- | -------- |
-| ![About page](docs/screenshots/about.webp) | ![Projects page](docs/screenshots/projects.webp) |
-| **Featured projects on the home page** | **Contact** |
-| ![Featured projects on the home page](docs/screenshots/home-projects.webp) | ![Contact page](docs/screenshots/contact.webp) |
+### Desktop
 
-The layout adapts to phones as well:
+<table>
+  <tr>
+    <th width="50%" align="center">About</th>
+    <th width="50%" align="center">Projects</th>
+  </tr>
+  <tr>
+    <td align="center"><br /><img src="docs/screenshots/about.webp" alt="About page" width="350" hspace="14" /><br /><br /></td>
+    <td align="center"><br /><img src="docs/screenshots/projects.webp" alt="Projects page" width="350" hspace="14" /><br /><br /></td>
+  </tr>
+  <tr>
+    <th width="50%" align="center">Featured projects</th>
+    <th width="50%" align="center">Contact</th>
+  </tr>
+  <tr>
+    <td align="center"><br /><img src="docs/screenshots/home-projects.webp" alt="Featured projects on the home page" width="350" hspace="14" /><br /><br /></td>
+    <td align="center"><br /><img src="docs/screenshots/contact.webp" alt="Contact page" width="350" hspace="14" /><br /><br /></td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="docs/screenshots/mobile-home.webp" alt="Home page on mobile" width="250" />
-  <img src="docs/screenshots/mobile-about.webp" alt="About page on mobile" width="250" />
-  <img src="docs/screenshots/mobile-projects.webp" alt="Projects page on mobile" width="250" />
-</p>
+<br />
+
+### Mobile
+
+<table>
+  <tr>
+    <th width="33%" align="center">Home</th>
+    <th width="33%" align="center">About</th>
+    <th width="33%" align="center">Projects</th>
+  </tr>
+  <tr>
+    <td align="center"><br /><img src="docs/screenshots/mobile-home.webp" alt="Home page on mobile" width="210" hspace="15" /><br /><br /></td>
+    <td align="center"><br /><img src="docs/screenshots/mobile-about.webp" alt="About page on mobile" width="210" hspace="15" /><br /><br /></td>
+    <td align="center"><br /><img src="docs/screenshots/mobile-projects.webp" alt="Projects page on mobile" width="210" hspace="15" /><br /><br /></td>
+  </tr>
+</table>
+
+<br />
 
 ## Built with
 
 | Area | Tools |
-| ---- | ----- |
+| :--- | :---- |
 | Framework | Next.js 15 (App Router), React 18 |
 | UI | Material UI 6, custom CSS, React Icons |
 | Fonts | Poppins and Oswald through `next/font` |
