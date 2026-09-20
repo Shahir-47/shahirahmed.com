@@ -2,7 +2,7 @@
 
 Software engineer and Master's student in Computer Science at New York University.
 
-Last updated: 2026-09-17
+Last updated: 2026-09-20
 Canonical URL: https://www.shahirahmed.com
 Machine-readable profile: https://www.shahirahmed.com/llms.json
 Location: New York, NY
@@ -50,45 +50,54 @@ Listed in the same order as the projects page, strongest first.
 - URL: https://grab-pic.vercel.app
 - GitHub: https://github.com/Shahir-47/Grab-Pic
 - Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Built as 3 services (Next.js, Spring Boot, and a Python DeepFace/TensorFlow worker producing 512-dimension face embeddings), connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, CloudFront signed URLs, Redis rate limiting, and Cloudflare Turnstile. Compute later moved to Shahir's home server behind a Cloudflare Tunnel, cutting hosting from about $85 to about $1 a month.
+- Tags: Full Stack, Backend, Databases, Distributed Systems, Machine Learning, Computer Vision, Vector Search, Security, DevOps & Cloud, Self-Hosting, TypeScript, Java, Python, SQL, Next.js, React, Spring Boot, TensorFlow, PostgreSQL, pgvector, Redis, AWS, Supabase, Docker, Cloudflare, Tailwind CSS
 
 ### PaperPulse
 - URL: https://paper-pulse-nu.vercel.app
 - GitHub: https://github.com/Shahir-47/Paper-Pulse
 - Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph. FastAPI and Next.js; the backend and Neo4j run in Docker on Shahir's home server.
+- Tags: Full Stack, Backend, Databases, Machine Learning, AI & LLMs, Vector Search, Data Engineering, DevOps & Cloud, Self-Hosting, TypeScript, Python, SQL, Next.js, React, FastAPI, Neo4j, PostgreSQL, pgvector, OpenAI, Cohere, Docker, Supabase, Tailwind CSS
 
 ### Home Server
 - URL: https://lab.shahirahmed.com
 - GitHub (live status page): https://github.com/Shahir-47/nitro-lab
 - Self-hosted cloud on an Acer Nitro 5 laptop running Ubuntu Server. Runs the GrabPic, PaperPulse, and Queue Up backends in Docker behind Cloudflare Tunnel for about $1 a month instead of about $100 on AWS. No inbound ports are open on the router. Coolify builds each app from GitHub on push and configures Traefik routes; databases publish no ports. Private apps (Immich, Paperless-ngx, Uptime Kuma, Samba, Homepage) are reachable only over Tailscale. The public page is a Next.js app that streams host and container status with Server-Sent Events.
+- Tags: DevOps & Cloud, Self-Hosting, Networking, Security, Real-Time, Frontend, JavaScript, Next.js, React, Docker, Linux, Cloudflare, Traefik, Coolify, Tailscale, Server-Sent Events
 
 ### Queue Up
 - URL: https://queue-up.shahirahmed.com
 - GitHub: https://github.com/Shahir-47/Queue-Up
 - Social app that matches people by Spotify listening history, with real-time WebSocket chat. Java, Spring Boot, React, PostgreSQL with Spring Data JPA, and Docker, self-hosted on Shahir's home server.
+- Tags: Full Stack, Backend, Databases, Real-Time, Security, DevOps & Cloud, Self-Hosting, Java, JavaScript, SQL, Spring Boot, React, PostgreSQL, WebSockets, Docker, AWS, Spotify API
 
 ### CoSign
 - URL: https://cosign-nwwl.onrender.com
 - GitHub: https://github.com/Shahir-47/CoSign
 - Task accountability app where users can't complete their own tasks. A verifier approves submitted proof through a task state machine, and if a deadline is missed the AES-encrypted hidden penalty is automatically emailed to the verifier. Spring Boot, React, TypeScript, WebSockets, Docker.
+- Tags: Full Stack, Backend, Databases, Real-Time, Security, DevOps & Cloud, Java, TypeScript, SQL, Spring Boot, React, PostgreSQL, WebSockets, Docker
 
 ### PandOS
 - GitHub: https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/
 - Operating system kernel in C for the uMPS3 emulator that runs up to 20 processes on 5 ms round-robin time slices, with semaphores, TLB-based virtual memory, system calls, and interrupt handling.
+- Tags: Operating Systems, Systems Programming, Concurrency, C, uMPS3
 
 ### BitTorrent Client JS
 - GitHub: https://github.com/Shahir-47/bittorrent-client-js
 - BitTorrent client in Node.js for .torrent files and magnet links, with TCP peer connections, SHA-1 piece verification, and extension protocol metadata exchange.
+- Tags: Networking, Systems Programming, Distributed Systems, Concurrency, Algorithms, JavaScript, Node.js
 
 ### Albatross (HackHarvard 2024)
 - URL: https://albatross-hack.netlify.app/
 - Devpost: https://devpost.com/software/albatross
 - Built after two teammates had felt unsafe walking through parts of Boston. A navigation app that routes walkers around high crime areas, built by a team of 4 in 36 hours, with a working demo for Boston. Clustered 50K+ crime records into risk zones with MLflow and stored them in a Databricks Delta Lakehouse. Vue.js, Cloudflare Workers, and the Google Maps API.
+- Tags: Frontend, Machine Learning, Data Engineering, DevOps & Cloud, JavaScript, Python, Vue.js, Cloudflare, Databricks, MLflow, Google Maps API
 
 ### SweetFriend (PennApps 2024)
 - URL: https://sweet-friend.vercel.app/app/dashboard
 - GitHub: https://github.com/dmicz/SweetFriend
 - Devpost: https://devpost.com/software/sweetfriend
 - Built with a teammate who lives with type 1 diabetes, to make carb counting and insulin dosing easier. Shahir built the React frontend and Chart.js glucose timeline. Diabetes management app with Dexcom glucose data, meal photo recognition, Twilio alerts, and a Flask and MongoDB backend.
+- Tags: Full Stack, Frontend, Backend, AI & LLMs, Databases, JavaScript, Python, React, Chart.js, Flask, MongoDB, OpenAI, Twilio
 
 ### Prospectus (HoyaHacks 2024)
 - Devpost: https://devpost.com/software/prospectus

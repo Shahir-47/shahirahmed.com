@@ -1,6 +1,6 @@
 {
 	"schema_version": "1.2",
-	"last_updated": "2026-09-17",
+	"last_updated": "2026-09-20",
 	"canonical_url": "https://www.shahirahmed.com",
 	"profile": {
 		"name": "Shahir Ahmed",
@@ -116,47 +116,211 @@
 			"category": "Personal",
 			"url": "https://grab-pic.vercel.app",
 			"github": "https://github.com/Shahir-47/Grab-Pic",
-			"description": "Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Three services (Next.js, Spring Boot, Python DeepFace/TensorFlow worker) connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, Redis rate limiting, and Cloudflare Turnstile. The backend is self-hosted on Shahir's home server, cutting hosting from about $85 to about $1 a month."
+			"description": "Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Three services (Next.js, Spring Boot, Python DeepFace/TensorFlow worker) connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, Redis rate limiting, and Cloudflare Turnstile. The backend is self-hosted on Shahir's home server, cutting hosting from about $85 to about $1 a month.",
+			"tags": {
+				"focus": [
+					"Full Stack",
+					"Backend",
+					"Databases",
+					"Distributed Systems",
+					"Machine Learning",
+					"Computer Vision",
+					"Vector Search",
+					"Security",
+					"DevOps & Cloud",
+					"Self-Hosting"
+				],
+				"languages": [
+					"TypeScript",
+					"Java",
+					"Python",
+					"SQL"
+				],
+				"tech": [
+					"Next.js",
+					"React",
+					"Spring Boot",
+					"TensorFlow",
+					"PostgreSQL",
+					"pgvector",
+					"Redis",
+					"AWS",
+					"Supabase",
+					"Docker",
+					"Cloudflare",
+					"Tailwind CSS"
+				]
+			}
 		},
 		{
 			"name": "PaperPulse",
 			"category": "Personal",
 			"url": "https://paper-pulse-nu.vercel.app",
 			"github": "https://github.com/Shahir-47/Paper-Pulse",
-			"description": "Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph. FastAPI and Next.js, with the backend self-hosted in Docker."
+			"description": "Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph. FastAPI and Next.js, with the backend self-hosted in Docker.",
+			"tags": {
+				"focus": [
+					"Full Stack",
+					"Backend",
+					"Databases",
+					"Machine Learning",
+					"AI & LLMs",
+					"Vector Search",
+					"Data Engineering",
+					"DevOps & Cloud",
+					"Self-Hosting"
+				],
+				"languages": [
+					"TypeScript",
+					"Python",
+					"SQL"
+				],
+				"tech": [
+					"Next.js",
+					"React",
+					"FastAPI",
+					"Neo4j",
+					"PostgreSQL",
+					"pgvector",
+					"OpenAI",
+					"Cohere",
+					"Docker",
+					"Supabase",
+					"Tailwind CSS"
+				]
+			}
 		},
 		{
 			"name": "Home Server",
 			"category": "Personal",
 			"url": "https://lab.shahirahmed.com",
 			"github": "https://github.com/Shahir-47/nitro-lab",
-			"description": "Self-hosted cloud on an Acer Nitro 5 laptop running Ubuntu Server. Runs the GrabPic, PaperPulse, and Queue Up backends in Docker behind Cloudflare Tunnel for about $1 a month instead of about $100 on AWS, with no inbound ports open. Coolify deploys from GitHub and configures Traefik routes, private apps are reachable only over Tailscale, Uptime Kuma monitors every app, and a live Next.js page streams host and container status with Server-Sent Events."
+			"description": "Self-hosted cloud on an Acer Nitro 5 laptop running Ubuntu Server. Runs the GrabPic, PaperPulse, and Queue Up backends in Docker behind Cloudflare Tunnel for about $1 a month instead of about $100 on AWS, with no inbound ports open. Coolify deploys from GitHub and configures Traefik routes, private apps are reachable only over Tailscale, Uptime Kuma monitors every app, and a live Next.js page streams host and container status with Server-Sent Events.",
+			"tags": {
+				"focus": [
+					"DevOps & Cloud",
+					"Self-Hosting",
+					"Networking",
+					"Security",
+					"Real-Time",
+					"Frontend"
+				],
+				"languages": [
+					"JavaScript"
+				],
+				"tech": [
+					"Next.js",
+					"React",
+					"Docker",
+					"Linux",
+					"Cloudflare",
+					"Traefik",
+					"Coolify",
+					"Tailscale",
+					"Server-Sent Events"
+				]
+			}
 		},
 		{
 			"name": "Queue Up",
 			"category": "Personal",
 			"url": "https://queue-up.shahirahmed.com",
 			"github": "https://github.com/Shahir-47/Queue-Up",
-			"description": "Social app that matches people by Spotify listening history, with real-time WebSocket chat. Spring Boot, React, PostgreSQL, Docker, self-hosted on Shahir's home server."
+			"description": "Social app that matches people by Spotify listening history, with real-time WebSocket chat. Spring Boot, React, PostgreSQL, Docker, self-hosted on Shahir's home server.",
+			"tags": {
+				"focus": [
+					"Full Stack",
+					"Backend",
+					"Databases",
+					"Real-Time",
+					"Security",
+					"DevOps & Cloud",
+					"Self-Hosting"
+				],
+				"languages": [
+					"Java",
+					"JavaScript",
+					"SQL"
+				],
+				"tech": [
+					"Spring Boot",
+					"React",
+					"PostgreSQL",
+					"WebSockets",
+					"Docker",
+					"AWS",
+					"Spotify API"
+				]
+			}
 		},
 		{
 			"name": "CoSign",
 			"category": "Personal",
 			"url": "https://cosign-nwwl.onrender.com",
 			"github": "https://github.com/Shahir-47/CoSign",
-			"description": "Task accountability app where users can't complete their own tasks. A verifier approves submitted proof through a task state machine, and missed deadlines automatically email the AES-encrypted hidden penalty to the verifier. Spring Boot, React, TypeScript, WebSockets, Docker."
+			"description": "Task accountability app where users can't complete their own tasks. A verifier approves submitted proof through a task state machine, and missed deadlines automatically email the AES-encrypted hidden penalty to the verifier. Spring Boot, React, TypeScript, WebSockets, Docker.",
+			"tags": {
+				"focus": [
+					"Full Stack",
+					"Backend",
+					"Databases",
+					"Real-Time",
+					"Security",
+					"DevOps & Cloud"
+				],
+				"languages": [
+					"Java",
+					"TypeScript",
+					"SQL"
+				],
+				"tech": [
+					"Spring Boot",
+					"React",
+					"PostgreSQL",
+					"WebSockets",
+					"Docker"
+				]
+			}
 		},
 		{
 			"name": "PandOS",
 			"category": "Personal",
 			"github": "https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
-			"description": "Operating system kernel in C for the uMPS3 emulator that runs up to 20 processes on 5 ms round-robin time slices, with semaphores, TLB-based virtual memory, system calls, and interrupt handling."
+			"description": "Operating system kernel in C for the uMPS3 emulator that runs up to 20 processes on 5 ms round-robin time slices, with semaphores, TLB-based virtual memory, system calls, and interrupt handling.",
+			"tags": {
+				"focus": [
+					"Operating Systems",
+					"Systems Programming",
+					"Concurrency"
+				],
+				"languages": [
+					"C"
+				],
+				"tech": [
+					"uMPS3"
+				]
+			}
 		},
 		{
 			"name": "BitTorrent Client JS",
 			"category": "Personal",
 			"github": "https://github.com/Shahir-47/bittorrent-client-js",
-			"description": "BitTorrent client in Node.js for .torrent files and magnet links, with TCP peer connections, SHA-1 piece verification, and extension protocol metadata exchange."
+			"description": "BitTorrent client in Node.js for .torrent files and magnet links, with TCP peer connections, SHA-1 piece verification, and extension protocol metadata exchange.",
+			"tags": {
+				"focus": [
+					"Networking",
+					"Systems Programming",
+					"Distributed Systems",
+					"Concurrency",
+					"Algorithms"
+				],
+				"languages": [
+					"JavaScript"
+				],
+				"tech": [
+					"Node.js"
+				]
+			}
 		},
 		{
 			"name": "Albatross",
@@ -164,7 +328,26 @@
 			"url": "https://albatross-hack.netlify.app/",
 			"github": "https://github.com/orgs/HackHarvard2024-Team/repositories",
 			"devpost": "https://devpost.com/software/albatross",
-			"description": "Built at HackHarvard 2024 after two teammates had felt unsafe walking through parts of Boston. Navigation app that routes walkers around high crime areas, built by a team of 4 in 36 hours, using 50K+ crime records grouped into risk zones with MLflow and Databricks. Vue.js, Cloudflare Workers, Google Maps API."
+			"description": "Built at HackHarvard 2024 after two teammates had felt unsafe walking through parts of Boston. Navigation app that routes walkers around high crime areas, built by a team of 4 in 36 hours, using 50K+ crime records grouped into risk zones with MLflow and Databricks. Vue.js, Cloudflare Workers, Google Maps API.",
+			"tags": {
+				"focus": [
+					"Frontend",
+					"Machine Learning",
+					"Data Engineering",
+					"DevOps & Cloud"
+				],
+				"languages": [
+					"JavaScript",
+					"Python"
+				],
+				"tech": [
+					"Vue.js",
+					"Cloudflare",
+					"Databricks",
+					"MLflow",
+					"Google Maps API"
+				]
+			}
 		},
 		{
 			"name": "SweetFriend",
@@ -172,7 +355,28 @@
 			"url": "https://sweet-friend.vercel.app/app/dashboard",
 			"github": "https://github.com/dmicz/SweetFriend",
 			"devpost": "https://devpost.com/software/sweetfriend",
-			"description": "Built at PennApps 2024 with a teammate who lives with type 1 diabetes. Dexcom glucose data on a Chart.js timeline (Shahir's React frontend), GPT-4o meal photo carb estimates via Tune Studio, a Cerebras chatbot, Twilio alerts, and a Flask and MongoDB backend."
+			"description": "Built at PennApps 2024 with a teammate who lives with type 1 diabetes. Dexcom glucose data on a Chart.js timeline (Shahir's React frontend), GPT-4o meal photo carb estimates via Tune Studio, a Cerebras chatbot, Twilio alerts, and a Flask and MongoDB backend.",
+			"tags": {
+				"focus": [
+					"Full Stack",
+					"Frontend",
+					"Backend",
+					"AI & LLMs",
+					"Databases"
+				],
+				"languages": [
+					"JavaScript",
+					"Python"
+				],
+				"tech": [
+					"React",
+					"Chart.js",
+					"Flask",
+					"MongoDB",
+					"OpenAI",
+					"Twilio"
+				]
+			}
 		},
 		{
 			"name": "Prospectus",

@@ -1,6 +1,20 @@
 import Projects from "@/components/Projects";
+import { projectsData } from "@/data/projects";
 
 const siteUrl = "https://www.shahirahmed.com";
+
+// Structured data reuses the tags the projects page filters on, so the two
+// never say different things about what a project is built with.
+const tagsFor = (name) => {
+	const project = projectsData.find((item) => item.title === name);
+	if (!project) return [];
+	return [...project.focus, ...project.languages, ...project.tech];
+};
+
+const withKeywords = (entry) => {
+	const keywords = tagsFor(entry.name);
+	return keywords.length ? { ...entry, keywords } : entry;
+};
 const ogImageUrl = "/opengraph-image";
 
 // Projects page SEO metadata
@@ -205,7 +219,7 @@ const projectsPageJsonLd = {
 					"@id": `${siteUrl}/#person`,
 				},
 			},
-		],
+		].map(withKeywords),
 	},
 };
 

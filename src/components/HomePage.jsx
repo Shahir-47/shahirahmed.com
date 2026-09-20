@@ -9,7 +9,7 @@ import SocialIcons from "./SocialIcons";
 import AboutArt from "./AboutArt";
 import ContactArt from "./ContactArt";
 import ScrollCue from "./ScrollCue";
-import { projectsData } from "./Projects";
+import { projectsData } from "@/data/projects";
 
 const RESUME_URL =
 	"https://drive.google.com/file/d/1APlXopNkSxXLLTHnxH-MBNT3GJKWq9Rp/view?usp=sharing";

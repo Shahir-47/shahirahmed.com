@@ -1,218 +1,146 @@
 "use client";
 
 import PropTypes from "prop-types";
-import SweetFriend from "@/assets/sweetFriend.jpg";
-import Albatross from "@/assets/albatross.png";
-import SpaceAccuracy from "@/assets/space.png";
-import QueueUp from "@/assets/queue-up.png";
-import CoSignImg from "@/assets/CoSignImg.png";
 import SocialIcons from "./SocialIcons";
-import GrabPicImg from "@/assets/grabpic.png";
-import PaperPulseImg from "@/assets/paperpulse.png";
-import HomeServerImg from "@/assets/homeserver.png";
-import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
-import { Box, Typography, Button, TextField, Chip } from "@mui/material";
-import { useState } from "react";
+import {
+	FilterList,
+	KeyboardArrowDown,
+	KeyboardArrowUp,
+} from "@mui/icons-material";
+import {
+	Box,
+	Typography,
+	Button,
+	TextField,
+	Chip,
+	Collapse,
+	MenuItem,
+} from "@mui/material";
+import { useEffect, useMemo, useState } from "react";
 import { SiDevpost } from "react-icons/si";
 import { Launch } from "@mui/icons-material";
 import { FaGithub } from "react-icons/fa";
+import {
+	CATEGORIES,
+	EMPTY_SELECTION,
+	GROUP_TAGS,
+	SORTS,
+	TAG_INDEX,
+	categoryColor,
+	categoryTint,
+	projectTags,
+	projectsData,
+	tagColor,
+	tint,
+} from "@/data/projects";
 
-const CATEGORIES = {
-	ALL: "All",
-	PERSONAL: "Personal",
-	HACKATHON: "Hackathon",
+const TagChip = ({ tag, active, onToggle, count }) => {
+	const color = tagColor(tag);
+	return (
+		<Chip
+			label={count === undefined ? tag : `${tag} (${count})`}
+			size="small"
+			onClick={() => onToggle(tag)}
+			aria-pressed={active}
+			sx={{
+				backgroundColor: active ? tint(color, 0.9) : tint(color, 0.12),
+				border: `1px solid ${tint(color, active ? 0.9 : 0.35)}`,
+				color: active ? "#1b1f24" : color,
+				fontWeight: active ? 700 : 500,
+				fontSize: { xs: "0.68rem", sm: "0.72rem", md: "0.75rem" },
+				height: { xs: "22px", sm: "24px" },
+				cursor: "pointer",
+				transition: "background-color 0.2s ease, border-color 0.2s ease",
+				"&:hover": {
+					backgroundColor: active ? tint(color, 0.9) : tint(color, 0.26),
+					borderColor: tint(color, 0.7),
+				},
+				"@media (min-width: 2560px)": {
+					fontSize: "1rem",
+					height: "32px",
+				},
+			}}
+		/>
+	);
 };
 
-const CATEGORY_COLORS = {
-	[CATEGORIES.HACKATHON]: "#e5a54a",
-	[CATEGORIES.PERSONAL]: "#6c9ee0",
-	[CATEGORIES.ALL]: "#00adb5",
+TagChip.propTypes = {
+	tag: PropTypes.string.isRequired,
+	active: PropTypes.bool,
+	onToggle: PropTypes.func.isRequired,
+	count: PropTypes.number,
 };
 
-const categoryColor = (category) => CATEGORY_COLORS[category] || "#00adb5";
+// Cards would drown in chips otherwise: GrabPic alone carries 26 tags.
+const VISIBLE_TAGS = 10;
 
-// Same hue at low alpha for chip and hover fills.
-const categoryTint = (category, alpha) => {
-	const hex = categoryColor(category).slice(1);
-	const r = parseInt(hex.slice(0, 2), 16);
-	const g = parseInt(hex.slice(2, 4), 16);
-	const b = parseInt(hex.slice(4, 6), 16);
-	return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+const ProjectTags = ({ tags, activeTags, onToggleTag }) => {
+	const [expanded, setExpanded] = useState(false);
+
+	if (!tags.length) return null;
+
+	// Selected tags come first, so a card always shows why it matched.
+	const ordered = [
+		...tags.filter((tag) => activeTags.includes(tag)),
+		...tags.filter((tag) => !activeTags.includes(tag)),
+	];
+	const visible = expanded ? ordered : ordered.slice(0, VISIBLE_TAGS);
+	const hidden = ordered.length - visible.length;
+
+	return (
+		<Box
+			sx={{
+				display: "flex",
+				flexWrap: "wrap",
+				gap: { xs: "0.35rem", sm: "0.4rem", md: "0.45rem" },
+				marginBottom: { xs: "1rem", sm: "1.15rem", md: "1.25rem" },
+				"@media (min-width: 2560px)": {
+					gap: "0.7rem",
+					marginBottom: "1.75rem",
+				},
+			}}
+		>
+			{visible.map((tag) => (
+				<TagChip
+					key={tag}
+					tag={tag}
+					active={activeTags.includes(tag)}
+					onToggle={onToggleTag}
+				/>
+			))}
+			{(hidden > 0 || expanded) && (
+				<Chip
+					label={expanded ? "Show fewer tags" : `+${hidden} more`}
+					size="small"
+					onClick={() => setExpanded(!expanded)}
+					sx={{
+						backgroundColor: "transparent",
+						border: "1px dashed #6b7280",
+						color: "#b6bcc6",
+						fontSize: { xs: "0.68rem", sm: "0.72rem", md: "0.75rem" },
+						height: { xs: "22px", sm: "24px" },
+						cursor: "pointer",
+						"&:hover": {
+							backgroundColor: "rgba(255, 255, 255, 0.06)",
+							borderColor: "#00adb5",
+							color: "#eeeeee",
+						},
+						"@media (min-width: 2560px)": {
+							fontSize: "1rem",
+							height: "32px",
+						},
+					}}
+				/>
+			)}
+		</Box>
+	);
 };
 
-// Ordered best to worst. The projects page shows the first 7 before "Show more".
-export const projectsData = [
-	{
-		image: GrabPicImg,
-		title: "GrabPic",
-		description:
-			"After weddings and events, I kept doing the same thing: searching the album for one person's face, sending them their photos, and then starting over for the next person. GrabPic replaces that with a single link. The host uploads everything to one album, and each guest takes a selfie to get only the photos they appear in.<p style=\"margin: 0.9em 0 0;\">Here's how it works behind that link:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It runs as three services that deploy on their own: a Next.js frontend, a Spring Boot API, and a Python worker that uses DeepFace to turn every face into an embedding. New photos reach the worker through an Amazon SQS queue, so uploads never wait on face processing.</li><li style=\"margin-top: 0.35em;\">A selfie search is a nearest-neighbor lookup in pgvector over an HNSW index, which brings back matches from albums of 500+ photos in under 200 milliseconds.</li><li style=\"margin-top: 0.35em;\">Photos upload straight from the browser to S3 through presigned URLs. Redis rate limiting and Cloudflare Turnstile keep bots out, and protected photos only show up for people whose face is in them.</li></ul>",
-		summary: "After a wedding or conference, share one link and every guest takes a selfie to see only the photos they're in.",
-		liveDemo: "https://grab-pic.vercel.app",
-		sourceCode: "https://github.com/Shahir-47/Grab-Pic",
-		devpost: null,
-		repo: "Grab-Pic",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: PaperPulseImg,
-		title: "PaperPulse",
-		description:
-			"Keeping up with research means checking arXiv, PubMed, and a few other databases every day and sorting through a lot of papers that don't matter to you. PaperPulse does that search overnight, ranks everything against your interests, and has the 25 most relevant papers waiting in your feed the next morning. You can also ask it questions and get answers pulled from the papers themselves, with citations.<p style=\"margin: 0.9em 0 0;\">Here's what happens each night and when you ask a question:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">The nightly pipeline pulls from arXiv, Semantic Scholar, PubMed, and OpenAlex, extracts the text from each PDF, and embeds it for search, then Cohere reranks the results for each user.</li><li style=\"margin-top: 0.35em;\">Answers come from a three-stage hybrid retrieval pipeline over pgvector, plus context from a Neo4j knowledge graph that links papers to their authors, concepts, and citations.</li><li style=\"margin-top: 0.35em;\">For literature reviews, an AI agent explores that graph on its own, following citations and shared concepts to find themes and gaps before it writes the review.</li><li style=\"margin-top: 0.35em;\">Built with FastAPI and Next.js. The backend and its Neo4j graph run as Docker containers on my home server.</li></ul>",
-		summary: "Start each morning with the new research papers that matter to your work, and ask questions about any of them.",
-		liveDemo: "https://paper-pulse-nu.vercel.app",
-		sourceCode: "https://github.com/Shahir-47/Paper-Pulse",
-		devpost: null,
-		repo: "Paper-Pulse",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: HomeServerImg,
-		title: "Home Server",
-		description:
-			"Two of my personal projects, GrabPic and PaperPulse, used to run on AWS for about $100 a month. I moved them onto an Acer Nitro 5 gaming laptop at home, along with Queue Up and a few apps I use myself. Now everything runs for about $1 a month. The live page shows every container on the server and the laptop's CPU, memory, and GPU readings as they change.<p style=\"margin: 0.9em 0 0;\">Here's what runs on it and how traffic gets in:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Visitors never connect to my home network directly. A cloudflared container keeps an outbound tunnel open to Cloudflare, which handles DNS and HTTPS, so my router has no open ports and my home IP address stays hidden.</li><li style=\"margin-top: 0.35em;\">When I push to GitHub, Coolify builds the app into a container and sets up its route in Traefik, which passes each request to the right app. None of the databases publish a port, so only containers on the same Docker network can reach them.</li><li style=\"margin-top: 0.35em;\">Apps for my own use, like Immich for photo backup and Paperless-ngx for scanned documents, are reachable only from my phone and laptop over Tailscale. Uptime Kuma checks every app and alerts me when one goes down.</li><li style=\"margin-top: 0.35em;\">The live page is a small Next.js app that reads the host, Docker, and Uptime Kuma only while someone has it open, and streams the readings to the browser with Server-Sent Events.</li></ul>",
-		summary: "A gaming laptop at home that hosts my apps for about $1 a month instead of $100 on AWS, with a live page showing what's running on it.",
-		liveDemo: "https://lab.shahirahmed.com",
-		sourceCode: "https://github.com/Shahir-47/nitro-lab",
-		devpost: null,
-		repo: "nitro-lab",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: QueueUp,
-		title: "Queue Up",
-		description:
-			"Queue Up is for meeting people through music. It reads your Spotify history, from top artists to saved songs, shows you the people whose taste overlaps with yours the most, and lets you start chatting once you both swipe right.<p style=\"margin: 0.9em 0 0;\">The matching and chat are built like this:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Matches are ranked with a weighted score, where a shared favorite artist counts for more than a shared saved song, and each profile shows exactly what you have in common.</li><li style=\"margin-top: 0.35em;\">Chat runs over WebSockets with typing indicators, online status, and live match notifications, and file attachments go straight to S3 through presigned URLs.</li><li style=\"margin-top: 0.35em;\">The React frontend is compiled into the Spring Boot app, so the whole thing ships as one Docker image. It runs on my home server alongside its PostgreSQL database, and logins use JWTs stored in HTTP-only cookies.</li></ul>",
-		summary: "Meet people who listen to the same music you do, matched from your Spotify history, and start chatting right away.",
-		liveDemo: "https://queue-up.shahirahmed.com",
-		sourceCode: "https://github.com/Shahir-47/Queue-Up",
-		devpost: null,
-		repo: "Queue-Up",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: CoSignImg,
-		title: "CoSign",
-		description:
-			"It's easy to ignore a to-do list when nobody's checking. In CoSign, someone you pick has to approve your proof before a task counts as done, and if the deadline passes first, they get emailed a penalty you wrote ahead of time and would rather keep private.<p style=\"margin: 0.9em 0 0;\">I built it to be hard to cheat:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Each task moves through a state machine from waiting on proof to approved or missed, and deadlines are enforced automatically.</li><li style=\"margin-top: 0.35em;\">Penalties are encrypted with AES and stay hidden until a deadline is missed, and each one is hashed so it can't be reused after it's exposed.</li><li style=\"margin-top: 0.35em;\">Built with Spring Boot, React, and TypeScript, with live WebSocket updates and recurring tasks, all shipped as one Docker container.</li></ul>",
-		summary: "Someone you pick has to sign off on your work, and if you miss the deadline, they get the penalty you wrote.",
-		liveDemo: "https://cosign-nwwl.onrender.com",
-		sourceCode: "https://github.com/Shahir-47/CoSign",
-		devpost: null,
-		repo: "CoSign",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "PandOS",
-		description:
-			"An operating system kernel I wrote in C for uMPS3, an emulator of a MIPS computer. It runs up to 20 processes at once and switches between them every 5 milliseconds, so each one gets a fair turn on the CPU.<p style=\"margin: 0.9em 0 0;\">The kernel handles the rest of the low-level work too:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">Processes wait on semaphores for devices and for each other, and the kernel handles their system calls and device interrupts.</li><li style=\"margin-top: 0.35em;\">Each process runs in its own virtual address space, mapped to physical memory through the TLB.</li></ul>",
-		liveDemo: null,
-		sourceCode:
-			"https://gitfront.io/r/Shahir-47/abfsq8dhTm4Z/Custom-OS-Kernel/",
-		devpost: null,
-		repo: "PandOS",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "BitTorrent Client JS",
-		description:
-			"A BitTorrent client I wrote in Node.js. Give it a .torrent file or a magnet link and it finds peers, connects to them directly, and downloads the file piece by piece.<p style=\"margin: 0.9em 0 0;\">I built each part of the protocol from scratch:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It includes its own bencode encoder and decoder, finds peers through HTTP trackers, and speaks the BitTorrent wire protocol over TCP.</li><li style=\"margin-top: 0.35em;\">Every piece is checked against its SHA-1 hash before the file is put back together.</li><li style=\"margin-top: 0.35em;\">For magnet links, which don't include the file's metadata, it uses the extension protocol to get that metadata from peers first.</li></ul>",
-		summary: "Download a file from a .torrent file or magnet link by connecting straight to the peers sharing it.",
-		liveDemo: null,
-		sourceCode: "https://github.com/Shahir-47/bittorrent-client-js",
-		devpost: null,
-		repo: "bittorrent-client-js",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: Albatross,
-		title: "Albatross",
-		description:
-			"Two of my teammates had felt unsafe walking through parts of Boston, so at HackHarvard 2024 our team of four built Albatross in 36 hours. It finds a fast walking route that stays out of crime hot zones.<p style=\"margin: 0.9em 0 0;\">We split the system into a few pieces:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">We loaded 50K+ crime records into Databricks and used MLflow to cluster them into hot zones.</li><li style=\"margin-top: 0.35em;\">Cloudflare Workers check each route against those zones, and I built the Vue.js frontend that shows the zones and the safer route on the map.</li></ul>",
-		summary: "Walk home through Boston on a route that stays out of crime hot zones.",
-		liveDemo: "https://albatross-hack.netlify.app/",
-		sourceCode: "https://github.com/orgs/HackHarvard2024-Team/repositories",
-		devpost: "https://devpost.com/software/albatross",
-		repo: "Albatross",
-		category: CATEGORIES.HACKATHON,
-	},
-	{
-		image: SweetFriend,
-		title: "SweetFriend",
-		description:
-			"One of my teammates at PennApps 2024 lives with type 1 diabetes, and carb counting and insulin dosing were a daily guessing game for them. In 36 hours we built SweetFriend, which shows live readings from a Dexcom glucose monitor and estimates the carbs in a meal from a photo.<p style=\"margin: 0.9em 0 0;\">Here's how it came together:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">I built the React frontend, including a Chart.js glucose chart where meals and workouts show up on the timeline.</li><li style=\"margin-top: 0.35em;\">The Flask and MongoDB backend sends meal photos to a GPT-4o vision model for carb estimates and texts you through Twilio when your glucose gets dangerous.</li></ul>",
-		summary: "Snap a photo of a meal to get a carb estimate next to your live glucose readings.",
-		liveDemo: "https://sweet-friend.vercel.app/app/dashboard",
-		sourceCode: "https://github.com/dmicz/SweetFriend",
-		devpost: "https://devpost.com/software/sweetfriend",
-		repo: "SweetFriend",
-		category: CATEGORIES.HACKATHON,
-	},
-	{
-		image: SpaceAccuracy,
-		title: "SpaceAccuracy",
-		description:
-			"A 2D shooter I built in Lua with the LÖVE framework, where every hit makes the alien move faster and a single miss ends the game.",
-		sourceCode: "https://github.com/Shahir-47/SpaceAccuracy",
-		repo: "SpaceAccuracy",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "Speller",
-		description:
-			"A spell checker in C that loads a dictionary into a hash table I implemented myself, so every word in a text gets checked in close to constant time.",
-		sourceCode: "https://github.com/Shahir-47/speller",
-		repo: "speller",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "Recover",
-		description:
-			"A C program that recovers JPEG photos from a raw memory card image by scanning it block by block for JPEG signatures and writing each photo back out as its own file.",
-		sourceCode: "https://github.com/Shahir-47/Recover",
-		repo: "Recover",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "Filter",
-		description:
-			"A C program that edits BMP images pixel by pixel to apply grayscale, sepia, blur, and mirror filters.",
-		sourceCode: "https://github.com/Shahir-47/filter",
-		repo: "filter",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "Runoff Voting System",
-		description:
-			"A ranked-choice election simulator that eliminates the last-place candidate each round and moves their votes to each voter's next choice until someone wins a majority.",
-		sourceCode: "https://github.com/Shahir-47/Runoff",
-		repo: "Runoff",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "DNA Profiling",
-		description:
-			"A program that identifies who a DNA sample belongs to by counting repeated short sequences in it and comparing those counts against a database of people.",
-		sourceCode: "https://github.com/Shahir-47/DNA",
-		category: CATEGORIES.PERSONAL,
-	},
-	{
-		image: "",
-		title: "Credit Card Validator",
-		description:
-			"A C program that validates credit card numbers with Luhn's algorithm and identifies whether each one is a Visa, Mastercard, or American Express card.",
-		sourceCode: "https://github.com/Shahir-47/Credit",
-		repo: "Credit",
-		category: CATEGORIES.PERSONAL,
-	},
-];
+ProjectTags.propTypes = {
+	tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+	activeTags: PropTypes.arrayOf(PropTypes.string).isRequired,
+	onToggleTag: PropTypes.func.isRequired,
+};
 
 const ProjectItem = ({
 	image,
@@ -222,6 +150,9 @@ const ProjectItem = ({
 	sourceCode,
 	devpost,
 	category,
+	tags,
+	activeTags,
+	onToggleTag,
 	highlight,
 }) => (
 	<Box
@@ -367,6 +298,13 @@ const ProjectItem = ({
 				dangerouslySetInnerHTML={{ __html: highlight(description) }}
 			/>
 
+			{/* Tags */}
+			<ProjectTags
+				tags={tags}
+				activeTags={activeTags}
+				onToggleTag={onToggleTag}
+			/>
+
 			{/* Action Buttons */}
 			<Box
 				sx={{
@@ -501,7 +439,110 @@ const ProjectItem = ({
 const Projects = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	const [activeFilter, setActiveFilter] = useState(CATEGORIES.ALL);
+	const [selectedTags, setSelectedTags] = useState(EMPTY_SELECTION);
+	const [sortBy, setSortBy] = useState(SORTS[0].value);
+	const [filtersOpen, setFiltersOpen] = useState(false);
 	const [showAllProjects, setShowAllProjects] = useState(false);
+	// Nothing is written back to the URL until the URL has been read, otherwise
+	// the first render would wipe the filters a shared link arrived with.
+	const [urlRead, setUrlRead] = useState(false);
+
+	useEffect(() => {
+		const params = new URLSearchParams(window.location.search);
+
+		const query = params.get("q");
+		if (query) setSearchTerm(query);
+
+		const category = Object.values(CATEGORIES).find(
+			(value) =>
+				value.toLowerCase() === (params.get("category") || "").toLowerCase(),
+		);
+		if (category) setActiveFilter(category);
+
+		const sort = SORTS.find((option) => option.value === params.get("sort"));
+		if (sort) setSortBy(sort.value);
+
+		// Tags are matched case-insensitively against the real tag names, so a
+		// hand-typed ?lang=java still works and an unknown tag is dropped.
+		const fromUrl = {};
+		let found = 0;
+		GROUP_TAGS.forEach((group) => {
+			const raw = params.get(group.param) || "";
+			const wanted = raw
+				.split(",")
+				.map((value) => value.trim().toLowerCase())
+				.filter(Boolean);
+			const tags = group.tags.filter((tag) =>
+				wanted.includes(tag.toLowerCase()),
+			);
+			fromUrl[group.key] = tags;
+			found += tags.length;
+		});
+		if (found) {
+			setSelectedTags(fromUrl);
+			setFiltersOpen(true);
+		}
+
+		setUrlRead(true);
+	}, []);
+
+	useEffect(() => {
+		if (!urlRead) return undefined;
+		// Safari caps how often a page may rewrite its URL, so typing in the
+		// search box waits for a pause before the query string catches up.
+		const timer = setTimeout(() => {
+			const params = new URLSearchParams();
+			if (searchTerm) params.set("q", searchTerm);
+			if (activeFilter !== CATEGORIES.ALL) params.set("category", activeFilter);
+			if (sortBy !== SORTS[0].value) params.set("sort", sortBy);
+			GROUP_TAGS.forEach((group) => {
+				const tags = selectedTags[group.key];
+				if (tags.length) params.set(group.param, tags.join(","));
+			});
+			const query = params.toString();
+			// replaceState keeps the back button pointing at the previous page
+			// rather than at every filter the visitor tried on the way.
+			window.history.replaceState(
+				null,
+				"",
+				query ? `?${query}` : window.location.pathname,
+			);
+		}, 300);
+
+		return () => clearTimeout(timer);
+	}, [urlRead, searchTerm, activeFilter, sortBy, selectedTags]);
+
+	const activeTags = useMemo(
+		() => GROUP_TAGS.flatMap((group) => selectedTags[group.key]),
+		[selectedTags],
+	);
+
+	const toggleTag = (tag) => {
+		const entry = TAG_INDEX.get(tag);
+		if (!entry) return;
+		setSelectedTags((current) => {
+			const tags = current[entry.group];
+			return {
+				...current,
+				[entry.group]: tags.includes(tag)
+					? tags.filter((value) => value !== tag)
+					: [...tags, tag],
+			};
+		});
+		setShowAllProjects(false);
+	};
+
+	const clearFilters = () => {
+		setSearchTerm("");
+		setActiveFilter(CATEGORIES.ALL);
+		setSelectedTags(EMPTY_SELECTION);
+		setShowAllProjects(false);
+	};
+
+	const hasFilters =
+		Boolean(searchTerm) ||
+		activeFilter !== CATEGORIES.ALL ||
+		activeTags.length > 0;
 
 	const highlightText = (text) => {
 		if (!searchTerm) return text;
@@ -514,27 +555,54 @@ const Projects = () => {
 		);
 	};
 
-	const filteredProjects = projectsData.filter((project) => {
-		const matchesSearch =
-			project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			project.description
-				.replace(/<[^>]*>/g, " ")
-				.toLowerCase()
-				.includes(searchTerm.toLowerCase());
-		const matchesFilter =
-			activeFilter === CATEGORIES.ALL || project.category === activeFilter;
-		return matchesSearch && matchesFilter;
-	});
+	const filteredProjects = useMemo(() => {
+		const query = searchTerm.trim().toLowerCase();
+		const matches = projectsData.filter((project) => {
+			const haystack = [
+				project.title,
+				project.description.replace(/<[^>]*>/g, " "),
+				projectTags(project).join(" "),
+			]
+				.join(" ")
+				.toLowerCase();
+			const matchesSearch = !query || haystack.includes(query);
+			const matchesCategory =
+				activeFilter === CATEGORIES.ALL || project.category === activeFilter;
+			// Inside a group any one tag is enough, across groups every group with
+			// a selection has to match: picking Backend and C means both.
+			const matchesTags = GROUP_TAGS.every((group) => {
+				const tags = selectedTags[group.key];
+				return (
+					!tags.length ||
+					tags.some((tag) => (project[group.key] || []).includes(tag))
+				);
+			});
+			return matchesSearch && matchesCategory && matchesTags;
+		});
+
+		const { compare } = SORTS.find((option) => option.value === sortBy) || {};
+		return compare ? [...matches].sort(compare) : matches;
+	}, [searchTerm, activeFilter, selectedTags, sortBy]);
 
 	const projectsToShow = showAllProjects
 		? filteredProjects
 		: filteredProjects.slice(0, 7);
 
-	// Get counts for each category
-	const getCategoryCount = (category) => {
-		if (category === CATEGORIES.ALL) return projectsData.length;
-		return projectsData.filter((p) => p.category === category).length;
-	};
+	// Counts follow the tag filter, so a category never promises more projects
+	// than it can show once the tags are applied.
+	const getCategoryCount = (category) =>
+		projectsData.filter((project) => {
+			const matchesCategory =
+				category === CATEGORIES.ALL || project.category === category;
+			const matchesTags = GROUP_TAGS.every((group) => {
+				const tags = selectedTags[group.key];
+				return (
+					!tags.length ||
+					tags.some((tag) => (project[group.key] || []).includes(tag))
+				);
+			});
+			return matchesCategory && matchesTags;
+		}).length;
 
 	return (
 		<Box
@@ -706,8 +774,259 @@ const Projects = () => {
 				/>
 			</Box>
 
+			{/* Filter Panel Toggle and Sort */}
+			<Box
+				sx={{
+					display: "flex",
+					flexWrap: "wrap",
+					alignItems: "center",
+					justifyContent: "space-between",
+					gap: { xs: "0.75rem", sm: "1rem" },
+					marginBottom: { xs: "1rem", sm: "1.25rem" },
+					"@media (min-width: 2560px)": {
+						gap: "1.5rem",
+						marginBottom: "1.75rem",
+					},
+				}}
+			>
+				<Button
+					variant="outlined"
+					onClick={() => setFiltersOpen(!filtersOpen)}
+					aria-expanded={filtersOpen}
+					aria-controls="project-tag-filters"
+					startIcon={<FilterList />}
+					endIcon={
+						filtersOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />
+					}
+					sx={{
+						borderColor: activeTags.length
+							? "#00adb5"
+							: "rgba(0, 173, 181, 0.45)",
+						backgroundColor: activeTags.length
+							? "rgba(0, 173, 181, 0.14)"
+							: "transparent",
+						color: "#00adb5",
+						fontWeight: 600,
+						fontSize: { xs: "0.8rem", sm: "0.85rem", md: "0.9rem" },
+						borderRadius: "980px",
+						textTransform: "none",
+						px: { xs: 1.75, sm: 2.25 },
+						py: { xs: 0.5, sm: 0.75 },
+						"&:hover": {
+							borderColor: "#00c8d1",
+							backgroundColor: "rgba(0, 173, 181, 0.2)",
+							color: "#00c8d1",
+						},
+						"@media (min-width: 2560px)": {
+							fontSize: "1.2rem",
+							px: 3.5,
+							py: 1,
+						},
+					}}
+				>
+					{activeTags.length
+						? `Filter by tag (${activeTags.length})`
+						: "Filter by tag"}
+				</Button>
+
+				<TextField
+					select
+					size="small"
+					id="projects-sort"
+					label="Sort by"
+					value={sortBy}
+					onChange={(event) => {
+						setSortBy(event.target.value);
+						setShowAllProjects(false);
+					}}
+					slotProps={{
+						select: {
+							MenuProps: {
+								PaperProps: {
+									sx: {
+										backgroundColor: "#393e46",
+										color: "#eeeeee",
+										border: "1px solid rgba(0, 173, 181, 0.35)",
+										"& .MuiMenuItem-root.Mui-selected": {
+											backgroundColor: "rgba(0, 173, 181, 0.22)",
+										},
+										"& .MuiMenuItem-root:hover": {
+											backgroundColor: "rgba(0, 173, 181, 0.14)",
+										},
+									},
+								},
+							},
+						},
+					}}
+					sx={{
+						minWidth: { xs: "100%", sm: "200px" },
+						"& .MuiInputLabel-root": { color: "#00adb5" },
+						"& .MuiInputLabel-root.Mui-focused": { color: "#00c8d1" },
+						"& .MuiOutlinedInput-root": {
+							color: "#eeeeee",
+							"& fieldset": { borderColor: "rgba(0, 173, 181, 0.45)" },
+							"&:hover fieldset": { borderColor: "#00adb5" },
+							"&.Mui-focused fieldset": { borderColor: "#00c8d1" },
+						},
+						"& .MuiSvgIcon-root": { color: "#00adb5" },
+						"@media (min-width: 2560px)": {
+							minWidth: "320px",
+							"& .MuiInputLabel-root": { fontSize: "1.2rem" },
+							"& .MuiInputBase-input": { fontSize: "1.2rem" },
+						},
+					}}
+				>
+					{SORTS.map((option) => (
+						<MenuItem key={option.value} value={option.value}>
+							{option.label}
+						</MenuItem>
+					))}
+				</TextField>
+			</Box>
+
+			{/* Tag Filter Panel */}
+			<Collapse in={filtersOpen} unmountOnExit>
+				<Box
+					id="project-tag-filters"
+					sx={{
+						backgroundColor: "#32373f",
+						border: "1px solid rgba(0, 173, 181, 0.18)",
+						borderRadius: { xs: "8px", md: "12px" },
+						padding: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+						marginBottom: { xs: "1.25rem", sm: "1.5rem" },
+						"@media (min-width: 2560px)": {
+							padding: "2.5rem",
+							borderRadius: "16px",
+							marginBottom: "2rem",
+						},
+					}}
+				>
+					{GROUP_TAGS.map((group) => (
+						<Box
+							key={group.key}
+							sx={{
+								marginBottom: { xs: "1rem", sm: "1.15rem" },
+								"&:last-of-type": { marginBottom: 0 },
+								"@media (min-width: 2560px)": { marginBottom: "1.75rem" },
+							}}
+						>
+							<Typography
+								component="h3"
+								sx={{
+									color: group.color,
+									fontWeight: 700,
+									textTransform: "uppercase",
+									letterSpacing: "0.08em",
+									fontSize: { xs: "0.7rem", sm: "0.75rem" },
+									marginBottom: { xs: "0.5rem", sm: "0.6rem" },
+									"@media (min-width: 2560px)": {
+										fontSize: "1.1rem",
+										marginBottom: "0.9rem",
+									},
+								}}
+							>
+								{group.label}
+							</Typography>
+							<Box
+								sx={{
+									display: "flex",
+									flexWrap: "wrap",
+									gap: { xs: "0.35rem", sm: "0.4rem", md: "0.45rem" },
+									"@media (min-width: 2560px)": { gap: "0.7rem" },
+								}}
+							>
+								{group.tags.map((tag) => (
+									<TagChip
+										key={tag}
+										tag={tag}
+										count={TAG_INDEX.get(tag).count}
+										active={selectedTags[group.key].includes(tag)}
+										onToggle={toggleTag}
+									/>
+								))}
+							</Box>
+						</Box>
+					))}
+
+					<Typography
+						sx={{
+							color: "#8b929c",
+							fontSize: { xs: "0.72rem", sm: "0.78rem" },
+							marginTop: { xs: "1rem", sm: "1.15rem" },
+							"@media (min-width: 2560px)": {
+								fontSize: "1.1rem",
+								marginTop: "1.75rem",
+							},
+						}}
+					>
+						Picking more tags in one row widens the results. Picking tags in
+						different rows narrows them, so Backend plus Java shows the backends
+						written in Java.
+					</Typography>
+				</Box>
+			</Collapse>
+
+			{/* Active Filters */}
+			{activeTags.length > 0 && (
+				<Box
+					sx={{
+						display: "flex",
+						flexWrap: "wrap",
+						alignItems: "center",
+						gap: { xs: "0.35rem", sm: "0.45rem" },
+						marginBottom: { xs: "1rem", sm: "1.25rem" },
+						"@media (min-width: 2560px)": {
+							gap: "0.7rem",
+							marginBottom: "1.75rem",
+						},
+					}}
+				>
+					{activeTags.map((tag) => (
+						<Chip
+							key={tag}
+							label={tag}
+							size="small"
+							onDelete={() => toggleTag(tag)}
+							sx={{
+								backgroundColor: tint(tagColor(tag), 0.9),
+								color: "#1b1f24",
+								fontWeight: 700,
+								fontSize: { xs: "0.68rem", sm: "0.72rem", md: "0.75rem" },
+								height: { xs: "22px", sm: "24px" },
+								"& .MuiChip-deleteIcon": {
+									color: "rgba(27, 31, 36, 0.65)",
+									"&:hover": { color: "#1b1f24" },
+								},
+								"@media (min-width: 2560px)": {
+									fontSize: "1rem",
+									height: "32px",
+								},
+							}}
+						/>
+					))}
+					<Button
+						onClick={clearFilters}
+						sx={{
+							color: "#b6bcc6",
+							textTransform: "none",
+							fontSize: { xs: "0.72rem", sm: "0.78rem" },
+							minWidth: "auto",
+							padding: "0 0.5rem",
+							textDecoration: "underline",
+							"&:hover": {
+								backgroundColor: "transparent",
+								color: "#00c8d1",
+							},
+							"@media (min-width: 2560px)": { fontSize: "1.1rem" },
+						}}
+					>
+						Clear all
+					</Button>
+				</Box>
+			)}
+
 			{/* Results Count */}
-			{(searchTerm || activeFilter !== CATEGORIES.ALL) && (
+			{hasFilters && (
 				<Typography
 					sx={{
 						color: "#888",
@@ -723,6 +1042,7 @@ const Projects = () => {
 					Showing {filteredProjects.length} project
 					{filteredProjects.length !== 1 ? "s" : ""}
 					{activeFilter !== CATEGORIES.ALL && ` in ${activeFilter}`}
+					{activeTags.length > 0 && ` tagged ${activeTags.join(", ")}`}
 					{searchTerm && ` matching "${searchTerm}"`}
 				</Typography>
 			)}
@@ -731,7 +1051,14 @@ const Projects = () => {
 			<Box>
 				{projectsToShow.length > 0 ? (
 					projectsToShow.map((project, index) => (
-						<ProjectItem key={index} {...project} highlight={highlightText} />
+						<ProjectItem
+							key={index}
+							{...project}
+							tags={projectTags(project)}
+							activeTags={activeTags}
+							onToggleTag={toggleTag}
+							highlight={highlightText}
+						/>
 					))
 				) : (
 					<Box
@@ -751,10 +1078,7 @@ const Projects = () => {
 						</Typography>
 						<Button
 							variant="outlined"
-							onClick={() => {
-								setSearchTerm("");
-								setActiveFilter(CATEGORIES.ALL);
-							}}
+							onClick={clearFilters}
 							sx={{
 								borderColor: "#00adb5",
 								color: "#00adb5",
@@ -873,6 +1197,9 @@ ProjectItem.propTypes = {
 	sourceCode: PropTypes.string.isRequired,
 	devpost: PropTypes.string,
 	category: PropTypes.string.isRequired,
+	tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+	activeTags: PropTypes.arrayOf(PropTypes.string).isRequired,
+	onToggleTag: PropTypes.func.isRequired,
 	highlight: PropTypes.func.isRequired,
 };
 
