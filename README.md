@@ -258,4 +258,4 @@ This project is released under the MIT License. If you use it as a starting poin
 - Website: [shahirahmed.com/contact](https://www.shahirahmed.com/contact)
 - LinkedIn: [linkedin.com/in/shahir47](https://www.linkedin.com/in/shahir47/)
 - GitHub: [@Shahir-47](https://github.com/Shahir-47)
-- Email: [shahir.a@nyu.edu](mailto:shahir.a@nyu.edu)
+- Email: [ka4121@nyu.edu](mailto:ka4121@nyu.edu)

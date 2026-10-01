@@ -1,6 +1,6 @@
 /* TEAM */
 Developer: Shahir Ahmed
-Contact: shahir.a@nyu.edu
+Contact: ka4121@nyu.edu
 GitHub: https://github.com/Shahir-47
 LinkedIn: https://www.linkedin.com/in/shahir47/
 Location: New York, NY

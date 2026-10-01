@@ -115,7 +115,7 @@ Cloud and DevOps: AWS (S3, SQS, EC2, ECR, App Runner), Google Cloud Platform, Ve
 Databases and Tools: PostgreSQL, pgvector, Supabase, Redis, Firebase, Neo4j, Stripe, Algolia, OpenAI API, Git, Vitest, Cypress
 
 ## Contact
-- Email: shahir.a@nyu.edu
+- Email: ka4121@nyu.edu
 - LinkedIn: https://www.linkedin.com/in/shahir47/
 - GitHub: https://github.com/Shahir-47
 - Devpost: https://devpost.com/Shahir-47

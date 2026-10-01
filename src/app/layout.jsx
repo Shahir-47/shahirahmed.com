@@ -316,7 +316,7 @@ const jsonLd = {
 				"https://devpost.com/Shahir-47",
 				"https://instagram.com/shahirahmed._",
 			],
-			email: "shahir.a@nyu.edu",
+			email: "ka4121@nyu.edu",
 		},
 		{
 			"@type": "ProfilePage",
