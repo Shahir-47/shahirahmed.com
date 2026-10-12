@@ -1,12 +1,12 @@
 {
-	"schema_version": "1.2",
-	"last_updated": "2026-09-20",
+	"schema_version": "1.3",
+	"last_updated": "2026-10-12",
 	"canonical_url": "https://www.shahirahmed.com",
 	"profile": {
 		"name": "Shahir Ahmed",
 		"title": "Software Engineer",
 		"location": "New York, NY",
-		"summary": "Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 25th of 600+ contributors to Mermaid.js.",
+		"summary": "Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 31st of 800+ contributors to Mermaid.js.",
 		"website": "https://www.shahirahmed.com",
 		"email": "ka4121@nyu.edu",
 		"social": {
@@ -25,34 +25,56 @@
 			"period": "2025-05 to 2026-09",
 			"website": "https://www.sarvabazaar.com/",
 			"highlights": [
-				"Cut inventory time by 60% by building a voice assistant that lets store owners manage inventory in their own languages",
-				"Created 3 GitHub Actions CI/CD pipelines that run 2,604 Vitest tests on 173 TypeScript APIs to catch bugs before production",
-				"Deployed 12 serverless Firebase Cloud Functions on Google Cloud Platform that retry failed payouts and restock abandoned carts",
-				"Lowered zero-result searches 7% by adding semantic search with OpenAI embeddings to keyword search for natural language queries",
-				"Reduced AI costs by adding Redis rate limiting and a token allowance per user to the Next.js API routes that call OpenAI",
+				"Cut inventory update time by 60% by building a multilingual AI voice assistant in Next.js and TypeScript that lets store owners add or update multiple products by voice over WebRTC",
+				"Reduced zero-result searches by 17% by adding semantic search with OpenAI embeddings and Firestore vector queries to Algolia keyword search so shoppers can find products using natural language",
+				"Built a Stripe Connect payout system for vendors and drivers with Google Cloud Functions that retry failed transfers and use idempotency keys to prevent duplicate payments",
+				"Prevented overselling during concurrent checkouts by checking and reserving stock in atomic Firestore transactions",
+				"Created GitHub Actions CI/CD pipelines that run 2,604 Vitest tests and check preview deployments before release",
 				"Built the product that put Sarva in the gener8tor and Meta gBETA accelerator and the Ship Tank and launchU finals"
 			],
 			"skills": [
 				"Next.js",
 				"TypeScript",
-				"Firebase",
-				"Google Cloud Platform",
-				"Redis",
+				"WebRTC",
 				"OpenAI API",
+				"Algolia",
+				"Firestore",
+				"Stripe Connect",
+				"Google Cloud Functions",
 				"Vitest",
 				"GitHub Actions"
 			],
 			"summary": "Startup that helps neighborhood grocery shops manage inventory by voice, with online ordering, pickup, and delivery."
 		},
 		{
+			"role": "Software Engineer Intern",
+			"organization": "FarmData2 at Dickinson College",
+			"location": "Carlisle, PA",
+			"period": "2024-05 to 2025-05",
+			"website": "https://github.com/FarmData2/FarmData2",
+			"highlights": [
+				"Developed crop seeding and tillage tracking in Vue.js through 25 merged pull requests to a National Science Foundation (NSF) funded open source platform that supports sustainability research and helps farmers manage field operations",
+				"Protected crop records with JavaScript rollback handlers that undo earlier writes when farmOS REST API calls fail",
+				"Wrote 70+ Cypress unit, integration, and end-to-end tests for data validation, record creation, and API failure recovery"
+			],
+			"skills": [
+				"Vue.js",
+				"JavaScript",
+				"farmOS REST API",
+				"Cypress"
+			],
+			"summary": "Paid internship on open source farm record-keeping software funded by the National Science Foundation."
+		},
+		{
 			"role": "Open Source Contributor",
 			"organization": "Mermaid.js",
 			"location": "Remote",
-			"period": "2025-01 to 2026-04",
+			"period": "2025-01 to 2025-04",
 			"website": "https://github.com/mermaid-js/mermaid",
 			"highlights": [
-				"Added 3 D3.js features with Cypress tests to a TypeScript library with 12M+ weekly downloads used by GitHub and Microsoft: data labels inside bar charts, Knuth-Plass word wrapping for journey diagram legends, and journey diagram title styling",
-				"Passed CI/CD checks and maintainer review on all 3 pull requests in the 200,000 line codebase to rank 25th of 600+ contributors"
+				"Added diagram features and fixed rendering bugs in TypeScript and D3.js for a library with 15M+ weekly downloads: data labels inside bar charts, Knuth-Plass word wrapping that keeps journey diagram legends from overlapping the diagram, and journey diagram title styling",
+				"Authored 3 merged pull requests with 22 Cypress regression tests by collaborating with maintainers and contributors",
+				"Ranked 31st of 800+ contributors on the repository's contributor graph as of October 2026"
 			],
 			"skills": [
 				"TypeScript",
@@ -62,31 +84,29 @@
 			"summary": "Open source tool that turns text into flowcharts and diagrams, used by GitHub and Microsoft."
 		},
 		{
-			"role": "Software Engineer Intern",
-			"organization": "FarmData2 at Dickinson College",
-			"location": "Carlisle, PA",
-			"period": "2024-05 to 2025-05",
-			"website": "https://github.com/FarmData2/FarmData2",
+			"role": "Student Researcher",
+			"organization": "Dickinson College and 84 Lumber",
+			"location": "Remote",
+			"period": "2023-09 to 2024-01",
 			"highlights": [
-				"Saved farmers 12+ hours a week by automating crop logging with 18+ transactional Node.js REST APIs on PostgreSQL",
-				"Cut page load time by 60% on a National Science Foundation funded farm platform by moving 22+ Vue.js components to Vuex",
-				"Authored 25 merged pull requests with 30+ Cypress integration tests in Agile sprints to become the project's 2nd top contributor"
+				"Built an ANTLR4 parser and abstract syntax tree (AST) translator to convert CBASIC into Python and Java",
+				"Co-designed a migration plan for 50,000+ lines of legacy code with 11 Dickinson students and 84 Lumber engineers"
 			],
 			"skills": [
-				"Vue.js",
-				"Node.js",
-				"PostgreSQL",
-				"Cypress"
-			],
-			"summary": "Paid internship on open source farm record-keeping software funded by the National Science Foundation."
-		},
+				"ANTLR4",
+				"Python",
+				"Java"
+			]
+		}
+	],
+	"leadership": [
 		{
 			"role": "Teaching Assistant",
 			"organization": "Dickinson College Computer Science Department",
 			"location": "Carlisle, PA",
 			"period": "2022-09 to 2025-05",
 			"highlights": [
-				"Raised assignment scores 15% for 25+ students over 6 semesters of weekly Python and Java code reviews and office hours"
+				"Taught 25+ students to write and debug Python and Java programs through labs, code reviews, and office hours"
 			],
 			"skills": [
 				"Python",
@@ -95,18 +115,12 @@
 			]
 		},
 		{
-			"role": "Software Engineer (Volunteer)",
-			"organization": "84 Lumber",
-			"location": "Remote",
-			"period": "2023-09 to 2024-01",
+			"role": "Resident Advisor",
+			"organization": "Dickinson College",
+			"location": "Carlisle, PA",
+			"period": "2022-08 to 2024-05",
 			"highlights": [
-				"Converted legacy CBASIC to Python and Java with an ANTLR4 translator that walks abstract syntax trees",
-				"Co-designed a plan with 11 teammates to modernize 50,000+ lines of CBASIC that shaped the $9B retailer's roadmap"
-			],
-			"skills": [
-				"ANTLR4",
-				"Python",
-				"Java"
+				"Mediated roommate conflicts, handled on-call emergencies, and connected 40 residents with campus resources"
 			]
 		}
 	],
@@ -116,7 +130,7 @@
 			"category": "Personal",
 			"url": "https://grab-pic.vercel.app",
 			"github": "https://github.com/Shahir-47/Grab-Pic",
-			"description": "Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Three services (Next.js, Spring Boot, Python DeepFace/TensorFlow worker) connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, Redis rate limiting, and Cloudflare Turnstile. The backend is self-hosted on Shahir's home server, cutting hosting from about $85 to about $1 a month.",
+			"description": "Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Three services (Next.js, Spring Boot, Python DeepFace/TensorFlow worker) connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, per-IP Redis rate limiting in an atomic Lua script, and Cloudflare Turnstile. The backend is self-hosted on Shahir's home server, cutting hosting from about $85 to about $1 a month.",
 			"tags": {
 				"focus": [
 					"Full Stack",
@@ -134,7 +148,8 @@
 					"TypeScript",
 					"Java",
 					"Python",
-					"SQL"
+					"SQL",
+					"Lua"
 				],
 				"tech": [
 					"Next.js",
@@ -157,7 +172,7 @@
 			"category": "Personal",
 			"url": "https://paper-pulse-nu.vercel.app",
 			"github": "https://github.com/Shahir-47/Paper-Pulse",
-			"description": "Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph. FastAPI and Next.js, with the backend self-hosted in Docker.",
+			"description": "Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph, streaming responses over Server-Sent Events. FastAPI and Next.js, with the backend self-hosted in Docker.",
 			"tags": {
 				"focus": [
 					"Full Stack",
@@ -186,6 +201,7 @@
 					"Cohere",
 					"Docker",
 					"Supabase",
+					"Server-Sent Events",
 					"Tailwind CSS"
 				]
 			}
@@ -438,47 +454,32 @@
 	],
 	"skills": {
 		"languages": [
+			"Java",
+			"Python",
 			"TypeScript",
 			"JavaScript",
-			"Python",
-			"Java",
-			"C",
 			"SQL",
-			"HTML/CSS"
+			"C"
 		],
 		"frameworks": [
-			"React",
 			"Next.js",
-			"Node.js",
-			"Express",
+			"React",
 			"Spring Boot",
 			"FastAPI",
-			"Vue.js",
-			"TailwindCSS",
-			"TensorFlow",
-			"D3.js"
+			"Node.js",
+			"Vue.js"
 		],
-		"cloud_and_devops": [
-			"AWS (S3, SQS, EC2, ECR, App Runner)",
-			"Google Cloud Platform",
-			"Vercel",
+		"tools": [
+			"AWS",
+			"Google Cloud",
 			"Docker",
-			"GitHub Actions",
-			"Linux"
-		],
-		"databases_and_tools": [
 			"PostgreSQL",
-			"pgvector",
-			"Supabase",
+			"Firestore",
 			"Redis",
-			"Firebase",
+			"pgvector",
 			"Neo4j",
-			"Stripe",
-			"Algolia",
-			"OpenAI API",
 			"Git",
-			"Vitest",
-			"Cypress"
+			"Linux"
 		]
 	}
 }

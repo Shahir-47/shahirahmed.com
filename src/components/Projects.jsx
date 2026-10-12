@@ -71,7 +71,7 @@ TagChip.propTypes = {
 	count: PropTypes.number,
 };
 
-// Cards would drown in chips otherwise: GrabPic alone carries 26 tags.
+// Cards would drown in chips otherwise: GrabPic alone carries 27 tags.
 const VISIBLE_TAGS = 10;
 
 const ProjectTags = ({ tags, activeTags, onToggleTag }) => {

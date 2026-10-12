@@ -158,7 +158,7 @@ const HomePage = () => {
 						<p className="home-copy">
 							I also contribute to Mermaid.js, an open source tool GitHub and
 							Microsoft use to turn text into flowcharts and diagrams, and I&apos;m
-							ranked 25th out of more than 600 contributors.
+							ranked 31st out of more than 800 contributors.
 						</p>
 						<Link className="btn btn-primary" href="/about">
 							Read more

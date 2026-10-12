@@ -69,7 +69,7 @@ export const projectsData = [
 		image: GrabPicImg,
 		title: "GrabPic",
 		description:
-			"After weddings and events, I kept doing the same thing: searching the album for one person's face, sending them their photos, and then starting over for the next person. GrabPic replaces that with a single link. The host uploads everything to one album, and each guest takes a selfie to get only the photos they appear in.<p style=\"margin: 0.9em 0 0;\">Here's how it works behind that link:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It runs as three services that deploy on their own: a Next.js frontend, a Spring Boot API, and a Python worker that uses DeepFace to turn every face into an embedding. New photos reach the worker through an Amazon SQS queue, so uploads never wait on face processing.</li><li style=\"margin-top: 0.35em;\">A selfie search is a nearest-neighbor lookup in pgvector over an HNSW index, which brings back matches from albums of 500+ photos in under 200 milliseconds.</li><li style=\"margin-top: 0.35em;\">Photos upload straight from the browser to S3 through presigned URLs. Redis rate limiting and Cloudflare Turnstile keep bots out, and protected photos only show up for people whose face is in them.</li></ul>",
+			"After weddings and events, I kept doing the same thing: searching the album for one person's face, sending them their photos, and then starting over for the next person. GrabPic replaces that with a single link. The host uploads everything to one album, and each guest takes a selfie to get only the photos they appear in.<p style=\"margin: 0.9em 0 0;\">Here's how it works behind that link:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">It runs as three services that deploy on their own: a Next.js frontend, a Spring Boot API, and a Python worker that uses DeepFace to turn every face into an embedding. New photos reach the worker through an Amazon SQS queue, so uploads never wait on face processing.</li><li style=\"margin-top: 0.35em;\">A selfie search is a nearest-neighbor lookup in pgvector over an HNSW index, which brings back matches from albums of 500+ photos in under 200 milliseconds.</li><li style=\"margin-top: 0.35em;\">Photos upload straight from the browser to S3 through presigned URLs. Selfie searches are rate limited per IP address by a Lua script that runs inside Redis, so each limit is checked and updated in one atomic step. Cloudflare Turnstile keeps bots out, and protected photos only show up for people whose face is in them.</li></ul>",
 		summary: "After a wedding or conference, share one link and every guest takes a selfie to see only the photos they're in.",
 		liveDemo: "https://grab-pic.vercel.app",
 		sourceCode: "https://github.com/Shahir-47/Grab-Pic",
@@ -81,7 +81,7 @@ export const projectsData = [
 			"Machine Learning", "Computer Vision", "Vector Search", "Security",
 			"DevOps & Cloud", "Self-Hosting",
 		],
-		languages: ["TypeScript", "Java", "Python", "SQL"],
+		languages: ["TypeScript", "Java", "Python", "SQL", "Lua"],
 		tech: [
 			"Next.js", "React", "Spring Boot", "TensorFlow", "PostgreSQL",
 			"pgvector", "Redis", "AWS", "Supabase", "Docker", "Cloudflare",
@@ -92,7 +92,7 @@ export const projectsData = [
 		image: PaperPulseImg,
 		title: "PaperPulse",
 		description:
-			"Keeping up with research means checking arXiv, PubMed, and a few other databases every day and sorting through a lot of papers that don't matter to you. PaperPulse does that search overnight, ranks everything against your interests, and has the 25 most relevant papers waiting in your feed the next morning. You can also ask it questions and get answers pulled from the papers themselves, with citations.<p style=\"margin: 0.9em 0 0;\">Here's what happens each night and when you ask a question:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">The nightly pipeline pulls from arXiv, Semantic Scholar, PubMed, and OpenAlex, extracts the text from each PDF, and embeds it for search, then Cohere reranks the results for each user.</li><li style=\"margin-top: 0.35em;\">Answers come from a three-stage hybrid retrieval pipeline over pgvector, plus context from a Neo4j knowledge graph that links papers to their authors, concepts, and citations.</li><li style=\"margin-top: 0.35em;\">For literature reviews, an AI agent explores that graph on its own, following citations and shared concepts to find themes and gaps before it writes the review.</li><li style=\"margin-top: 0.35em;\">Built with FastAPI and Next.js. The backend and its Neo4j graph run as Docker containers on my home server.</li></ul>",
+			"Keeping up with research means checking arXiv, PubMed, and a few other databases every day and sorting through a lot of papers that don't matter to you. PaperPulse does that search overnight, ranks everything against your interests, and has the 25 most relevant papers waiting in your feed the next morning. You can also ask it questions and get answers pulled from the papers themselves, with citations.<p style=\"margin: 0.9em 0 0;\">Here's what happens each night and when you ask a question:</p><ul style=\"margin: 0.35em 0 0 1.25em; padding: 0;\"><li style=\"margin-top: 0.35em;\">The nightly pipeline pulls from arXiv, Semantic Scholar, PubMed, and OpenAlex, extracts the text from each PDF, and embeds it for search, then Cohere reranks the results for each user.</li><li style=\"margin-top: 0.35em;\">Answers come from a three-stage hybrid retrieval pipeline over pgvector, plus context from a Neo4j knowledge graph that links papers to their authors, concepts, and citations. Responses stream to the browser over Server-Sent Events as they're written.</li><li style=\"margin-top: 0.35em;\">For literature reviews, an AI agent explores that graph on its own, following citations and shared concepts to find themes and gaps before it writes the review.</li><li style=\"margin-top: 0.35em;\">Built with FastAPI and Next.js. The backend and its Neo4j graph run as Docker containers on my home server.</li></ul>",
 		summary: "Start each morning with the new research papers that matter to your work, and ask questions about any of them.",
 		liveDemo: "https://paper-pulse-nu.vercel.app",
 		sourceCode: "https://github.com/Shahir-47/Paper-Pulse",
@@ -107,7 +107,8 @@ export const projectsData = [
 		languages: ["TypeScript", "Python", "SQL"],
 		tech: [
 			"Next.js", "React", "FastAPI", "Neo4j", "PostgreSQL", "pgvector",
-			"OpenAI", "Cohere", "Docker", "Supabase", "Tailwind CSS",
+			"OpenAI", "Cohere", "Docker", "Supabase", "Server-Sent Events",
+			"Tailwind CSS",
 		],
 	},
 	{

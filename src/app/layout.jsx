@@ -33,7 +33,7 @@ export const metadata = {
 		template: "%s | Shahir Ahmed",
 	},
 	description:
-		"Shahir Ahmed is a software engineer and Master's student in Computer Science at NYU. He was a software engineer at Sarva, interned on FarmData2, and is ranked 25th of 600+ contributors to Mermaid.js. Projects include GrabPic, PaperPulse, and a self-hosted home server.",
+		"Shahir Ahmed is a software engineer and Master's student in Computer Science at NYU. He was a software engineer at Sarva, interned on FarmData2, and is ranked 31st of 800+ contributors to Mermaid.js. Projects include GrabPic, PaperPulse, and a self-hosted home server.",
 	keywords: [
 		"Shahir Ahmed",
 		"Software Engineer",
@@ -203,7 +203,7 @@ const jsonLd = {
 				height: 400,
 			},
 			description:
-				"Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 25th of 600+ contributors to Mermaid.js. Built GrabPic, PaperPulse, and the home server that hosts them.",
+				"Software engineer and M.S. Computer Science student at New York University. Previously a software engineer at Sarva and a software engineer intern on FarmData2. Ranked 31st of 800+ contributors to Mermaid.js. Built GrabPic, PaperPulse, and the home server that hosts them.",
 			jobTitle: "Software Engineer",
 			affiliation: {
 				"@type": "CollegeOrUniversity",
@@ -218,7 +218,7 @@ const jsonLd = {
 					name: "United States",
 				},
 				skills:
-					"TypeScript, JavaScript, Java, Python, SQL, C, React, Next.js, Node.js, Spring Boot, FastAPI, PostgreSQL, Redis, AWS, Docker",
+					"Java, Python, TypeScript, JavaScript, SQL, C, Next.js, React, Spring Boot, FastAPI, Node.js, Vue.js, AWS, Google Cloud, Docker, PostgreSQL, Firestore, Redis, pgvector, Neo4j, Git, Linux",
 			},
 			alumniOf: {
 				"@type": "EducationalOrganization",
@@ -280,11 +280,15 @@ const jsonLd = {
 				"Peer-to-peer networking",
 				"REST APIs",
 				"WebSockets",
+				"WebRTC",
+				"Server-Sent Events",
 				"PostgreSQL",
 				"MongoDB",
 				"Firebase",
+				"Firestore",
 				"Supabase",
 				"Stripe Connect",
+				"Algolia",
 				"AWS S3",
 				"AWS App Runner",
 				"AWS SQS",

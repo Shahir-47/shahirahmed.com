@@ -36,7 +36,7 @@ const aboutPageJsonLd = {
 	url: `${siteUrl}/about`,
 	name: "About Shahir Ahmed",
 	description:
-		"About page covering Shahir Ahmed's professional background, technical skills, open source contributions, hackathon work, education, and certifications.",
+		"About page covering Shahir Ahmed's professional background, technical skills, open source contributions, hackathon work, leadership roles, education, and certifications.",
 	isPartOf: {
 		"@id": `${siteUrl}/#website`,
 	},

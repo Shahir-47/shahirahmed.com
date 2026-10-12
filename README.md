@@ -29,7 +29,7 @@ The code behind [shahirahmed.com](https://www.shahirahmed.com), my personal webs
 ## What's on the site
 
 - **Home:** a short introduction, a preview of my background, and three featured projects.
-- **About:** my work experience, open source contributions, hackathons, education, and GitHub activity. A sticky table of contents makes the long page easy to navigate.
+- **About:** my work experience, open source contributions, hackathons, leadership roles, education, and GitHub activity. A sticky table of contents makes the long page easy to navigate.
 - **Projects:** my personal and hackathon projects, with search, category filters, and links to each live demo and repository. Every project is tagged by focus, language, and tech, so you can filter down to the backends written in Java or the low-level C work, sort the results, and share the link you end up with.
 - **Contact:** a message form that sends straight to my inbox through EmailJS.
 - **404:** a page not found screen with buttons back to the main pages.

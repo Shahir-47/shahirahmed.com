@@ -8,6 +8,7 @@ const sections = [
 	{ id: "work-experience", label: "Work Experience" },
 	{ id: "open-source", label: "Open Source" },
 	{ id: "hackathons", label: "Hackathons" },
+	{ id: "leadership", label: "Leadership" },
 	{ id: "education", label: "Education" },
 	{ id: "certifications", label: "Certifications" },
 	{ id: "github-stats", label: "GitHub Stats" },

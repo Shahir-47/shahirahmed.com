@@ -94,7 +94,7 @@ const About = () => {
 										Mermaid.js
 									</a>
 									, an open source diagramming tool used by GitHub and Microsoft. The
-									features I&apos;ve added put me in the top 25 of its more than 600
+									features I&apos;ve added put me 31st out of its more than 800
 									contributors.
 								</p>
 								<p className="about-me-text">
@@ -223,12 +223,6 @@ const About = () => {
 								<img
 									loading="lazy"
 									decoding="async"
-									src="https://img.shields.io/badge/Vuex-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white"
-									alt="Vuex"
-								/>
-								<img
-									loading="lazy"
-									decoding="async"
 									src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
 									alt="TailwindCSS"
 								/>
@@ -291,6 +285,12 @@ const About = () => {
 									decoding="async"
 									src="https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socketdotio&logoColor=white"
 									alt="WebSockets"
+								/>
+								<img
+									loading="lazy"
+									decoding="async"
+									src="https://img.shields.io/badge/WebRTC-333333?style=for-the-badge&logo=webrtc&logoColor=white"
+									alt="WebRTC"
 								/>
 								<img
 									loading="lazy"
@@ -597,95 +597,31 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Cut inventory time by 60% by building a voice assistant that lets
-									store owners manage inventory in their own languages
+									Cut inventory update time by 60% by building a multilingual AI voice
+									assistant in Next.js and TypeScript that lets store owners add or
+									update multiple products by voice over WebRTC
 								</li>
 								<li>
-									Created 3 GitHub Actions CI/CD pipelines that run 2,604 Vitest tests
-									on 173 TypeScript APIs to catch bugs before production
+									Reduced zero-result searches by 17% by adding semantic search with
+									OpenAI embeddings and Firestore vector queries to Algolia keyword
+									search so shoppers can find products using natural language
 								</li>
 								<li>
-									Deployed 12 serverless Firebase Cloud Functions on Google Cloud
-									Platform that retry failed payouts and restock abandoned carts
+									Built a Stripe Connect payout system for vendors and drivers with
+									Google Cloud Functions that retry failed transfers and use
+									idempotency keys to prevent duplicate payments
 								</li>
 								<li>
-									Lowered zero-result searches 7% by adding semantic search with OpenAI
-									embeddings to keyword search for natural language queries
+									Prevented overselling during concurrent checkouts by checking and
+									reserving stock in atomic Firestore transactions
 								</li>
 								<li>
-									Reduced AI costs by adding Redis rate limiting and a token allowance
-									per user to the Next.js API routes that call OpenAI
+									Created GitHub Actions CI/CD pipelines that run 2,604 Vitest tests
+									and check preview deployments before release
 								</li>
 								<li>
 									Built the product that put Sarva in the gener8tor and Meta gBETA
 									accelerator and the Ship Tank and launchU finals
-								</li>
-							</ul>
-						</VerticalTimelineElement>
-
-						{/* Mermaid.js */}
-						<VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{
-								background: "#393e46",
-								color: "#fff",
-								boxShadow: "0 3px 0 #00adb5",
-							}}
-							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
-							date="Jan 2025 - Apr 2026"
-							dateClassName={"custom-date"}
-							iconStyle={{ background: "#00adb5", color: "#fff" }}
-							icon={
-								<img
-									src={MermaidJS.src}
-									alt="Mermaid.js"
-									style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "contain" }}
-								/>
-							}
-						>
-							<h3 className="vertical-timeline-element-title">
-								Open Source Contributor
-							</h3>
-							<h4 className="vertical-timeline-element-subtitle">
-								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
-									<span>Mermaid.js</span>
-									<span>Remote</span>
-								</span>
-								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
-									<a
-										href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5", textDecoration: "underline" }}
-									>
-										Pull requests
-									</a>
-									<a
-										href="https://github.com/mermaid-js/mermaid/graphs/contributors"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5", textDecoration: "underline" }}
-									>
-										Contributor ranking
-									</a>
-									<a
-										href="https://github.com/mermaid-js/mermaid"
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{ color: "#00adb5", textDecoration: "underline" }}
-									>
-										GitHub repository
-									</a>
-								</span>
-							</h4>
-							<ul>
-								<li>
-									Added 3 D3.js features with Cypress tests to a TypeScript library with
-									12M+ weekly downloads used by GitHub and Microsoft
-								</li>
-								<li>
-									Passed CI/CD checks and maintainer review on all 3 pull requests in the
-									200,000 line codebase to rank 25th of 600+ contributors
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -739,21 +675,23 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Saved farmers 12+ hours a week by automating crop logging with 18+
-									transactional Node.js REST APIs on PostgreSQL
+									Developed crop seeding and tillage tracking in Vue.js through 25
+									merged pull requests to a National Science Foundation (NSF) funded
+									open source platform that supports sustainability research and helps
+									farmers manage field operations
 								</li>
 								<li>
-									Cut page load time by 60% on a National Science Foundation funded farm
-									platform by moving 22+ Vue.js components to Vuex
+									Protected crop records with JavaScript rollback handlers that undo
+									earlier writes when farmOS REST API calls fail
 								</li>
 								<li>
-									Authored 25 merged pull requests with 30+ Cypress integration tests in
-									Agile sprints to become the project&apos;s 2nd top contributor
+									Wrote 70+ Cypress unit, integration, and end-to-end tests for data
+									validation, record creation, and API failure recovery
 								</li>
 							</ul>
 						</VerticalTimelineElement>
 
-						{/* Teaching Assistant */}
+						{/* Mermaid.js */}
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
@@ -762,40 +700,65 @@ const About = () => {
 								boxShadow: "0 3px 0 #00adb5",
 							}}
 							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
-							date="Sep 2022 - May 2025"
+							date="Jan 2025 - Apr 2025"
 							dateClassName={"custom-date"}
 							iconStyle={{ background: "#00adb5", color: "#fff" }}
 							icon={
 								<img
-									src={Dickinson.src}
-									alt="Dickinson College"
-									style={{
-										width: "100%",
-										height: "100%",
-										borderRadius: "50%",
-										objectFit: "contain",
-									}}
+									src={MermaidJS.src}
+									alt="Mermaid.js"
+									style={{ width: "100%", height: "100%", borderRadius: "50%", objectFit: "contain" }}
 								/>
 							}
 						>
 							<h3 className="vertical-timeline-element-title">
-								Teaching Assistant
+								Open Source Contributor
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
 								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
-									<span>Computer Science Department, Dickinson College</span>
-									<span>Carlisle, PA</span>
+									<span>Mermaid.js</span>
+									<span>Remote</span>
+								</span>
+								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
+									<a
+										href="https://github.com/mermaid-js/mermaid/pulls?q=is%3Apr+involves%3AShahir-47+is%3Aclosed"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										Pull requests
+									</a>
+									<a
+										href="https://github.com/mermaid-js/mermaid/graphs/contributors"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										Contributor ranking
+									</a>
+									<a
+										href="https://github.com/mermaid-js/mermaid"
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ color: "#00adb5", textDecoration: "underline" }}
+									>
+										GitHub repository
+									</a>
 								</span>
 							</h4>
 							<ul>
 								<li>
-									Raised assignment scores 15% for 25+ students over 6 semesters of
-									weekly Python and Java code reviews and office hours
+									Added diagram features and fixed rendering bugs in TypeScript and
+									D3.js for a library with 15M+ weekly downloads
+								</li>
+								<li>
+									Authored 3 merged pull requests with 22 Cypress regression tests by
+									collaborating with maintainers and contributors
 								</li>
 							</ul>
 						</VerticalTimelineElement>
 
-						{/* 84 Lumber (Volunteer) */}
+						{/* Dickinson College and 84 Lumber */}
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{
@@ -816,11 +779,11 @@ const About = () => {
 							}
 						>
 							<h3 className="vertical-timeline-element-title">
-								Software Engineer, Volunteer
+								Student Researcher
 							</h3>
 							<h4 className="vertical-timeline-element-subtitle">
 								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
-									<span>84 Lumber</span>
+									<span>Dickinson College and 84 Lumber</span>
 									<span>Remote</span>
 								</span>
 								<span style={{ display: "flex", flexWrap: "wrap", gap: "4px 16px", marginTop: "6px" }}>
@@ -836,12 +799,12 @@ const About = () => {
 							</h4>
 							<ul>
 								<li>
-									Converted legacy CBASIC to Python and Java with an ANTLR4 translator
-									that walks abstract syntax trees
+									Built an ANTLR4 parser and abstract syntax tree (AST) translator to
+									convert CBASIC into Python and Java
 								</li>
 								<li>
-									Co-designed a plan with 11 teammates to modernize 50,000+ lines of
-									CBASIC that shaped the $9B retailer&apos;s roadmap
+									Co-designed a migration plan for 50,000+ lines of legacy code with 11
+									Dickinson students and 84 Lumber engineers
 								</li>
 							</ul>
 						</VerticalTimelineElement>
@@ -905,7 +868,7 @@ const About = () => {
 										rel="noopener noreferrer"
 										style={{ color: "var(--teal)", textDecoration: "underline" }}
 									>
-										over 12 million times a week
+										over 15 million times a week
 									</a>
 									, so every change has to pass its CI checks and a maintainer&apos;s
 									review before it&apos;s merged.
@@ -920,7 +883,7 @@ const About = () => {
 								>
 									I&apos;ve had 3 pull requests merged into its 200,000 line TypeScript
 									codebase, each one with Cypress end-to-end tests. Those three put me
-									25th out of more than 600 contributors.
+									31st out of more than 800 contributors.
 								</p>
 								<p
 									style={{
@@ -1431,6 +1394,100 @@ const About = () => {
 									</button>
 								</a>
 							</div>
+						</VerticalTimelineElement>
+					</VerticalTimeline>
+				</section>
+
+				{/* Leadership Timeline */}
+				<section id="leadership" className="timeline-section">
+					<h2>Leadership</h2>
+					<VerticalTimeline
+						lineColor="#00adb5"
+						layout="1-column-left"
+						className="timeline"
+					>
+						{/* Teaching Assistant */}
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{
+								background: "#393e46",
+								color: "#fff",
+								boxShadow: "0 3px 0 #00adb5",
+							}}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
+							date="Sep 2022 - May 2025"
+							dateClassName={"custom-date"}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
+							icon={
+								<img
+									src={Dickinson.src}
+									alt="Dickinson College"
+									style={{
+										width: "100%",
+										height: "100%",
+										borderRadius: "50%",
+										objectFit: "contain",
+									}}
+								/>
+							}
+						>
+							<h3 className="vertical-timeline-element-title">
+								Teaching Assistant
+							</h3>
+							<h4 className="vertical-timeline-element-subtitle">
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>Computer Science Department, Dickinson College</span>
+									<span>Carlisle, PA</span>
+								</span>
+							</h4>
+							<ul>
+								<li>
+									Taught 25+ students to write and debug Python and Java programs
+									through labs, code reviews, and office hours
+								</li>
+							</ul>
+						</VerticalTimelineElement>
+
+						{/* Resident Advisor */}
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{
+								background: "#393e46",
+								color: "#fff",
+								boxShadow: "0 3px 0 #00adb5",
+							}}
+							contentArrowStyle={{ borderRight: "7px solid #393e46" }}
+							date="Aug 2022 - May 2024"
+							dateClassName={"custom-date"}
+							iconStyle={{ background: "#00adb5", color: "#fff" }}
+							icon={
+								<img
+									src={Dickinson.src}
+									alt="Dickinson College"
+									style={{
+										width: "100%",
+										height: "100%",
+										borderRadius: "50%",
+										objectFit: "contain",
+									}}
+								/>
+							}
+						>
+							<h3 className="vertical-timeline-element-title">
+								Resident Advisor
+							</h3>
+							<h4 className="vertical-timeline-element-subtitle">
+								<span style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0 12px" }}>
+									<span>Dickinson College</span>
+									<span>Carlisle, PA</span>
+								</span>
+							</h4>
+							<ul>
+								<li>
+									Mediated roommate conflicts, handled on-call emergencies, and
+									connected 40 residents with campus resources
+								</li>
+							</ul>
 						</VerticalTimelineElement>
 					</VerticalTimeline>
 				</section>

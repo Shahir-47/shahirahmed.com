@@ -2,41 +2,46 @@
 
 Software engineer and Master's student in Computer Science at New York University.
 
-Last updated: 2026-09-20
+Last updated: 2026-10-12
 Canonical URL: https://www.shahirahmed.com
 Machine-readable profile: https://www.shahirahmed.com/llms.json
 Location: New York, NY
 
 ## Summary
-Shahir Ahmed is a software engineer and M.S. Computer Science student at NYU (Sep 2026 to May 2028, expected). He was previously a software engineer at Sarva and a software engineer intern on FarmData2, and is ranked 25th of 600+ contributors to Mermaid.js. He works mostly in TypeScript, Java, and Python, with React, Next.js, Spring Boot, FastAPI, PostgreSQL, and AWS.
+Shahir Ahmed is a software engineer and M.S. Computer Science student at NYU (Sep 2026 to May 2028, expected). He was previously a software engineer at Sarva and a software engineer intern on FarmData2, and is ranked 31st of 800+ contributors to Mermaid.js. He works mostly in TypeScript, Java, and Python, with React, Next.js, Spring Boot, FastAPI, PostgreSQL, and AWS.
 
 ## Experience
 ### Software Engineer, Sarva (May 2025 - Sep 2026), Carlisle, PA
 Sarva is a startup that helps neighborhood grocery shops manage inventory by voice: owners track stock, get low-stock alerts, and see what sold by speaking in their own language. It also offers online ordering with pickup and delivery.
-- Cut inventory time by 60% by building a voice assistant that lets store owners manage inventory in their own languages.
-- Created 3 GitHub Actions CI/CD pipelines that run 2,604 Vitest tests on 173 TypeScript APIs to catch bugs before production.
-- Deployed 12 serverless Firebase Cloud Functions on Google Cloud Platform that retry failed payouts and restock abandoned carts.
-- Lowered zero-result searches 7% by adding semantic search with OpenAI embeddings to keyword search for natural language queries.
-- Reduced AI costs by adding Redis rate limiting and a token allowance per user to the Next.js API routes that call OpenAI.
+- Cut inventory update time by 60% by building a multilingual AI voice assistant in Next.js and TypeScript that lets store owners add or update multiple products by voice over WebRTC.
+- Reduced zero-result searches by 17% by adding semantic search with OpenAI embeddings and Firestore vector queries to Algolia keyword search so shoppers can find products using natural language.
+- Built a Stripe Connect payout system for vendors and drivers with Google Cloud Functions that retry failed transfers and use idempotency keys to prevent duplicate payments.
+- Prevented overselling during concurrent checkouts by checking and reserving stock in atomic Firestore transactions.
+- Created GitHub Actions CI/CD pipelines that run 2,604 Vitest tests and check preview deployments before release.
 - Built the product that put Sarva in the gener8tor and Meta gBETA accelerator and the Ship Tank and launchU finals.
-
-### Open Source Contributor, Mermaid.js (Jan 2025 - Apr 2026), Remote
-Mermaid.js is an open source tool that turns text into flowcharts and diagrams, used by GitHub and Microsoft, with 12M+ weekly npm downloads.
-- Added 3 D3.js features with Cypress tests: data labels inside bar charts, Knuth-Plass word wrapping for journey diagram legends, and journey diagram title styling.
-- Passed CI/CD checks and maintainer review on all 3 pull requests in the 200,000 line codebase to rank 25th of 600+ contributors.
 
 ### Software Engineer Intern, FarmData2 at Dickinson College (May 2024 - May 2025), Carlisle, PA
 Paid internship on FarmData2, open source farm record-keeping software funded by the National Science Foundation.
-- Saved farmers 12+ hours a week by automating crop logging with 18+ transactional Node.js REST APIs on PostgreSQL.
-- Cut page load time by 60% on a National Science Foundation funded farm platform by moving 22+ Vue.js components to Vuex.
-- Authored 25 merged pull requests with 30+ Cypress integration tests in Agile sprints to become the project's 2nd top contributor.
+- Developed crop seeding and tillage tracking in Vue.js through 25 merged pull requests to a National Science Foundation (NSF) funded open source platform that supports sustainability research and helps farmers manage field operations.
+- Protected crop records with JavaScript rollback handlers that undo earlier writes when farmOS REST API calls fail.
+- Wrote 70+ Cypress unit, integration, and end-to-end tests for data validation, record creation, and API failure recovery.
 
-### Teaching Assistant, Dickinson College Computer Science Department (Sep 2022 - May 2025)
-- Raised assignment scores 15% for 25+ students over 6 semesters of weekly Python and Java code reviews and office hours.
+### Open Source Contributor, Mermaid.js (Jan 2025 - Apr 2025), Remote
+Mermaid.js is an open source tool that turns text into flowcharts and diagrams, used by GitHub and Microsoft, with 15M+ weekly npm downloads.
+- Added diagram features and fixed rendering bugs in TypeScript and D3.js for a library with 15M+ weekly downloads: data labels inside bar charts, Knuth-Plass word wrapping that keeps journey diagram legends from overlapping the diagram, and journey diagram title styling.
+- Authored 3 merged pull requests with 22 Cypress regression tests by collaborating with maintainers and contributors.
+- Ranked 31st of 800+ contributors on the repository's contributor graph as of October 2026.
 
-### Software Engineer (Volunteer), 84 Lumber (Sep 2023 - Jan 2024), Remote
-- Converted legacy CBASIC to Python and Java with an ANTLR4 translator that walks abstract syntax trees.
-- Co-designed a plan with 11 teammates to modernize 50,000+ lines of CBASIC that shaped the $9B retailer's roadmap.
+### Student Researcher, Dickinson College and 84 Lumber (Sep 2023 - Jan 2024), Remote
+- Built an ANTLR4 parser and abstract syntax tree (AST) translator to convert CBASIC into Python and Java.
+- Co-designed a migration plan for 50,000+ lines of legacy code with 11 Dickinson students and 84 Lumber engineers.
+
+## Leadership
+### Teaching Assistant, Dickinson College Computer Science Department (Sep 2022 - May 2025), Carlisle, PA
+- Taught 25+ students to write and debug Python and Java programs through labs, code reviews, and office hours.
+
+### Resident Advisor, Dickinson College (Aug 2022 - May 2024), Carlisle, PA
+- Mediated roommate conflicts, handled on-call emergencies, and connected 40 residents with campus resources.
 
 ## Education
 - New York University: M.S. Computer Science (Sep 2026 - May 2028, expected). Coursework: Design and Analysis of Algorithms, Big Data, Virtual and Augmented Reality.
@@ -49,14 +54,14 @@ Listed in the same order as the projects page, strongest first.
 ### GrabPic
 - URL: https://grab-pic.vercel.app
 - GitHub: https://github.com/Shahir-47/Grab-Pic
-- Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Built as 3 services (Next.js, Spring Boot, and a Python DeepFace/TensorFlow worker producing 512-dimension face embeddings), connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, CloudFront signed URLs, Redis rate limiting, and Cloudflare Turnstile. Compute later moved to Shahir's home server behind a Cloudflare Tunnel, cutting hosting from about $85 to about $1 a month.
-- Tags: Full Stack, Backend, Databases, Distributed Systems, Machine Learning, Computer Vision, Vector Search, Security, DevOps & Cloud, Self-Hosting, TypeScript, Java, Python, SQL, Next.js, React, Spring Boot, TensorFlow, PostgreSQL, pgvector, Redis, AWS, Supabase, Docker, Cloudflare, Tailwind CSS
+- Event photo search. Upload a selfie to find your photos in albums of 500+ photos, matched in under 200 milliseconds. Built as 3 services (Next.js, Spring Boot, and a Python DeepFace/TensorFlow worker producing 512-dimension face embeddings), connected through Amazon SQS, with pgvector HNSW search, S3 presigned uploads, CloudFront signed URLs, per-IP Redis rate limiting in an atomic Lua script, and Cloudflare Turnstile. Compute later moved to Shahir's home server behind a Cloudflare Tunnel, cutting hosting from about $85 to about $1 a month.
+- Tags: Full Stack, Backend, Databases, Distributed Systems, Machine Learning, Computer Vision, Vector Search, Security, DevOps & Cloud, Self-Hosting, TypeScript, Java, Python, SQL, Lua, Next.js, React, Spring Boot, TensorFlow, PostgreSQL, pgvector, Redis, AWS, Supabase, Docker, Cloudflare, Tailwind CSS
 
 ### PaperPulse
 - URL: https://paper-pulse-nu.vercel.app
 - GitHub: https://github.com/Shahir-47/Paper-Pulse
-- Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph. FastAPI and Next.js; the backend and Neo4j run in Docker on Shahir's home server.
-- Tags: Full Stack, Backend, Databases, Machine Learning, AI & LLMs, Vector Search, Data Engineering, DevOps & Cloud, Self-Hosting, TypeScript, Python, SQL, Next.js, React, FastAPI, Neo4j, PostgreSQL, pgvector, OpenAI, Cohere, Docker, Supabase, Tailwind CSS
+- Research assistant that picks the 25 most relevant new papers from arXiv, PubMed, Semantic Scholar, and OpenAlex for each user every night, ranked with neural reranking, and answers questions about them with retrieval augmented generation over pgvector and a Neo4j knowledge graph, streaming responses over Server-Sent Events. FastAPI and Next.js; the backend and Neo4j run in Docker on Shahir's home server.
+- Tags: Full Stack, Backend, Databases, Machine Learning, AI & LLMs, Vector Search, Data Engineering, DevOps & Cloud, Self-Hosting, TypeScript, Python, SQL, Next.js, React, FastAPI, Neo4j, PostgreSQL, pgvector, OpenAI, Cohere, Docker, Supabase, Server-Sent Events, Tailwind CSS
 
 ### Home Server
 - URL: https://lab.shahirahmed.com
@@ -109,10 +114,9 @@ Listed in the same order as the projects page, strongest first.
 - Portfolio: https://github.com/Shahir-47/open-source-contributions
 
 ## Skills
-Languages: TypeScript, JavaScript, Python, Java, C, SQL, HTML/CSS
-Frameworks: React, Next.js, Node.js, Express, Spring Boot, FastAPI, Vue.js, TailwindCSS, TensorFlow, D3.js
-Cloud and DevOps: AWS (S3, SQS, EC2, ECR, App Runner), Google Cloud Platform, Vercel, Docker, GitHub Actions, Linux
-Databases and Tools: PostgreSQL, pgvector, Supabase, Redis, Firebase, Neo4j, Stripe, Algolia, OpenAI API, Git, Vitest, Cypress
+Languages: Java, Python, TypeScript, JavaScript, SQL, C
+Frameworks: Next.js, React, Spring Boot, FastAPI, Node.js, Vue.js
+Tools: AWS, Google Cloud, Docker, PostgreSQL, Firestore, Redis, pgvector, Neo4j, Git, Linux
 
 ## Contact
 - Email: ka4121@nyu.edu
